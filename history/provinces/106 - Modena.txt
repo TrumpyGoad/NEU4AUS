@@ -1,0 +1,22 @@
+# - Syracusa
+
+owner = MOD
+controller = MOD
+culture = romagnan 
+religion = catholic 
+hre = yes 
+base_tax = 4
+base_production = 3
+trade_goods = livestock
+base_manpower = 1
+capital = "Modena"
+is_city = yes
+add_core = MOD
+
+
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+

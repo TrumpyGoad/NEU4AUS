@@ -1,0 +1,618 @@
+#Brand New Decisons for Mod
+
+country_decisions = {
+
+	#Free Colonist for 30 years
+
+	new_colonial_charter = {
+
+		potential = {
+			NOT = {
+				has_country_modifier = colonial_charter
+			}
+			always = no
+		}
+
+		allow = {
+			has_institution = new_world_i
+			OR = {
+				north_america = { has_discovered = PREV }
+				south_america = { has_discovered = PREV }
+				new_world = { has_discovered = PREV }
+			}
+			ai = no
+			treasury = 200
+
+		}
+
+		effect = {
+			add_treasury = -200
+			add_country_modifier = {
+				name = "colonial_charter"
+				duration = -1
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	holy_orders_allowed_by_pope =  {
+
+		potential = {
+			#NOT = {
+				has_country_modifier = holy_orders_allowed_pap
+			#}
+			religion = catholic
+		}
+
+		allow = {
+			OR = {
+				PAP = { has_opinion = { who = root value = 150 } }
+				NOT = { exists = PAP }
+			}
+			 papal_influence = 150
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "holy_orders_allowed_pap"
+				duration = -1
+			}
+			add_papal_influence = -150
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+	}
+
+	reform_angevin_empire =  {
+
+		potential = {
+			tag = ENG
+			NOT = { has_country_flag = reform_angevin_flag }
+			OR = {
+				ROOT = { has_country_flag = eng_had_end_of_hundred_years_war }
+				start_date = 1444.11.12
+			}
+		}
+		major = yes
+		provinces_to_highlight = {
+			OR = {
+				area = normandy_area
+				area = picardy_area
+				area = ile_de_france_area
+				area = pyrenees_area
+				area = brittany_area
+
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			normandy_area = {
+				type = all
+				owned_by = ROOT
+			}
+			picardy_area = {
+				type = all
+				owned_by = ROOT
+			}
+			ile_de_france_area = {
+				type = all
+				owned_by = ROOT
+			}
+			OR = {
+				pyrenees_area = {
+					type = all
+					owned_by = ROOT
+				}
+				brittany_area = {
+					type = all
+					owned_by = ROOT
+				}
+			}
+		}
+
+		effect = {
+			set_country_flag = reform_angevin_flag
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					OR = {
+						ai = no
+						AND = {
+							ai = yes
+							has_idea_group = default_ideas
+						}
+					}
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+	}
+
+	adopt_imperial_chinese_ideas =  {
+
+		major = yes
+
+		potential = {
+			NOT = { tag = MNG } #Ming
+			NOT = { tag = QNG }	#Qing
+			NOT = { tag = MCH }	#Manchu
+			NOT = { tag = YUA } #Yuan
+			NOT = { tag = MGE } #Mongol Empire
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			has_idea_group = chinese_ideas #Generic Chinese Ideas
+			has_custom_ideas = no
+			NOT = { has_country_flag = chinese_imperial_ideas_flag }
+		}
+
+		allow = {
+			OR = {
+				is_emperor_of_china = yes
+				total_development = 1000
+			}
+		}
+
+		effect = {
+			country_event = { id = ideagroups.1 } #Swap Ideas
+			if = {
+				limit = {
+					has_reform = chinese_warlord
+				}
+				remove_government_reform = chinese_warlord
+			}
+			set_country_flag = chinese_imperial_ideas_flag
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+	}
+
+	remove_mandate_of_heaven =  {
+
+		potential = {
+			is_emperor_of_china = yes
+			ai = no
+		}
+
+		allow = {
+			NOT = { imperial_mandate = 1 }
+			is_emperor_of_china = yes
+			is_at_war = no
+			ai = no
+		}
+
+		effect = {
+			dismantle_empire_of_china = yes
+			add_country_modifier = {
+				name = "lost_mandate_of_heaven"
+				duration = 7300
+			}
+			add_prestige = -100
+			add_legitimacy = -100
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+	}
+
+	manual_estate_statutory_rights =  {
+
+		potential = {
+			NOT = { crown_land_share = 11 }
+			ai = no
+		}
+
+		allow = {
+			NOT = { crown_land_share = 6 }
+			OR = {
+				AND = {
+					government = monarchy
+					has_estate = estate_nobles
+					NOT = {	num_of_estate_privileges = { estate = estate_nobles	value = 6 } }
+				}
+				AND = {
+					government = republic
+					has_estate = estate_burghers
+					NOT = {	num_of_estate_privileges = { estate = estate_burghers value = 6 } }
+				}
+				AND = {
+					government = theocracy
+					has_estate = estate_church
+					NOT = {	num_of_estate_privileges = { estate = estate_church value = 6 } }
+				}
+				AND = {
+					religion = hinduism
+					has_estate = estate_brahmins
+					NOT = {	num_of_estate_privileges = { estate = estate_brahmins	value = 6 } }
+				}
+			}
+			NOT = {
+				has_estate_privilege = estate_brahmins_statutory_rights
+				has_estate_privilege = estate_nobles_statutory_rights
+				has_estate_privilege = estate_burghers_statutory_rights
+				has_estate_privilege = estate_church_statutory_rights
+			}
+		}
+
+		effect = {
+			country_event = { id = estate_privileges_and_agendas_events.2 }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+	}
+
+	#For fast Ambrosian Republic
+	milan_tank_legitimacy =  {
+
+		potential = {
+			tag = MLO
+			has_ruler = "Filippo Maria I"
+			NOT = { has_country_flag = milan_tank_legitimacy_flag }
+		}
+
+		allow = {
+			ai = no
+		}
+
+		effect = {
+			add_legitimacy = -100
+			set_country_flag = milan_tank_legitimacy_flag
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+	}
+
+	#Blessings for the Pope
+	pope_self_blessing_decision =  {
+
+		potential = {
+			tag = PAP
+		}
+
+		allow = {
+			custom_trigger_tooltip = {
+			tooltip = spent_papal_influence_is_lower_than_total_tt
+				OR = {
+					AND = {
+						check_variable = {
+							which = PapalInfluencePAP
+							value = 0
+						}
+						NOT = {
+							check_variable = {
+								which = PapalInfluencePAP
+								value = 1
+							}
+						}
+						invested_papal_influence = 50
+					}
+					AND = {
+						check_variable = {
+							which = PapalInfluencePAP
+							value = 50
+						}
+						NOT = {
+							check_variable = {
+								which = PapalInfluencePAP
+								value = 51
+							}
+						}
+						invested_papal_influence = 100
+					}
+					AND = {
+						check_variable = {
+							which = PapalInfluencePAP
+							value = 100
+						}
+						NOT = {
+							check_variable = {
+								which = PapalInfluencePAP
+								value = 101
+							}
+						}
+						invested_papal_influence = 150
+					}
+					AND = {
+						check_variable = {
+							which = PapalInfluencePAP
+							value = 150
+						}
+						NOT = {
+							check_variable = {
+								which = PapalInfluencePAP
+								value = 151
+							}
+						}
+						invested_papal_influence = 200
+					}
+					
+				}
+			}
+		}
+
+		effect = {
+			country_event = {
+				id = new_events.6
+			}
+			
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+	}
+
+	#Westernisation Decisions
+	westernisation_mediterranean =  {
+
+		potential = {
+			OR = {
+				technology_group = ottoman
+				AND = {
+					primary_culture = egyptian
+					technology_group = muslim
+				}
+				AND = {
+					technology_group = muslim
+					culture_group = maghrebi
+				}
+			}
+			always = no #Won't show up until this is removed
+		}
+
+		allow = {
+			adm_tech = 10
+			is_at_war = no
+			OR = {
+				#Vienna
+				AND = {
+					owns_core_province = 134
+					134 = {
+						NOT = { nationalism = 1 }
+					}
+				}
+				#Rome
+				AND = {
+					owns_core_province = 118
+					118 = {
+						NOT = { nationalism = 1 }
+					}
+				}
+				#Madrid
+				AND = {
+					owns_core_province = 217
+					217 = {
+						NOT = { nationalism = 1 }
+					}
+				}
+			}
+		}
+
+		effect = {
+			change_unit_type = western	
+			#add global notification event here
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+
+	}
+
+	#Functional version of MRM Educate Ruler Decision
+	educate_ruler = {
+		major = yes
+		potential = {
+			ai = no
+			
+			NOT = {
+				government = republic
+			}
+		}
+		allow = {
+			NOT = {
+				check_variable = {
+					which = rulerStatsTracker
+					value = 9
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = hasnt_educated_ruler.tt
+				NOT = { 
+				AND = {
+						has_country_flag = educate_ruler_flag_age1 
+						current_age = age_of_discovery
+					}
+				}
+				NOT = { 
+					AND = {
+						has_country_flag = educate_ruler_flag_age2 
+						current_age = age_of_reformation
+					}
+				}
+				NOT = { 
+					AND = {
+						has_country_flag = educate_ruler_flag_age3
+						current_age = age_of_absolutism
+					}
+				}
+				NOT = { 
+					AND = {
+						has_country_flag = educate_ruler_flag_age4
+						current_age = age_of_revolutions
+					}
+				}
+			}
+		}
+		effect = {
+			change_adm = 1
+			change_dip = 1
+			change_mil = 1
+			change_variable = {
+				which = rulerStatsTracker
+				value = 3
+			}
+			add_years_of_income = -0.5
+			if = {
+				limit = {
+					current_age = age_of_discovery
+				}
+				set_country_flag = educate_ruler_flag_age1
+			}
+			if = {
+				limit = {
+					current_age = age_of_reformation
+				}
+				set_country_flag = educate_ruler_flag_age2
+			}
+			if = {
+				limit = {
+					current_age = age_of_absolutism
+				}
+				set_country_flag = educate_ruler_flag_age3
+			}
+			else = {
+				limit = {
+					current_age = age_of_revolutions
+				}
+				set_country_flag = educate_ruler_flag_age4
+			}
+		}
+	}
+
+	#Building Tracker
+	building_tracker_decision = {
+		major = yes
+		potential = {
+			ai = no 
+		}
+		allow = {
+			always = no
+			
+			
+			#Temples
+			calc_true_if = {
+				desc = bt_total_temples_tt
+				all_owned_province = {
+					has_building = temple
+				}
+				amount = 0
+			}
+			#Cathedrals
+			calc_true_if = {
+				desc = bt_total_cathedral_tt
+				all_owned_province = {
+					has_building = cathedral
+				}
+				amount = 0
+			}
+			#Barracks
+			calc_true_if = {
+				desc = bt_total_barracks_tt
+				all_owned_province = {
+					has_building = barracks
+				}
+				amount = 0
+			}
+			#Training Fields
+			calc_true_if = {
+				desc = bt_total_training_fields_tt
+				all_owned_province = {
+					has_building = training_fields
+				}
+				amount = 0
+			}
+			#Soldier's Households
+			calc_true_if = {
+				desc = bt_total_soldiershouseholds_tt
+				all_owned_province = {
+					has_building = soldier_households
+				}
+				amount = 0
+			}
+			#Workshops
+			calc_true_if = {
+				desc = bt_total_workshops_tt
+				all_owned_province = {
+					has_building = workshop
+				}
+				amount = 0
+			}
+			#Counting Houses
+			calc_true_if = {
+				desc = bt_total_counting_house_tt
+				all_owned_province = {
+					has_building = counting_house
+				}
+				amount = 0
+			}
+			#Manufactories
+			calc_true_if = {
+				desc = bt_total_manufactories_tt
+				all_owned_province = {
+					OR = {
+						has_building = mills
+						has_building = farm_estate
+						has_building = tradecompany
+						has_building = plantations
+						has_building = textile
+						has_building = weapons
+						has_building = wharf
+						has_building = furnace
+					}
+				}
+				amount = 0
+			}
+			#Regimental Camps
+			calc_true_if = {
+				desc = bt_total_regimentalcamps_tt
+				all_owned_province = {
+					has_building = regimental_camp
+				}
+				amount = 0
+			}
+			#Conscription Centres
+			calc_true_if = {
+				desc = bt_total_conscription_center_tt
+				all_owned_province = {
+					has_building = conscription_center
+				}
+				amount = 0
+			}
+			
+		}
+	}
+
+	
+
+
+
+
+}

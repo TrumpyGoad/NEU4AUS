@@ -1,0 +1,539 @@
+######Mod Ideas######
+
+
+#Halych Volynian ideas, Written by Johanis
+
+VOL_ideas = {
+	start = {
+		improve_relation_modifier = 0.20
+		manpower_recovery_speed = 0.15
+	}
+	
+	bonus = {
+		global_manpower_modifier = 0.2
+	}
+	
+	trigger = {
+		tag = VOL
+	}
+	free = yes		#will be added at load.
+	
+	vol_immigration = {
+		development_cost = -0.1
+	}
+	
+	vol_druzhina = {
+		discipline = 0.05
+	}
+	
+	vol_church = {
+		religious_unity = 0.15
+	}
+
+	vol_vassals = {
+		vassal_forcelimit_bonus = 1
+	}
+	
+	vol_trade = {
+		merchants = 1
+	}
+	
+	vol_chronicle = {
+		legitimacy = 1
+	}
+	
+	vol_reforms = {
+		reduced_liberty_desire_on_same_continent = 15
+	}
+	
+}	
+
+#Egyptian Ideas, written by Ezio
+
+EGY_ideas = {
+	start = {
+		galley_power = 0.15
+		production_efficiency = 0.1
+	}
+	
+	bonus = {
+		discipline = 0.05
+	}
+	
+	trigger = {
+		OR = {
+			tag = EGY
+			tag = CPT
+		}
+	}
+	free = yes		#will be added at load.
+	
+	egy_camelry = {
+		land_attrition = -0.25
+		shock_damage_received = -0.1
+	}
+	
+	egy_reforms_idea = {
+		yearly_absolutism = 1
+		global_autonomy = -0.05
+	}
+	
+	egy_nizam = {
+		infantry_power = 0.15
+	}
+
+	egy_independence = {
+		prestige = 1
+		land_morale = 0.05
+	}
+	
+	egy_granary = {
+		global_trade_goods_size_modifier = 0.15
+	}
+	
+	egy_conscription = {
+		global_manpower_modifier = 0.25
+	}
+	
+	egy_state_monopolies = {
+		global_own_trade_power = 0.25
+	}
+	
+}	
+
+
+#Dauphine Ideas, Written by Whisper
+
+DAU_ideas = {
+	start = {
+		land_morale = 0.10
+		diplomatic_reputation = 1
+	}
+	
+	bonus = {
+		global_trade_goods_size_modifier = 0.10
+	}	
+
+	trigger = {
+		tag = DAU
+	}
+	free = yes		#will be added at load.
+	
+	dau_universite = {
+		idea_cost = -0.10
+	}
+	dau_dauphin = {
+		improve_relation_modifier = 0.20
+	}
+	dau_mountain = {
+		fire_damage_received = -0.10
+	}
+	dau_conseil = {
+		prestige = 1
+	}
+	dau_eveque = {
+		tolerance_own = 2
+	}
+	dau_palace = {
+		global_manpower_modifier = 0.15 
+	}
+	dau_tiles = {
+		global_unrest = -1
+	}
+}
+
+#Picardie Ideas, Written by Najhan
+
+PIC_ideas = {
+	start = {
+		mercenary_manpower = 0.20
+		legitimacy = 1
+	}
+	
+	bonus = {
+		prestige_decay = -0.01
+	}
+	
+	trigger = {
+		tag = PIC
+	}
+	free = yes		#will be added at load.
+	
+	pic_lessons_of_the_jacquerie_revolt = {
+		cavalry_power = 0.10
+	}
+	
+	pic_home_of_gothic_architecture = {
+		development_cost = -0.10
+	}
+	
+	pic_jacquerie_tradition = {
+		land_forcelimit_modifier = 0.20
+	}
+
+	pic_crossroads = {
+		diplomatic_upkeep = 1
+	}
+	
+	pic_basilica_of_saint_quentin = {
+		tolerance_own = 2
+	}
+	
+	pic_picardy_wine = {
+		global_unrest = -1
+	}
+	
+	pic_temple_of_reason = {
+		idea_cost = -0.10
+	}
+	
+}
+
+#Tirol Ideas, Written by Jaiman
+
+TIR_ideas = {
+	start = {
+		land_morale = 0.1
+		inflation_reduction = 0.10
+	}
+	
+	bonus = {
+		garrison_size = 0.2
+	}
+	
+	trigger = {
+		tag = TIR
+	}
+	free = yes		#will be added at load.
+	
+	tir_longer_work_shifts = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	
+	tir_land_management = {
+		development_cost = -0.10
+	}
+	
+	tir_equal_rights_equal_taxes = {
+		global_tax_modifier = 0.10
+	}
+
+	tir_alpine_protection = {
+		defensiveness = 0.20
+	}
+	
+	tir_trade_improvements = {
+		trade_efficiency = 0.10
+	}
+	
+	tir_convertion = {
+		global_missionary_strength = 0.015
+	}
+	
+	tir_become_the_mountians = {
+		fire_damage_received = -0.10
+	}
+	
+}
+
+#Lombardy Ideas, Written by Deathsspear
+
+LOM_ideas = {
+
+	start = {
+		trade_efficiency = 0.1
+		land_forcelimit_modifier = 0.2
+	}
+	
+	bonus = {
+		reinforce_speed = 0.25
+	}
+	
+	trigger = {
+		tag = LOM
+	}
+	
+	free = yes
+	
+	lom_kingdom_reborn = {
+		infantry_power = 0.1
+	}
+	
+	lom_diplomats_germany = {
+		improve_relation_modifier = 0.2
+	}
+	
+	lom_lowered_power_of_barons = {
+		development_cost = -0.1
+	}
+	
+	lom_age_of_condottieri = {
+		mercenary_manpower = 0.3
+	}
+	
+	lom_urbino_legacy = {
+		shock_damage = 0.1
+	}
+	
+	lom_alps = {
+		defensiveness = 0.2
+	}
+	
+	lom_iron_crown = {
+		prestige = 1
+		legitimacy = 1
+	}
+	
+}
+
+#Latin Empire Ideas
+
+LTN_ideas = {
+
+	start = {
+		land_morale = 0.1
+		tolerance_heretic = 4
+	}
+	
+	bonus = {
+		discipline = 0.05
+	}
+	
+	free = yes
+	
+	trigger = {
+		tag = LTN
+	}
+	
+	ltn_italian_trade = {
+		trade_efficiency = 0.15
+	}
+	
+	ltn_rebuild_capital = {
+		development_cost = -0.1
+	}
+	
+	ltn_mercenary_reliance = {
+		mercenary_cost = -0.25
+	}
+	
+	ltn_legacy = {
+		army_tradition = 0.5
+	}
+
+	
+	ltn_feudal_heritage = {
+		global_tax_modifier = 0.1
+	}
+	
+	ltn_claims = {
+		legitimacy = 1
+	}
+	
+	ltn_continue_crusade = {
+		core_creation = -0.15
+	}
+}
+
+#Illyrian Ideas
+
+YUG_ideas = {
+
+	start = {
+		infantry_power = 0.1
+		tolerance_heretic = 4
+	}
+	
+	bonus = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	
+	free = yes
+	
+	trigger = {
+		tag = YUG
+	}
+	
+	yug_stratioti = {
+		cavalry_power = 0.20
+	}
+	
+	yug_adriatic = {
+		embargo_efficiency = 0.25
+		global_own_trade_power = 0.2
+	}
+	
+	yug_unification = {
+		global_unrest = -2
+	}
+	
+	yug_renaissance = {
+		technology_cost = -0.1
+	}
+
+	
+	yug_crossroads_of_europe = {
+		defensiveness = 0.15
+	}
+	
+	yug_legions = {
+		global_manpower_modifier = 0.25
+	}
+	
+	yug_hadjuks = {
+		land_morale = 0.1
+	}
+}
+
+#Imperial Chinese Ideas
+
+chinese_emperor_ideas = {
+
+	start = {
+		global_manpower_modifier = 0.33
+		technology_cost = -0.1
+	}
+	
+	bonus = {
+		governing_capacity_modifier = 0.25
+	}
+	
+	free = yes
+	
+	trigger = {
+		has_country_flag = chinese_imperial_ideas_flag
+		NOT = { tag = MNG } #Ming
+		NOT = { tag = QNG }	#Qing
+		NOT = { tag = MCH }	#Manchu
+		NOT = { tag = YUA } #Yuan	
+		NOT = { tag = MGE } #Mongol Empire
+	}
+	
+	chi_son_of_heaven = {
+		imperial_mandate = 0.03
+		meritocracy = 0.5
+	}
+	
+	chi_gunpowder_warfare = {
+		fire_damage = 0.10
+	}
+	
+	chi_tributary_system = {
+		diplomatic_reputation = 2
+	}
+	
+	chi_jixiao_xinshu = {
+		infantry_power = 0.1
+	}
+	
+	chi_workshop_of_the_word = {
+		global_trade_goods_size_modifier = 0.1
+	}
+
+	chi_middle_kingdom = {
+		prestige = 1
+	}
+	
+	chi_hongyipao = {
+		artillery_power = 0.1
+	}
+}
+
+#Arabian Empire Ideas
+
+ARB_ideas = {
+
+	start = {
+		global_missionary_strength = 0.02
+		land_morale = 0.2
+	}
+	
+	bonus = {
+		discipline = 0.05
+	}
+	
+	free = yes
+	
+	trigger = {
+		tag = ARB
+	}
+	
+	arb_bedouin_horsemen = {
+		cavalry_power = 0.2
+		cavalry_flanking = 0.25
+	}
+	
+	arb_trade = {
+		trade_efficiency = 0.1
+	}
+	
+	arb_trade_power = {
+		global_own_trade_power = 0.25
+	}
+	
+	arb_people_of_the_book = {
+		tolerance_heathen = 3
+		dhimmi_loyalty_modifier = 0.1
+	}
+	
+	arb_restore_baghdad = {
+		idea_cost = -0.1
+	}
+	
+	arb_protector_of_islam = {
+		tolerance_own = 2
+	}
+	
+	arb_new_caliphate = {
+		prestige = 1
+		monthly_piety = 0.001
+	}
+	
+	
+}
+
+#Ifriqiya Ideas
+IFR_ideas = {
+
+	start = {
+		may_perform_slave_raid = yes
+		naval_morale = 0.1
+	}
+	
+	bonus = {
+		discipline = 0.05
+	}
+	
+	free = yes
+	
+	trigger = {
+		tag = IFR
+	}
+	ifr_lessons_of_normans = {
+		shock_damage_received = -0.15
+	}
+	
+	ifr_sicily = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	ifr_catalan_guard = {
+		infantry_power = 0.1
+	}
+	ifr_caliphate = {
+		manpower_in_true_faith_provinces = 0.25
+	}
+	
+	ifr_crossroads_of_med = {
+		trade_efficiency = 0.15
+	}
+	ifr_board_of_captains = {
+		own_coast_naval_combat_bonus = 1
+	}
+	
+	ifr_heirs_to_carthage = {
+		naval_forcelimit_modifier = 0.33
+	}
+	
+	
+}
+

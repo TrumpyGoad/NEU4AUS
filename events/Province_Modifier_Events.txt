@@ -1,0 +1,445 @@
+namespace = province_idea_event
+
+#Infra Dev On Buying Idea
+country_event = {
+	id = province_idea_event.1
+	title = province_idea_event.1.t
+	desc = province_idea_event.1.d
+	picture = TRADEGOODS_eventPicture
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	hidden = yes
+	
+	trigger = {
+		NOT = { has_country_flag = infra_dev_event_flag }
+		has_idea = infra_dev
+	}
+
+	immediate = {
+		set_country_flag = infra_dev_event_flag
+		every_owned_province = {
+			limit = {
+				OR = {
+					has_terrain = woods
+					has_terrain = jungle
+					has_terrain = marsh
+					has_terrain = forest
+					has_terrain = hills 
+					has_terrain = mountain
+					has_terrain = highlands 
+					has_terrain = steppe 
+				}
+				NOT = { has_province_modifier = infra_dev_province_modifier }
+			}
+			add_province_modifier = {
+				name = "infra_dev_province_modifier"
+				duration = -1
+			}
+		}
+	}
+	
+	option = {
+		name = infa_dev_event_option
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = province_idea_event.2
+	title = province_idea_event.2.t
+	desc = province_idea_event.2.d
+	picture = TRADEGOODS_eventPicture
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	hidden = yes
+	
+	trigger = {
+		has_country_flag = infra_dev_event_flag
+		NOT = { has_idea = infra_dev }
+	}
+
+	immediate = {
+		clr_country_flag = infra_dev_event_flag
+		every_owned_province = {
+			limit = {
+				has_province_modifier = infra_dev_province_modifier
+			}
+			remove_province_modifier = infra_dev_province_modifier
+		}
+	}
+	
+	option = {
+		name = infa_dev_event_option_2
+		ai_chance = { factor = 100 }
+	}
+}
+
+
+
+
+
+#Religious Church Building Slot
+#On actions for on_convert
+country_event = {
+	id = province_idea_event.5
+	title = province_idea_event.5.t
+	desc = province_idea_event.5.d
+	picture = TRADEGOODS_eventPicture
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	hidden = yes
+	
+	trigger = {
+		NOT = { has_country_flag = religious_building_slot_event_flag }
+		has_idea = religious_tradition_new
+	}
+
+	immediate = {
+		set_country_flag = religious_building_slot_event_flag
+		every_owned_province = {
+			limit = {
+				NOT = { has_province_modifier = religious_tradition_province_modifier }
+				has_owner_religion = yes
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+			add_province_modifier = {
+				name = "religious_tradition_province_modifier"
+				duration = -1
+			}
+		}
+	}
+	
+	option = {
+		name = religious_building_slot_option
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = province_idea_event.6
+	title = province_idea_event.6.t
+	desc = province_idea_event.6.d
+	picture = TRADEGOODS_eventPicture
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	hidden = yes
+	
+	trigger = {
+		has_country_flag = religious_building_slot_event_flag
+		NOT = { has_idea = religious_tradition_new }
+	}
+
+	immediate = {
+		clr_country_flag = religious_building_slot_event_flag
+		every_owned_province = {
+			limit = {
+				has_province_modifier = religious_tradition_province_modifier
+			}
+			remove_province_modifier = religious_tradition_province_modifier
+		}
+	}
+	
+	option = {
+		name = religious_building_slot_option_2
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Maritime Building Slot
+
+country_event = {
+	id = province_idea_event.7
+	title = province_idea_event.7.t
+	desc = province_idea_event.7.d
+	picture = TRADEGOODS_eventPicture
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	hidden = yes
+	
+	trigger = {
+		NOT = { has_country_flag = maritime_building_slot_event_flag }
+		has_idea = grand_navy_new
+	}
+
+	immediate = {
+		set_country_flag = maritime_building_slot_event_flag
+		every_owned_province = {
+			limit = {
+				NOT = { has_province_modifier = maritime_free_building_slot_province_modifier }
+				OR = {
+					has_building = shipyard
+					has_building = grand_shipyard
+					has_building = dock
+					has_building = drydock
+				}
+			}
+			add_province_modifier = {
+				name = "maritime_free_building_slot_province_modifier"
+				duration = -1
+			}
+		}
+	}
+	
+	option = {
+		name = maritime_building_slot_option
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = province_idea_event.8
+	title = province_idea_event.8.t
+	desc = province_idea_event.8.d
+	picture = TRADEGOODS_eventPicture
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	hidden = yes
+	
+	trigger = {
+		has_country_flag = maritime_building_slot_event_flag
+		NOT = { has_idea = grand_navy_new }
+	}
+
+	immediate = {
+		clr_country_flag = maritime_building_slot_event_flag
+		every_owned_province = {
+			limit = {
+				has_province_modifier = maritime_free_building_slot_province_modifier
+			}
+			remove_province_modifier = maritime_free_building_slot_province_modifier
+		}
+	}
+	
+	option = {
+		name = maritime_building_slot_option.2
+		ai_chance = { factor = 100 }
+	}
+}
+
+#Pluto Dev Cost
+
+country_event = {
+	id = province_idea_event.9
+	title = province_idea_event.9.t
+	desc = province_idea_event.9.d
+	picture = TRADEGOODS_eventPicture
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	hidden = yes
+	
+	trigger = {
+		NOT = { has_country_flag = pluto_dev_cost_event_flag }
+		has_idea = free_cities_new
+	}
+
+	immediate = {
+		set_country_flag = pluto_dev_cost_event_flag
+		every_owned_province = {
+			limit = {
+				NOT = { has_province_modifier = pluto_skyscraper_province_modifier }
+				development = 25
+			}
+			add_province_modifier = {
+				name = "pluto_skyscraper_province_modifier"
+				duration = -1
+			}
+		}
+	}
+	
+	option = {
+		name = pluto_dev_cost_option
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = province_idea_event.10
+	title = province_idea_event.10.t
+	desc = province_idea_event.10.d
+	picture = TRADEGOODS_eventPicture
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	hidden = yes
+	
+	trigger = {
+		has_country_flag = pluto_dev_cost_event_flag
+		NOT = { has_idea = free_cities_new }
+	}
+
+	immediate = {
+		clr_country_flag = pluto_dev_cost_event_flag
+		every_owned_province = {
+			limit = {
+				has_province_modifier = pluto_skyscraper_province_modifier
+			}
+			remove_province_modifier = pluto_skyscraper_province_modifier
+		}
+	}
+	
+	option = {
+		name = pluto_dev_cost_option.2
+		ai_chance = { factor = 100 }
+	}
+}
+
+
+
+
+#Espionage Perma Scorched Earth
+country_event = {
+	id = province_idea_event.13
+	title = province_idea_event.13.t
+	desc = province_idea_event.13.d
+	picture = TRADEGOODS_eventPicture
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	hidden = yes
+	
+	trigger = {
+		NOT = { has_country_flag = espionage_scorched_earth_event }
+		has_idea = guerrilla_warfare_idea
+	}
+
+	immediate = {
+		set_country_flag = espionage_scorched_earth_event
+		every_owned_province = {
+			limit = {
+				fort_level = 2
+				NOT = { has_province_modifier = scorched_earth }
+			}
+			add_province_modifier = {
+				name = "scorched_earth"
+				duration = -1
+			}
+		}
+	}
+	
+	option = {
+		name = espionage_scorched_earth_event_option
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = province_idea_event.14
+	title = province_idea_event.14.t
+	desc = province_idea_event.14.d
+	picture = TRADEGOODS_eventPicture
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	hidden = yes
+	
+	trigger = {
+		has_country_flag = espionage_scorched_earth_event
+		NOT = { has_idea = guerrilla_warfare_idea }
+	}
+
+	immediate = {
+		clr_country_flag = espionage_scorched_earth_event
+		every_owned_province = {
+			limit = {
+				has_province_modifier = scorched_earth
+			}
+			remove_province_modifier = scorched_earth
+		}
+	}
+	
+	option = {
+		name = espionage_scorched_earth_event_option_2
+		ai_chance = { factor = 100 }
+	}
+}
+
+
+
+
+#Maritime Marine Buffs
+country_event = {
+	id = province_idea_event.17
+	title = province_idea_event.17.t
+	desc = province_idea_event.17.d
+	picture = TRADEGOODS_eventPicture
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	hidden = yes
+	
+	trigger = {
+		NOT = { has_country_modifier = maritime_marines_modifier   }
+		has_idea = oorah_marines
+	}
+
+	immediate = {
+		add_country_modifier = {
+			name = "maritime_marines_modifier"
+			duration = -1
+		}
+	}
+	
+	option = {
+		name = naval_ica_option1
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = {
+	id = province_idea_event.18
+	title = province_idea_event.18.t
+	desc = province_idea_event.18.d
+	picture = TRADEGOODS_eventPicture
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	hidden = yes
+	
+	trigger = {
+		has_country_modifier = maritime_marines_modifier 
+		NOT = { has_idea = oorah_marines  }
+	}
+
+	immediate = {
+		remove_country_modifier = maritime_marines_modifier
+	}
+	
+	option = {
+		name = naval_ica_option2
+		ai_chance = { factor = 100 }
+	}
+}

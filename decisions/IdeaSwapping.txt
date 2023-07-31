@@ -1,0 +1,345 @@
+country_decisions = {
+    clear_idea_groups = {
+        potential = {
+            ai = no
+            NOT = {
+                has_country_flag = cleared_idea_groups_flag
+            }
+            NOT = {
+                had_country_flag = {
+                    flag = idea_swapping_flag
+                    days = 365
+                }
+            }
+            has_country_flag = idea_swapping_flag
+        }
+        allow = {
+            adm_tech = 5
+            ai = no
+        }
+
+        major = yes
+
+        effect = {
+            clear_idea_groups_scripted_effect = yes
+            set_country_flag = cleared_idea_groups_flag
+            set_country_flag = idea_reset_flag #Decisions time out after 365 days
+        }
+        ai_will_do = {
+			factor = 0
+		}
+    }
+
+    select_mil_idea = {
+        potential = {
+            ai = no
+            NOT = {
+                had_country_flag = {
+                    flag = idea_swapping_flag
+                    days = 365
+                }
+            }
+            NOT = { has_country_flag = temp_idea_decision_flag }
+            has_country_flag = idea_reset_flag
+        }
+
+        major = yes
+
+        allow = {
+            ai = no
+            idea_group_limit = yes
+            OR = {
+                #Techs 5 to 10
+                AND = {
+                    adm_tech = 5
+                    NOT = { adm_tech = 14 }
+                    NOT = { #Prevents overstacking of one category
+                        calc_true_if = {
+                            has_mil_group_scripted_trigger = yes
+                            amount = 1
+                        } 
+                    }
+                }
+                #Tech 14
+                AND = {
+                    adm_tech = 14
+                    NOT = { adm_tech = 17 }
+                    NOT = { #Ensures there's at least 1 idea in every category
+                        AND = {
+                            OR = {
+                                calc_true_if = {
+                                    has_dip_group_scripted_trigger = yes
+                                    amount = 2
+                                }
+                                calc_true_if = {
+                                    has_adm_group_scripted_trigger = yes
+                                    amount = 2
+                                }
+                            }
+                            calc_true_if = {
+                                has_mil_group_scripted_trigger = yes
+                                amount = 1
+                            }   
+                        }
+                    }
+                    NOT = { #Prevents overstacking of one category
+                        calc_true_if = {
+                            has_mil_group_scripted_trigger = yes
+                            amount = 2
+                        } 
+                    }
+                }
+                #Tech 17
+                AND = {
+                    adm_tech = 17
+                    NOT = { adm_tech = 20 }
+                    NOT = { #Prevents overstacking of one category
+                        calc_true_if = {
+                            has_mil_group_scripted_trigger = yes
+                            amount = 2
+                        } 
+                    }
+                }
+                #Techs 20 and 23
+                AND = {
+                    adm_tech = 20
+                    NOT = { adm_tech = 26 }
+                    NOT = { #Prevents overstacking of one category
+                        calc_true_if = {
+                            has_mil_group_scripted_trigger = yes
+                            amount = 3
+                        }
+                    }
+                }
+                #Tech 26
+                AND = {
+                    adm_tech = 26
+                    NOT = { #Prevents overstacking of one category
+                        calc_true_if = {
+                            has_mil_group_scripted_trigger = yes
+                            amount = 4
+                        } 
+                    }
+                }
+            }
+        }
+
+        effect = {
+            country_event = {
+                id = idea_selection.1
+            }
+            set_country_flag = temp_idea_decision_flag
+        }
+        ai_will_do = {
+			factor = 0
+		}
+    }
+    select_dip_idea = {
+        potential = {
+            ai = no
+            NOT = {
+                had_country_flag = {
+                    flag = idea_swapping_flag
+                    days = 365
+                }
+            }
+            NOT = { has_country_flag = temp_idea_decision_flag }
+            has_country_flag = idea_reset_flag
+        }
+
+        major = yes
+
+        allow = {
+            ai = no
+            idea_group_limit = yes
+            OR = {
+                #Techs 5 to 10
+                AND = {
+                    adm_tech = 5
+                    NOT = { 
+                        calc_true_if = { #Prevents overstacking of one category
+                            has_dip_group_scripted_trigger = yes
+                            amount = 1
+                        } 
+                    }
+                }
+                #Tech 14
+                AND = {
+                    adm_tech = 14
+                    NOT = { adm_tech = 17 }
+                    NOT = { #Ensures there's at least 1 idea in every category
+                        AND = {
+                            OR = {
+                                calc_true_if = {
+                                    has_adm_group_scripted_trigger = yes
+                                    amount = 2
+                                }
+                                calc_true_if = {
+                                    has_mil_group_scripted_trigger = yes
+                                    amount = 2
+                                }
+                            }
+                            calc_true_if = {
+                                has_dip_group_scripted_trigger = yes
+                                amount = 1
+                            }   
+                        }
+                    }
+                    NOT = { #Prevents overstacking of one category
+                        calc_true_if = {
+                            has_dip_group_scripted_trigger = yes
+                            amount = 2
+                        } 
+                    }
+                }
+                #Tech 17
+                AND = {
+                    adm_tech = 17
+                    NOT = { adm_tech = 20 }
+                    NOT = { #Prevents overstacking of one category
+                        calc_true_if = {
+                            has_dip_group_scripted_trigger = yes
+                            amount = 2
+                        } 
+                    }
+                }
+                #Techs 20 and 23
+                AND = {
+                    adm_tech = 20
+                    NOT = { adm_tech = 26 }
+                    NOT = { #Prevents overstacking of one category
+                        calc_true_if = {
+                            has_dip_group_scripted_trigger = yes
+                            amount = 3
+                        } 
+                    }
+                }
+                #Tech 26
+                AND = {
+                    adm_tech = 26
+                    NOT = { #Prevents overstacking of one category
+                        calc_true_if = {
+                            has_dip_group_scripted_trigger = yes
+                            amount = 4
+                        } 
+                    }
+                }
+            }
+        }
+
+        effect = {
+            country_event = {
+                id = idea_selection.2
+            }
+            set_country_flag = temp_idea_decision_flag
+        }
+        ai_will_do = {
+			factor = 0
+		}
+    }
+    select_adm_idea = {
+        potential = {
+            ai = no
+            NOT = {
+                had_country_flag = {
+                    flag = idea_swapping_flag
+                    days = 365
+                }
+            }
+            NOT = { has_country_flag = temp_idea_decision_flag }
+            has_country_flag = idea_reset_flag
+        }
+
+        major = yes
+
+        allow = {
+            ai = no
+            idea_group_limit = yes
+            OR = {
+                #Techs 5 to 10
+                AND = {
+                    adm_tech = 5
+                    NOT = { adm_tech = 14 }
+                    NOT = { 
+                        calc_true_if = {
+                            has_adm_group_scripted_trigger = yes
+                            amount = 1
+                        } 
+                    }
+                }
+                #Tech 14
+                AND = {
+                    adm_tech = 14
+                    NOT = { adm_tech = 17 }
+                    NOT = { 
+                        AND = {
+                            OR = {
+                                calc_true_if = {
+                                    has_dip_group_scripted_trigger = yes
+                                    amount = 2
+                                }
+                                calc_true_if = {
+                                    has_mil_group_scripted_trigger = yes
+                                    amount = 2
+                                }
+                            }
+                            calc_true_if = {
+                                has_adm_group_scripted_trigger = yes
+                                amount = 1
+                            }   
+                        }
+                    }
+                    NOT = { 
+                        calc_true_if = {
+                            has_adm_group_scripted_trigger = yes
+                            amount = 2
+                        } 
+                    }
+                }
+                #Tech 17
+                AND = {
+                    adm_tech = 17
+                    NOT = { adm_tech = 20 }
+                    NOT = { 
+                        calc_true_if = {
+                            has_adm_group_scripted_trigger = yes
+                            amount = 2
+                        } 
+                    }
+                }
+                #Techs 20 and 23
+                AND = {
+                    adm_tech = 20
+                    NOT = { adm_tech = 26 }
+                    NOT = { 
+                        calc_true_if = {
+                            has_adm_group_scripted_trigger = yes
+                            amount = 3
+                        } 
+                    }
+                }
+                #Tech 26
+                AND = {
+                    adm_tech = 26
+                    NOT = { 
+                        calc_true_if = {
+                            has_adm_group_scripted_trigger = yes
+                            amount = 4
+                        } 
+                    }
+                }
+            }
+        }
+
+        effect = {
+            country_event = {
+                id = idea_selection.3
+            }
+            set_country_flag = temp_idea_decision_flag
+        }
+        ai_will_do = {
+			factor = 0
+		}
+    }
+    
+}

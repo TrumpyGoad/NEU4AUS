@@ -1,0 +1,16 @@
+version="1.35"
+tags={
+	"Map"
+	"Balance"
+	"National Ideas"
+	"Missions And Decisions"
+	"Gameplay"
+	"Trade"
+	"Religion"
+	"New Nations"
+	"Events"
+	"Utilities"
+}
+name="EU4 Australia Multiplayer+"
+supported_version="1.35.6"
+remote_file_id="3005627651"

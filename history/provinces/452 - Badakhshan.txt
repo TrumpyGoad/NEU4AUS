@@ -1,0 +1,27 @@
+#452 - Badakhshan
+
+owner = TIM
+controller = TIM
+culture = afghani
+religion = sunni
+capital = "Munjan"
+trade_goods = gems #Rubies, Saphires
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+is_city = yes
+add_core = TIM
+add_core = AFG
+discovered_by = KAS
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = indian
+discovered_by = nomad_group
+
+1444.11.11 = {
+	remove_core = TIM
+	add_Core = AFG
+	owner = AFG
+	controller = AFG
+	}

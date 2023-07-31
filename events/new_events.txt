@@ -1,0 +1,612 @@
+########################################
+# Brand new Events for EU4 AUS MOD
+
+# Written by Ezio
+########################################
+
+namespace = new_events
+
+#St. Domingue Event
+country_event = {
+	id = new_events.1
+	title = new_events.1.t
+	desc = new_events.1.d
+	picture = TRADEGOODS_eventPicture
+	fire_only_once = yes
+
+	major = yes
+
+	trigger = {
+		NOT = { has_global_flag = sugar_capital_happened }
+		any_owned_province = {
+				region = carribeans_region
+				trade_goods = sugar
+				has_building = plantations
+				development = 15
+			}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					region = carribeans_region
+					trade_goods = sugar
+					has_building = plantations
+					development = 15
+				}
+				save_event_target_as = sugar_capital
+			}
+		}
+	}
+	option = {
+		name = new_events.1.a
+		event_target:sugar_capital = {
+			add_permanent_province_modifier = {
+				name = pearl_of_the_antilles
+				duration = -1
+			}
+		}
+		set_global_flag =  sugar_capital_happened
+		}
+}
+
+
+
+#Dismantle HRE for shattered
+
+
+country_event = {
+
+	id = new_events.3
+	title = "shattered_hre.t"
+	desc = "shattered_hre.d"
+	picture = TRADEGOODS_eventPicture
+
+	fire_only_once = yes
+	major = yes
+	hidden = yes
+
+	trigger = {
+		start_date = 1444.11.12
+	}
+
+	option = {
+		name = shattered_hre.a
+		dismantle_hre = yes
+	}
+}
+
+
+#Startup Event
+#+1 Stab at Start of game
+#Transports for England
+#Redistributes Electorships to players
+#Stop Prussia Cheesing
+#Independent Holland and Sweden
+
+country_event = {
+
+	id = new_events.4
+	title = "new_events_4.t"
+	desc = "new_events_4.d"
+	picture = TRADEGOODS_eventPicture
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	hidden = yes
+
+	trigger = {
+		owns = 1
+	}
+
+	immediate = {
+		every_country = {
+			add_yearly_manpower = 3
+			add_stability = 1
+		}
+		#### +4 Transports for England
+		236 = {
+			ENG = {
+				transport = PREV
+			}
+		}
+		236 = {
+			ENG = {
+				transport = PREV
+			}
+		}
+		236 = {
+			ENG = {
+				transport = PREV
+			}
+		}
+		236 = {
+			ENG = {
+				transport = PREV
+			}
+		}
+		####Makes Every Italian Player Join the HRE
+		every_country = {
+			limit = {
+				NOT = {is_part_of_hre = yes}
+				capital_scope = {
+					region = italy_region
+				}
+				NOT = { has_country_flag = joined_hre_decision_flag }
+				ai = no
+			}
+			every_owned_province = {
+				limit = {
+					region = italy_region
+				}
+				set_in_empire = yes
+			}
+		}
+		####Makes Every player in the HRE an elector
+		every_country = {
+			limit = {
+				ai = no
+				is_part_of_hre = yes
+				NOT = { is_emperor = yes }
+				NOT = { is_elector = yes }
+			}
+			elector = yes
+		}
+		###Independence for Holland if player
+		HOL = {
+			if = {
+				limit = {
+					ai = no
+				}
+				grant_independence = yes
+			}
+
+		}
+		###Independence for Sweden if player
+		SWE = {
+			if = {
+				limit = {
+					ai = no
+				}
+				define_ruler = {
+					name = "Gustav"
+					dynasty = "Vasa"
+					adm = 5
+					dip = 4
+					mil = 4
+					age = 20
+					claim = 95
+				}		
+				grant_independence = yes
+			}
+
+		}
+		####Grants spare elector slots to AI
+		if = {
+			limit = {
+				NOT = { num_of_electors = 7 }
+				NOT = { SAX = { is_elector = yes} }
+			}
+			SAX = {
+				elector = yes
+			}
+		}
+		if = {
+			limit = {
+				NOT = { num_of_electors = 7 }
+				NOT = { TRI = { is_elector = yes} }
+			}
+			TRI = {
+				elector = yes
+			}
+		}
+		if = {
+			limit = {
+				NOT = { num_of_electors = 7 }
+				NOT = { PAL = { is_elector = yes} }
+			}
+			PAL = {
+				elector = yes
+			}
+		}
+		if = {
+			limit = {
+				NOT = { num_of_electors = 7 }
+				NOT = { KOL = { is_elector = yes} }
+			}
+			KOL = {
+				elector = yes
+			}
+		}
+		if = {
+			limit = {
+				NOT = { num_of_electors = 7 }
+				NOT = { MAI = { is_elector = yes} }
+			}
+			MAI = {
+				elector = yes
+			}
+		}
+		###Gives country flag to all eligible Prussia candidates
+		every_country = {
+			limit = {
+				OR = {
+					tag = LIV
+					tag = SAX
+					tag = STE
+					tag = WOL 
+					tag = MKL 
+					tag = ANH
+					tag = MAG
+					tag = MKL
+					tag = RIG
+					tag = THU
+				}
+			}
+			set_country_flag = can_form_prussia_flag
+		}
+		#Fixes issue with Pavia's province name
+		4728 = {
+			change_province_name = "Pavi"
+		}
+		4728 = {
+			change_province_name = "Pavia"
+		}
+		
+
+	}
+
+	option = {
+		name = free_stab_event
+	}
+}
+
+#Clears country name when tag switching from Denmark-Holstein
+country_event = {
+
+	id = new_events.5
+	title = "new_events.5.t"
+	desc = "new_events.5.d"
+	picture = TRADEGOODS_eventPicture
+
+	fire_only_once = yes
+	hidden = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		AND = { 
+			has_country_flag = denmark_joined_hre_decision_flag
+			NOT = { has_country_flag = formed_kalmar_flag }
+			NOT = { tag = DAN }
+		}
+	}
+
+	option = {
+		name = new_events.5.a
+		restore_country_name = yes	
+	}
+}
+
+country_event = {
+
+	id = new_events.6
+	title = "new_events.6.t"
+	desc = "new_events.6.desc"
+	picture = POPE_PREACHING_eventPicture
+
+	is_triggered_only = yes
+
+	#Levy Church Tax
+	option = {
+		name = new_events.6.a
+		trigger = {
+			NOT = { has_country_modifier = papal_sanction_for_church_taxes }
+		}
+		add_country_modifier = {
+			name = "papal_sanction_for_church_taxes"
+			duration = 7300
+		}
+		change_variable = {
+			which = PapalInfluencePAP
+			value = 50
+		}
+		hidden_effect = {
+			country_event = {
+				id = new_events.7
+				days = 7300
+			}
+		}
+	}
+	#Forgive Ursury
+	option = {
+		name = new_events.6.b
+		trigger = {
+			NOT = { has_country_modifier = usury_forgiven }
+		}
+		add_country_modifier = {
+			name = "usury_forgiven"
+			duration = 7300
+		}
+		change_variable = {
+			which = PapalInfluencePAP
+			value = 50
+		}
+	}
+	#Bless Ruler
+	option = {
+		name = new_events.6.c
+		trigger = {
+			NOT = { has_country_modifier = papal_blessing }
+		}
+		add_country_modifier = {
+			name = "papal_blessing"
+			duration = 7300
+		}
+		change_variable = {
+			which = PapalInfluencePAP
+			value = 50
+		}
+	}
+	#Proclaim Holy War
+	option = {
+		name = new_events.6.d
+		trigger = {
+			NOT = { has_country_modifier = papal_sanction_for_holy_war }
+		}
+		add_country_modifier = {
+			name = "papal_sanction_for_holy_war"
+			duration = 7300
+		}
+		change_variable = {
+			which = PapalInfluencePAP
+			value = 50
+		}
+	}
+	#Sanction Dynasty
+	option = {
+		name = new_events.6.e
+		trigger = {
+			NOT = { has_country_modifier = papal_indulgence }
+		}
+		add_country_modifier = {
+			name = "papal_indulgence"
+			duration = 7300
+		}
+		change_variable = {
+			which = PapalInfluencePAP
+			value = 50
+		}
+	}
+	#Papal Legate
+	option = {
+		name = new_events.6.f
+		trigger = {
+			NOT = { has_country_modifier = papal_legate }
+		}
+		add_country_modifier = {
+			name = "papal_legate"
+			duration = 7300
+		}
+		change_variable = {
+			which = PapalInfluencePAP
+			value = 50
+		}
+	}
+	#No Blessing
+	option = {
+		name = new_events.6.i
+	}
+	
+}
+
+#+1 to stat of choice for newly elected Popes
+country_event = {
+
+	id = new_events.7
+	title = "new_events.7.t"
+	desc = "new_events.7.desc"
+	picture = POPE_PREACHING_eventPicture
+
+	is_triggered_only = yes
+
+	#+1 Admin Skill
+	option = {
+		name = new_events.7.a
+		trigger = {
+			NOT = { adm = 6 } #Won't fire if you have 6 admin
+		}
+		change_adm = 1
+	}
+	#+1 Dip Skill
+	option = {
+		name = new_events.7.b
+		trigger = {
+			NOT = { dip = 6 } #Won't fire if you have 6 dip
+		}
+		change_dip = 1
+	}
+	#+1 Mil Skill
+	option = {
+		name = new_events.7.c
+		trigger = {
+			NOT = { has_country_modifier = papal_blessing }
+		}
+		trigger = {
+			NOT = { mil = 6 } #Won't fire if you have 6 mil
+		}
+		change_mil = 1
+	}
+	#Backup Option in case you get a 6/6/6 or want to have a worse ruler?
+	option = {
+		name = new_events.7.d
+		add_prestige = 10
+		add_devotion = 10
+	}
+	
+}
+#WIP :)
+#Discovering the Source of the Nile
+country_event = {
+
+	id = new_events.8
+	title = "new_events.8.t"
+	desc = "new_events.8.desc"
+	picture = COLONIZATION_eventPicture
+	major = yes
+
+	is_triggered_only = yes
+
+	#Lake Victoria
+	option = {
+		name = new_events.8.a
+		1649 = {
+			change_province_name = "Lake Victoria"
+		}
+	}
+	#Random Australian State
+	option = {
+		name = new_events.8.b
+		random_list = {
+			20 = {
+				1649 = {
+					change_province_name = "Lake Queensland"
+				}
+			}
+			20 = {
+				1649 = {
+					change_province_name = "Lake New South Wales"
+				}
+			}
+			20 = {
+				1649 = {
+					change_province_name = "Lake South Australia"
+				}
+			}
+			20 = {
+				1649 = {
+					change_province_name = "Lake Western Australia"
+				}
+			}
+			15 = {
+				1649 = {
+					change_province_name = "Lake Northern Territory"
+				}
+			}
+			5 = {
+				1649 = {
+					change_province_name = "Lake Australian Capital Territory"
+				}
+			}
+		}
+		
+	}
+	#Allah's Oasis
+	option = {
+		name = new_events.8.c
+		1649 = {
+			change_province_name = "Wahat Allah"
+		}
+	}
+	#Institutionalised Corruption
+	option = {
+		name = new_events.8.d
+		random_list = {
+			15 = {
+				1649 = {
+					change_province_name = "Lake Taric"
+				}
+			}
+			15 = {
+				1649 = {
+					change_province_name = "Lake Fidget"
+				}
+			}
+			15 = {
+				1649 = {
+					change_province_name = "Lake Whisper"
+				}
+			}
+			15 = {
+				1649 = {
+					change_province_name = "Lake Natalie"
+				}
+			}
+			15 = {
+				1649 = {
+					change_province_name = "Lake Hara"
+				}
+			}
+			15 = {
+				1649 = {
+					change_province_name = "Lake Panzer"
+				}
+			}
+			9 = {
+				1649 = {
+					change_province_name = "Lake UltimateAlloy"
+				}
+			}
+			1 = {
+				1649 = {
+					change_province_name = "Lake IGNOBLE"
+				}
+			}
+		}
+	}
+	#Lake Ezio
+	option = {
+		name = new_events.8.e
+		1649 = {
+			change_province_name = "Lake Ezio"
+		}
+	}
+	#Lake Deathsspear
+	option = {
+		name = new_events.8.f
+		1649 = {
+			change_province_name = "Lake Deathsspear"
+		}
+	}
+	
+	
+	
+}
+#Change ideas when hotjoining as colonial nation
+country_event = {
+
+	id = new_events.9
+	title = "new_events.9.t"
+	desc = "new_events.9.desc"
+	picture = POPE_PREACHING_eventPicture
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	trigger = {
+		is_colony_trigger = yes
+		ai = no
+		NOT = {has_country_flag = idea_swapping_flag}
+	}
+
+	immediate = {
+		set_country_flag = idea_swapping_flag
+	}
+
+	option = {
+		name = new_events.9.a
+		custom_tooltip = "idea_swapping_tooltip"
+	}
+	
+	
+	
+}
