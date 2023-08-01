@@ -1,8 +1,7 @@
 #213 - Barcelona
 
-owner = ARA	#Alfons V of Aragon
-controller = ARA
-add_core = ARA
+owner = CAT	#Alfons V of Aragon
+controller = CAT
 add_core = CAT
 culture = catalan
 religion = catholic
@@ -21,12 +20,5 @@ discovered_by = ottoman
 extra_cost = 8
 center_of_trade = 1
 
-1412.6.29 = { revolt = { type = pretender_rebels size = 0 } controller = REB } # Jaime d'Urgell Uprising
-1413.1.1 = { revolt = {} controller = ARA }
-1444.11.12 = {
-	remove_core = ARA
-	owner = CAT
-	controller = CAT
-	add_core = CAT
-		}
+
 

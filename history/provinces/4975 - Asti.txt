@@ -13,6 +13,7 @@ capital = "Asti"
 is_city = yes
 add_core = SAV
 add_core = MFA
+center_of_trade = 1
 
 
 

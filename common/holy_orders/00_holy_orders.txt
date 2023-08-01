@@ -377,7 +377,7 @@ calatrava_order = {
         add_base_manpower = -1
     }
     modifier = {
-		local_defender_dice_roll_bonus = 1 
+		local_defensiveness = 0.2 
     }
     ai_priority = {
         factor = 2

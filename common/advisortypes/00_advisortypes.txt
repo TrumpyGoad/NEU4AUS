@@ -679,8 +679,7 @@ colonial_governor = {
 	monarch_power = DIP
 	
 	# Bonus
-	global_colonial_growth = 20
-	global_tariffs = 0.1
+	global_colonial_growth = 30
 	
 	skill_scaled_modifier = {
 		trigger = {

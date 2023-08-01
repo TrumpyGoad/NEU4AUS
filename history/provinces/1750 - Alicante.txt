@@ -1,8 +1,7 @@
-#1750 - Alàcant
+#1750 - Alï¿½cant
 
-owner = ARA		#Martí I of Aragon
-controller = ARA
-add_core = ARA
+owner = VAL		#Martï¿½ I of Aragon
+controller = VAL
 add_core = VAL
 culture = catalan
 religion = catholic
@@ -11,7 +10,7 @@ base_tax = 3
 base_production = 3
 trade_goods = wine
 base_manpower = 3 
-capital = "Alàcant" 
+capital = "Alï¿½cant" 
 is_city = yes
 
 

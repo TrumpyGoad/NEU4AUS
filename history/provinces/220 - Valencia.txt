@@ -1,8 +1,7 @@
-#220 - València
+#220 - Valï¿½ncia
 
-owner = ARA	#Alfons V of Aragon
-controller = ARA
-add_core = ARA
+owner = VAL	#Alfons V of Aragon
+controller = VAL
 add_core = VAL
 culture = catalan
 religion = catholic
@@ -12,7 +11,7 @@ base_production = 5
 trade_goods = cloth
 base_manpower = 4
 fort_15th = yes
-capital = "València" 
+capital = "Valï¿½ncia" 
 is_city = yes
 discovered_by = western
 discovered_by = eastern
