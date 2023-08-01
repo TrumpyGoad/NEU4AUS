@@ -66,287 +66,9 @@ french_missions_1 = {
 		}
 	}
 	
-	fra_burg_succession = { 
-		icon = fra_burg_succession
-		required_missions = { fra_liberate_norm } 
-		position = 2 
-		provinces_to_highlight = { 
-			OR = { 
-				area = west_burgundy_area 
-				province_id = 88
-				province_id = 89
-				province_id = 1743
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
-		}
-		trigger = { 
-			OR = { 
-				AND = { 
-					picardy_area = {
-						type = all 
-						OR = { 
-							province_id = 87 
-							country_or_non_sovereign_subject_holds = ROOT 
-						}
-					}
-					west_burgundy_area = { 
-						type = all 
-						country_or_non_sovereign_subject_holds = ROOT 
-					}
-				}
-				BUR = {
-					OR = { 
-						is_subject_of = ROOT 
-						alliance_with = ROOT 
-					}
-					AND = {
-						if = { 
-							limit = { is_subject_of = ROOT }
-							has_opinion = {
-								who = ROOT 
-								value = 125
-							}
-						}
-						else = {
-							has_opinion = {
-								who = ROOT 
-								value = 180
-							}
-						}
-						if = {
-							limit = { has_dlc = "Leviathan" }
-							trust = { who = FRA value = 75 }
-						}
-						else = { monthly_dip = 8 }
-						if = { 
-							limit = { is_subject_of = ROOT }
-							NOT = { liberty_desire = 10 }
-						}
-					}
-				}
-			}
-		}
-		effect = {
-			if = { 
-				limit = { has_dlc = "Emperor" } 
-				custom_tooltip = fra_if_bur_subject_and_emperor_dlc_tt
-				tooltip = { 
-					country_event = { id = incidents_bur_inheritance.501 } 
-				}
-				custom_tooltip = fra_alternatively_10_dev_spread_and_tt 
-				tooltip = { 
-					add_country_modifier = { 
-						name = fra_reintegration_of_burgundian_lands_modifier
-						duration = 7300
-					}
-				}
-				custom_tooltip = fra_complete_via_opinion_alliance_and_trust_tt
-			}
-			else = { 
-				custom_tooltip = fra_alternatively_10_dev_spread_and2_tt 
-				tooltip = { 
-					add_country_modifier = { 
-						name = fra_reintegration_of_burgundian_lands_modifier
-						duration = 7300
-					}
-				}
-			}
-			hidden_effect = { 
-				if = {
-					limit = { 
-						BUR = { is_subject_of = ROOT } 
-						has_dlc = "Emperor"
-					}
-					country_event = { id = incidents_bur_inheritance.501 } 
-				}
-				else_if = { 
-					limit = { 
-						OR = {  
-							NOT = { has_dlc = "Emperor" } 
-							AND = { 
-								picardy_area = {
-									type = all 
-									OR = { 
-										province_id = 87 
-										country_or_non_sovereign_subject_holds = ROOT 
-									}
-								}
-								west_burgundy_area = { 
-									type = all 
-									country_or_non_sovereign_subject_holds = ROOT 
-								}
-							}
-						}
-					}
-					add_country_modifier = { 
-						name = fra_reintegration_of_burgundian_lands_modifier
-						duration = 7300
-					}
-					random_owned_province = { 
-						limit = { 
-							OR = { 
-								area = west_burgundy_area 
-								area = picardy_area 
-								area = bourgogne_area 
-								area = lorraine_area 
-							}
-						}
-						random_list = {
-							40 = { add_base_tax = 1 } 
-							30 = { add_base_production = 1 } 
-							30 = { add_base_manpower = 1 } 
-						}
-					}
-					random_owned_province = { 
-						limit = { 
-							OR = { 
-								area = west_burgundy_area 
-								area = picardy_area 
-								area = bourgogne_area 
-								area = lorraine_area 
-							}
-						}
-						random_list = {
-							40 = { add_base_tax = 1 } 
-							30 = { add_base_production = 1 } 
-							30 = { add_base_manpower = 1 } 
-						}
-					}
-					random_owned_province = { 
-						limit = { 
-							OR = { 
-								area = west_burgundy_area 
-								area = picardy_area 
-								area = bourgogne_area 
-								area = lorraine_area 
-							}
-						}
-						random_list = {
-							40 = { add_base_tax = 1 } 
-							30 = { add_base_production = 1 } 
-							30 = { add_base_manpower = 1 } 
-						}
-					}
-					random_owned_province = { 
-						limit = { 
-							OR = { 
-								area = west_burgundy_area 
-								area = picardy_area 
-								area = bourgogne_area 
-								area = lorraine_area 
-							}
-						}
-						random_list = {
-							40 = { add_base_tax = 1 } 
-							30 = { add_base_production = 1 } 
-							30 = { add_base_manpower = 1 } 
-						}
-					}
-					random_owned_province = { 
-						limit = { 
-							OR = { 
-								area = west_burgundy_area 
-								area = picardy_area 
-								area = bourgogne_area 
-								area = lorraine_area 
-							}
-						}
-						random_list = {
-							40 = { add_base_tax = 1 } 
-							30 = { add_base_production = 1 } 
-							30 = { add_base_manpower = 1 } 
-						}
-					}
-					random_owned_province = { 
-						limit = { 
-							OR = { 
-								area = west_burgundy_area 
-								area = picardy_area 
-								area = bourgogne_area 
-								area = lorraine_area 
-							}
-						}
-						random_list = {
-							40 = { add_base_tax = 1 } 
-							30 = { add_base_production = 1 } 
-							30 = { add_base_manpower = 1 } 
-						}
-					}
-					random_owned_province = { 
-						limit = { 
-							OR = { 
-								area = west_burgundy_area 
-								area = picardy_area 
-								area = bourgogne_area 
-								area = lorraine_area 
-							}
-						}
-						random_list = {
-							40 = { add_base_tax = 1 } 
-							30 = { add_base_production = 1 } 
-							30 = { add_base_manpower = 1 } 
-						}
-					}
-					random_owned_province = { 
-						limit = { 
-							OR = { 
-								area = west_burgundy_area 
-								area = picardy_area 
-								area = bourgogne_area 
-								area = lorraine_area 
-							}
-						}
-						random_list = {
-							40 = { add_base_tax = 1 } 
-							30 = { add_base_production = 1 } 
-							30 = { add_base_manpower = 1 } 
-						}
-					}
-					random_owned_province = { 
-						limit = { 
-							OR = { 
-								area = west_burgundy_area 
-								area = picardy_area 
-								area = bourgogne_area 
-								area = lorraine_area 
-							}
-						}
-						random_list = {
-							40 = { add_base_tax = 1 } 
-							30 = { add_base_production = 1 } 
-							30 = { add_base_manpower = 1 } 
-						}
-					}
-					random_owned_province = { 
-						limit = { 
-							OR = { 
-								area = west_burgundy_area 
-								area = picardy_area 
-								area = bourgogne_area 
-								area = lorraine_area 
-							}
-						}
-						random_list = {
-							40 = { add_base_tax = 1 } 
-							30 = { add_base_production = 1 } 
-							30 = { add_base_manpower = 1 } 
-						}
-					}
-				}
-				else_if = { 
-					limit = { 
-						BUR = { alliance_with = ROOT }
-						has_dlc = "Emperor" 
-					}
-					BUR = { set_country_flag = fra_guaranteed_succession_flag } 
-				}
-			}
-		}
-	}
-	
 	fra_border_empire = { 
 		icon = end_the_habsburgs
-		required_missions = { fra_burg_succession fra_unite_france } 
+		required_missions = {  fra_liberate_norm fra_unite_france } 
 		position = 4 
 		provinces_to_highlight = { 
 			area = bourgogne_area 
@@ -675,6 +397,27 @@ french_missions_1_Continuation_a = {
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT 
+			}
+			corsica_sardinia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			central_sicily_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			corsica_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}	
@@ -2750,16 +2493,6 @@ french_missions_3_continuation_after_hre_missions = {
 		}
 		trigger = {
 			if = { 
-				limit = { has_country_flag = fra_papal_lap_dop_flag } 
-				venetia_area = { 
-					type = all 
-					OR = { 
-						country_or_non_sovereign_subject_holds = ROOT 
-						country_or_non_sovereign_subject_holds = PAP 
-					}
-				}
-			}
-			else = { 
 				venetia_area = { 
 					type = all 
 					country_or_non_sovereign_subject_holds = ROOT 
@@ -2779,25 +2512,8 @@ french_missions_3_continuation_after_hre_missions = {
 			}
 		}
 		effect = { 
-			custom_tooltip = fra_lapdog_reward_cambrai_tt
-			tooltip = { 
-				# venetia_area = { 
-					# limit = { 
-						# NOT = { country_or_non_sovereign_subject_holds = PAP } 
-					# }
-					# remove_core = ROOT 
-					# add_core = PAP 
-					# cede_province = PAP 
-				# }
-				add_country_modifier = { 
-					name = fra_venetian_craftsmanship_modifier
-					duration = -1 
-					desc = fra_as_long_as_owned_by_pap_or_subject_desc
-				}
-			}
 			if = { 	
 				limit = { has_dlc = "Leviathan" }
-				custom_tooltip = fra_alternatively_tt
 				tooltip = { 
 					112 = { 
 						destroy_great_project = { 
@@ -2820,24 +2536,8 @@ french_missions_3_continuation_after_hre_missions = {
 					add_prestige = 20 
 				}
 			}
-			hidden_effect = { 
-				if = { 
-					limit = { has_country_flag = fra_papal_lap_dop_flag } 
-					venetia_area = { 
-						limit = { 
-							NOT = { country_or_non_sovereign_subject_holds = PAP } 
-						}
-						remove_core = ROOT 
-						add_core = PAP 
-						cede_province = PAP 
-					}
-					add_country_modifier = { 
-						name = fra_venetian_craftsmanship_modifier
-						duration = -1 
-						desc = fra_as_long_as_owned_by_pap_or_subject_desc
-					}
-				}
-				else_if = {
+			hidden_effect = {
+				if = {
 					limit = { has_dlc = "Leviathan" } 
 					112 = {
 						destroy_great_project = { 
@@ -2847,15 +2547,6 @@ french_missions_3_continuation_after_hre_missions = {
 					set_country_flag = fra_build_roi_palace_flag
 					112 = { 
 						add_province_triggered_modifier = fra_roi_palace_triggered_modifier
-					}
-					add_prestige = 20 
-				}
-				else = { 
-					112 = { 
-						add_province_modifier = {
-							name = fra_roi_palace_modifier 
-							duration = -1 
-						}
 					}
 					add_prestige = 20 
 				}
@@ -2886,67 +2577,6 @@ french_missions_3_continuation_after_hre_missions = {
 		}
 		trigger = { 
 			if = { 
-				limit = { has_country_flag = fra_papal_lap_dop_flag } 
-				custom_trigger_tooltip = {
-					tooltip = fra_northern_italy_by_you_subject_or_papal_states_or_subject_tt
-					liguria_area = {
-						type = all 
-						OR = { 
-							country_or_non_sovereign_subject_holds = ROOT 
-							country_or_non_sovereign_subject_holds = PAP 
-						}
-					}
-					piedmont_area = {
-						type = all 
-						OR = { 
-							country_or_non_sovereign_subject_holds = ROOT 
-							country_or_non_sovereign_subject_holds = PAP 
-						}
-					}
-					lombardy_area = {
-						type = all 
-						OR = { 
-							country_or_non_sovereign_subject_holds = ROOT 
-							country_or_non_sovereign_subject_holds = PAP 
-						}
-					}
-					po_valley_area = {
-						type = all 
-						OR = { 
-							country_or_non_sovereign_subject_holds = ROOT 
-							country_or_non_sovereign_subject_holds = PAP 
-						}
-					}
-					venetia_area = {
-						type = all 
-						OR = { 
-							country_or_non_sovereign_subject_holds = ROOT 
-							country_or_non_sovereign_subject_holds = PAP 
-						}
-					}
-					tuscany_area = {
-						type = all 
-						OR = { 
-							country_or_non_sovereign_subject_holds = ROOT 
-							country_or_non_sovereign_subject_holds = PAP 
-						}
-					}
-					emilia_romagna_area = {
-						type = all 
-						OR = { 
-							country_or_non_sovereign_subject_holds = ROOT 
-							country_or_non_sovereign_subject_holds = PAP 
-						}
-					}
-					PAP = { 
-						OR = { 
-							is_subject_of = ROOT 
-							alliance_with = ROOT 
-						}
-					}
-				}
-			}
-			else = { 
 				custom_trigger_tooltip = {
 					tooltip = fra_northern_italy_by_you_subject_tt
 					liguria_area = {
@@ -2981,14 +2611,6 @@ french_missions_3_continuation_after_hre_missions = {
 			}
 		}
 		effect = {
-			custom_tooltip = fra_cede_northern_italy_to_pope_coronation_and_tt 
-			tooltip = { 
-				add_ruler_modifier = { 
-					name = fra_coronated_by_the_pope_modifier
-					duration = -1
-				}
-				country_event = { id = flavor_fra.117 }
-			}
 			custom_tooltip = fra_alternatively_gain_following_evolving_reward_tt
 			tooltip = { 
 				add_country_modifier = { 
@@ -2997,32 +2619,6 @@ french_missions_3_continuation_after_hre_missions = {
 				}
 			}
 			hidden_effect = { 
-				if = { 
-					limit = { has_country_flag = fra_papal_lap_dop_flag } 
-					italy_region = { 
-						limit = { 
-							OR = {
-								area = liguria_area
-								area = piedmont_area 
-								area = lombardy_area
-								area = po_valley_area
-								area = venetia_area
-								area = tuscany_area
-								area = emilia_romagna_area 
-							}
-							country_or_non_sovereign_subject_holds = ROOT 
-							NOT = { owned_by = PAP } 
-						}
-						remove_core = ROOT 
-						add_core = PAP 
-						cede_province = PAP 
-					}
-					add_ruler_modifier = { 
-						name = fra_coronated_by_the_pope_modifier
-						duration = -1
-					}
-					country_event = { id = flavor_fra.117 }
-				}
 				else = { 
 					add_country_modifier = { 
 						name = fra_golden_march_modifier
@@ -3039,48 +2635,12 @@ french_missions_3_continuation_after_hre_missions = {
 		position = 7
 		provinces_to_highlight = {
 			if = { 
-				limit = { has_country_flag = fra_papal_lap_dop_flag } 
-				area = lazio_area 
-				NOT = { 
-					OR = { 
-						country_or_non_sovereign_subject_holds = ROOT 
-						country_or_non_sovereign_subject_holds = PAP 
-					}
-				}
-			}
-			else = { 
 				area = lazio_area 
 				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 			}
 		}
 		trigger = {
 			if = { 
-				limit = { has_country_flag = fra_papal_lap_dop_flag } 
-				if = { 
-					limit = { 
-						PAP = { exists = yes } 
-					}
-					PAP = {
-						has_opinion_modifier = {
-							who = ROOT
-							modifier = sent_gift
-						}
-					}
-				}
-				lazio_area = { 
-					type = all 
-					OR = { 
-						country_or_non_sovereign_subject_holds = ROOT 
-						country_or_non_sovereign_subject_holds = PAP 
-					}
-				}
-				PAP = { 
-					alliance_with = ROOT 
-					is_at_war = no 
-				}
-				is_at_war = no 
-			}
-			else = { 
 				lazio_area = { 
 					type = all 
 					country_or_non_sovereign_subject_holds = ROOT 
@@ -3093,22 +2653,9 @@ french_missions_3_continuation_after_hre_missions = {
 			}
 		}
 		effect = { 
-			custom_tooltip = fra_if_lapdog_reward_tt
-			tooltip = {
-				PAP = { 
-					country_event = { id = flavor_fra.120 }
-				}
-			}
-			custom_tooltip = fra_event_insight_120_tt
 			custom_tooltip = fra_alternatively_modify_golden_march_and_tt
 			hidden_effect = { 
-				if = { 	
-					limit = { has_country_flag = fra_papal_lap_dop_flag } 
-					PAP = { 
-						country_event = { id = flavor_fra.120 }
-					}
-				}
-				else = {
+				if = {
 					remove_country_modifier = fra_golden_march_modifier 
 					add_country_modifier = { 
 						name = fra_golden_march2_modifier
@@ -4130,16 +3677,6 @@ french_missions_4_normal_continuation = {
 		}
 		trigger = { 
 			if = { 
-				limit = { has_country_flag = fra_papal_lap_dop_flag } 
-				piedmont_area = { 
-					type = all 
-					OR = { 
-						country_or_non_sovereign_subject_holds = ROOT 
-						country_or_non_sovereign_subject_holds = PAP 
-					}
-				}
-			}
-			else = { 
 				piedmont_area = {
 					type = all 
 					country_or_non_sovereign_subject_holds = ROOT 
@@ -4147,10 +3684,6 @@ french_missions_4_normal_continuation = {
 			}
 		}
 		effect = {
-			custom_tooltip = fra_if_we_aligned_with_pope_and_we_are_both_independent_tt
-			tooltip = { 
-				country_event = { id = flavor_fra.115 }
-			}
 			custom_tooltip = fra_if_we_defied_the_pope_tt
 			tooltip = { 
 				italy_region = { 
@@ -4211,16 +3744,6 @@ french_missions_4_normal_continuation = {
 		}
 		trigger = { 
 			if = { 
-				limit = { has_country_flag = fra_papal_lap_dop_flag } 
-				lombardy_area = { 
-					type = all 
-					OR = { 
-						country_or_non_sovereign_subject_holds = PAP 
-						country_or_non_sovereign_subject_holds = ROOT 
-					} 
-				}
-			}
-			else = { 
 				lombardy_area = { 
 					type = all 
 					country_or_non_sovereign_subject_holds = ROOT 
@@ -4229,31 +3752,6 @@ french_missions_4_normal_continuation = {
 			}
 		}
 		effect = { 
-			custom_tooltip = fra_if_lapdog_reward_tt
-			tooltip = {
-				lombardy_area = { 
-					limit = { country_or_non_sovereign_subject_holds = ROOT } 
-					remove_core = ROOT 
-					add_core = PAP 
-					cede_province = PAP 
-				}
-				if = { 
-					limit = { has_dlc = "Leviathan" }
-					104 = { 
-						add_great_project_tier = { 
-							type = duomo_milano
-							tier = 1 
-						}
-					}
-				}
-				else = { 
-					104 = { add_base_tax = 3 } 
-				}
-				add_country_modifier = { 
-					name = fra_influx_of_milanese_engineers_modifier
-					duration = 9125
-				}
-			}
 			custom_tooltip = fra_if_completed_via_conquest_tt
 			tooltip = { 
 				country_event = { id = flavor_fra.118 } 
@@ -4266,51 +3764,9 @@ french_missions_4_normal_continuation = {
 						}
 					}
 				}
-				else = { 
-					104 = { 
-						add_base_tax = 1 
-						add_base_production = 1 
-						add_province_modifier = {
-							name = fra_first_opera_house_modifier
-							duration = -1 
-						}
-					}
-				}
 			}
 			hidden_effect = { 
-				if = {
-					limit = { 
-						has_country_flag = fra_papal_lap_dop_flag 
-						has_dlc = "Leviathan"
-					} 
-					lombardy_area = { 
-						limit = { country_or_non_sovereign_subject_holds = ROOT } 
-						remove_core = ROOT 
-						add_core = PAP 
-						cede_province = PAP 
-					}
-					104 = { 
-						add_great_project_tier = { 
-							type = duomo_milano
-							tier = 1 
-						}
-					}
-				}
-				else_if = {
-					limit = { has_country_flag = fra_papal_lap_dop_flag }
-					lombardy_area = { 
-						limit = { country_or_non_sovereign_subject_holds = ROOT } 
-						remove_core = ROOT 
-						add_core = PAP 
-						cede_province = PAP 
-					}
-					104 = { add_base_tax = 3 }
-					add_country_modifier = { 
-						name = fra_influx_of_milanese_engineers_modifier
-						duration = 9125
-					}
-				}
-				else_if = { 
+				if = { 
 					limit = { 
 						has_dlc = "Leviathan" 
 						has_country_flag = fra_chose_to_piss_off_pope_flag 
@@ -4323,16 +3779,6 @@ french_missions_4_normal_continuation = {
 						}
 					}
 				}
-				else = { 
-					104 = { 
-						add_base_tax = 1 
-						add_base_production = 1 
-						add_province_modifier = {
-							name = fra_first_opera_house_modifier
-							duration = -1 
-						}
-					}
-				}
 			}
 		}
 	}		
@@ -4342,136 +3788,28 @@ french_missions_4_normal_continuation = {
 		required_missions = { fra_house_god fra_secure_genoan_trade }
 		position = 9
 		provinces_to_highlight = { 
-			if = { 	
-				limit = { 
-					owner = { has_country_flag = fra_papal_lap_dop_flag }
-				}
-				region = italy_region 
-				NOT = { 
-					OR = { 
-						country_or_non_sovereign_subject_holds = ROOT 
-						country_or_non_sovereign_subject_holds = PAP 
-					}
-				}
-			}
-			else = { 
+			if = { 
 				region = italy_region 
 				NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 			}
 		}
 		trigger = { 
-			if = { 	
-				limit = { has_country_flag = fra_papal_lap_dop_flag } 
-				italy_region = { 
-					type = all 
-					OR = { 	
-						country_or_non_sovereign_subject_holds = ROOT 
-						country_or_non_sovereign_subject_holds = PAP 
-					}
-				}
-			}
-			else = {
+			if = {
 				italy_region = { 
 					type = all 
 					country_or_non_sovereign_subject_holds = ROOT 
 				}
 			}
-			if = { 
-				limit = { 
-					PAP = { exists = yes }
-					has_country_flag = fra_papal_lap_dop_flag
-				}
-				PAP = { 
-					OR = { 
-						alliance_with = ROOT 
-						is_subject_of = ROOT 
-					}
-				}
-			}
 		}
 		effect = { 
-			custom_tooltip = fra_if_aligned_with_pope_and_not_subject_exists_tt
-			tooltip = { 
-				PAP = { 
-					country_event = { id = flavor_fra.120 } 
-				}
-			}
-			custom_tooltip = fra_if_aligned_and_pope_subject_already_tt
-			tooltip = { 
-				add_country_modifier = {
-					name = fra_catholic_italy_modifier
-					duration = -1 
-				}
-				PAP = { 
-					override_country_name = FU_KINGDOM_OF_GOD 
-					set_country_flag = is_kingdom_of_god_flag
-					add_country_modifier = { 
-						name = fra_suzerainty_italy_modifier
-						duration = -1 
-					}
-				}
-			}
-			custom_tooltip = fra_alternatively_evolve_golden_march_3_tt
-			tooltip = { 
-				balkan_region = { 
-					limit = { 
-						NOT = { owned_by = ROOT } 
-						NOT = { is_core = ROOT }
-					}
-				}
-			}
-			hidden_effect = { 
-				if = { 	
-					limit = {
-						has_country_flag = fra_papal_lap_dop_flag 
-						PAP = { 
-							exists = yes 
-							NOT = { is_subject_of = ROOT }
-						}
-					}
-					PAP = { 
-						country_event = { id = flavor_fra.120 } 
-					}
 					add_country_modifier = {
 						name = fra_catholic_italy_modifier
 						duration = -1 
 					}
-				}
-				else_if = {
-					limit = { has_country_flag = fra_papal_lap_dop_flag } 
-					custom_tooltip = fra_access_new_papal_bulls_tt
-					add_country_modifier = {
-						name = fra_catholic_italy_modifier
-						duration = -1 
-					}
-					PAP = { 
-						override_country_name = FU_KINGDOM_OF_GOD 
-						set_country_flag = is_kingdom_of_god_flag
-						set_country_flag = has_overriden_name_flag
-						add_country_modifier = { 
-							name = fra_suzerainty_italy_modifier
-							duration = -1 
-						}
-					}
-				}
-				else = { 
-					remove_country_modifier = fra_golden_march_modifier
-					remove_country_modifier = fra_golden_march2_modifier
-					add_country_modifier = { 
-						name = fra_golden_march3_modifier
-						duration = -1 
-					}
-					balkan_region = { 
-						limit = { 
-							NOT = { owned_by = ROOT } 
-							NOT = { is_core = ROOT }
-						}
-					}
-				}
-			}
 		}
 	}
 }
+
 
 french_missions_4_normal_contiuation = {
 	slot = 4
@@ -4967,82 +4305,30 @@ french_missions_5_normal = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
 		trigger = { 
-			OR = { 
-				PRO = { is_subject_of = ROOT } 
-				PRO = { 
-					alliance_with = ROOT 
-					has_opinion = {
-						who = ROOT 
-						value = 150
-					}
-					if = { 
-						limit = { has_dlc = "Leviathan" }
-						trust = { 
-							who = ROOT 
-							value = 90 
-						}
-					}
-					marriage_with = ROOT 
-					is_at_war = no 
-				}
-				AND = { 
+			AND = { 
+				
+				
 					178 = { country_or_non_sovereign_subject_holds = ROOT } 
 					2991 = { country_or_non_sovereign_subject_holds = ROOT }
 					201 = { country_or_non_sovereign_subject_holds = ROOT }
 					4696 = { country_or_non_sovereign_subject_holds = ROOT }
-				}
+				
 			}
 		}
 		effect = { 
-			custom_tooltip = fra_if_alliance_tt
-			tooltip = {
-				PRO = { 
-					country_event = { id = flavor_fra.106 } 
-				}
-			}
-			custom_tooltip = fra_if_conquest_tt
-			tooltip = { 
-				add_country_modifier = { 
-					name = fra_conquered_the_capetian_house_of_anjou_modifier
-					duration = 5475 
-				}
-				add_prestige = 20 
-			}
-			custom_tooltip = fra_alternatively_if_pro_already_subject_tt
-			tooltip = { 
-				change_heir_adm = 1 
-				change_heir_dip = 1 
-				change_heir_mil = 1 
-				add_stability_or_adm_power = yes 
-			}
-			hidden_effect = { 
-				if = { 
-					limit = { 
-						PRO = { is_subject_of = ROOT } 
-					}
 					change_heir_adm = 1 
 					change_heir_dip = 1 
 					change_heir_mil = 1 
 					add_stability_or_adm_power = yes 
-				}
-				else_if = { 
-					limit = { 
-						PRO = { alliance_with = ROOT } 
-					}
-					PRO = { 
-						country_event = { id = flavor_fra.106 } 
-					}
-				}
-				else = { 
-					add_country_modifier = { 
+				add_country_modifier = { 
 						name = fra_conquered_the_capetian_house_of_anjou_modifier
 						duration = 5475 
 					}
-					add_prestige = 20
-				}
+					
+		
 			}
 		}
-	}
+	
 
 	fra_ducal_lands_avignon = { 
 		icon = negotiate_for_avignon
@@ -5053,8 +4339,6 @@ french_missions_5_normal = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
 		trigger = { 
-			OR = {
-				AND = { 
 					202 = { country_or_non_sovereign_subject_holds = ROOT }
 					PAP = { 
 						OR = { 
@@ -5068,130 +4352,9 @@ french_missions_5_normal = {
 							}
 						}
 					}
-				}
-				AND = {
-					PAP = { 
-						alliance_with = ROOT 
-						has_opinion = {
-							who = ROOT 
-							value = 180
-						}
-					}
-					invested_papal_influence = 50 
-				}
-			}
 		}
 		effect = {
-			custom_tooltip = fra_revolving_missions_based_on_choice
-			custom_tooltip = fra_if_align_with_pope_tt 
-			tooltip = { 
-				add_country_modifier = { 
-					name = fra_resurgence_of_crusader_fervor_modifier
-					duration = 9125
-				}
-				palestine_area = {
-					limit = { 
-						NOT = { owned_by = ROOT }
-						NOT = { is_core = ROOT }
-					}
-					add_permanent_claim = ROOT 
-				}
-			}
-			custom_tooltip = fra_defying_the_pope_tt
-			tooltip = { 
-				add_country_modifier = { 
-					name = fra_italian_wars_modifier
-					duration = 7300 
-				}
-				piedmont_area = { 
-					limit = { 
-						NOT = { owned_by = ROOT }
-						NOT = { is_core = ROOT }
-					}
-					add_permanent_claim = ROOT 
-				}
-				liguria_area = {
-					limit = { 
-						NOT = { owned_by = ROOT }
-						NOT = { is_core = ROOT }
-					}
-					add_permanent_claim = ROOT 
-				}
-				lombardy_area = {
-					limit = { 
-						NOT = { owned_by = ROOT }
-						NOT = { is_core = ROOT }
-					}
-					add_permanent_claim = ROOT 
-				}
-				if = {
-					limit = { 
-						NAP = { is_subject = no exists = yes } 
-					}
-					add_casus_belli = {
-						target = NAP
-						type = cb_vassalize_mission
-						months = 180
-					}
-				}
-				else = { 
-					naples_area = {
-						limit = {
-							NOT = { owned_by = ROOT }
-							NOT = { is_core = ROOT }
-							is_empty = no
-						}
-						add_permanent_claim = ROOT
-					}
-					calabria_area = {
-						limit = {
-							NOT = { owned_by = ROOT }
-							NOT = { is_core = ROOT }
-							is_empty = no
-						}
-						add_permanent_claim = ROOT
-					}
-					apulia_area = {
-						limit = {
-							NOT = { owned_by = ROOT }
-							NOT = { is_core = ROOT }
-							is_empty = no
-						}
-						add_permanent_claim = ROOT
-					}
-				}
-			}
-			if = { 
-				limit = { 
-					PAP = { 
-						alliance_with = ROOT 
-						has_opinion = {
-							who = ROOT 
-							value = 180
-						}
-					}
-					invested_papal_influence = 50 
-				}
-				set_country_flag = fra_papal_lap_dop_flag 
-			}
-			else = { set_country_flag = fra_chose_to_piss_off_pope_flag }
-			hidden_effect = { 
-				if = { 
-					limit = { 
-						202 = { country_or_non_sovereign_subject_holds = ROOT } 
-						PAP = {
-							OR = { 
-								has_opinion_modifier = {
-									who = ROOT
-									modifier = scornfully_insulted
-								}
-								has_opinion_modifier = {
-									who = ROOT
-									modifier = insulted
-								}
-							}
-						}
-					}
+					set_country_flag = fra_chose_to_piss_off_pope_flag 
 					add_country_modifier = { 
 						name = fra_italian_wars_modifier
 						duration = 7300 
@@ -5217,70 +4380,27 @@ french_missions_5_normal = {
 						}
 						add_permanent_claim = ROOT 
 					}
-					if = {
-						limit = {
-							exists = NAP
-						}
-						add_casus_belli = {
-							target = NAP
-							type = cb_vassalize_mission
-							months = 180
-						}
-					}
-					else = { 
-						naples_area = {
-							limit = {
-								NOT = { owned_by = ROOT }
-								NOT = { is_core = ROOT }
-								is_empty = no
-							}
-							add_permanent_claim = ROOT
-						}
-						calabria_area = {
-							limit = {
-								NOT = { owned_by = ROOT }
-								NOT = { is_core = ROOT }
-								is_empty = no
-							}
-							add_permanent_claim = ROOT
-						}
-						apulia_area = {
-							limit = {
-								NOT = { owned_by = ROOT }
-								NOT = { is_core = ROOT }
-								is_empty = no
-							}
-							add_permanent_claim = ROOT
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						PAP = { 
-							alliance_with = ROOT 
-							has_opinion = {
-								who = ROOT 
-								value = 180
-							}
-						}
-					}
-					add_country_modifier = { 
-						name = fra_resurgence_of_crusader_fervor_modifier
-						duration = 9125
-					}
-					palestine_area = {
+					west_liguria_area = {
 						limit = { 
 							NOT = { owned_by = ROOT }
 							NOT = { is_core = ROOT }
 						}
 						add_permanent_claim = ROOT 
 					}
-					set_country_flag = fu_gain_25_random_pp_and_10_pi_per_bull_flag
-				}
-			}
-			swap_non_generic_missions = yes 
+					piedmont_po_valley_area = {
+						limit = { 
+							NOT = { owned_by = ROOT }
+							NOT = { is_core = ROOT }
+						}
+						add_permanent_claim = ROOT 
+					}
+					
+				
+				swap_non_generic_missions = yes
 		}
+			 
 	}
+	
 }	
 
 french_missions_5_branching = {
@@ -5482,16 +4602,6 @@ french_missions_5_continuation_normal_1 = {
 		}
 		trigger = {
 			if = { 
-				limit = { has_country_flag = fra_papal_lap_dop_flag } 
-				liguria_area = { 
-					type = all 
-					OR = { 
-						country_or_non_sovereign_subject_holds = ROOT 
-						country_or_non_sovereign_subject_holds = PAP 
-					}
-				}
-			}
-			else = { 
 				liguria_area = { 
 					type = all 
 					country_or_non_sovereign_subject_holds = ROOT 
@@ -5499,48 +4609,13 @@ french_missions_5_continuation_normal_1 = {
 			}
 		}
 		effect = { 
-			custom_tooltip = fra_if_lapdog_reward_tt
-			tooltip = {
-				liguria_area = { 
-					limit = { country_or_non_sovereign_subject_holds = ROOT } 
-					remove_core = ROOT 
-					add_core = PAP 
-					cede_province = PAP 
-				}
-				1298 = { 
-					add_trade_modifier = {
-						who = ROOT
-						duration = 9125
-						power = 50
-						key = FRA_FRENCH_PRESENCE_GENOA_KEY
-					}
-				}
-				add_mercantilism = 5
-			}
 			custom_tooltip = fra_defying_the_pope_tt
 			tooltip = { 
 				country_event = { id = flavor_fra.119 }
 			}
 			hidden_effect = {
+				
 				if = { 
-					limit = { has_country_flag = fra_papal_lap_dop_flag }
-					liguria_area = { 
-						limit = { country_or_non_sovereign_subject_holds = ROOT } 
-						remove_core = ROOT 
-						add_core = PAP 
-						cede_province = PAP 
-					}
-					1298 = { 
-						add_trade_modifier = {
-							who = ROOT
-							duration = 9125
-							power = 50
-							key = FRA_FRENCH_PRESENCE_GENOA_KEY
-						}
-					}
-					add_mercantilism = 5
-				}
-				else = { 
 					country_event = { id = flavor_fra.119 }
 				}
 			}
