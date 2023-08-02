@@ -409,7 +409,7 @@ age_of_reformation = {
 				culture_group = iberian
 			}
 			modifier = {
-				shock_damage_received = -0.3
+				leader_shock = 1
 			}
 			ai_will_do = {
 				factor = 100
