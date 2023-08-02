@@ -1243,7 +1243,7 @@ cukurova_area = { #3
 }
 
 aleppo_area = { #4
-	377 1849 2313 4298
+	377 1849 2313 4298 4992
 }
 
 syria_area = { #4
