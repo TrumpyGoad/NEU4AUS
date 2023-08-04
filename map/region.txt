@@ -435,6 +435,20 @@ arabia_region = {
 		qasim_area
 		yamamah_area
 		nafud_area
+		qatar_area
+		pirate_coast2_area
+		baqara_area
+		central_arabia_area
+		trabah_area
+		anizah_area
+		ashayrah_area
+		island_arabia_area
+		nuhaygil_area
+		masabishah_area
+		south_mecca_area
+		raqi_area
+		sabit_area
+		filim_area
 	}
 }
 

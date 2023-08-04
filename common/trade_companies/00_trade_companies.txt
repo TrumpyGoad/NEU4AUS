@@ -1197,4 +1197,32 @@ trade_company_polynesia = {
 		name = "TRADE_COMPANY_POLYNESIA_Oceania_Trade_Company"
 	}
 }
+trade_company_carribean = {
+	color = { 222 140 60 }
+	
+	provinces = {
+		484 485 4622 4623 4624
+		486 2654 2655 2656
+		488 489 4618 4619
+		490 2658 2659 4620 4621
+		487 481 491 492
+		493 494 495 496 1881
+		497 498 499 500 501 502
+		482 483
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_CARRIBEAN_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_CARRIBEAN_Trade_Company"
+	}
+}
+
+
+
+
+
 
