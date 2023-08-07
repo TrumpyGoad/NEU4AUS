@@ -1884,7 +1884,7 @@ gc_por_5_continued = {
 		icon = mission_wine_monopolies
 		required_missions = {  }
 		position = 9
-		
+
 		provinces_to_highlight = {
 			trade_goods = wine
 			NOT = { owned_by = ROOT }
@@ -1896,23 +1896,15 @@ gc_por_5_continued = {
 			}
 			has_discovered = ROOT
 		}
-		
+
 		trigger = {
-			OR = {
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 10
-					trade_goods = wine
-					OR = {
-						has_building = workshop
-						has_building = counting_house
-					}
-				}
-				trading_bonus = {
-					trade_goods = wine
-					value = yes
-				}
-				production_leader = {
-					trade_goods = wine
+			num_of_owned_provinces_with = {
+				value = 3
+				base_production = 10
+				trade_goods = wine
+				OR = {
+					has_building = workshop
+					has_building = counting_house
 				}
 			}
 		}
@@ -1921,20 +1913,9 @@ gc_por_5_continued = {
 				name = "por_wine_monopolies"
 				duration = 7300
 			}
-			
-			if = { 
-				limit = { has_dlc = "Domination" }
-				custom_tooltip = por_every_wine_prov_tt
-				tooltip = { add_base_production = 1 } 
-				hidden_effect = {
-					every_owned_province = {
-						limit = { trade_goods = wine } 
-						add_base_production = 1 
-					}
-				}
-			}
 		}
 	}
+	
 	gc_por_trading_houses = {
 		icon = mission_great_trading_houses
 		required_missions = { gc_por_wine_monopolies }

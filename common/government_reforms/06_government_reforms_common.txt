@@ -196,7 +196,6 @@ council_of_the_indies_reform = {
 		}
 	}
 	modifiers = {
-		global_tariffs = 0.2
 		treasure_fleet_income = 0.2
 	}
 	ai = {
@@ -3578,8 +3577,7 @@ new_world_exploitation_reform = {
 		}
 	}
 	modifiers = {
-		global_tariffs = 0.25
-		treasure_fleet_income = 0.25
+		vassal_forcelimit_bonus = 0.25
 	}
 	custom_attributes = {
 		extra_trade_goods_for_colonial_subjects = yes

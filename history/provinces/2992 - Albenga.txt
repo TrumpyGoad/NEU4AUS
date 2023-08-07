@@ -12,6 +12,7 @@ base_manpower = 1
 capital = "Albenga"
 is_city = yes
 add_core = GEN
+center_of_trade = 1
 
 
 

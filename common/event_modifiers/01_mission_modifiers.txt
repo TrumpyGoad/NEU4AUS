@@ -469,7 +469,6 @@ liv_lva_colonial_ambition = {
 
 liv_lva_american_trade_dominance = {	#Permanent
 	trade_efficiency = 0.1
-	global_tariffs = 0.15
 }
 
 liv_lva_random_new_world_colonialism = {
@@ -1084,7 +1083,6 @@ nor_colonial_enthusiasm = {
 }
 
 nor_new_world_administration = { #Permanent
-	global_tariffs = 0.25
 	liberty_desire_from_subject_development = -0.33
 	trade_steering = 0.1
 }
@@ -1106,7 +1104,7 @@ nor_holder_of_the_kalmar_union = {	#Permanent
 }
 
 nor_domination_of_the_new_world = {	#Permanent
-	global_tariffs = 0.25
+
 	treasure_fleet_income = 0.25
 	global_trade_power = 0.1
 }
@@ -1597,7 +1595,8 @@ por_brazil_colonial = {
 }
 
 por_brazil_tariffs = {
-	global_tariffs = 0.25
+	production_efficiency = 0.05
+	trade_efficiency = 0.1
 }
 
 por_spice_trade = {
@@ -1635,7 +1634,6 @@ eng_french_recovery = {
 }
 
 eng_caribbean_trade = {
-	global_tariffs = 0.25
 	native_assimilation = 0.25
 }
 
@@ -1826,7 +1824,6 @@ gbr_religious_stability = {
 }
 
 gbr_new_world_dominance = {	#Permanent
-	global_tariffs = 0.25
 	trade_efficiency = 0.1
 }
 
@@ -1918,7 +1915,6 @@ ave_national_bank = {
 }
 
 ave_new_world_dominance = {	#Permanent
-	global_tariffs = 0.15
 	trade_efficiency = 0.05
 }
 
@@ -2014,7 +2010,6 @@ the_darien_scheme = {
 }
 
 nova_scotia_modifier = {
-	global_tariffs = 0.15
 }
 cod_boom = {
 	trade_goods_size = 2.0
@@ -2057,13 +2052,13 @@ spa_rb_italian_ambition_mod = {
 }
 
 spa_rb_overseas_trade = {
-	global_tariffs = 0.25
+	trade_efficiency = 0.05
+	trade_range_modifier = 0.50
 }
 
 # Dutch Missions
 
 ned_brazil_mod = {
-	global_tariffs = 0.1
 	colonist_placement_chance = 0.03
 }
 
@@ -2119,7 +2114,7 @@ french_callais = {
 	province_trade_power_modifier = 0.25
 }
 french_tariffs = {
-	global_tariffs = 0.2
+	trade_efficiency = 0.1
 }
 fra_into_germany = {
 	ae_impact = -0.20
@@ -2262,7 +2257,6 @@ gen_asia_holding_mod = {
 gen_america_holding_mod = {
 	global_colonial_growth = 20
 	colonist_placement_chance = 0.02
-	global_tariffs = 0.15
 }
 
 gen_indian_holding_mod = {
@@ -2622,7 +2616,6 @@ rus_new_world_colonization = {
 }
 
 rus_tariffs_of_the_new_world = {	#Permanent
-	global_tariffs = 0.25
 	reduced_liberty_desire = 20
 }
 
@@ -3748,7 +3741,8 @@ mor_colonized_brazil = {
 }
 
 mor_new_world_power = {
-	global_tariffs = 0.05
+	trade_efficiency = 0.05
+
 }
 
 # Golden Century Spanish modifiers
@@ -3762,7 +3756,7 @@ fortified_navarra = {
 }
 
 viceroyalty_of_new_spain = {
-	global_tariffs = 0.15
+	trade_efficiency = 0.1
 }
 
 spa_native_reductions = {
@@ -5033,7 +5027,6 @@ hab_chinese_riches = {
 }
 
 hab_austrian_australia = {
-	global_tariffs = 0.15
 	trade_steering = 0.1
 }
 
@@ -9182,7 +9175,6 @@ fra_french_canadian_settlers_modifier = {
 }
 fra_overseas_focus_modifier = {
 	trade_company_investment_cost = -0.2
-	global_tariffs = 0.15
 	trade_efficiency = 0.05
 }
 fra_masters_of_india_modifier = {
@@ -10006,10 +9998,11 @@ por_reform_navy_1_modifier = {
 }
 
 spa_universal_empire_modifier = {
-	imperial_authority_value = 0.1
 	all_power_cost = -0.05
 	years_to_integrate_personal_union = -10
 	diplomatic_reputation = 1
+	morale_damage_received = -0.10
+	global_manpower_modifier = 0.33
 }
 fra_unification_movement_modifier = {	
 	local_warscore_cost_modifier = -0.33
@@ -10030,4 +10023,140 @@ jap_grant_samurai_modifier = {
 
 allow_local_banners_modifier = {
 	local_has_banners = yes
+}
+
+consolidating_iberian_rule = {
+	global_missionary_strength = 0.02
+	culture_conversion_cost = -0.25
+}
+
+desert_preparations = {
+	land_attrition = -0.15
+	movement_speed = 0.10
+}
+
+ desert_experience = {
+	land_attrition = -0.10
+	movement_speed = 0.10
+}
+
+west_african_integration = {
+	core_creation = -0.15
+	years_of_nationalism = -5
+}
+
+church_on_side = {
+	global_tax_modifier = 0.1
+	build_cost = -0.05
+
+}
+
+supported_school_of_salamanca = {
+	technology_cost = -0.05
+	idea_cost = -0.05
+	institution_growth = 4
+	global_institution_spread = 0.25
+}
+
+tunisian_trade_cities = {
+	merchants = 2
+	trade_efficiency = 0.1
+}
+
+dorretzeak = { 
+	local_defensiveness = 0.33
+	local_garrison_size = 0.5 
+}
+
+shipping_seized = { 
+	local_unrest = 10
+}
+
+basque_fleet = {
+	global_ship_recruit_speed = -0.25
+ }
+
+ sevilla_shipyard = {
+	global_ship_cost = -0.20
+	global_ship_recruit_speed = -0.25
+ }
+
+masts_of_europe2 = {
+	production_efficiency = 0.05
+	naval_forcelimit_modifier = 0.15
+}
+
+major_exporter_wood = {
+	local_production_efficiency = 1
+}
+
+spanish_armada = {
+	heavy_ship_power = 0.1
+	heavy_ship_cost = -0.2
+}
+
+subjects_strengthened = {
+	vassal_forcelimit_bonus = 0.25
+	vassal_income = 0.5
+}
+portugese_investments = {
+	development_cost = -0.05
+	build_cost = -0.05
+	production_efficiency = 0.1
+}
+thriving_wine_industry = {
+	global_trade_goods_size_modifier = 0.1
+}
+
+thriving_wineries = { 
+	local_production_efficiency = 0.5
+	trade_goods_size = 1
+}
+
+island_integration = { 
+	core_creation = -0.1
+}
+
+sardinian_cannons = {
+	artillery_cost = -0.15
+}
+
+golden_tercios = {
+	infantry_power = 0.15 
+	infantry_cost = -0.1
+}
+
+italy_campaign_spa = { 
+	galley_power = 0.25
+	land_forcelimit_modifier = 0.15
+}
+
+sicily_ports_prov = { 
+	local_development_cost_modifier = -0.15
+	local_build_cost = -0.25
+
+}
+italian_dominance_spa = {
+	trade_efficiency = 0.15
+}
+
+catholic_claims = { 
+	province_warscore_cost = -0.1
+}
+
+spanish_curia = {
+	stability_cost_modifier = -0.2
+	advisor_cost = -0.1
+}
+spanish_investment = { 
+	local_manpower_modifier = 0.25
+	local_production_efficiency = 0.25
+}
+
+yemen_united = {
+	years_of_nationalism = -5
+	core_creation = -0.25
+	global_manpower_modifier = 0.20
+	land_morale = 0.15
+
 }

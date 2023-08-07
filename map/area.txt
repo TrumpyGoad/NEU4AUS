@@ -1243,7 +1243,7 @@ cukurova_area = { #3
 }
 
 aleppo_area = { #4
-	377 1849 2313 4298
+	377 1849 2313 4298 4992
 }
 
 syria_area = { #4
@@ -1299,15 +1299,27 @@ al_jazira_area = { #5
 ########################################
 
 bahrain_area = { #5
-	394 395 396 2340 2347
+	394 5041 5040 2340 2347
 }
 
-pirate_coast_area = { #4
-	397 398 404 2333
+qatar_area = {
+	395 396 5039
+}
+
+pirate_coast_area = { #5
+	5037 2333 397 5030 5031
+}
+
+pirate_coast2_area ={
+	398 5036 5035 5032 5034
+}
+
+baqara_area = { 
+	5029 404 5033
 }
 
 nafud_area = { #3
-	393 2338 4272
+	393 2338 4272 5042 2337
 }
 
 tabuk_area = { #4
@@ -1316,56 +1328,98 @@ tabuk_area = { #4
 
 medina_area = { #3
 	color = { 225 158 92 }
-	384 2329 2330
+	2331 5068 5069 2329 5067
+}
+central_arabia_area = { 
+	5045 5046 4273 5044
+}
+trabah_area = { 
+	5047 5048 5049 4274 392
+}
+mecca_area = { #5
+	5060 5062 5061 385
 }
 
-mecca_area = { #5
-	385 2331 2332 4277 4278
+anizah_area = { 
+	2330 384 5043 5066
+}
+
+ashayrah_area = { 
+	5063 5064 5065 4277
 }
 
 asir_area = { #3
-	386 391 4282
+	5001 391 5002 4282
 }
 
 tihama_al_yemen_area = { #3
-	387 2346 4279
+	5000 4279 5003 5004
+}
+
+island_arabia_area = { 
+	5005 1099
 }
 
 upper_yemen_area = { #3
 	color = { 220 41 155 }
-	390 2344 4281
+	4996 390 4999 4281 2344
 }
 
 yemen_area = { #Lower Yemen #
-	388 2345 4280
+	4995 4280 4994 387 4993
 }
 
+nuhaygil_area = {
+	5008 5007 2335 5056 
+}
+
+masabishah_area = { 
+	5006 386 2346
+}
+
+south_mecca_area = { 
+	4278 2332 5057 5058 5059
+}
+
+
 hadramut_area = { #3
-	389 2343 4283
+	 5010 2345 4997 4998 388 5009
 }
 
 mahra_area = { #3
-	402 1099 4284
+	402 5012 389 5011 4283
 }
 
 yamamah_area = { #4
-	2335 2336 2339 4275
+	5038 2339 5051 5050 4275
 }
 
 qasim_area = { #4
-	392 2337 4273 4274
+	5055 5054 5053 5052 2336
 }
 
 dhofar_area = { #3 (Dhofar + Masirah)
-	401 2341 2342
+	401 5014 4284 2343 5013
 }
 
 oman_area = { #3 (Oman Proper)
-	403 4285 4287  
+	5028 5025 4285 5026 399
 }
 
-mascat_area = { #3 (Batinah and Muscat coast
-	399 400 4286
+raqi_area = {
+	5020 5019 5018 5016 5015
+}
+
+sabit_area = { 
+	5027 403 4287 5023
+}
+
+filim_area = {
+	5021 2342 5017
+}
+
+mascat_area = { #3 Batinah and Muscat coast
+	5024 400 5022 4286 2341
 }
 
 syrian_desert_area = { #3
@@ -1379,28 +1433,33 @@ syrian_desert_area = { #3
 
 gulf_of_arabia_area = { #5
 	color = { 19 219 75 }
-	365 2315 2320 2321
+	365 5093 5094 5095 2315 2320 5084 5091 5092
+}
+
+lower_gulf_area = {
+	2321 5076 5077
 }
 
 al_wahat_area = { #3
-	1233 2318 4323
+	1233 5081 2318 4323 5083 5086
 }
 
 delta_area = { #3
-	358 362 363
+	358 362 363 5100 5101 5102 5103 5104 5105
 }
 
 bahari_area = { #4 #Lower Egypt
 	color = { 19 193 219 }
-	361 2316 4316 4317 
+	361 5096 2316 4316 5099 4317 5097 5098
 }
 
 vostani_area = { #3 #Middle Egypt
-	359 2317 4318
+	359 2317 4318 5085 5087 5088 5089 5090
 }
 
 said_area = { #5 #Upper Egypt
-	360 1231 2319 4319 4320
+	360 5080 1231 2319 5082 4319 5078 5079 4320 5075
+
 }
 
 tripolitania_area = { #4
@@ -1408,7 +1467,7 @@ tripolitania_area = { #4
 }
 
 cyrenaica_area = { #5
-	356 357 2325 2326 
+	356 357 2325 5106 5107 2326 5108 5109 5110 5111 5112 5113 5114 5115
 }
 
 fezzan_area = { #4
@@ -1625,7 +1684,11 @@ kurdufan_area = { #3
 }
 
 lower_nubia_area = { #3
-	1234 2322 2323
+	1234 2322 5072 5073
+}
+
+proper_nubia_area = {
+	2323 5070 5071
 }
 
 dongola_area = { #3
@@ -1641,7 +1704,7 @@ sennar_area = { #3
 }
 
 red_sea_coast_area = { #4
-	1230 1232 2324 2787
+	1230 1232 2324 2787 5074
 }
 
 tigray_area = { #4
@@ -2709,7 +2772,7 @@ ishim_area = { #5
 }
 
 aqmola_area = { #5
-	479 2354 2357 4686 4690
+	479 2354 2357 4686 4690 
 }
 
 ########################################
@@ -3096,7 +3159,7 @@ banda_oriental_area = { #5
 }
 
 guyana_area = { #4
-	502 743 744 2803 
+ 	 743 744 2803 
 }
 
 suriname_area = { #3
@@ -3747,7 +3810,7 @@ leeward_islands_area = { #5
 }
 
 windward_islands_area = { #5
-    497 498 499 500 501
+    497 498 499 500 501 502
 }
 
 transvaal_area = { #4

@@ -880,7 +880,6 @@ expansion_ideas = {
 	}
 	general_colonization_law  = {
 		governing_capacity_modifier = 0.2
-		global_tariffs = 0.1
 	}
 	competetive_merchants  = {
 		merchants = 1

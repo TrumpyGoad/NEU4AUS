@@ -71,13 +71,6 @@ alliance = {
 	end_date = 1491.12.6
 }
 
-# The Anglo-Portuguese alliance
-alliance = {
-	first = ENG
-	second = POR
-	start_date = 1373.1.1
-	end_date = 1444.11.12
-}
 
 # The triple alliance
 alliance = {
