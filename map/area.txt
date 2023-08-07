@@ -285,11 +285,11 @@ bahama_channel_area = {
 brittany_area = { #5
 	color = { 118  99  151 }
 
-	169 170 171 172 4384
+	169 170 171 172 4384 5124
 }
 
 normandy_area = { #4
-	167 168 1879 4385
+	167 168 1879 4385 5126
 }
 
 provence_area = { #3
@@ -301,7 +301,7 @@ poitou_area = { #4
 }
 
 guyenne_area = { #4
-	194 198 4112 174
+	194 198 4112 174 5122
 }
 
 pyrenees_area = { #4
@@ -339,7 +339,7 @@ picardy_area = { #4
 }
 
 ile_de_france_area = { #4
-	182 183 185 4388
+	182 183 185 4388 5127
 }
 
 champagne_area = { #3
@@ -401,7 +401,7 @@ valencia_area = { #5
 }
 
 lower_andalucia_area = { #5
-	224 225 1748 1749 4548
+	224 225 1748 1749 4548 5116 5118
 }
 
 upper_andalucia_area = { #4
@@ -439,7 +439,7 @@ leon_area = { #3
 }
 
 extremadura_area = {
-	4788 218 1747
+	4788 218 1747 5119
 }
 
 beieras_area = { #4
@@ -447,7 +447,7 @@ beieras_area = { #4
 }
 
 alentejo_area = { #5
-	227 229 230 4150 4787
+	227 229 230 4150 4787 5117
 }
 
 macaronesia_area = { #3
@@ -601,7 +601,9 @@ east_midlands_area = { #3
 wessex_area = { #5
 	233 234 4130 4373 4374
 }
-
+channel_islands_area = {
+	5132 5131
+}
 home_counties_area = { #4
 	235 236 237 4371 
 }
@@ -659,7 +661,7 @@ laponia_area = { #3
 }
 
 karelia_area = { #4
-	30 33 34 1961
+	30 33 34 1961 5158 5152
 }
 
 north_karelia = { #3
@@ -739,7 +741,7 @@ podlasie_area = {
 }
 
 mazovia_area = { #4
-	256 257  1938 4525
+	256 257  1938 4525 5141
 }
 
 central_poland_area = {
@@ -795,7 +797,7 @@ crimea_area = { #4
 }
 
 white_ruthenia_area = { #3
-	292 771 4246
+	292 771 4246 5146
 }
 
 minsk_area = { #4
@@ -821,7 +823,7 @@ yaroslavl_area = { #4
 }
 
 tver_area = { #5
-	294 1752 4243 4248 4249 
+	294 1752 4243 4248 4249 5153
 }
 
 suzdal_area = { #3
@@ -829,7 +831,7 @@ suzdal_area = { #3
 }
 
 smolensk_area = { #4
-	293 297 4244 4245
+	293 297 4244 4245 5147
 }
 
 oka_area = { #3
@@ -1035,7 +1037,7 @@ palatinate_area = { #3
 }
 
 north_rhine_area = { #4
-	84 85 2975 83
+	84 85 2975 83 5129
 }
 
 lower_rhineland_area = { #4
