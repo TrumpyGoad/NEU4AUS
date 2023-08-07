@@ -10152,3 +10152,11 @@ spanish_investment = {
 	local_manpower_modifier = 0.25
 	local_production_efficiency = 0.25
 }
+
+yemen_united = {
+	years_of_nationalism = -5
+	core_creation = -0.25
+	global_manpower_modifier = 0.20
+	land_morale = 0.15
+
+}

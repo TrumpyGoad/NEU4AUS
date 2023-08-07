@@ -57,10 +57,10 @@ marketplace = {
 }
 
 workshop = {
-	cost = 100
+	cost = 125
 	time = 12
 	modifier = {
-		local_production_efficiency = 0.5
+		local_production_efficiency = 0.6
 	}
 	on_built = {
 		add_development_from_building = {
@@ -87,7 +87,7 @@ workshop = {
 }
 
 temple = {
-	cost = 100
+	cost = 125
 	time = 12
 	modifier = {
 		local_tax_modifier = 0.4
@@ -226,7 +226,7 @@ temple = {
 }
 
 barracks = {
-	cost = 100
+	cost = 125
 	time = 12
 	modifier = {
 		local_manpower_modifier = 0.5
@@ -364,7 +364,7 @@ shipyard = {
 }
 
 fort_15th = {
-	cost = 200
+	cost = 150
 	time = 30
 
 	build_trigger = {
@@ -547,7 +547,7 @@ coastal_defence = {
 # Tier 2, 16th Century Buildings
 ################################################
 courthouse = {
-	cost = 100
+	cost = 125
 	time = 12
 	modifier = {
 		local_state_maintenance_modifier = -0.25
@@ -716,7 +716,7 @@ dock = {
 }
 
 regimental_camp = {
-	cost = 200
+	cost = 250
 	time = 12
 	modifier = {
 		land_forcelimit = 1
@@ -775,7 +775,7 @@ regimental_camp = {
 }
 
 fort_16th = {
-	cost = 400
+	cost = 300
 	time = 30
 	make_obsolete = fort_15th
 	modifier = {
@@ -945,7 +945,7 @@ naval_battery = {
 cathedral = {
 	make_obsolete = temple
 
-	cost = 300
+	cost = 375
 	time = 12
 	modifier = {
 		local_missionary_strength = 0.03
@@ -1100,7 +1100,7 @@ cathedral = {
 
 
 university = {
-	cost = 150
+	cost = 200
 	time = 12
 	modifier = {
 		local_development_cost = -0.10
@@ -1192,7 +1192,7 @@ university = {
 }
 
 trade_depot = {
-	cost = 300
+	cost = 375
 	time = 12
 
 	make_obsolete = marketplace
@@ -1303,7 +1303,7 @@ grand_shipyard = {
 }
 
 training_fields = {
-	cost = 300
+	cost = 375
 	time = 12
 
 	make_obsolete = barracks
@@ -1381,7 +1381,7 @@ training_fields = {
 
 
 fort_17th = {
-	cost = 600
+	cost = 450
 	time = 30
 
 	make_obsolete = fort_16th
@@ -1533,7 +1533,7 @@ fort_17th = {
 # Tier 4, 18th Century Buildings
 ################################################
 stock_exchange = {
-	cost = 400
+	cost = 500
 	time = 12
 
 	make_obsolete = trade_depot
@@ -1587,7 +1587,7 @@ stock_exchange = {
 }
 
 counting_house = {
-	cost = 400
+	cost = 475
 	time = 12
 
 	make_obsolete = workshop
@@ -1625,7 +1625,7 @@ counting_house = {
 
 
 town_hall = {
-	cost = 200
+	cost = 250
 	time = 12
 
 	make_obsolete = courthouse
@@ -1812,7 +1812,7 @@ drydock = {
 }
 
 conscription_center = {
-	cost = 400
+	cost = 500
 	time = 12
 
 
@@ -1879,7 +1879,7 @@ conscription_center = {
 
 
 fort_18th = {
-	cost = 800
+	cost = 750
 	time = 30
 
 
@@ -2031,7 +2031,7 @@ fort_18th = {
 ################################################
 
 manufactory = {
-	cost = 500
+	cost = 550
 	time = 60
 	modifier = {
 		trade_goods_size = 1
