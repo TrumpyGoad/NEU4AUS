@@ -11443,7 +11443,7 @@ chan_chan_citadel = {
 }
 
 doges_palace = {
-	start = 112 #Venice
+	start = 4991 #Giudecca
 	date = 1340.01.01
 	time = { months = 0	}
 	build_cost = 0
