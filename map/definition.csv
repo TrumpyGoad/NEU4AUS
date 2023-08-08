@@ -5114,18 +5114,50 @@ province;red;green;blue;x;x
 5113;230;238;77;Adjdabiya;x
 5114;6;9;100;Jikharra;x
 5115;19;210;29;Gabr;x
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+5116;60;37;141;Donana;x
+5117;228;27;174;Moura;x
+5118;191;254;133;Sierra Morena;x
+5119;134;251;113;Almaden;x
+5120;100;177;233;Guadiana River;x
+5121;50;88;120;Guadalquivir River;x
+5122;12;32;93;Blaye;x
+5123;45;240;208;Garonne River;x
+5124;101;27;13;Pornic;x
+5125;19;150;163;Loire River;x
+5126;168;115;172;Lisieux;x
+5127;121;58;125;Beauvais;x
+5128;112;135;217;Seine River;x
+5129;239;81;95;Emmerich;x
+5130;15;169;206;Rhine River;x
+5131;150;64;106;Jersey;x
+5132;212;55;133;Isle of Wight;x
+5133;54;229;200;Thames River;x
+5134;119;51;49;Terschelling;x
+5135;19;127;249;Elbe River;x
+5136;46;175;131;Rhone River;x
+5137;57;94;200;Po River;x
+5138;44;197;210;Upper Danube;x
+5139;133;195;205;Central Danube;x
+5140;63;133;244;Lower Danube;x
+5141;54;220;48;Wolomin;x
+5142;7;68;219;Vistula River;x
+5143;43;189;231;Dnister River;x
+5144;36;106;130;Lower Dnipro;x
+5145;28;180;246;Upper Dnipro;x
+5146;157;128;157;Kirovo;x
+5147;70;16;66;Dovsk;x
+5148;4;231;236;Daugava River;x
+5149;122;194;208;Neva River;x
+5150;153;20;86;Volkhov River;x
+5151;196;191;45;Svir River;x
+5152;251;72;230;Volkhov;x
+5153;128;212;113;Vereya;x
+5154;37;102;163;Don River;x
+5155;32;1;186;Lower Volga;x
+5156;3;132;162;Central Volga;x
+5157;73;213;197;Upper Volga;x
+5158;106;20;27;Primorsky;x
+5159;89;177;218;Lower Nile;x
+5160;66;205;230;Upper Nile;x
+5161;22;237;218;Damietta Branch;x
+5162;37;181;161;Dvina;x

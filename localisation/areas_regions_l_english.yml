@@ -1,5 +1,11 @@
 ﻿l_english:
  #MOD
+ rivers_area:0 "Rivers"
+ rivers_area_name:0 "Rivers"
+ rivers_area_adj:0 "Rivers"
+ channel_islands_area:0 "Channel Islands"
+ channel_islands_area_name:0 "Channel Islands"
+ channel_islands_area_adj:0 "Channel Islands"
  central_sicily_area:0 "Upper Sicily"
  central_sicily_area_name:0 "Upper Sicily"
  central_sicily_area_adj:0 "Upper Sicilian"
