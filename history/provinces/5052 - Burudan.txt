@@ -3,7 +3,7 @@
 
 owner = DAW
 controller = DAW
-culture = bedouin_arabic_culture
+culture = bedouin_arabic
 religion = sunni
 capital = "Burudan"
 trade_goods = wool #And pearls

@@ -2,7 +2,7 @@
 
 owner = ALH
 controller = ALH
-culture = gulf_arabic_culture
+culture = gulf_arabic
 religion = sunni
 capital = "Qusaybi"
 trade_goods = fish #And pearls
