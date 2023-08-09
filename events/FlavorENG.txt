@@ -209,7 +209,6 @@ country_event = {
 		white_peace = FRA
 		remove_accepted_culture = gascon
 		remove_accepted_culture = normand
-		swap_free_idea_group = yes
 	}
 	option = {		# We will never give this up!
 		name = "flavor_eng.EVTOPTB9104"
