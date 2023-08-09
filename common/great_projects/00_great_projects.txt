@@ -550,7 +550,7 @@ don_volga_canal = {
 	}
 	
 	#how much to build one
-	build_cost = 10000
+	build_cost = 5000
 	
 	#can we move it?
 	can_be_moved = no
@@ -726,7 +726,7 @@ volga_onega_canal = {
 	}
 	
 	#how much to build one
-	build_cost = 10000
+	build_cost = 5000
 	
 	#can we move it?
 	can_be_moved = no
