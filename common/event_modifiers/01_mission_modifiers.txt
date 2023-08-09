@@ -10155,10 +10155,8 @@ spanish_investment = {
 
 yemen_united = {
 	years_of_nationalism = -5
-	core_creation = -0.25
-	global_manpower_modifier = 0.20
-	land_morale = 0.15
-
+	core_creation = -0.10
+	land_morale = 0.5
 }
 
 yem_rasulid_malik_modifier = {

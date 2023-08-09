@@ -270,20 +270,9 @@ vassal = {
 } 
 
 # Cyprus, a Mamluk tributary
-dependency = {
-	subject_type = "tributary_state"
-	first = MAM
-	second = CYP
-	start_date = 1444.1.1
-	end_date = 1444.11.10
-}
 
-vassal = { #Viceroy of the Hejaz
-	first = MAM
-	second = HED
-	start_date = 1444.1.1
-	end_date = 1444.11.12
-}
+
+
 
 vassal = { #Mamluks fall
 	first = TUR
@@ -293,12 +282,7 @@ vassal = { #Mamluks fall
 }
 
 #Hejaz protected by the Mamluks
-guarantee = {
-	first = MAM
-	second = MDA
-	start_date = 1444.1.1
-	end_date = 1444.11.12
-}
+
 
 #Hormuz under the Portuguese
 vassal = {
@@ -309,12 +293,6 @@ vassal = {
 }
 
 #Amir al Arab
-vassal = {
-	first = MAM
-	second = FAD
-	start_date = 1444.11.10
-	end_date = 1444.11.12
-}
 
 #Mikhlaf subservient to the Zaidi Imams
 

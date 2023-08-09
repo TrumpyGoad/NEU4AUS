@@ -10,7 +10,7 @@ country_event = {
 	
 	trigger = {
 		NOT = { is_year = 1450 }
-		tag = YEM 
+		tag = RAS 
 	}
 	mean_time_to_happen = {
 		days = 30 

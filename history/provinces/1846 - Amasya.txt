@@ -1,7 +1,7 @@
 #1846 - Amasya
 
-owner = TUR
-controller = TUR
+owner = ERE
+controller = ERE
 culture = turkish
 religion = sunni
 capital = "Amasya"
@@ -11,7 +11,6 @@ base_tax = 4
 base_production = 4
 base_manpower = 3
 is_city = yes
-add_core = TUR
 add_core = ERE
 
 

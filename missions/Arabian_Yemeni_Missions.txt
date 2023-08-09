@@ -56,6 +56,9 @@ yem_formation = {
 				}
 				add_core = ROOT
 			}
+			unlock_estate_privilege = {
+                estate_privilege = estate_burghers_hydraulic_rights
+            }
 		}
 		ai_weight = {
 			factor = 500	#Having an army to conquer Yemen is probably a good idea

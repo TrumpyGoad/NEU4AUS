@@ -1,7 +1,7 @@
 #399 - Suhar
 owner = YAS
 controller = YAS
-culture = gulf_arabic_culture
+culture = gulf_arabic
 religion = shiite
 capital = "Baqara"
 trade_goods = wool #And pearls
