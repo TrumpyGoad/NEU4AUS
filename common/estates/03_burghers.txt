@@ -1,9 +1,8 @@
-#MOD
 estate_burghers = {
 	icon = 3
 
 	# If true, country will get estate
-	trigger = {
+	trigger = {	
 		NOT = { has_government_attribute = disables_estate_burghers }
 		NOT = { has_country_flag = disables_estate_burghers_flag }
 		OR = {
@@ -11,17 +10,12 @@ estate_burghers = {
 			has_country_flag = enables_estate_burghers_flag
 			AND = {
 				NOT = { has_government_attribute = is_pirate_republic_reform }
-		NOT = { is_revolutionary_republic_trigger = yes }
-		NOT = { has_reform = cossacks_reform }
-		NOT = { government = native }
-		NOT = { has_reform = siberian_tribe }
-		OR = {
-			NOT = { has_reform = celestial_empire }
-			has_dlc = "Mandate of Heaven"
-		}
-		#is_nomad = no
-		is_colonial_nation = no
-		NOT = { has_reform = revolutionary_empire_reform }
+				NOT = { is_revolutionary_republic_trigger = yes }
+				NOT = { government = native }
+				NOT = { has_reform = siberian_tribe }
+				is_nomad = no
+				is_colonial_nation = no
+				NOT = { has_reform = revolutionary_empire_reform }
 				NOT = { has_estate = estate_vaisyas }
 				NOT = { has_estate = estate_jains }
 			}
@@ -230,13 +224,6 @@ estate_burghers = {
 		desc = estate_shangbang
 		trigger = {
 			culture_group = east_asian
-		}
-	}
-	custom_name = {
-		desc = estate_neoconfucian_reformers
-		trigger = {
-			tag = KOR
-			religion = confucianism
 		}
 	}
 	custom_name = {

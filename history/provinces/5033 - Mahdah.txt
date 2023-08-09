@@ -2,7 +2,7 @@
 
 owner = YAS
 controller = YAS
-culture = gulf_arabic_culture
+culture = gulf_arabic
 religion = shiite
 capital = "Sayq"
 trade_goods = grain #And pearls

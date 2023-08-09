@@ -2928,6 +2928,15 @@
  island_arabia_area:0 "Arabian Islands"
  island_arabia_area_adj:0 "Arabian Islands"
  island_arabia_area_name:0 "Arabian Islands"
+ zaytum_area:0 "Zaytum"
+ bangazi_area:0 "Bangzai"
+ gamasa_area:0 "Gamasa"
+ iskandariyya_area:0 "Iskandariyya"
+ sina_area:0 "Sina"
+ desert_area:0 "Buhaira"
+ fayyum_area :0 "Fayyum"
+ qus_area:0 "Qus"
+
 
 
 

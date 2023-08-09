@@ -1,7 +1,7 @@
 #163 - Crete
 
-owner = VEN
-controller = VEN
+owner = NAX
+controller = NAX
 culture = greek
 religion = orthodox
 capital = "Heraklion"
@@ -11,8 +11,7 @@ base_tax = 5
 base_production = 5
 base_manpower = 3
 is_city = yes
-add_core = VEN
-add_core = CRT
+add_core = NAX
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim

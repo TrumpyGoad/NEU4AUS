@@ -317,6 +317,14 @@ egypt_region = {
 		bahari_area
 		vostani_area
 		said_area
+		bangazi_area
+		zaytum_area
+		iskandariyya_area
+		gamasa_area
+		sina_area
+		desert_area 
+		fayyum_area 
+		qus_area
 	}
 }
 

@@ -2,7 +2,7 @@
 
 owner = SHR
 controller = SHR
-culture = gulf_arabic_culture
+culture = gulf_arabic
 religion = shiite
 capital = "Arada"
 trade_goods = spices #And pearls
