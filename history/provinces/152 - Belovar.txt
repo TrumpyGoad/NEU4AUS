@@ -1,7 +1,7 @@
 #152 - Varazd
 
-owner = CRO
-controller = CRO
+owner = HUN
+controller = HUN
 culture = croatian
 religion = catholic
 capital = "Varazdin"

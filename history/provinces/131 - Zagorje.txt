@@ -1,7 +1,7 @@
 #131 - Zagorje
 
-owner = CRO
-controller = CRO
+owner = HUN
+controller = HUN
 culture = croatian
 religion = catholic
 capital = "Zagreb"
@@ -12,7 +12,7 @@ base_production = 3
 base_manpower = 1
 is_city = yes
 fort_15th = yes
-add_core = CRO
+add_core = HUN
 discovered_by = KAZ
 discovered_by = CRI
 discovered_by = GOL
