@@ -44,7 +44,7 @@ bns_md_culturalchange_1 = {
 	global_unrest = 1
 }
 bns_md_culturalchange_2 = {
-	same_culture_advisor_cost = -0.5
+	same_culture_advisor_cost = -0.05
 	relation_with_accepted_culture = 20
 	global_unrest = 1
 }
