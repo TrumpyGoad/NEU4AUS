@@ -877,19 +877,13 @@ gbr_row_slot_2 = {
 		trigger = {
 			if = {
 				limit = { is_random_new_world = no }
-				custom_trigger_tooltip = {
-					tooltip = miss_discover_canada
-					canada_region = {
-						has_discovered = ROOT
-					}
+				canada_region = {
+					has_discovered = ROOT
 				}
-				custom_trigger_tooltip = {
-					tooltip = gbr_colonize_canada_ct
-					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						value = 10
-						region = canada_region
-						is_city = yes
-					}
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
+					region = canada_region
+					is_city = yes
 				}
 			}
 			else = {
@@ -2583,13 +2577,11 @@ gbr_row_4 = {
 		trigger = { 
 			if = {
 				limit = { is_random_new_world = no }
-				custom_trigger_tooltip = {
-					tooltip = english_colony_in_the_carribean.tooltip
-					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						value = 5
-						region = carribeans_region
-						is_city = yes
-					}
+				#tooltip = english_colony_in_the_carribean.tooltip
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 5
+					region = carribeans_region
+					is_city = yes
 				}
 			}
 			else = {
@@ -4198,7 +4190,7 @@ gbr_ave_row_1 = {
 				limit = { is_random_new_world = no }
 				OR = {
 					province_id = 1500
-					province_id = 1269
+					province_id = 236
 				}
 				has_discovered = ROOT
 			}
@@ -4215,7 +4207,7 @@ gbr_ave_row_1 = {
 						share = 40
 					}
 				}
-				1269 = {
+				236 = {
 					highest_value_trade_node = yes
 					trade_share = {
 						country = ROOT
@@ -4224,7 +4216,7 @@ gbr_ave_row_1 = {
 				}
 			}
 			else = {
-				1269 = {
+				236 = {
 					highest_value_trade_node = yes
 					trade_share = {
 						country = ROOT
@@ -4253,16 +4245,16 @@ gbr_ave_row_1 = {
 		}
 		position = 12
 		provinces_to_highlight = {
-			province_id = 1269
+			province_id = 236
 		}		
 		trigger = { 
-			1269 = {
+			236 = {
 				is_strongest_trade_power = ROOT
 			}
-			1269 = {
+			236 = {
 				highest_value_trade_node = yes
 			}
-			1269 = {
+			236 = {
 				trade_node_value = 500
 			}
 			reform_level = 8

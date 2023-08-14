@@ -61,7 +61,7 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 				province_id = 213	# Barcelona
-				province_id = 214	# Aragón
+				province_id = 214	# Aragï¿½n
 				province_id = 215	# Castilla La Vieja
 				province_id = 216	# Salamanca
 				province_id = 224	# Andalucia
@@ -85,7 +85,7 @@ country_decisions = {
 			is_nomad = no
 			is_at_war = no
 			owns_core_province = 213	# Barcelona
-			owns_core_province = 214	# Aragón
+			owns_core_province = 214	# Aragï¿½n
 			owns_core_province = 215	# Castilla La Vieja
 			owns_core_province = 216	# Salamanca
 			owns_core_province = 224	# Andalucia
@@ -161,7 +161,6 @@ country_decisions = {
 			is_tutorial_active = no
 			OR = {
 				tag = CAS
-				tag = ARA
 			}
 			capital_scope = {
 				region = iberia_region
@@ -176,8 +175,16 @@ country_decisions = {
 							ARA = {	is_subject_of = CAS	}
 						}
 						AND = {
-							tag = ARA
-							CAS = {	is_subject_of = ARA	}
+							tag = CAS
+							VAL = {	is_subject_of = CAS	}
+						}
+						AND = {
+							tag = CAS
+							CAT = {	is_subject_of = CAS	}
+						}
+						AND = {
+							tag = CAS
+							MJO = {	is_subject_of = CAS	}
 						}
 					}
 				}
@@ -187,12 +194,10 @@ country_decisions = {
 				AND = {
 					ai = yes
 					tag = CAS
-					ARA = { NOT = { num_of_cities = 40 } } #Keep this number the same as below
-				}
-				AND = {
-					ai = yes
-					tag = ARA
-					CAS = { NOT = { num_of_cities = 47 } } #Keep this number the same as below
+					ARA = { NOT = { num_of_cities = 10 } } #Keep this number the same as below
+					CAT = { NOT = { num_of_cities = 10 } } #Keep this number the same as below
+					VAL = { NOT = { num_of_cities = 10 } } #Keep this number the same as below
+					MJO = { NOT = { num_of_cities = 10 } } #Keep this number the same as below
 				}
 			}
 		}
@@ -206,32 +211,30 @@ country_decisions = {
 				type = all
 				NOT = { owner = { religion_group = muslim } }
 			}
-			custom_trigger_tooltip = {
-				tooltip = forming_spain_diplomatically_tooltip
-				OR = {
-					AND = {
-						tag = CAS
-						ARA = {	is_subject_of = CAS	}
-					}
-					AND = {
-						tag = ARA
-						CAS = {	is_subject_of = ARA	}
-					}
-				}
-			}
 			OR = {
 				AND = {
 					tag = CAS
-					ARA = {
-						NOT = { num_of_cities = 40 } #Keep this number the same as above. Original 17 +15, +5 with Spain update, +3 with Emperor update
-					}
+					ARA = {	is_subject_of = CAS	}
 				}
 				AND = {
-					tag = ARA
-					CAS = {
-						NOT = { num_of_cities = 47 } #Keep this number the same as above. Original 25 +15, +5 with Spain update, +2 with Emperor update
-					}
+					tag = CAS
+					VAL = {	is_subject_of = CAS	}
 				}
+				AND = {
+					tag = CAS
+					CAT = {	is_subject_of = CAS	}
+				}
+				AND = {
+					tag = CAS
+					MJO = {	is_subject_of = CAS	}
+				}
+			}
+			AND = {
+				tag = CAS
+				ARA = { NOT = { num_of_cities = 10 } } #Keep this number the same as below
+				CAT = { NOT = { num_of_cities = 10 } } #Keep this number the same as below
+				VAL = { NOT = { num_of_cities = 10 } } #Keep this number the same as below
+				MJO = { NOT = { num_of_cities = 10 } } #Keep this number the same as below
 			}
 		}
 		effect = {
@@ -251,12 +254,30 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					tag = ARA
-					CAS = {
+					tag = CAS
+					VAL = {
 						ai = yes
 					}
 				}
-				inherit = CAS
+				inherit = VAL
+			}
+			if = {
+				limit = {
+					tag = CAS
+					CAT = {
+						ai = yes
+					}
+				}
+				inherit = CAT
+			}
+			if = {
+				limit = {
+					tag = CAS
+					MJO = {
+						ai = yes
+					}
+				}
+				inherit = MJO
 			}
 			change_tag = SPA
 			if = {
