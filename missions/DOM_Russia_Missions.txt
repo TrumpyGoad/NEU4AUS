@@ -3907,7 +3907,7 @@ rus_russian_streltsy = {
 				}
 				legitimacy_equivalent = 90
 				stability = 3
-				num_of_subjects = 7
+				#num_of_subjects = 7
 				NOT = {
 					any_subject_country = {
 						liberty_desire = 20
