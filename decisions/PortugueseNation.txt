@@ -162,7 +162,7 @@ country_decisions = {
 				}					
 			}
 			remove_non_electors_emperors_from_empire_effect = yes
-			every_owned_province = { #this is just a check to make sure that all the siberian colonies of the colonial subject *stay* as siberian colonies (replicated for POB below)
+			every_owned_province = { #this is just a check to make sure that all the siberian colonies of the colonial subject *stay* as siberian colonies
 				limit = {
 				colonial_region = colonial_brazil
 				}
