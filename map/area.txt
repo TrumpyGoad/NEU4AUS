@@ -3133,12 +3133,12 @@ grao_para_area = { #4
 	748 2890 2928 2929 
 }
 
-amapa_area = { #3
-	747 2935 2938
+amapa_area = { #5
+	747 2935 2938 5302 5303
 }
 
-amazon_area = { #4
-	2889 2930 2933 2934
+amazon_area = { #5
+	2889 2930 2933 2934 5301
 }
 
 paraguay_area = { #5
