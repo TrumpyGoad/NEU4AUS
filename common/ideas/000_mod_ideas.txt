@@ -1,4 +1,45 @@
 ######Mod Ideas######
+#Portugal-Brazil ideas WIP
+POB_ideas = {
+		start = {
+			envoy_travel_time = -0.25
+			infantry_power = 0.15
+			movement_speed_in_fleet_modifier = 1 
+		}
+		bonus = {
+			artillery_fire = 1
+		}	
+		trigger = {
+			tag = POB
+		}
+		free = yes
+		pob_pluricontinental_state = {
+			legitimacy = 1
+			technology_cost = -0.05
+		}
+		pob_royal_brigade = {
+			allowed_marine_fraction = 0.25
+			global_sailors_modifier = 0.30
+		}
+		pob_monopolies= {
+			global_trade_goods_size_modifier = 0.1
+		}
+		pob_settlement_of_brazil = {
+			global_colonial_growth = 20
+		}
+		pob_the_indian_route = {
+			global_trade_power = 0.15
+			trade_efficiency = 0.15
+		}
+		pob_banco_do_brasil = {
+			build_cost = -0.15
+			interest = -1
+		}
+		pob_arsenal_real = {
+			heavy_ship_power = 0.1
+			naval_morale = 0.15
+		}
+	}
 
 
 #Halych Volynian ideas, Written by Johanis
