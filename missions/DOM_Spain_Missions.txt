@@ -3128,17 +3128,22 @@ dom_cas_missions_5 = {
 		icon = mission_hanseatic_city
 		required_missions = { stengthen_portugese_alliance }
 		position = 3
-		trigger = { 
+		trigger = {
 			if {
 			any_ally = {
-						capital_scope = { area = alentejo_area } 
+				OR = {
+					tag = POR
+					tag = POB
+				}
 			}
 			}
 			if {
 				POR = { num_of_heavy_ship = 10}
+				POB = { num_of_heavy_ship = 10}
 			}		
 			if { 
 				POR = { full_idea_group = expansion_ideas}
+				POB = { full_idea_group = expansion_ideas}
 			}
 		}
 		effect = { 
@@ -3146,8 +3151,14 @@ dom_cas_missions_5 = {
 				name = portugese_investments
 				duration = 10950
 			}
-			POR = {add_treasury = 300}
+			if = {limit = {exist = POR}
+				POR = {add_treasury = 300}
+			}
+			else = {
+				POB = {add_treasury = 300}
+			}
 		}
+		
 	}
 
 	spa_iberian_wine_monopolies = {
