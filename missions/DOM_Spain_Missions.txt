@@ -3137,13 +3137,18 @@ dom_cas_missions_5 = {
 				}
 			}
 			}
-			if {
-				POR = { num_of_heavy_ship = 10}
-				POB = { num_of_heavy_ship = 10}
-			}		
 			if { 
-				POR = { full_idea_group = expansion_ideas}
-				POB = { full_idea_group = expansion_ideas}
+				OR = {
+					AND = {
+						POR = { num_of_heavy_ship = 10}
+						POR = { full_idea_group = expansion_ideas}
+					}
+					AND = {
+						POR = { num_of_heavy_ship = 10}
+						POR = { full_idea_group = expansion_ideas}
+					}
+				}
+				
 			}
 		}
 		effect = { 
