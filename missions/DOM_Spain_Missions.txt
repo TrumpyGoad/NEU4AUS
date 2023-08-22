@@ -3144,8 +3144,8 @@ dom_cas_missions_5 = {
 						POR = { full_idea_group = expansion_ideas}
 					}
 					AND = {
-						POR = { num_of_heavy_ship = 10}
-						POR = { full_idea_group = expansion_ideas}
+						POB = { num_of_heavy_ship = 10}
+						POB = { full_idea_group = expansion_ideas}
 					}
 				}
 				
