@@ -40,6 +40,7 @@ trade_route_map = {
                 OR = {
                     tag = POR
                     tag = BRZ
+					tag = POB
                 }
             }
             normal_or_historical_nations = no
@@ -154,6 +155,7 @@ portuguese_navigators = {
     trigger = {
 		OR = {
 			tag = POR
+			tag = POB
 			tag = BRZ
 		}
         normal_or_historical_nations = yes
@@ -179,6 +181,7 @@ portuguese_bombardier = {
 		OR = {
 			tag = POR
 			tag = BRZ
+			tag = POB
 		}
         normal_or_historical_nations = yes
     }
@@ -203,6 +206,7 @@ portuguese_trade_route_map = {
 		OR = {
 			tag = POR
 			tag = BRZ
+			tag = POB
 		}
         normal_or_historical_nations = yes
     }
@@ -335,6 +339,7 @@ portuguese_corps_of_fusiliers = {
 		OR = {
 			tag = POR
 			tag = BRZ
+			tag = POB
 		}
         normal_or_historical_nations = yes
     }
