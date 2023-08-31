@@ -4,6 +4,6 @@ tm_md_spain_tercios = {
 		tag = SPA
 	}
 	trigger = {}
-	shock_damage_received = -0.1
+	#shock_damage_received = -0.1
 	leader_shock = 1
 }

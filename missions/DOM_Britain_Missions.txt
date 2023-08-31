@@ -516,7 +516,7 @@ eng_row_slot_1 = {
 					estate = all
 					loyalty = 60
 				}
-				num_of_subjects = 5
+				num_of_subjects = 3
 				NOT = {
 					any_subject_country = {
 						liberty_desire = 20
