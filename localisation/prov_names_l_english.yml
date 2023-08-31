@@ -2932,7 +2932,7 @@
  PROV2932:0 "Wadai"
  PROV2933:0 "Barcelos"
  PROV2934:0 "Manaus"
- PROV2935:0 "Muturu"
+ PROV2935:0 "Almeirim" #called Muturu in definition.csv
  PROV2936:0 "Guyana"
  PROV2937:0 "Suriname"
  PROV2938:0 "Oiapoque"
@@ -3966,7 +3966,10 @@
  PROV5160:0 "Upper Nile"
  PROV5161:0 "Damietta Branch"
  PROV5162:0 "Dvina River"
- 
+ PROV5301:0 "Cacau Pirera
+ PROV5302:0 "Monte Alegre
+ PROV5303:0 "Porto de Moz"
+ PROV5304:0 "Amazon River"
  
 
 
