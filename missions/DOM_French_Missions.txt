@@ -1834,7 +1834,7 @@ french_missions_2_Continuation_b = {
 				}
 			}
 			total_development = 500 
-			crown_land_share = 50 
+			crown_land_share = 30
 		}
 		effect = { 
 			if = {

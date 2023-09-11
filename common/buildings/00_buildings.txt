@@ -60,7 +60,7 @@ workshop = {
 	cost = 125
 	time = 12
 	modifier = {
-		local_production_efficiency = 0.6
+		local_production_efficiency = 0.5
 	}
 	on_built = {
 		add_development_from_building = {
@@ -90,7 +90,7 @@ temple = {
 	cost = 125
 	time = 12
 	modifier = {
-		local_tax_modifier = 0.4
+		local_tax_modifier = 0.33
 	}
 	on_built = {
 		on_province_tax_building_built_estate_privileges_effect = yes
@@ -719,7 +719,7 @@ regimental_camp = {
 	cost = 250
 	time = 12
 	modifier = {
-		land_forcelimit = 1
+		land_forcelimit = 0.5
 	}
 
 #	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
@@ -949,7 +949,7 @@ cathedral = {
 	time = 12
 	modifier = {
 		local_missionary_strength = 0.03
-		local_tax_modifier = 0.8
+		local_tax_modifier = 0.66
 	}
 	on_built = {
 		on_province_tax_building_built_estate_privileges_effect = yes
@@ -1100,7 +1100,7 @@ cathedral = {
 
 
 university = {
-	cost = 200
+	cost = 400
 	time = 12
 	modifier = {
 		local_development_cost = -0.10
@@ -1842,7 +1842,7 @@ conscription_center = {
 #	}
 
 	modifier = {
-		land_forcelimit = 2
+		land_forcelimit = 1
 	}
 	on_built = {
 		add_development_from_upgrading_or_building = {

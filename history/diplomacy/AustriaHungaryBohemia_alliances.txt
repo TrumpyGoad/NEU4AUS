@@ -122,13 +122,6 @@ union = {
 	end_date = 1620.8.11
 }
 
-# Croatia-Hungary, post-Ladislaus of Naples' attempt to take the Croatian and Hungarian crowns
-vassal = {
-	first = HUN
-	second = CRO
-	start_date = 1409.1.1
-	end_date = 1444.11.12
-}
 
 # Brandenburg-Ansbach (Albrecht Achilles)
 alliance = {

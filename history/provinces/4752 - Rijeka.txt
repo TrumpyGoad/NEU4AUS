@@ -1,7 +1,7 @@
 #4752 - Rijeka
 
-owner = HUN
-controller = HUN
+owner = DAL
+controller = DAL
 culture = croatian
 religion = catholic
 capital = "Rijeka"
@@ -11,7 +11,6 @@ base_tax = 4
 base_production = 4
 base_manpower = 2
 is_city = yes
-add_core = HUN
 discovered_by = KAZ
 discovered_by = CRI
 discovered_by = GOL
@@ -24,6 +23,7 @@ discovered_by = ottoman
 extra_cost = 8
 center_of_trade = 1
 add_core = DAL
+fort_15th = yes 
 
 
 1444.11.12 = {

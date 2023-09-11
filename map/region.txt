@@ -290,6 +290,8 @@ balkan_region = {
 		albania_area
 		silistria_area
 		slavonia_area
+		herz_area
+		nth_bosnia_area
 	}
 }
 

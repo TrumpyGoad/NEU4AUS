@@ -211,6 +211,25 @@
  pic_temple_of_reason:0 "Temple of Reason"
  pic_temple_of_reason_desc:0 "Picardy has always been a bell weather region for France & when the shoots of revolution began here it was no exception, during this time the great basilica was converted by devotees to the cult of reason into the temple of reason."
 
+ #Portugal-Brazil Ideas
+ POB_ideas:0 "Luso-Brazilian Ideas"
+ POB_ideas_start:0 "Luso-Brazilian Traditions"
+ POB_ideas_bonus:0 "Luso-Brazilian Ambition"
+ pob_royal_brigade:0 "The Royal Brigade of the Navy"
+ pob_royal_brigade_desc:0 "The Regiment of the Navy of the Crown of Portugal was first established in 1618 and we continue that grand tradition with our own Royal Brigade"
+ pob_pluricontinental_state:0 "A Plurinational and Pluricontinental State"
+ pob_pluricontinental_state_desc:0 "Spanning two peoples and three continents, the United Kingdom of Portugal, Brazil and the Algarves can draw upon the greatest minds of Europe and the Americas."
+ pob_monopolies:0 "End the Colonial Pact"
+ pob_monopolies_desc:0 "A co-equal kingdom cannot suffer under unequal law. By ending the legal monopolies of Portuguese traders we can create new opportunities for Brazilian investors."
+ pob_settlement_of_brazil:0"Continue the Settlement of Brazil"
+ pob_settlement_of_brazil_desc:0"Brazil has a vast and sparsely populated hinterland. We should continue our colonial policies in the interior of Brazil to further enrich our United Kingdom."
+ pob_the_indian_route:0 "Control of the Route to India"
+ pob_the_indian_route_desc:0"With our new capital in Rio de Janeiro we are perfectly positioned to control - and profit from - the flow of oriental trade to Europe."
+ pob_banco_do_brasil:0 "The Royal Bank of Brazil"
+ pob_banco_do_brasil_desc:"Founded in 1808, the Banco do Brasil is the first modern bank of Latin America. With the Banco and the backing of gold from Minas Gerais, we will have access to a nearly limitless line of credit."
+ pob_arsenal_real:0"Arsenal Real da Marinha"
+ pob_arsenal_real_desc:0 "Established by John VI during the transfer of the royal court to Brazil, the Arsenal de Marinha is the largest and most well-equipped naval base in all of South America, building the largest and most well-equipped ships."
+
  #Tirolian Ideas
  TIR_ideas:0 "Tyrolian Ideas"
  TIR_ideas_start:0 "Tyrolian Traditions"

@@ -1,5 +1,5 @@
-owner = TUR
-controller = TUR
+owner = MOL
+controller = MOL
 culture = bulgarian
 religion = orthodox
 capital = "Tolcu"
@@ -9,8 +9,8 @@ base_tax = 2
 base_production = 1
 base_manpower = 1
 is_city = yes
-add_core = TUR
-add_core = BUL
+add_core = MOL
+
 
 
 
@@ -21,9 +21,3 @@ discovered_by = ottoman
 discovered_by = nomad_group
 
 
-1444.11.12 = {
-	owner = BUL
-	controller = BUL
-	add_core = BUL
-	remove_core = TUR
-}

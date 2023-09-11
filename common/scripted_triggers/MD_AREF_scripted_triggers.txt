@@ -318,10 +318,10 @@ st_md_competent_court = {
     employed_advisor = { category = DIP }
     employed_advisor = { category = MIL }
 
-    OR = {
-        has_adm_advisor_2 = yes
-        has_dip_advisor_2 = yes
-        has_mil_advisor_2 = yes
+    AND = {
+        has_adm_advisor_3 = yes
+        has_dip_advisor_3 = yes
+        has_mil_advisor_3 = yes
     }
 }
 

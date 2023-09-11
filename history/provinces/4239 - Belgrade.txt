@@ -1,7 +1,7 @@
 #4239 - Belgrade
 
-owner = HUN
-controller = HUN
+owner = SER
+controller = SER
 culture = serbian
 religion = orthodox
 capital = "Belgrade"
@@ -13,7 +13,6 @@ base_manpower = 2
 is_city = yes
 fort_15th = yes
 add_core = SER
-add_core = HUN
 discovered_by = KAZ
 discovered_by = CRI
 discovered_by = GOL
@@ -27,7 +26,7 @@ extra_cost = 8
 center_of_trade = 1
 
 1428.1.1 = {
-	capital = "Nándorfehérvár"
+	capital = "Nï¿½ndorfehï¿½rvï¿½r"
 }
 1444.11.12 = {
 	owner = SER

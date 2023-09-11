@@ -8393,6 +8393,7 @@ belem_tower = {
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
 			global_trade_power = 0.05
+			sailors_recovery_speed = 0.05
 		}
 
 		#what effects happen when this tier is achieved
@@ -8425,6 +8426,7 @@ belem_tower = {
 		country_modifiers = {
 			global_trade_power = 0.1
 			global_sailors_modifier = 0.1
+			sailors_recovery_speed = 0.15
 		}
 
 		#what effects happen when this tier is achieved
@@ -8457,6 +8459,7 @@ belem_tower = {
 		country_modifiers = {
 			global_trade_power = 0.15
 			global_sailors_modifier = 0.25
+			sailors_recovery_speed = 0.30
 		}
 
 		#what effects happen when this tier is achieved

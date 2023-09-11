@@ -1,7 +1,7 @@
 #4173 - Syrmia
 
-owner = HUN
-controller = HUN 
+owner = SER
+controller = SER 
 culture = serbian
 religion = orthodox
 capital = "Mitrovica"
@@ -11,7 +11,6 @@ base_tax = 2
 base_production = 2
 base_manpower = 1
 is_city = yes
-add_core = HUN
 add_core = SER
 discovered_by = KAZ
 discovered_by = CRI

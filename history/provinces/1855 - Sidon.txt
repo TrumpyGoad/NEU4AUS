@@ -1,17 +1,17 @@
 #1855 - Sidon
 
-owner = LEB
-controller = LEB
+owner = KOJ
+controller = KOJ
 culture = al_suryah_arabic
 religion = shiite
 capital = "Sayda"
 trade_goods = naval_supplies
 hre = no
-base_tax = 5 
-base_production = 5
-base_manpower = 3
+base_tax = 3 
+base_production = 3
+base_manpower = 2
 is_city = yes
-add_core = LEB
+add_core = KOJ
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = eastern

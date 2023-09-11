@@ -1,10 +1,10 @@
-#1318 - Spiš
+#1318 - Spiï¿½
 
-owner = HUN
-controller = HUN  
+owner = SLO
+controller = SLO
 culture = slovak
 religion = catholic
-capital = "Spiš"
+capital = "Spiï¿½"
 trade_goods = copper
 hre = no
 base_tax = 3
@@ -12,7 +12,6 @@ base_production = 4
 base_manpower = 2
 is_city = yes
 estate = estate_nobles
-add_core = HUN
 add_core = SLO
 discovered_by = western
 discovered_by = eastern
@@ -25,9 +24,3 @@ discovered_by = AST
 discovered_by = QAS
 
 
-1444.11.12 = {
-	remove_core = HUN
-	owner = SLO
-	controller = SLO
-	add_core = SLO
-		}
