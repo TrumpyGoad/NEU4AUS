@@ -21,6 +21,7 @@ discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
 discovered_by = ottoman
+fort_15th = yes
 
 1463.12.25 = {
 	owner = HUN

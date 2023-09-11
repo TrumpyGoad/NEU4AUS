@@ -72,7 +72,7 @@ age_of_discovery = {
 		# End Large City -------------------------------------------------------------------
 
 		obj_md_50_development = {
-			grown_by_development = 50
+			grown_by_development = 300
 		}
 
 		# Competent Court -------------------------------------------------------------------
@@ -433,7 +433,7 @@ age_of_discovery = {
 		}
 		ab_md_1400s_justified_wars = {
 			modifier = {
-				ae_impact = -0.15
+				ae_impact = -0.20
 			}
 			ai_will_do = {
 				factor = 10
@@ -480,7 +480,6 @@ age_of_discovery = {
 			modifier = {
 				attack_bonus_in_capital_terrain = yes
 				attack_bonus_in_capital_terrain = 1
-				leader_land_manuever = 1
 			}
 			ai_will_do = {
 				factor = 10

@@ -1,17 +1,17 @@
 #378 - Tripoli
 
-owner = LEB
-controller = LEB
+owner = KOJ
+controller = KOJ
 culture = al_suryah_arabic
 religion = shiite
 capital = "Trablos" #Tripoli in the East.
-trade_goods = grain
+trade_goods = iron
 hre = no
-base_tax = 6 
-base_production = 6
-base_manpower = 4
+base_tax = 3
+base_production = 3
+base_manpower = 2
 is_city = yes
-add_core = LEB
+add_core = KOJ
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = eastern

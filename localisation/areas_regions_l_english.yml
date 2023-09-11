@@ -2934,8 +2934,10 @@
  iskandariyya_area:0 "Iskandariyya"
  sina_area:0 "Sina"
  desert_area:0 "Buhaira"
- fayyum_area :0 "Fayyum"
+ fayyum_area:0 "Fayyum"
  qus_area:0 "Qus"
+ nth_bosnia_area
+ herz_area
 
 
 

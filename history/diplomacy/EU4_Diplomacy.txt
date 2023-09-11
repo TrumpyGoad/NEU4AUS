@@ -1,12 +1,4 @@
 #Tunis Berber vassals
-
-vassal = {
-	first = TUN
-	second = FZA #Fezzan
-	start_date = 1444.1.1
-	end_date = 1820.1.1
-}
-
 vassal = {
 	first = TUN
 	second = MZB #Mzab

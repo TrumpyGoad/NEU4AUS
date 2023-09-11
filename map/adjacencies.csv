@@ -315,7 +315,9 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 4249;294;sea;5157;-1;-1;-1;-1;
 5153;294;sea;5157;-1;-1;-1;-1;
 #Amazon
-5301;2934;sea;5304;-1;-1;-1;-1;
+5302;2934;sea;5305;-1;-1;-1;-1;
+5303;2930;sea;5305;-1;-1;-1;-1;
+5304;2935;sea;5305;-1;-1;-1;-1;
 #Canals
 5154;5155;canal;1971;-1;-1;-1;-1;don_volga_canal
 5157;1262;canal;312;-1;-1;-1;-1;volga_onega_canal

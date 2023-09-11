@@ -5161,13 +5161,12 @@ province;red;green;blue;x;x
 5160;66;205;230;Upper Nile;x
 5161;22;237;218;Damietta Branch;x
 5162;37;181;161;Dvina;x
-
 5163;255;1;0;Savuar;x
 5164;1;255;0;Papa;x
 5165;1;0;255;Komlo;x
 5166;255;1;1;Pozeg;x
 5167;2;255;0;Cazin;x
-5168;2;0;255;Gyongyos
+5168;2;0;255;Gyongyos;x
 5169;255;1;2;Gyula;x
 5170;3;255;0;Arad;x
 5171;3;0;255;Marghira;x 
@@ -5301,10 +5300,28 @@ province;red;green;blue;x;x
 5299;46;255;0;Tayma;x
 5300;46;0;255;Arar;x
 5301;255;1;46;Sakaka;x
-5301;225;49;48;Cacau Pirera;x
-5302;47;197;48;Monte Alegre;x
-5303;47;47;47;Porto de Moz;x
-5304;46;85;252;Amazon River;x
+5302;225;49;48;Cacau Pirera;x
+5303;47;197;48;Monte Alegre;x
+5304;47;47;47;Porto de Moz;x
+5305;46;85;252;Amazon River;x
+5306;200;44;0;Kerch;x
+5307;144;249;253;Kezlev;x
+5308;94;159;86;Cankoy;x
+5309;125;249;67;Kherson;x
+5310;66;201;96;Kakhovka;x
+5311;218;108;222;Nikopol;x
+5312;192;54;107;Odessa;x
+5313;69;33;154;Mariupol;x
+5314;159;58;115;Donetsk;x
+5315;104;48;149;Tikhoretsk;x
+5316;64;98;49;Armavir;x
+5317;84;208;232;Stavropol;x
+5318;54;196;249;Salsk;x
+5319;87;208;104;Yashkul;x
+5320;222;63;26;Lagan;x
+5321;133;60;14;Saqsin;x
+5322;205;88;151;Volgograd;x
+5323;243;255;63;X Karasu;x
 
 
 

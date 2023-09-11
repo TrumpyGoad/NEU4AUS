@@ -1,7 +1,7 @@
 #318 - Sugla
 
-owner = TUR
-controller = TUR
+owner = AYD
+controller = AYD
 culture = turkish #Should not be Greek or Orthodox in 1444. Its status as a majority Greek city dates to at least after the 17th Century
 religion = sunni
 capital = "Izmirni"
@@ -11,8 +11,6 @@ base_tax = 4
 base_production = 4
 base_manpower = 2
 is_city = yes
-add_core = TUR
-add_core = KNI
 add_core = AYD
 fort_15th = yes
 discovered_by = western

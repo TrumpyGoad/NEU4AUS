@@ -2428,7 +2428,7 @@ dom_cas_missions_4 = {
 				}
 			}
 			OR = {
-				crown_land_share = 40
+				crown_land_share = 30
 				estate_loyalty = {
 					estate = estate_nobles 
 					loyalty = 60 
