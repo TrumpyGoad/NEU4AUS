@@ -1,7 +1,7 @@
 #1953 - Szabolcs
 
-owner = HUN
-controller = HUN 
+owner = BAR
+controller = BAR 
 culture = hungarian
 religion = catholic
 capital = "Szolnok"
@@ -11,7 +11,7 @@ base_tax = 3
 base_production = 3
 base_manpower = 2
 is_city = yes
-add_core = HUN
+add_core = BAR
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
@@ -32,7 +32,7 @@ discovered_by = QAS
 	owner = HAB
 	controller = HAB
 	add_core = HAB
-} # Battle of Mohács, the end of the independent Kingdom of Hungary
+} # Battle of Mohï¿½cs, the end of the independent Kingdom of Hungary
 1542.1.1 = {
 	owner = TUR
 	controller = HAB 

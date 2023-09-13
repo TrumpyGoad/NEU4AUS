@@ -1,7 +1,7 @@
 #4542 - Lubnie
 
-owner = LIT
-controller = LIT
+owner = CHR
+controller = CHR
 culture = ruthenian
 religion = orthodox
 hre = no
@@ -13,7 +13,6 @@ capital = "Lubnie"
 is_city = yes
 #estate = estate_nobles
 add_local_autonomy = 10
-add_core = LIT
 add_core = CHR
 fort_15th = yes
 discovered_by = eastern

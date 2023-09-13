@@ -11,7 +11,19 @@ mam_slot_1_missions = {
 	}
 	has_country_shield = yes
 	
-	
+	mam_reconquer_egypt = { 
+		icon = mission_clear_the_delta
+		required_missions = { }
+		position = 1
+		trigger = {}
+		effect = {	egypt_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}}
+	}
 	
 
 	mam_develop_nile = {

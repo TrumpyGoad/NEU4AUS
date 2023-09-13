@@ -1,8 +1,8 @@
 #1233 - Kargah
 
-owner = MAM
-controller = MAM 
-add_core = MAM
+owner = AZZ
+controller = AZZ
+add_core = AZZ
 culture = al_misr_arabic
 religion = sunni
 capital = "Kharga"

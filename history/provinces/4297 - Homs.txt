@@ -3,7 +3,7 @@
 owner = KOJ
 controller = KOJ
 culture = al_suryah_arabic
-religion = sunni
+religion = catholic
 capital = "Homs"
 trade_goods = cotton
 hre = no

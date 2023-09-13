@@ -1,8 +1,8 @@
 #2318 - Bahariya
 
-owner = MAM
-controller = MAM #Local Badawin in control
-add_core = MAM
+owner = AZZ
+controller = AZZ #Local Badawin in control
+add_core = AZZ
 culture = al_misr_arabic
 religion = sunni
 capital = "el Qasr"

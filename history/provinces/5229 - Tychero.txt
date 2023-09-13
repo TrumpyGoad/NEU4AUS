@@ -1,5 +1,5 @@
-owner = ACH
-controller = ACH
+owner = FRE
+controller = FRE
 culture = greek
 religion = orthodox
 capital = "Gumulcine"
@@ -9,7 +9,7 @@ base_tax = 1
 base_production = 1
 base_manpower = 2
 is_city = yes
-add_core = ACH
+add_core = FRE
 
 
 

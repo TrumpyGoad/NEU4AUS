@@ -3,7 +3,7 @@
 owner = KOJ
 controller = KOJ
 culture = al_suryah_arabic
-religion = shiite
+religion = catholic
 capital = "Sayda"
 trade_goods = naval_supplies
 hre = no

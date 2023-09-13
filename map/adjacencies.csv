@@ -209,7 +209,7 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 4240;1772;sea;5138;-1;-1;-1;-1;Fejer-Pozsony
 135;1772;sea;5138;-1;-1;-1;-1;Sopron-Pozsony
 #Dnister
-1756;282;sea;5143;-1;-1;-1;-1;Basarabia-Edisanas
+1756;5312;sea;5143;-1;-1;-1;-1;Basarabia-Edisanas
 2405;282;sea;5143;-1;-1;-1;-1;Tighina-Edisanas
 2405;1943;sea;5143;-1;-1;-1;-1;Tighina-Braclavas
 2405;281;sea;5143;-1;-1;-1;-1;Tighina-Podole
@@ -218,9 +218,10 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 261;2961;sea;5143;-1;-1;-1;-1;Halicz-Lwow
 4541;2961;sea;5143;-1;-1;-1;-1;Drob-Lwow
 #Dnipro
-1974;2406;sea;5144;-1;-1;-1;-1;Yedishkul-Ingilas
+5309;5310;sea;5144;-1;-1;-1;-1;Yedishkul-Ingilas
 1974;283;sea;5144;-1;-1;-1;-1;Yedishkul-Zaporoze
-2412;283;sea;5144;-1;-1;-1;-1;Kyzyl-Zaporoze
+1974;5309;sea;5144;-1;-1;-1;-1;Yedishkul-Zaporoze
+5313;283;sea;5144;-1;-1;-1;-1;Kyzyl-Zaporoze
 2411;283;sea;5144;-1;-1;-1;-1;Zaporoze-Mansur
 290;283;sea;5144;-1;-1;-1;-1;Zaporoze-Poltava
 290;1944;sea;5144;-1;-1;-1;-1;Cerkasai-Poltava
@@ -254,9 +255,11 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 286;2413;sea;5154;-1;-1;-1;-1;Azov-Tyn
 2414;2413;sea;5154;-1;-1;-1;-1;Azaraba-Tyn
 2414;288;sea;5154;-1;-1;-1;-1;Azaraba-Lower Don
-468;288;sea;5154;-1;-1;-1;-1;Manych-Lower Don
+5318;288;sea;5154;-1;-1;-1;-1;Manych-Lower Don
 1971;288;sea;5154;-1;-1;-1;-1;Beljamen-Lower Don
-467;288;sea;5154;-1;-1;-1;-1;Boris-Lower Don
+467;5322;sea;5154;-1;-1;-1;-1;Boris-Lower Don
+5321;5322;sea;5154;-1;-1;-1;-1;Boris-Lower Don
+1971;5322;sea;5154;-1;-1;-1;-1;Boris-Lower Don
 467;2409;sea;5154;-1;-1;-1;-1;Boris-Bahmut
 299;2408;sea;5154;-1;-1;-1;-1;Voronezh-Yelets
 #Neva
