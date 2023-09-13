@@ -274,6 +274,7 @@ crimea_region = {
 		azov_area
 		kezlev_area
 		stavropol_area
+		tyn_area
 	}
 }
 
