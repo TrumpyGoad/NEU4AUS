@@ -307,10 +307,7 @@ X_CRI_slot_3 = {
 				estate = estate_nomadic_tribes
 				loyalty = 60
 			}
-			estate_loyalty = {
-				estate = estate_dhimmi
-				loyalty = 60
-			}
+		
 		}
 		effect = {
 			284 = { 
