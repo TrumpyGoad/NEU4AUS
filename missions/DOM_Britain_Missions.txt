@@ -4189,19 +4189,19 @@ gbr_ave_row_1 = {
 			if = {
 				limit = { is_random_new_world = no }
 				OR = {
-					province_id = 1500
+					province_id = 1502
 					province_id = 236
 				}
 				has_discovered = ROOT
 			}
 			else = {
-				province_id = 1269
+				province_id = 236
 			}
 		}		
 		trigger = {
 			if = {
 				limit = { is_random_new_world = no }
-				1500 = {
+				1502 = {
 					trade_share = {
 						country = ROOT
 						share = 40
