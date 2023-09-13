@@ -1,16 +1,16 @@
-owner = ACH
-controller = ACH
+owner = FRE
+controller = FRE
 culture = greek
 religion = orthodox
-capital = "Gumulcine"
+capital = "Feres"
 trade_goods = livestock
 hre = no
 base_tax = 2
 base_production = 1
 base_manpower = 2
 is_city = yes
-add_core = ACH
-
+add_core = FRE
+fort_15th = yes
 
 
 discovered_by = western

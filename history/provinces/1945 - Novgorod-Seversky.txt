@@ -1,7 +1,7 @@
 #Severia
 
-owner = LIT
-controller = LIT 
+owner = CHR
+controller = CHR
 culture = ryazanian
 religion = orthodox
 hre = no
@@ -12,7 +12,6 @@ base_manpower = 1
 capital = "Novgorod-Seversky"
 is_city = yes
 add_core = CHR
-add_core = LIT
 #estate = estate_nobles
 discovered_by = western
 discovered_by = eastern

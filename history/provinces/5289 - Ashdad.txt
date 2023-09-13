@@ -1,6 +1,6 @@
 
-owner = MAM
-controller = MAM
+owner = CPT
+controller = CPT
 culture = al_suryah_arabic
 religion = sunni
 capital = "Gazzah"
@@ -11,7 +11,7 @@ base_production = 2
 base_manpower = 1
 estate = estate_nobles
 is_city = yes
-add_core = MAM
+add_core = CPT
 
 discovered_by = western
 discovered_by = muslim

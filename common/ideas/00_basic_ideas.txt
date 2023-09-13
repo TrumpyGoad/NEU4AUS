@@ -63,7 +63,7 @@ aristocracy_ideas = {
 		navy_tradition_decay = -0.01
 	}
 	serfdom = {
-		global_autonomy = -0.05
+		global_autonomy = -0.10
 		nobles_loyalty_modifier = 0.1
 	}
 	local_nobility = {
@@ -71,6 +71,7 @@ aristocracy_ideas = {
 	}
 	noble_resilience = {
 		max_absolutism = 10
+		land_morale = 0.075
 	}
 	
 	
@@ -101,11 +102,11 @@ plutocracy_ideas = {
 		always = yes
 	}
 	bill_of_rights_new = {
-		mercenary_manpower = 0.20
+		mercenary_manpower = 0.33
 		merc_leader_army_tradition = 0.5
 	}
 	tradition_of_payment = {
-		mercenary_cost = -0.25
+		mercenary_cost = -0.20
 		global_unrest = -2
 	}
 	
@@ -140,7 +141,7 @@ horde_gov_ideas = {
 	category = MIL
 	
 	bonus = {
-		cavalry_power = 0.25
+		cavalry_power = 0.20
 	}
 	
 	trigger = {
@@ -149,7 +150,7 @@ horde_gov_ideas = {
 	}
 	
 	horse_lords_new = {
-		cavalry_cost = -0.33
+		cavalry_cost = -0.05
 	}
 	beyond_the_sun = {
 		ae_impact = -0.1
@@ -164,7 +165,7 @@ horde_gov_ideas = {
 		global_unrest = -1
 	}
 	watchers_of_the_silk_road = {	
-		caravan_power = 0.20
+		trade_efficiency = 7.5
 	}
 	a_magnanimous_empire = {
 		num_accepted_cultures = 2
@@ -273,8 +274,8 @@ innovativeness_ideas = {
 		innovativeness_gain = 1
 	}
 	scientific_revolution = {
-		advisor_cost = -0.15
-		idea_cost = -0.1
+		advisor_cost = -0.10
+		idea_cost = -0.05
 	}
 	optimism = {
 		monthly_reform_progress_modifier = 0.25
@@ -284,7 +285,7 @@ innovativeness_ideas = {
 		prestige_decay = -0.01
 	}
 	print_culture = {
-		technology_cost = -0.1
+		technology_cost = -0.075
 	}
 	dynamic_court = {
 		advisor_pool = 2
@@ -342,8 +343,7 @@ religious_ideas = {
 		warscore_cost_vs_other_religion = -0.15
 	}
 	inquisition = {
-		land_morale = 0.05
-		naval_morale = 0.05
+		manpower_in_true_faith_provinces = 0.20
 	}
 	
 
@@ -378,7 +378,6 @@ spy_ideas = {
 	
 	agent_training_new = {
 		siege_ability = 0.1
-		advisor_cost = -0.10
 	}
 
 	vetting = {
@@ -387,7 +386,7 @@ spy_ideas = {
 	}
 
 	claim_fabrication = {
-		movement_speed = 0.1
+		movement_speed = 0.2
 	}
 
 	flexible_negotiation = {
@@ -433,7 +432,7 @@ infrastructure_ideas = {
 		monthly_splendor = 3
 	}
 	infra_roads_new = {
-		manpower_recovery_speed = 0.1
+		manpower_recovery_speed = 0.2
 		reinforce_speed = 0.1
 	}
 
@@ -650,7 +649,7 @@ statehood_ideas = {
 	important = yes
 
 	bonus = {
-		same_culture_advisor_cost = -0.2
+		same_culture_advisor_cost = -0.10
 		manpower_in_own_culture_provinces = 0.15
 	}
 
@@ -674,8 +673,7 @@ statehood_ideas = {
 		core_decay_on_your_own = -0.25	
 	}
 	national_pride  = {
-		land_morale = 0.05
-		naval_morale = 0.05
+		core_creation = -0.1
  	}
 	westphalian_sovereigty = {
 		prestige = 1

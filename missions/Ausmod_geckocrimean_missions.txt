@@ -178,10 +178,7 @@ X_CRI_slot_2 = {
 			1322 = {
 				is_strongest_trade_power = ROOT
 			}
-			trade_goods_produced_amount = {
-				trade_goods = slaves
-				amount = 8
-			}
+		
 			estate_loyalty = {
 				estate = estate_burghers
 				loyalty = 60
@@ -719,30 +716,7 @@ X_CRI_slot_5 = {
         required_missions = { }
 		position = 2
 		trigger = {
-				yedisan_area = {
-					type = all
-					country_or_subject_holds = ROOT		
-				}
-				zaporizhia_area = {
-					type = all
-					country_or_subject_holds = ROOT		
-				}
-				podolia_volhynia_area = {
-					type = all
-					country_or_subject_holds = ROOT		
-				}
-				west_dniepr_area = {
-					type = all
-					country_or_subject_holds = ROOT		
-				}
-				east_dniepr_area = {
-					type = all
-					country_or_subject_holds = ROOT		
-				}
-				chernigov_area = {
-					type = all
-					country_or_subject_holds = ROOT		
-				}
+	
 		}
 		effect = {
 			red_ruthenia_area = {

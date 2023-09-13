@@ -370,47 +370,22 @@ emp_mlo_venice_branch = {
 			}
 		}
 		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 3
-				OR = {
-					province_id = 108
-					province_id = 4729
-					province_id = 1774
-					province_id = 111
-					province_id = 114
+			OR ={ 
+		108 = { 
+                type = all
+				country_or_non_sovereign_subject_holds = ROOT}
+		4984 = { 
+                type = all
+				country_or_non_sovereign_subject_holds = ROOT}
+		
+		4729 = { 
+                type = all
+				country_or_non_sovereign_subject_holds = ROOT}
+		
+		1774 = { 
+                type = all
+				country_or_non_sovereign_subject_holds = ROOT}
 				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = emp_mlo_terra_firma_trigger_tooltip
-				
-				VEN = {
-					NOT = {
-						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-							value = 1
-							OR = {
-								area = lombardy_area
-								area = venetia_area
-								area = piedmont_area
-								area = liguria_area
-								area = emilia_romagna_area
-								area = po_valley_area
-								area = tuscany_area
-								AND = {
-									area = carinthia_area
-									culture_group = latin
-								}
-								AND = {
-									area = tirol_area
-									culture_group = latin
-								}
-							}
-							NOT = { province_id = 112 } #Venice
-							NOT = { province_id = 4991 } #Giudecca
-						}
-					}
-				}
-			}
-			is_subject = no
 		}
 		effect = {
 			add_dip_power = 50
@@ -1078,9 +1053,9 @@ emp_mlo_security_branch_2 = {
 			OR = {
 				province_id = 4982 #Lucano
 				province_id = 4978 #Aosta
-				province_id = 4727
+				province_id = 4977
 				province_id = 102
-				province_id = 110
+				province_id = 107
 				province_id = 111
 			}
 			OR = {
@@ -1105,9 +1080,9 @@ emp_mlo_security_branch_2 = {
 				OR = {
 					province_id = 4982 #Lucano
 					province_id = 4978 #Aosta
-					province_id = 4727
+					province_id = 4977
 					province_id = 102
-					province_id = 110
+					province_id = 107
 					province_id = 111
 				}
 			}
@@ -1120,9 +1095,9 @@ emp_mlo_security_branch_2 = {
 						OR = {
 							province_id = 4740
 							province_id = 103
-							province_id = 4727
+							province_id = 4977
 							province_id = 102
-							province_id = 110
+							province_id = 107
 							province_id = 111
 						}
 						has_building = fort_18th
@@ -1137,9 +1112,9 @@ emp_mlo_security_branch_2 = {
 						OR = {
 							province_id = 4740
 							province_id = 103
-							province_id = 4727
+							province_id = 4977
 							province_id = 102
-							province_id = 110
+							province_id = 107
 							province_id = 111
 						}
 					}

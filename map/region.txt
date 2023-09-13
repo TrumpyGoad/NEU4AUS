@@ -272,6 +272,8 @@ crimea_region = {
 		zaporizhia_area
 		yedisan_area
 		azov_area
+		kezlev_area
+		stavropol_area
 	}
 }
 
@@ -292,6 +294,17 @@ balkan_region = {
 		slavonia_area
 		herz_area
 		nth_bosnia_area
+		montengro_area
+		nis_area
+		popovo_area
+		svoge_area
+		plovdiv_area 
+		feres_area
+		edirne_area
+		north_macedonia_area
+		east_greece_area
+		athens_area
+		achaea_area
 	}
 }
 
@@ -304,6 +317,10 @@ carpathia_region = {
 		southern_transylvania_area
 		wallachia_area
 		moldavia_area
+		bekes_area
+		pest_area
+		daneti_area
+		harsova_area
 	}
 }
 
@@ -363,6 +380,9 @@ mashriq_region = {
 		trans_jordan_area
 		syrian_desert_area
 		aleppo_area
+		dufna_area
+		dimashq_area 
+		kobani_area
 	}
 }
 
@@ -380,6 +400,15 @@ anatolia_region = {
 		ankara_area
 		aegean_archipelago_area
 		germiyan_area
+		izmit_area
+		mentese_area
+		saruhan_area
+		hamid_area
+		eretna_area
+		deverek_area 
+		trebizond_area 
+		cyprus_area
+		icel_area
 	}
 }
 

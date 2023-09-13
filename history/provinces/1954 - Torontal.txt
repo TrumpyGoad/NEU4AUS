@@ -1,7 +1,7 @@
-#1954 - Torontál
+#1954 - Torontï¿½l
 
-owner = HUN
-controller = HUN 
+owner = BAR
+controller = BAR
 culture = hungarian
 religion = catholic
 capital = "Nagybecskerek"
@@ -11,7 +11,7 @@ base_tax = 3
 base_production = 3
 base_manpower = 2
 is_city = yes
-add_core = HUN
+add_core = BAR
 discovered_by = KAZ
 discovered_by = CRI
 discovered_by = GOL

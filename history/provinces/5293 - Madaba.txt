@@ -1,5 +1,5 @@
-owner = FAD
-controller = FAD
+owner = KNI
+controller = KNI
 culture = bedouin_arabic
 religion = sunni
 capital = "Madaba"
@@ -9,7 +9,7 @@ base_tax = 1
 base_production = 1
 base_manpower = 1
 is_city = yes
-add_core = FAD``
+add_core = KNI
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = eastern

@@ -1,7 +1,7 @@
 owner = KOJ
 controller = KOJ
 culture = al_suryah_arabic
-religion = shiite
+religion = catholic
 capital = "Sanlurfa" #Tripoli in the East.
 trade_goods = grain
 hre = no

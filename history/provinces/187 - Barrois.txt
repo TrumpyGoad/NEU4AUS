@@ -1,7 +1,9 @@
 # 187 Barrois - Principal cities: Verdun
 
-owner = BAR
-controller = BAR
+owner = BUR
+controller = BUR
+add_core = BUR
+
 capital = "Bar-le-Duc"
 is_city = yes
 culture = burgundian
@@ -21,15 +23,3 @@ discovered_by = muslim
 discovered_by = ottoman
 
 
-1430.6.26 = { owner = PRO controller = PRO add_core = PRO }
-1444.11.11 = {
-	owner = BUR
-	controller = BUR
-	add_core = BUR
-}
-1444.11.12 = {
-	owner = BAR
-	controller = BAR
-	add_core = BAR
-	remove_core = PRO
-}

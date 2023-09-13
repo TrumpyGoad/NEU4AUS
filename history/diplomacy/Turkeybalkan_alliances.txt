@@ -111,13 +111,7 @@ alliance = {
 	end_date = 1800.1.1
 }
 
-# Athens, a Byzantine vassal
-vassal = {
-	first = BYZ
-	second = ATH
-	start_date = 1444.6.1
-	end_date = 1444.11.12
-}
+
 
 # Athens, a Morean vassal
 vassal = {

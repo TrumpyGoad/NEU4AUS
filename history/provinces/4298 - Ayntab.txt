@@ -3,7 +3,7 @@
 owner = KOJ
 controller = KOJ
 culture = turkish
-religion = sunni
+religion = catholic
 capital = "Ayntab"
 trade_goods = wool
 hre = no

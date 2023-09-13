@@ -1,7 +1,7 @@
 #290 - Poltava
 
-owner = LIT
-controller = LIT 
+owner = CHR
+controller = CHR 
 culture = ruthenian
 religion = orthodox
 hre = no
@@ -14,7 +14,6 @@ is_city = yes
 #estate = estate_nobles
 add_local_autonomy = 10
 add_core = CHR
-add_core = LIT
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim

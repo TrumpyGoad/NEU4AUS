@@ -1,7 +1,7 @@
 #358 - Alexandria
 
-owner = MAM
-controller = MAM
+owner = IKS
+controller = IKS
 culture = al_misr_arabic
 religion = sunni
 capital = "Al Iskandirya"
@@ -11,7 +11,7 @@ base_tax = 3
 base_production = 3
 base_manpower = 2
 is_city = yes
-add_core = MAM
+add_core = IKS
 fort_15th = yes
 discovered_by = western
 discovered_by = muslim

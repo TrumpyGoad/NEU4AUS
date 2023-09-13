@@ -1,8 +1,7 @@
 #2324 - Halaib
 
-owner = MAM
-controller = MAM
-add_core = MAM
+owner = BEJ
+controller = BEJ
 add_core = BEJ
 culture = beja
 religion = sunni

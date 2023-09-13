@@ -721,7 +721,7 @@ regimental_camp = {
 	cost = 250
 	time = 12
 	modifier = {
-		land_forcelimit = 0.5
+		land_forcelimit = 1
 	}
 
 #	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)

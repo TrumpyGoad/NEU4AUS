@@ -1,7 +1,7 @@
-#153 - Pest (Pest + Pilis + Esztergom + Kalocsa + most of Kiskunság + Parts of Nógrád )
+#153 - Pest (Pest + Pilis + Esztergom + Kalocsa + most of Kiskunsï¿½g + Parts of Nï¿½grï¿½d )
 
-owner = HUN
-controller = HUN 
+owner = BAR
+controller = BAR 
 culture = hungarian
 religion = catholic
 capital = "Buda"
@@ -11,7 +11,7 @@ base_tax = 5
 base_production = 4
 base_manpower = 2
 is_city = yes
-add_core = HUN
+add_core = BAR
 discovered_by = KAZ
 discovered_by = CRI
 discovered_by = GOL

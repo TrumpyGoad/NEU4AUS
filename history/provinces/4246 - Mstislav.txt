@@ -1,7 +1,7 @@
 #4246 - Mstislav
 
-owner = LIT
-controller = LIT  
+owner = PLT
+controller = PLT
 culture = byelorussian
 religion = orthodox 
 hre = no
@@ -11,7 +11,6 @@ trade_goods = wool
 base_manpower = 1
 capital = "Mstsislaw"
 is_city = yes
-add_core = LIT
 add_core = PLT
 discovered_by = western
 discovered_by = eastern
