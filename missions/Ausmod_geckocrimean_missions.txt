@@ -73,13 +73,6 @@ X_CRI_slot_1 = {
 		trigger = {
 			stability = 3
 			legitimacy_equivalent = 75
-			custom_trigger_tooltip = {
-				tooltip = X_CRI_reform_1_passed_tt
-				check_variable = {
-					which = X_CRI_celestial_empire_reforms_variable
-					value = 1
-				}
-			}
 			if = {
 				limit = { exists = GOL }	
 				OR = {
