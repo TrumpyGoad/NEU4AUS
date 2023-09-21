@@ -616,7 +616,6 @@ tatar_missions_2 = {
 	ai = yes
 	potential = {
 		OR = {
-			tag = GOL
 			tag = NOG
 			tag = KAZ
 			tag = SHY
