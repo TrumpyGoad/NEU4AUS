@@ -3878,7 +3878,8 @@ por_elite_marines_modifier = {
 	is_marine_modifier = yes 
 }
 por_minas_gerais = {
-	trade_goods_size = 2
+	trade_goods_size = 0.01 #don't ask me why this fucking thing is necessary.
+	local_gold_depletion_chance_modifier = -0.5
 }
 
 por_wine_monopolies = {

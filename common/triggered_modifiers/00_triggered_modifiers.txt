@@ -39,6 +39,26 @@ east_indian_trade_route = {
 
 	trade_efficiency = 0.05	
 }
+control_of_minas_gerais = {
+	potential = {
+		any_subject_country = {
+			capital_scope = {
+				colonial_region = colonial_brazil
+			}
+			owns = 765
+		}
+	}
+	trigger = {
+		765 = {
+			has_great_project = {
+				type = minas_gerais
+				tier = 3
+			}
+		}
+	}
+	interest = -1
+	
+}
 
 #########################################################
 # Coptic control of Alexandria.
