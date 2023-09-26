@@ -7368,8 +7368,6 @@ jesuits_expelled = { #Long term effect on colonies
 	technology_cost = 0.1
 	global_missionary_strength = -0.01
 }
-
-
 #Protestantism Events
 harbouring_reformer = {
 	church_power_modifier = 0.15
