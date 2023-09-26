@@ -16574,7 +16574,6 @@ minas_gerais = {
 			trade_goods_size = 2.0
 		}
 		country_modifiers = {
-			interest = -0.5
 		}
 		on_upgraded = {
 			if = {
@@ -16598,7 +16597,6 @@ minas_gerais = {
 			trade_goods_size = 3.0
 		}
 		country_modifiers = {
-			interest = -1
 		}
 		on_upgraded = {
 			if = {
