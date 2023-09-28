@@ -1,0 +1,13 @@
+delete_building_and_call_event_effect = {
+	every_owned_province = {
+		if = { limit = { NOT = {num_free_building_slots = 1}}
+			remove_building	= $BUILDING$
+		}
+	}
+	ROOT = {
+		country_event = { 
+			id = building.1 
+			days = 1
+		} 
+	}
+}
