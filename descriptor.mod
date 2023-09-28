@@ -11,6 +11,6 @@ tags={
 	"Events"
 	"Utilities"
 }
-name="NEU4AUS+"
+name="EU4 Australia Multiplayer+"
 supported_version="1.35.6"
 remote_file_id="3005627651"
