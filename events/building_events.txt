@@ -17,28 +17,6 @@ country_event = {
         }
 	}
 
-	# Fort chain
-	option = {
-		name = building_fort_15th
-		trigger = { ROOT = { fort_15th = 1 } }
-		delete_building_and_call_event_effect = { BUILDING = fort_15th }
-	}
-	option = {
-		name = building_fort_16th
-		trigger = { ROOT = { fort_16th = 1 } }
-		delete_building_and_call_event_effect = { BUILDING = fort_16th }
-	}
-	option = {
-		name = building_fort_17th
-		trigger = { ROOT = { fort_17th = 1 } }
-		delete_building_and_call_event_effect = { BUILDING = fort_17th }
-	}
-	option = {
-		name = building_fort_18th
-		trigger = { ROOT = { fort_18th = 1 } }
-		delete_building_and_call_event_effect = { BUILDING = fort_18th }
-	}
-
 	# Marketplace chain
 	option = {
 		name = building_marketplace
@@ -172,73 +150,12 @@ country_event = {
     desc = building.1.1.d
 	is_triggered_only = yes
 	picture = CITY_DEVELOPMENT_eventPicture
-    
-	option = {
-		name = building_tradecompany
-		trigger = { ROOT = { tradecompany = 1 } }
-		delete_building_and_call_event_effect = { BUILDING = tradecompany }
-	}
-    
-	option = {
-		name = building_textile
-		trigger = { ROOT = { textile = 1 } }
-		delete_building_and_call_event_effect = { BUILDING = textile }
-	}
-    
-	option = {
-		name = building_wharf
-		trigger = { ROOT = { wharf = 1 } }
-		delete_building_and_call_event_effect = { BUILDING = wharf }
-	}
-    
-	option = {
-		name = building_plantations
-		trigger = { ROOT = { plantations = 1 } }
-		delete_building_and_call_event_effect = { BUILDING = plantations }
-	}
-    
-	option = {
-		name = building_farm_estate
-		trigger = { ROOT = { farm_estate = 1 } }
-		delete_building_and_call_event_effect = { BUILDING = farm_estate }
-	}
-    
-	option = {
-		name = building_mills
-		trigger = { ROOT = { mills = 1 } }
-		delete_building_and_call_event_effect = { BUILDING = mills }
-	}
-    
-	option = {
-		name = building_furnace
-		trigger = { ROOT = { furnace = 1 } }
-		delete_building_and_call_event_effect = { BUILDING = furnace }
-	}
-    
-	option = {
-		name = building_soldier_households
-		trigger = { ROOT = { soldier_households = 1 } }
-		delete_building_and_call_event_effect = { BUILDING = soldier_households }
-	}
-    
-	option = {
-		name = building_impressment_offices
-		trigger = { ROOT = { impressment_offices = 1 } }
-		delete_building_and_call_event_effect = { BUILDING = impressment_offices }
-	}
-    
+
 	option = {
 		name = building_ramparts
 		trigger = { ROOT = { ramparts = 1 } }
 		delete_building_and_call_event_effect = { BUILDING = ramparts }
 	}
-    
-	option = {
-		name = building_state_house
-		trigger = { ROOT = { state_house = 1 } }
-		delete_building_and_call_event_effect = { BUILDING = state_house }
-	}
-
 	option = {
 		name = building.1.general_buildings
         ROOT = {
