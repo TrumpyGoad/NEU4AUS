@@ -6,9 +6,19 @@ country_decisions = {
 		major = yes
 		potential = {
 			ai = no
+			any_owned_province = {
+				AND = {
+					building = temple
+					NOT = {num_free_building_slots = 1}
+				}
+			}
 		}
 		effect = {
-			country_event = { id = building.1 } 
+			every_owned_province = {
+				if = { limit = { NOT = {num_free_building_slots = 1}}
+					remove_building	= temple
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 0

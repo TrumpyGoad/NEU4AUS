@@ -12,5 +12,5 @@
  building.1.1.every_manufactory: "§REvery Manufactory§!"
 
 # decisions
- delete_buildings_title: "Show Building Removal Menu"
- delete_buildings_desc: "An event will pop up that allows you to delete every building of a kind you choose in the option"
+ delete_buildings_title: "Church Removal Button"
+ delete_buildings_desc: "Removes all Churches in provinces with 0 building slots"
