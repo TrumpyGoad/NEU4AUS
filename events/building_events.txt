@@ -6,16 +6,6 @@ country_event = {
     desc = building.1.d
 	is_triggered_only = yes
 	picture = CITY_DEVELOPMENT_eventPicture
-
-	option = {
-		name = building.1.manufactories
-        ROOT = {
-            country_event = { 
-                id = building.1.1
-                days = 1
-            } 
-        }
-	}
 	# Temple chain
 	option = {
 		name = building_temple
@@ -38,17 +28,6 @@ country_event = {
 		trigger = { ROOT = { naval_battery = 1 } }
 		delete_building_and_call_event_effect = { BUILDING = naval_battery }
 	}
-
-	option = {
-		name = building.1.general_buildings
-        ROOT = {
-            country_event = { 
-                id = building.1
-                days = 1
-            } 
-        }
-	}
-
 	option = {
 		name = building.1.exit
 	}
