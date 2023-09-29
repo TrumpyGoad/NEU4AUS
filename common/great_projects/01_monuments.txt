@@ -16549,6 +16549,7 @@ minas_gerais = {
 		}
 		province_modifiers = {
 			trade_goods_size = 1.0
+			interest = -.25
 		}
 		country_modifiers = {			
 		}
@@ -16572,6 +16573,7 @@ minas_gerais = {
 		}
 		province_modifiers = {
 			trade_goods_size = 2.0
+			interest = -.5
 		}
 		country_modifiers = {
 		}
@@ -16595,6 +16597,7 @@ minas_gerais = {
 		}
 		province_modifiers = {
 			trade_goods_size = 3.0
+			interest = -.75
 		}
 		country_modifiers = {
 		}
