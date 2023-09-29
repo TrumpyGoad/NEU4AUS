@@ -132,42 +132,6 @@ gc_por_1 = {
 			}
 		}
 		effect = {
-			if = {
-				limit = {
-					765 = {
-						NOT = {
-							trade_goods = gold
-						}
-					}
-				}
-				765 = {
-					change_trade_goods = gold
-				}
-			}
-			if = {
-				limit = {
-					765 = {
-						has_great_project = {
-							type = minas_gerais
-							tier = 1
-						}
-					}
-				}
-				765 = {
-					add_great_project_tier = {
-						type = minas_gerais
-						tier = 1
-					}
-				}
-			}
-			else = {
-				765 = {
-					add_great_project_tier = {
-						type = minas_gerais
-						tier = 2
-					}
-				}
-			}
 			765 = {
 				add_province_modifier = {
 					name = "por_minas_gerais"
