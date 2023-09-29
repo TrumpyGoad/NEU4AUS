@@ -16561,7 +16561,6 @@ minas_gerais = {
 				}
 				change_trade_goods = gold 
 			}
-			else = { add_base_production = 1 }
 		}
 	}
 
@@ -16586,7 +16585,6 @@ minas_gerais = {
 				}
 				change_trade_goods = gold 
 			}
-			else = { add_base_production = 1 }
 		}
 	}
 
@@ -16611,7 +16609,6 @@ minas_gerais = {
 				}
 				change_trade_goods = gold 
 			}
-			else = { add_base_production = 1 }
 		}
 	}
 }
