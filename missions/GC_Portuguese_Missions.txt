@@ -132,6 +132,18 @@ gc_por_1 = {
 			}
 		}
 		effect = {
+			if = {
+				limit = {
+					765 = {
+						NOT = {
+							trade_goods = gold
+						}
+					}
+				}
+				765 = {
+					change_trade_goods = gold
+				}
+			}
 			765 = {
 				add_province_modifier = {
 					name = "por_minas_gerais"
