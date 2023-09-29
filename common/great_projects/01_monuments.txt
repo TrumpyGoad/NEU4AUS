@@ -16549,7 +16549,9 @@ minas_gerais = {
 		}
 		province_modifiers = {
 			trade_goods_size = 1.0
-			interest = -.25
+		}
+		area_modifier = {
+			trade_goods_size_modifier = 0.05
 		}
 		country_modifiers = {			
 		}
@@ -16573,9 +16575,12 @@ minas_gerais = {
 		}
 		province_modifiers = {
 			trade_goods_size = 2.0
-			interest = -.5
+		}
+		area_modifier = {
+			trade_goods_size_modifier = 0.1
 		}
 		country_modifiers = {
+			interest = -0.25
 		}
 		on_upgraded = {
 			if = {
@@ -16597,9 +16602,12 @@ minas_gerais = {
 		}
 		province_modifiers = {
 			trade_goods_size = 3.0
-			interest = -.75
+		}
+		area_modifier = {
+			trade_goods_size_modifier = 0.15
 		}
 		country_modifiers = {
+			interest = -0.5
 		}
 		on_upgraded = {
 			if = {
