@@ -1,8 +1,8 @@
 # 197 Roussillon - Principal cities: Perpignan
 
-owner = CAS
-controller = CAS
-add_core = CAS
+owner = CAT
+controller = CAT
+add_core = CAT
 capital = "Perpignan"
 is_city = yes
 culture = catalan

@@ -178,10 +178,7 @@ bishop_elector_group_2 = {
 				name = bishop_elector_ecclesiastic_league
 				duration = 7300
 			}
-			add_core = 80 #Trier
-			add_core = 1760 #Coblenz
-			add_core = 78 #Mainz
-			add_core = 4718 #Aschaffenberg
+			
 		}
 	}
 	bishop_elector_unity_in_faith = {

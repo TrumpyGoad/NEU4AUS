@@ -337,7 +337,7 @@ lorraine_area = { #4
 }
 
 picardy_area = { #4
-	87 88 89 1743
+	87 88 89 1743 5326
 }
 
 ile_de_france_area = { #4
@@ -370,11 +370,11 @@ holland_area = { #4
 }
 
 flanders_area = { #3
-	90 1865 4769
+	90 1865 4769 5325 5324
 }
 
 frisia_area = { #5
-	99 100 1931 4381 4382
+	99 100 1931 4381 4382 5327
 }
 
 brabant_area = { #3
@@ -445,11 +445,17 @@ extremadura_area = {
 }
 
 beieras_area = { #4
-	231 232 228 1851 4556
+	 228 5331 5330 
 }
 
 alentejo_area = { #5
-	227 229 230 4150 4787 5117
+	5333 4150 5334 229 5117 230
+}
+lisboa_area = { 
+	227 1851 5332 4787
+}
+porto_area = { 
+	4556 5329 5328 231 232
 }
 
 macaronesia_area = { #3
@@ -979,7 +985,7 @@ upper_franconia_area = { #4
 }
 
 upper_swabia_area = { #4 (East Swabia)
-	68 1868 4711 1872
+	68 1868 4711 1872 4710
 }
 
 northern_saxony_area = { #4 (Saxe-Altmark)
@@ -1009,7 +1015,7 @@ hinter_pommern_area = { #3
 }
 
 tirol_area = { #5
-	73 110 1768 4710 4758
+	73 110 1768 4758
 }
 
 austria_proper_area = { #5
@@ -1161,7 +1167,10 @@ southern_transylvania_area = { #3
 }
 
 slovakia_area = { #5
-	154 162 1318 1772 4236 5267 5268
+	154  1318 1772 4236 
+}
+zemplin_area = { 
+	162 5267 5268
 }
 
 serbia_area = { #5
@@ -1268,7 +1277,7 @@ eretna_area = {
 	5270 4314 5269 1846 2300
 }
 erzurum_area = { #3	Erzurum and Trebizond
-	 331 2305 5274 5275 
+	 331 2305 5274 
 }
 
 hudavendigar_area = { #3
@@ -1333,14 +1342,14 @@ icel_area = {
 }
 
 aleppo_area = { #4
-	377 1849 2313 4992  5282 5283
+	377  2313 4992  5282 4298 5277
 }
 
 kobani_area = { 
-	5277 4298 5276
+	 5276 5281 2308 2303
 }
 syria_area = { #4
-	378 4297 5284 5285 
+	378 4297 5284 5285 1849 5283
 }
 dimashq_area = { 
 	382 5287 5288 1855
@@ -1356,7 +1365,7 @@ palestine_area = { #3
 
 dulkadir_area = { # 4
 	color = { 184 54 72 }
-	332 2303 2308 4310 5281
+	332 4310 5275
 }
 
 iraq_arabi_area = { #5 Lower Mesopotamia
@@ -1368,7 +1377,7 @@ basra_area = { #4
 }
 
 luristan_area = { #4
-	413 414 2209 2210
+	413 414 2209 2210 2211
 }
 
 north_kurdistan_area = { #5
@@ -1381,12 +1390,12 @@ khuzestan_area = { #5
 
 shahrizor_area = {	#4
 	color = { 152 102 102 }
-	415 2211 4293 4294
+	415 4293 4294 411
 }
 
 al_jazira_area = { #5
 	color = { 92 200 92 }
-	407 411 2309 2314 4292 5279 5280
+	407 2309 2314 4292 5279 5280
 }
 
 
@@ -1684,7 +1693,7 @@ southern_madagascar = { #4
 
 lower_zambezi_area = { #3
 	color = { 213 127 69 }
-	1187 1190 1191
+	 1190 1191
 }
 
 upper_zambezi_area = { #3
@@ -1692,7 +1701,7 @@ upper_zambezi_area = { #3
 }
 
 shire_area = { #3
-	4038 4039 4040
+ 4039 4040
 }
 
 butua_area = { #3
@@ -1700,7 +1709,7 @@ butua_area = { #3
 }
 
 zimbabwe_area = { #4
-	1184 2950 2951 2952
+	1184 2950 2951 2952 1187
 }
 
 ruvuma_area = { #4
@@ -1708,7 +1717,7 @@ ruvuma_area = { #4
 }
 
 ngonde_area = { #3
-	4041 4044 4045
+ 4044 4045
 }
 
 mozambique_area = { #4
@@ -1716,7 +1725,7 @@ mozambique_area = { #4
 }
 
 uticulo_makuana_area = { #3
-	4034 4035 4048
+	4034 4035 4048 4038
 }
 
 quelimane_area = { #3
@@ -1748,7 +1757,7 @@ jubba_area = { #3
 }
 
 tanzania_area = { #5
-	4055 4056 4057 4058 4073
+	4055 4056 4057 4058 4073 4041
 }
 
 buha_area = { #5
@@ -1788,7 +1797,7 @@ bunyoro_area = { #3
 }
 
 kasai_area = { #5
-	4083 4087 4091 4092 4093
+	 4087 4091 4092 4093
 }
 
 sankuru_area = { #3
@@ -1797,7 +1806,7 @@ sankuru_area = { #3
 
 lower_kasai = { #4
 	color = { 66 114 224 }
-	4081 4085 4086 4088
+	4081 4085 4086 4088 4083
 }
 
 ogaden_area = { #5
@@ -2185,19 +2194,19 @@ kabulistan_area = { #5
 }
 
 transcaspia_area = {
-	437 438 439 443 2349
+	437 438 439 443 2349 2350
 }
 
 mashhad_area = { #4 - Northern Khorasan
-	2221 2235 2236 4326
+	2221 2235 2236 4326 4325
 }
 
 herat_area = {	#3 - Eastern Khorasan
-	446 4324 4325 
+	446 
 }
 
 birjand_area = { #3 - Western Khorasan
-	436 4334 4336 
+	436 4334 4336 4324
 }
 
 ghor_area = { #3
@@ -2207,7 +2216,7 @@ ghor_area = { #3
 
 merv_area = { #3
 	color = { 60 186 134 }
-	444 445 2350
+	444 445 
 }
 
 balkh_area = { #3

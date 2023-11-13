@@ -9,7 +9,7 @@ religion = catholic
 capital = 236 # London
 
 
-#1422.8.31 = { #Succession
+
 
 1429.11.6 = { #Coronation
 	monarch = {

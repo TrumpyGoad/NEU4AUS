@@ -10,7 +10,6 @@ issue_letters_of_marque = {
 	}
 	
 	modifier = {
-		privateer_efficiency = 0.15
 		embargo_efficiency = 0.1
 		light_ship_cost = -0.1
 	}

@@ -1,3 +1,4 @@
+discovered_by = south_american
 # - Porto de Moz
 
 culture = tupinamba
@@ -13,7 +14,7 @@ native_size = 15
 native_ferocity = 2
 native_hostileness = 6
 extra_cost = 8
-
+center_of_trade = 1
 1669.10.24 = {
 	owner = POR
 	controller = POR

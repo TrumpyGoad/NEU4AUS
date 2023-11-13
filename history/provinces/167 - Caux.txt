@@ -1,7 +1,7 @@
 # 167 Caux - Principal cities: Rouen
 
-owner = ENG
-controller = ENG
+owner = NRM
+controller = NRM
 capital = "Rouen"
 is_city = yes
 culture = normand
@@ -11,9 +11,7 @@ base_tax = 4
 base_production = 4
 trade_goods = glass
 base_manpower = 4
-add_core = FRA
 add_core = NRM
-add_core = ENG
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim

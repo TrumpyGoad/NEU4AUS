@@ -1910,7 +1910,7 @@ gbr_colonial_australia = {
 }
 
 ave_national_bank = {
-	interest = -2
+	interest = -0.25
 	inflation_reduction = 0.1
 }
 
@@ -10408,4 +10408,12 @@ X_CRI_ruthenian_dominance_cmod = {
 ser_extended_policy = { 
 	development_cost = -0.05
 	production_efficiency = 0.05
+}
+
+por_church_under = { 
+	global_tax_modifier = 0.1
+}
+manstonkpor = { 
+	global_sailors_modifier = 0.1
+	global_manpower_modifier = 0.1
 }

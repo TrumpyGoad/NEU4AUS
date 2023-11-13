@@ -1,8 +1,8 @@
 #210 - Navarra
 
-owner = CAS		#Juan I de Navarra
-controller = CAS
-add_core = CAS
+owner = NAV		#Juan I de Navarra
+controller = NAV
+add_core = NAV
 culture = basque
 religion = catholic
 hre = no

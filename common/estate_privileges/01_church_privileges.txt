@@ -268,10 +268,10 @@ estate_church_independent_inquisition = {
 	influence = 0.05
 	loyalty = 0.05
 	penalties = {
-		stability_cost_modifier = 0.1
+		stability_cost_modifier = 0.05
 	}
 	benefits = {
-		adm_advisor_cost = -0.15
+		adm_advisor_cost = -0.10
 	}
 	conditional_modifier = {
 		trigger = { has_government_mechanic = russian_modernization_mechanic }
@@ -2442,7 +2442,7 @@ estate_church_japanese_christian_communities_privilege = {
 }
 
 #Domination generic Estate Privileges
-estate_church_development_of_temples = {
+#estate_church_development_of_temples = {
 	icon = privilege_religious
 	loyalty = 0.1
 	influence = 0.05

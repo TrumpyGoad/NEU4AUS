@@ -39,13 +39,14 @@ emp_bra_pru_1 = {
 				}
 				add_core = ROOT
 			}
-			hinter_pommern_area = {
+			hinter_pommern_area  = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_core = ROOT
 			}
+		
 		}
 	}
 	emp_brapru_conquer_pomerania = {
@@ -241,6 +242,12 @@ emp_bra_pru_1_b = {
 		effect = {
 			set_country_flag = brapru_army_reforms_2
 			country_event = { id = flavor_brapru.6 }
+			if = {
+				limit = { has_dlc = "Domination" }
+				custom_tooltip = pru_access_normal_militarization_tt
+				set_country_flag = enable_second_mil_level_flag
+				regenerate_government_mechanics = yes
+			}
 		}
 	}
 	emp_brapru_army_reforms_3 = {
@@ -277,6 +284,13 @@ emp_bra_pru_1_b = {
 					name = "pru_space_marines_2"
 					duration = -1
 				}
+			}
+			if = {
+				limit = { has_dlc = "Domination" }
+				custom_tooltip = pru_access_advanced_militarization_tt
+				clr_country_flag = enable_second_mil_level_flag
+				set_country_flag = enable_third_mil_level_flag
+				regenerate_government_mechanics = yes
 			}
 		}
 	}
@@ -431,23 +445,7 @@ emp_bra_pru_2 = {
 			}
 		}
 	}
-	emp_brapru_chinese_trade = {
-		icon = mission_open_up_china
-		required_missions = { emp_brapru_emden_company }
-		provinces_to_highlight = {
-		}
-		trigger = {
-			667 = {
-				is_strongest_trade_power = ROOT
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = "pru_chinese_trade"
-				duration = 7300
-			}
-		}
-	}
+	
 	emp_brapru_empower_the_junkers = {
 		icon = empower_the_junkers
 		required_missions = { emp_brapru_army_reforms_1 }
@@ -526,13 +524,11 @@ emp_bra_pru_2 = {
 emp_bra_pru_3 = {
 	slot = 3
 	generic = no
-	ai = yes
 	potential_on_load = {
 		has_dlc = "Emperor"
 	}
 	potential = {
 		has_dlc = "Emperor"
-		NOT = { map_setup = map_setup_random }
 		OR = {
 			tag = BRA
 			tag = PRU
@@ -568,24 +564,29 @@ emp_bra_pru_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			weser_area = {
+			lusatia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			1931 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+			south_saxony_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
+				add_permanent_claim = ROOT
 			}
+			mecklenburg_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			
+		
 		}
 	}
 	emp_brapru_lower_saxony = {

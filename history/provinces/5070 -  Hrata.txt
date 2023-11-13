@@ -1,10 +1,8 @@
-#360 - Qus & Qena
-
 owner = BEJ
 controller = BEJ
-culture = al_misr_arabic
+culture = nubian
 religion = sunni
-capital = "Qus"
+capital = "Hrata"
 trade_goods = livestock
 hre = no
 base_tax = 1

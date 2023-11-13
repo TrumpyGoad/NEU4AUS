@@ -15,12 +15,7 @@ union = { #a bit more extensive than in history, I know!
 }
 
 # Saxony and Thuringia until the Leipziger Teilung
-union = {
-	first = SAX
-	second = THU
-	start_date = 1444.10.29
-	end_date = 1444.11.12
-}
+
 
 # Wurzburg and Bamberg
 vassal = {
@@ -52,6 +47,13 @@ vassal = {
 	second = THU
 	start_date = 1573.3.2
 	end_date = 1586.2.11
+}
+
+vassal = { 
+	first = SWI
+	second = TTL
+	start_date = 1444.11.11
+	end_date = 1590.11.11
 }
 
 # Saxony and Poland

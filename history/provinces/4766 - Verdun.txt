@@ -8,7 +8,6 @@ capital = "Verdun"
 is_city = yes
 culture = burgundian
 religion = catholic
-hre = yes
 base_tax = 3
 base_production = 3
 trade_goods = grain

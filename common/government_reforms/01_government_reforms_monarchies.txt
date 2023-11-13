@@ -1536,6 +1536,7 @@ portuguese_monarchy_reform = {
 		global_tax_modifier = 0.1
 		sailors_recovery_speed = 0.2
 	}
+	has_parliament = yes
 	ai = {
 		factor = 1
 	}
@@ -2200,12 +2201,26 @@ prussian_monarchy = {
 		max_absolutism = 10
 		monarch_military_power = 1
 		nobles_loyalty_modifier = 0.1
-		#governing_capacity_modifier = -0.33
+		governing_capacity_modifier = -0.5
 	}
 
 	conditional = {
-		allow = { has_dlc = "Rights of Man" }
-		#militarised_society = yes
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			prussian_militarization_mechanic_1
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			prussian_militarization_mechanic_2
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			prussian_militarization_mechanic_3
+		}
 	}
 }
 
@@ -5909,7 +5924,6 @@ strengthened_parliament_reform = {
 	}
 	modifiers = {
 		max_absolutism = -20
-		development_cost_in_primary_culture = -0.1
 		parliament_backing_chance = 0.05
 	}
 	ai = {

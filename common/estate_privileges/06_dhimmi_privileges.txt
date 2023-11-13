@@ -785,7 +785,7 @@ estate_dhimmi_millet_system = {
 }
 
 #Domination generic Estate Privileges
-estate_dhimmi_development_of_communities = {
+#estate_dhimmi_development_of_communities = {
 	icon = privilege_development_efficiency
 	loyalty = 0.05
 	influence = 0.05

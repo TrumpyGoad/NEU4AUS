@@ -1,7 +1,7 @@
 owner = KNI
 controller = KNI
 culture = bedouin_arabic
-religion = sunni
+religion = catholic
 capital = "Madaba"
 trade_goods = grain
 hre = no

@@ -1,17 +1,16 @@
 #205 - Savoie
 
-owner = SAV
-controller = SAV
+owner = DAU
+controller = DAU
 culture = occitain
 religion = catholic
-hre = yes
 base_tax = 6
 base_production = 6
 trade_goods = cloth
 base_manpower = 3
-capital = "Chambéry"
+capital = "Chambï¿½ry"
 is_city = yes	
-add_core = SAV
+add_core = DAU
 fort_15th = yes
 
 

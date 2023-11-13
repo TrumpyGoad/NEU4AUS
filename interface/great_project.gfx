@@ -555,10 +555,6 @@ spriteTypes = {
 		texturefile = "gfx//interface//great_projects//great_project_zacatecas_mine_city.dds"
 	}
 
-	spriteType = {
-		name = "GFX_great_project_minas_gerais"	
-		texturefile = "gfx//interface//great_projects//great_project_falun_copper_mine.dds"
-	}
 	### 1.34 MONUMENTS
 
 	spriteType = {

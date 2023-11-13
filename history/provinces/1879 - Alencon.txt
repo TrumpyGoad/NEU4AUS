@@ -1,8 +1,8 @@
-# 1879 - Alençon
+# 1879 - Alenï¿½on
 
-owner = ENG
-controller = ENG
-capital = "Alençon"
+owner = ALE
+controller = ALE
+capital = "Alenï¿½on"
 is_city = yes
 culture = cosmopolitan_french
 religion = catholic
@@ -12,9 +12,6 @@ base_production = 4
 trade_goods = livestock
 base_manpower = 3
 add_core = ALE
-add_core = ENG
-add_core = FRA
-add_local_autonomy = 80
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim

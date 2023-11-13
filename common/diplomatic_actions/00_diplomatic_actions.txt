@@ -111,7 +111,7 @@ annexationaction = {
 			FROM = {
 				has_opinion = {
 					who = ROOT
-					value = 190
+					value = 150
 				}
 			}
 		}
@@ -144,7 +144,7 @@ integrationaction = {
 			FROM = {
 				has_opinion = {
 					who = ROOT
-					value = 190
+					value = 150
 				}
 			}
 		}
@@ -346,7 +346,7 @@ sow_discontent = {
 		}
 		allow = {
 			OR = {
-				dip_tech = 18
+				dip_tech = 30
 				has_idea = agent_training_new
 			}
 		}
@@ -360,7 +360,7 @@ sabotage_reputation = {
 		}
 		allow = {
 			OR = {
-				dip_tech = 21
+				dip_tech = 30
 				has_idea = agent_training_new
 			}
 		}

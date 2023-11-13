@@ -32,11 +32,11 @@ mam_slot_1_missions = {
 		position = 2
 		trigger = {
 			development_in_provinces = {
-				value = 45
+				value = 30
 				area = vostani_area
 			}
 			development_in_provinces = {
-				value = 45
+				value = 30
 				area = said_area
 			}
 		}

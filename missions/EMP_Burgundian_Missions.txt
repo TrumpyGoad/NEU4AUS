@@ -662,14 +662,7 @@ emp_burgundy_3 = {
 		effect = {
 			add_prestige = 20
 			add_mil_power = 100
-			1975 = {
-				add_trade_modifier = {
-					who = root
-					duration = 7300
-					power = 20
-					key = bur_channel_ambition
-				}
-			}
+			
 		}
 	}
 	
@@ -1011,6 +1004,20 @@ emp_burgundy_4 = {
 			add_country_modifier = {
 				name = bur_english_diplomacy
 				duration = 7300
+			}
+			normandy_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			savoy_dauphine_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
