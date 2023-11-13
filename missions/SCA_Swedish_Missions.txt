@@ -552,16 +552,29 @@ swe_scandinavian_colonialism_mission_slot = {
 				}
 				custom_tooltip = swe_colonial_ambitions_tt
 				hidden_effect = {
+					colonial_canada = {
+						limit = {
+							OR = {
+								has_river_estuary_trigger = yes
+								province_has_center_of_trade_of_level = 1
+							}
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { owner = { is_subject_of = ROOT } }
+							has_port = yes
+						}
+						add_permanent_claim = ROOT
+					}
 					colonial_eastern_america = {
 						limit = {
 							OR = {
 								has_river_estuary_trigger = yes
 								province_has_center_of_trade_of_level = 1
-								NOT = { is_core = ROOT }
-								NOT = { is_permanent_claim = ROOT }
-								NOT = { owner = { is_subject_of = ROOT } }
-								has_port = yes
 							}
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { owner = { is_subject_of = ROOT } }
+							has_port = yes
 						}
 						add_permanent_claim = ROOT
 					}
@@ -598,6 +611,7 @@ swe_north_america_mission_slot = {
 		required_missions = { swe_colonial_ambitions }
 		provinces_to_highlight = {
 			OR = {
+				colonial_region = colonial_canada
 				colonial_region = colonial_eastern_america
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -605,6 +619,7 @@ swe_north_america_mission_slot = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
+					colonial_region = colonial_canada
 					colonial_region = colonial_eastern_america
 				}
 				value = 5
@@ -617,7 +632,7 @@ swe_north_america_mission_slot = {
 			}
 			custom_tooltip = swe_colonize_delaware_tt
 			hidden_effect = {
-				carribeans_region = {
+				colonial_the_carribean = {
 					limit = {
 						OR = {
 							has_river_estuary_trigger = yes
@@ -639,7 +654,7 @@ swe_north_america_mission_slot = {
 		position = 12
 		required_missions = { swe_colonize_delaware }
 		provinces_to_highlight = {
-			region = carribeans_region
+			colonial_region = colonial_the_carribean
 			OR = {
 				has_trade_building_trigger = yes
 				province_has_center_of_trade_of_level = 1
@@ -648,7 +663,7 @@ swe_north_america_mission_slot = {
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				region = carribeans_region
+				colonial_region = colonial_the_carribean
 				OR = {
 					has_trade_building_trigger = yes 
 					province_has_center_of_trade_of_level = 1
@@ -857,9 +872,12 @@ swe_diplomacy_mission_slot = {
 							who = ROOT
 							value = 100
 						}
-						trust = {
-							who = ROOT
-							value = 70
+						if = {
+							limit = { has_dlc = "Leviathan" }
+							trust = { 	
+								who = ROOT 
+								value = 70
+							}
 						}
 						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 							OR = {
@@ -911,9 +929,12 @@ swe_diplomacy_mission_slot = {
 							who = ROOT
 							value = 100
 						}
-						trust = {
-							who = ROOT
-							value = 70
+						if = {
+							limit = { has_dlc = "Leviathan" }
+							trust = { 	
+								who = ROOT 
+								value = 70
+							}
 						}
 						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 							OR = {
@@ -931,9 +952,12 @@ swe_diplomacy_mission_slot = {
 							who = ROOT
 							value = 100
 						}
-						trust = {
-							who = ROOT
-							value = 70
+						if = {
+							limit = { has_dlc = "Leviathan" }
+							trust = { 	
+								who = ROOT 
+								value = 70
+							}
 						}
 						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 							OR = {
@@ -1004,7 +1028,7 @@ swe_diplomacy_mission_slot = {
 			}
 		}
 		effect = {
-			#Maybe a new event for LÃ¼beck?
+			#Maybe a new event for Lübeck?
 			if = {
 				limit = {
 					owns_or_non_sovereign_subject_of = 45
@@ -1173,11 +1197,14 @@ swe_diplomacy_mission_slot = {
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					province_id = 4163
-					NOT = {
-						trade_share = {
-							country = ROOT
-							share = 50
+					province_id = 1975
+					OR = {
+						NOT = { is_strongest_trade_power = ROOT }
+						NOT = {
+							trade_share = {
+								country = ROOT
+								share = 25
+							}
 						}
 					}
 				}
@@ -1195,33 +1222,29 @@ swe_diplomacy_mission_slot = {
 				}
 				AND = {
 					province_id = 1926
-					OR = {
-						NOT = { is_strongest_trade_power = ROOT }
-						NOT = {
-							trade_share = {
-								country = ROOT
-								share = 25
-							}
+					NOT = {
+						trade_share = {
+							country = ROOT
+							share = 50
 						}
 					}
 				}
 			}
 		}
 		trigger = {
-			1927 = {
+			1926 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			1975 = {
 				OR = {
 					is_strongest_trade_power = ROOT
 					trade_share = {
 						country = ROOT
 						share = 25
 					}
-				}
-			}
-			4163 = {
-				
-				trade_share = {
-					country = ROOT
-					share = 50
 				}
 			}
 			45 = {
@@ -2141,30 +2164,30 @@ swe_internal_slot = {
 			}
 		}
 		effect = {
-			add_accepted_culture_or_dip_power = { culture = novgorodian }
+			add_accepted_culture_or_dip_power = { culture = novgorodian dip_reward = yes }
 			310 = {
-				change_province_name = "Hï¿½lmgarï¿½r"
-				rename_capital = "Hï¿½lmgarï¿½r"
-				if = {
-					limit = {
-						NOT = { province_has_center_of_trade_of_level = 2 }
+				change_province_name = "Hólmgarðr"
+				rename_capital = "Hólmgarðr"
+				custom_tooltip = will_upgrade_center_of_trade_to_level_2_tt
+				hidden_effect = {
+					if = {
+						limit = {
+							NOT = { province_has_center_of_trade_of_level = 2 }
+						}
+						add_center_of_trade_level = 1
 					}
-					add_center_of_trade_level = 1
-				}
-				else = {
-					custom_tooltip = will_upgrade_center_of_trade_to_level_2_tt
 				}
 				change_religion = ROOT
 			}
 			33 = {
-				if = {
-					limit = {
-						NOT = { province_has_center_of_trade_of_level = 2 }
+				custom_tooltip = will_upgrade_center_of_trade_to_level_2_tt
+				hidden_effect = {
+					if = {
+						limit = {
+							NOT = { province_has_center_of_trade_of_level = 2 }
+						}
+						add_center_of_trade_level = 1
 					}
-					add_center_of_trade_level = 1
-				}
-				else = {
-					custom_tooltip = will_upgrade_center_of_trade_to_level_2_tt
 				}
 				change_religion = ROOT
 				if = {
@@ -2282,7 +2305,10 @@ swe_internal_slot = {
 						AND = {
 							alliance_with = ROOT
 							has_opinion = { who = ROOT value = 100 }
-							trust = { who = ROOT value = 75 }
+							if = {
+								limit = { has_dlc = "Leviathan" }
+								trust = { who = ROOT value = 75 }
+							}
 						}
 					}
 				}
@@ -2295,7 +2321,10 @@ swe_internal_slot = {
 						AND = {
 							alliance_with = ROOT
 							has_opinion = { who = ROOT value = 100 }
-							trust = { who = ROOT value = 75 }
+							if = {
+								limit = { has_dlc = "Leviathan" }
+								trust = { who = ROOT value = 75 }
+							}
 						}
 					}
 				}
@@ -2679,7 +2708,18 @@ swe_swedish_military_mission_slot = {
 					limit = { exists = PLC }
 					alliance_with = PLC
 					reverse_has_opinion = { who = PLC value = 150 }
-					PLC = { trust = { who = ROOT value = 80 } }
+					if = {
+						limit = { has_dlc = "Leviathan" }
+						PLC = { trust = { who = ROOT value = 80 } }
+					}
+					else = {
+						PLC = {
+							has_opinion_modifier = {
+								who = ROOT 
+								modifier = sent_gift
+							}
+						}
+					}
 					if = {
 						limit = { PLC = { government = monarchy } ROOT = { government = monarchy } }
 						marriage_with = PLC
@@ -2756,7 +2796,13 @@ swe_swedish_military_mission_slot = {
 					}
 				}
 				add_adm_power = 150
-				add_accepted_culture_or_dip_power = { culture = polish }
+			if = {
+				limit = { has_updated_culture = { culture = slavic } }
+				add_accepted_culture_or_dip_power = { culture = polish_new dip_reward = yes }
+			}
+			else = {
+				add_accepted_culture_or_dip_power = { culture = polish dip_reward = yes }
+			}
 				poland_region = {
 					limit = {
 						country_or_non_sovereign_subject_holds = ROOT
@@ -3248,7 +3294,7 @@ swe_religion_mission_slot = {
 			}
 			else = {
 				change_ruler_stat = {
-					stat = dip
+					type = dip
 					amount = 1
 				}
 			}
@@ -3257,7 +3303,7 @@ swe_religion_mission_slot = {
 				loyalty = 15
 			}
 			change_ruler_stat = {
-				stat = mil
+				type = mil
 				amount = 1
 			}
 			custom_tooltip = swe_humanist_effects_tt
@@ -3384,7 +3430,7 @@ swe_religion_mission_slot = {
 			add_papal_influence = 200
 			add_war_exhaustion = -2
 			change_ruler_stat = {
-				stat = mil
+				type = mil
 				amount = 2
 			}
 			if = {
@@ -3409,7 +3455,7 @@ swe_religion_mission_slot = {
 			}
 			else = {
 				change_ruler_stat = {
-					stat = dip
+					type = dip
 					amount = 1
 				}
 			}
@@ -3418,7 +3464,7 @@ swe_religion_mission_slot = {
 			add_fervor = 100
 			add_war_exhaustion = -2
 			change_ruler_stat = {
-				stat = mil
+				type = mil
 				amount = 2
 			}
 			if = {
@@ -3444,13 +3490,13 @@ swe_religion_mission_slot = {
 			}
 			else = {
 				change_ruler_stat = {
-					stat = dip
+					type = dip
 					amount = 1
 				}
 			}
 			custom_tooltip = swe_humanist_effects_tt
 			change_ruler_stat = {
-				stat = dip
+				type = dip
 				amount = 3
 			}
 		}
@@ -3745,7 +3791,7 @@ swe_catholic_mission_slot = {
 			add_papal_influence = 200
 			add_war_exhaustion = -2
 			change_ruler_stat = {
-				stat = mil
+				type = mil
 				amount = 2
 			}
 			if = {
@@ -3800,7 +3846,7 @@ swe_catholic_mission_slot = {
 			}
 			else = {
 				change_ruler_stat = {
-					stat = dip
+					type = dip
 					amount = 1
 				}
 			}
@@ -3995,7 +4041,7 @@ swe_protestant_mission_slot = {
 			}
 			else = {
 				change_ruler_stat = {
-					stat = dip
+					type = dip
 					amount = 1
 				}
 			}
@@ -4004,7 +4050,7 @@ swe_protestant_mission_slot = {
 				loyalty = 15
 			}
 			change_ruler_stat = {
-				stat = mil
+				type = mil
 				amount = 1
 			}
 			add_country_modifier = {
@@ -4058,7 +4104,7 @@ swe_protestant_mission_slot = {
 			add_fervor = 100
 			add_war_exhaustion = -2
 			change_ruler_stat = {
-				stat = mil
+				type = mil
 				amount = 2
 			}
 			if = {
@@ -4084,7 +4130,7 @@ swe_protestant_mission_slot = {
 			}
 			else = {
 				change_ruler_stat = {
-					stat = dip
+					type = dip
 					amount = 1
 				}
 			}
@@ -4231,7 +4277,7 @@ swe_humanist_mission_slot = {
 		}
 		effect = {
 			change_ruler_stat = {
-				stat = dip
+				type = dip
 				amount = 3
 			}
 		}
@@ -5372,6 +5418,7 @@ swe_sca_competent_fleet_slot = {
 			}
 			OR = {
 				full_idea_group = maritime_ideas
+				full_idea_group = quality_ideas
 				full_idea_group = naval_ideas
 				naval_reformer = 3
 			}
@@ -5426,6 +5473,7 @@ swe_sca_competent_fleet_slot = {
 				limit = {
 					ROOT = {
 						NOT = { full_idea_group = maritime_ideas }
+						NOT = { full_idea_group = quality_ideas }
 						NOT = { full_idea_group = naval_ideas }
 					}
 				}
@@ -5444,8 +5492,9 @@ swe_sca_competent_fleet_slot = {
 		}
 		trigger = {
 			OR = {
-				full_idea_group = naval_ideas
 				full_idea_group = maritime_ideas
+				full_idea_group = quality_ideas
+				full_idea_group = naval_ideas
 				AND = {
 					max_sailors = 50000
 					num_of_owned_provinces_with = {
@@ -5475,6 +5524,7 @@ swe_sca_competent_fleet_slot = {
 					limit = {
 						OR = {
 							full_idea_group = naval_ideas
+							full_idea_group = quality_ideas 
 							full_idea_group = maritime_ideas
 						}
 					}
@@ -5502,7 +5552,7 @@ swe_sca_competent_fleet_slot = {
 				limit = {
 					has_dlc = "Golden Century"
 				}
-				has_or_building_flagship = no
+				has_spare_flagship_capacity = yes
 			}
 		}
 		effect = {

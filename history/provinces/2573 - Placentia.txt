@@ -23,21 +23,21 @@ discovered_by = north_american
 }
 1534.1.1 = { discovered_by = FRA } # Jacques Cartier	
 1620.1.1 = {
-	#owner = FRA
-	#controller = FRA
-	#add_core = FRA
-	#is_city = yes
+	owner = FRA
+	controller = FRA
+	add_core = FRA
+	is_city = yes
 	culture = cosmopolitan_french
 	religion = catholic
 	trade_goods = fish
 } # French fishermen dominate the southern coast and northern peninsula
 1655.1.1 = { capital = "Plaisance" } #Actually in Beothuk, but was the French capital, so in the French province
 1713.4.11 = {
-	#owner = GBR
-	#controller = GBR
+	owner = GBR
+	controller = GBR
 	capital = "Placentia"
 	culture = english
 	religion = protestant
-	#add_core = GBR
+	add_core = GBR
 	remove_core = FRA
 } #Treaty of Utrecht, France abandon its half of Newfoundland

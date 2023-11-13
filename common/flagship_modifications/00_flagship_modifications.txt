@@ -22,7 +22,7 @@ mass_load_cannons = {
         }
     }
 	modifier = {
-        number_of_cannons_flagship_modifier = 0.75
+        number_of_cannons_flagship_modifier = 0.50
         naval_maintenance_flagship_modifier = 0.5
 	}
     ai_trade_score = {
@@ -40,14 +40,13 @@ trade_route_map = {
                 OR = {
                     tag = POR
                     tag = BRZ
-					tag = POB
                 }
             }
             normal_or_historical_nations = no
         }
     }
 	modifier = {
-        trade_power_in_fleet_modifier = 0.50
+        trade_power_in_fleet_modifier = 1
         naval_maintenance_flagship_modifier = 0.25
 	}
     ai_trade_score = {
@@ -79,7 +78,7 @@ command_aftercastle = {
         }
     }
 	modifier = {
-        morale_in_fleet_modifier = 0.03
+        morale_in_fleet_modifier = 0.05
         naval_maintenance_flagship_modifier = 0.5
 	}
     ai_trade_score = {
@@ -155,7 +154,6 @@ portuguese_navigators = {
     trigger = {
 		OR = {
 			tag = POR
-			tag = POB
 			tag = BRZ
 		}
         normal_or_historical_nations = yes
@@ -181,7 +179,6 @@ portuguese_bombardier = {
 		OR = {
 			tag = POR
 			tag = BRZ
-			tag = POB
 		}
         normal_or_historical_nations = yes
     }
@@ -206,12 +203,11 @@ portuguese_trade_route_map = {
 		OR = {
 			tag = POR
 			tag = BRZ
-			tag = POB
 		}
         normal_or_historical_nations = yes
     }
 	modifier = {
-        trade_power_in_fleet_modifier = 1
+        trade_power_in_fleet_modifier = 2
         naval_maintenance_flagship_modifier = 0.25
 	}
     ai_trade_score = {
@@ -316,7 +312,7 @@ dutch_courage = {
         normal_or_historical_nations = yes
     }
     modifier = {
-        morale_in_fleet_modifier = 0.05
+        morale_in_fleet_modifier = 0.1
         naval_maintenance_flagship_modifier = 0.5
     }
     ai_trade_score = {
@@ -339,14 +335,13 @@ portuguese_corps_of_fusiliers = {
 		OR = {
 			tag = POR
 			tag = BRZ
-			tag = POB
 		}
         normal_or_historical_nations = yes
     }
     modifier = {
-        movement_speed_onto_off_boat_modifier = 0.33
+        movement_speed_onto_off_boat_modifier = 0.66
         landing_penalty = -2
-        naval_maintenance_flagship_modifier = 0.25
+        naval_maintenance_flagship_modifier = 0.5
     }
     ai_trade_score = {
         factor = 0
@@ -376,7 +371,7 @@ integrated_marines = {
         }
     }
     modifier = {
-        movement_speed_onto_off_boat_modifier = 0.20
+        movement_speed_onto_off_boat_modifier = 0.33
         naval_maintenance_flagship_modifier = 0.5
     }
     ai_trade_score = {
@@ -449,26 +444,26 @@ flag_officers = {
     }
 }
 
-#spare_jolly_roger = {
-#    modifier = {
-#       privateering_efficiency_in_fleet_modifier = 0.25
-#        naval_maintenance_flagship_modifier = 0.5
-#   }
-#    ai_trade_score = {
-#	    factor = 1
-#        modifier = {
-#           factor = 10
-#            has_government_attribute = is_pirate_republic_reform
-#        }
-#   }
-#    ai_war_score = {
-#        factor = 1
-#       modifier = {
-#           factor = 10
-#            has_government_attribute = is_pirate_republic_reform
-#        }
-#    }
-#}
+spare_jolly_roger = {
+    modifier = {
+        privateering_efficiency_in_fleet_modifier = 0.25
+        naval_maintenance_flagship_modifier = 0.5
+    }
+    ai_trade_score = {
+	    factor = 1
+        modifier = {
+            factor = 10
+            has_government_attribute = is_pirate_republic_reform
+        }
+    }
+    ai_war_score = {
+        factor = 1
+        modifier = {
+            factor = 10
+            has_government_attribute = is_pirate_republic_reform
+        }
+    }
+}
 
 captains_log = {
     modifier = {

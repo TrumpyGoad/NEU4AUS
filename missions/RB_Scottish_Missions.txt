@@ -636,7 +636,7 @@ sco_rb_colonial_2 = {
 		required_missions = { sco_north_sea }
 		position = 4
 		provinces_to_highlight = {
-			region = canada_region
+			colonial_region = colonial_canada
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -645,7 +645,7 @@ sco_rb_colonial_2 = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 5
-				region = canada_region
+				colonial_region = colonial_canada
 				is_city = yes
 			}
 		}

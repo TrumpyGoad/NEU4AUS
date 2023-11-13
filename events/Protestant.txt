@@ -23,10 +23,7 @@ country_event = {
 		religion = catholic
 		is_defender_of_faith = no	
 		NOT = { has_reform = papacy_reform }
-		OR = { 
-			reform_desire = 1
-			is_year = 1518
-		}
+		reform_desire = 1
 		capital_scope = {
 			continent = europe
 		}
@@ -40,13 +37,6 @@ country_event = {
 	mean_time_to_happen = {
 		months = 4000
 		
-		###Should always trigger after 1518 now
-		modifier = {
-			factor = 0.1
-			is_year = 1518
-		}
-		###
-
 		modifier = {
 			factor = 2
 			PAP = { is_part_of_hre = yes }
@@ -54,7 +44,12 @@ country_event = {
 				culture_group = germanic
 				culture_group = scandinavian
 				culture_group = british
+				primary_culture = anglois
 				culture_group = west_slavic
+				primary_culture = czech_new
+				primary_culture = sorbian_new
+				primary_culture = schlesian_new
+				primary_culture = polish_new
 			}
 		}
 		modifier = {
@@ -111,6 +106,14 @@ country_event = {
 		modifier = {
 			factor = 2.0
 			government = theocracy
+		}
+		modifier = {
+			factor = 2
+			has_dlc = "Rule Britannia"	#For Anglicanism
+			OR = {
+				culture_group = british
+				primary_culture = anglois
+			}
 		}
 		modifier = {
 			factor = 8.0

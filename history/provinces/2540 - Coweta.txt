@@ -1,9 +1,9 @@
 # No previous file for Coweta
 
-#owner = ETO
-#controller = ETO
-#add_core = ETO
-#is_city = yes
+owner = ETO
+controller = ETO
+add_core = ETO
+is_city = yes
 culture = creek
 religion = totemism
 capital = "Coweta"
@@ -23,15 +23,15 @@ discovered_by = north_american
 1524.1.1 = { discovered_by = POR } # Diego Gomez
 
 1610.1.1 = {
-	#owner = CHE
-	#controller = CHE
-	#add_core = CHE
+	owner = CHE
+	controller = CHE
+	add_core = CHE
 	culture = cherokee
 }	
 1785.11.2 = {
-	#owner = USA
-	#controller = USA
-	#add_core = USA
+	owner = USA
+	controller = USA
+	add_core = USA
 	culture = american
 	religion = protestant
 } #Treaty of Hopewell (with the Cherokee), define a new border

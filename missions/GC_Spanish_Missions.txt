@@ -77,7 +77,7 @@ gc_spain_1 = {
 			else = {
 				custom_trigger_tooltip = {
 					tooltip = miss_discover_caribbean
-					carribeans_region = { has_discovered = ROOT }
+					colonial_the_carribean = { has_discovered = ROOT }
 				}
 			}
 		}
@@ -131,7 +131,7 @@ gc_spain_1_b = {
 		# free mission
 
 		provinces_to_highlight = {
-			region = carribeans_region
+			colonial_region = colonial_the_carribean
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
@@ -141,7 +141,7 @@ gc_spain_1_b = {
 				tooltip = miss_colonize_caribbean
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 					value = 1
-					region = carribeans_region
+					colonial_region = colonial_the_carribean
 					is_city = yes
 				}
 			}
@@ -370,6 +370,50 @@ gc_spain_2 = {
 					duration = 7300
 				}
 			}
+			if = {
+				limit = {
+					exists = POR
+					valid_for_personal_unions_trigger = yes
+					POR = {
+						valid_for_personal_unions_trigger = yes
+					}
+				}
+				if = {
+					limit = {
+						mission_completed = gc_cas_spa_reconquista_one
+					}
+					add_casus_belli = {
+						type = cb_restore_personal_union
+						months = 300
+						target = POR
+					}
+				}
+				else = {
+					custom_tooltip = gc_cas_spa_navarra_ct
+				}
+			}
+			else_if = {
+				limit = {
+					mission_completed = gc_cas_spa_reconquista_one
+				}
+				alentejo_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				beieras_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			else = {
+				custom_tooltip = gc_cas_spa_navarra_bt
+			}
 		}
 	}
 
@@ -485,7 +529,7 @@ gc_spain_2_b = {
 				fire = 5
 				manuever = 6
 				siege = 1
-				name = "Hernï¿½n Cortï¿½s"
+				name = "Hernán Cortés"
 			}
 			490 = {
 				add_base_production = 3
@@ -783,6 +827,50 @@ gc_spain_3 = {
 			country_event = {
 				id = flavor_spa.8
 			}
+			if = {
+				limit = {
+					exists = POR
+					valid_for_personal_unions_trigger = yes
+					POR = {
+						valid_for_personal_unions_trigger = yes
+					}
+				}
+				if = {
+					limit = {
+						mission_completed = gc_cas_spa_navarra
+					}
+					add_casus_belli = {
+						type = cb_restore_personal_union
+						months = 300
+						target = POR
+					}
+				}
+				else = {
+					custom_tooltip = gc_cas_spa_reconquista_one_ct
+				}
+			}
+			else_if = {
+				limit = {
+					mission_completed = gc_cas_spa_navarra
+				}
+				alentejo_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				beieras_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			else = {
+				custom_tooltip = gc_cas_spa_reconquista_one_bt
+			}
 		}
 	}
 	gc_cas_spa_iberia_christian = {
@@ -829,13 +917,13 @@ gc_spain_3 = {
 
 		provinces_to_highlight = {
 			area = northern_morocco_area
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
 			northern_morocco_area = {
 				type = all
-				owned_by = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 
@@ -1137,6 +1225,10 @@ gc_spain_3_b = {
 					}
 					NOT = { is_strongest_trade_power = ROOT }
 				}
+				AND = { 
+					province_id = 809 
+					NOT = { province_has_center_of_trade_of_level = 3 }
+				}
 			}
 		}
 
@@ -1371,14 +1463,6 @@ gc_spain_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			if = {
-				limit = {
-					ARA = {
-						is_subject_of = ROOT
-					}
-				}
-				ARA = { has_opinion = { who = ROOT value = 100 } }
-			}
 		}
 
 		effect = {
@@ -1409,13 +1493,6 @@ gc_spain_4 = {
 					}
 					add_permanent_claim = ROOT
 				}
-				naples_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
 				calabria_area = {
 					limit = {
 						NOT = { is_core = ROOT }
@@ -1430,27 +1507,21 @@ gc_spain_4 = {
 					}
 					add_permanent_claim = ROOT
 				}
-				#New States
-				central_italy_area = {
+				naples_area = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { is_permanent_claim = ROOT }
 					}
 					add_permanent_claim = ROOT
 				}
-				north_apulia_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
+				120 = {
+					if = {
+						limit = {
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
+						}
 					add_permanent_claim = ROOT
-				}
-				central_sicily_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = ROOT
 				}
 			}
 			else = {
@@ -1458,38 +1529,38 @@ gc_spain_4 = {
 					limit = {
 						NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					}
-					add_permanent_claim = NAP
+					add_permanent_claim = ROOT
 				}
 				western_sicily_area = {
 					limit = {
 						NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					}
-					add_permanent_claim = NAP
+					add_permanent_claim = ROOT
 				}
 				calabria_area = {
 					limit = {
 						NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					}
-					add_permanent_claim = NAP
+					add_permanent_claim = ROOT
 				}
 				apulia_area = {
 					limit = {
 						NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					}
-					add_permanent_claim = NAP
+					add_permanent_claim = ROOT
 				}
 				naples_area = {
 					limit = {
 						NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					}
-					add_permanent_claim = NAP
+					add_permanent_claim = ROOT
 				}
 				120 = {
 					if = {
 						limit = {
 							NOT = { country_or_non_sovereign_subject_holds = ROOT }
 						}
-					add_permanent_claim = NAP
+						add_permanent_claim = ROOT
 					}
 				}
 			}
@@ -1507,10 +1578,7 @@ gc_spain_4 = {
 				area = calabria_area
 				area = apulia_area
 				area = naples_area
-				#New States
-				area = central_sicily_area
-				area = central_italy_area
-				area = north_apulia_area
+				province_id = 120
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1541,14 +1609,7 @@ gc_spain_4 = {
 						type = all
 						country_or_non_sovereign_subject_holds = ROOT
 					}
-					#New States
-					central_sicily_area = {
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					central_italy_area = {
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					north_apulia_area = {
+					120 = {
 						country_or_non_sovereign_subject_holds = ROOT
 					}
 				}
@@ -1880,7 +1941,7 @@ gc_spain_4_c = {
 		position = 6
 
 		provinces_to_highlight = {
-			region = la_plata_region
+			colonial_region = colonial_la_plata
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = yes
 		}
@@ -1888,7 +1949,7 @@ gc_spain_4_c = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 5
-				region = la_plata_region
+				colonial_region = colonial_la_plata
 				is_city = yes
 			}
 		}
@@ -2107,10 +2168,12 @@ gc_castile_spain_5 = {
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
-
+	
 	gc_cas_spa_reconquista_two = {
 		icon = mission_cannons_firing
-		required_missions = { gc_cas_spa_reconquista_three }
+		required_missions = {
+			gc_cas_spa_reconquista_three
+		}
 		position = 2
 
 		# free mission

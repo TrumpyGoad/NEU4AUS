@@ -24,12 +24,12 @@ country_decisions = {
 						}
 					}
 					capital_scope = {
-						region = cascadia_region
+						colonial_region = colonial_alaska
 						is_core = ROOT
 					}
 				}
 			}
-			cascadia_region = {
+			colonial_alaska = {
 				owned_by = ROOT
 			}
 			OR = {
@@ -41,7 +41,7 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			region = cascadia_region
+			colonial_region = colonial_alaska
 			OR = {
 				NOT = { owned_by = ROOT }
 				is_city = no
@@ -52,12 +52,12 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			capital_scope = {
-				region = cascadia_region
+				colonial_region = colonial_alaska
 				is_core = ROOT
 			}
 			num_of_owned_provinces_with = {
 				value = 10
-				region = cascadia_region
+				colonial_region = colonial_alaska
 				is_city = yes
 			}
 			NOT = { exists = CSC }
@@ -73,6 +73,7 @@ country_decisions = {
 				}
 			}
 			change_tag = CSC
+			on_change_tag_effect = yes
 			if = {
 				limit = {
 					NOT = { is_former_colonial_nation = yes }
@@ -86,7 +87,7 @@ country_decisions = {
 				}
 				set_government_rank = 2
 			}
-			cascadia_region = {
+			colonial_alaska = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}

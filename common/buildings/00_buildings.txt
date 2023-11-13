@@ -40,6 +40,15 @@ marketplace = {
 			type = production
 			value = 1
 		}
+		if = {
+			limit = {
+				FROM = { 
+					has_dlc = "Mandate of Heaven"
+					has_country_flag = mam_trade_building_prosperity_flag
+				}
+			}
+			add_prosperity = 5
+		}
 	}
 	on_destroyed = {
 		remove_development_from_building = {
@@ -47,7 +56,21 @@ marketplace = {
 			type = production
 			value = 1
 		}
+		if = {
+			limit = {
+				FROM = { 
+					has_dlc = "Mandate of Heaven"
+					has_country_flag = mam_trade_building_prosperity_flag
+				}
+				
+			}
+			add_prosperity = -5
+		}
 	}
+
+	on_construction_started = { } #Fires when you start the construction,  ROOT - Province FROM - Country that started
+	on_construction_canceled = { } #Fires when you cancel the construction, ROOT - Province FROM - Country that canceled
+
 	on_obsolete = {
 	}
 
@@ -57,7 +80,7 @@ marketplace = {
 }
 
 workshop = {
-	cost = 125
+	cost = 100
 	time = 12
 	modifier = {
 		local_production_efficiency = 0.5
@@ -87,12 +110,13 @@ workshop = {
 }
 
 temple = {
-	cost = 125
+	cost = 100
 	time = 12
 	modifier = {
-		local_tax_modifier = 0.33
+		local_tax_modifier = 0.4
 	}
 	on_built = {
+		on_built_tax_building_effect = yes
 		on_province_tax_building_built_estate_privileges_effect = yes
 		add_development_from_building = {
 			building = temple
@@ -113,6 +137,7 @@ temple = {
 		if = {
 			limit = {
 				FROM = { has_government_attribute = temples_modifier }
+				owned_by = FROM 
 			}
 			add_province_modifier = {
 				name = gov_expanded_temple_rights_mod
@@ -121,49 +146,25 @@ temple = {
 		}
 		if = {
 			limit = {
-				NOT = {
-					has_province_modifier = religious_tradition_province_modifier
+				FROM = {
+					has_country_flag = mosque_local_unrest_flag
 				}
-				owner = { has_idea = religious_tradition_new }
-				has_owner_religion = yes
 			}
-			hidden_effect = {
-				add_province_modifier = {
-					name = "religious_tradition_province_modifier"
-					duration = -1
-				}
+			add_province_modifier = {
+				name = turkoman_peaceful_worshipping
+				duration = -1
 			}
 		}
 		if = {
 			limit = {
-				FROM = {
-					OR = {
-						religion = buddhism
-						religion = mahayana
-						religion = vajrayana
-					}
-					has_estate_privilege = estate_church_karma_temples
-				}
+				FROM = { has_country_modifier = mam_mosque_great_mosque_generates_crown_land_modifier }
 			}
 			FROM = {
-				add_karma = 3
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					religion = catholic
-					has_estate_privilege = estate_church_influence_temples
+				change_estate_land_share = {
+					estate = all
+					share = -0.25
 				}
 			}
-			FROM = {
-				add_papal_influence = 3
-			}
-		}
-		add_development_from_building = {
-			building = temple
-			type = tax
-			value = 1
 		}
 	}
 	on_destroyed = {
@@ -172,6 +173,14 @@ temple = {
 			building = temple
 			type = tax
 			value = 1
+		}
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = mosque_local_unrest_flag
+				}
+			}
+			remove_province_modifier = turkoman_peaceful_worshipping
 		}
 		if = {
 			limit = {
@@ -185,37 +194,16 @@ temple = {
 			}
 		}
 		remove_province_modifier = gov_expanded_temple_rights_mod
-		remove_province_modifier = religious_tradition_province_modifier
 		if = {
 			limit = {
-				FROM = {
-					OR = {
-						religion = buddhism
-						religion = mahayana
-						religion = vajrayana
-					}
-					has_estate_privilege = estate_church_karma_temples
-				}
+				FROM = { has_country_modifier = mam_mosque_great_mosque_generates_crown_land_modifier }
 			}
 			FROM = {
-				add_karma = -3
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					religion = catholic
-					has_estate_privilege = estate_church_influence_temples
+				change_estate_land_share = {
+					estate = all
+					share = 0.25
 				}
 			}
-			FROM = {
-				add_papal_influence = -3
-			}
-		}
-		remove_development_from_building = {
-			building = temple
-			type = tax
-			value = 1
 		}
 	}
 	on_obsolete = {
@@ -226,7 +214,7 @@ temple = {
 }
 
 barracks = {
-	cost = 125
+	cost = 100
 	time = 12
 	modifier = {
 		local_manpower_modifier = 0.5
@@ -235,11 +223,22 @@ barracks = {
 		if = {
 			limit = {
 				FROM = {
-					has_reform = corvee_reform
+					has_government_attribute = manpower_sailors_on_build
 				}
 			}
 			FROM = {
 				add_manpower = 1
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = jap_tanegashima_teppo
+					has_dlc = "Cradle of Civilization" 
+				}
+			}
+			FROM = {
+				add_army_professionalism = 0.001
 			}
 		}
 		add_development_from_building = {
@@ -247,22 +246,39 @@ barracks = {
 			type = manpower
 			value = 1
 		}
+		update_improved_military_buildings_modifier = {
+			building = barracks
+		}
 	}
 	on_destroyed = {
 		if = {
 			limit = {
 				FROM = {
-					has_reform = corvee_reform
+					has_government_attribute = manpower_sailors_on_build
 				}
 			}
 			FROM = {
 				add_manpower = -1
 			}
 		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = jap_tanegashima_teppo
+					has_dlc = "Cradle of Civilization" 
+				}
+			}
+			FROM = {
+				add_army_professionalism = -0.001
+			}
+		}
 		remove_development_from_building = {
 			building = barracks
 			type = manpower
 			value = 1
+		}
+		update_improved_military_buildings_modifier = {
+			building = barracks
 		}
 	}
 	on_obsolete = {
@@ -310,20 +326,6 @@ shipyard = {
 		local_has_galleass = yes
 	}
 	on_built = {
-		if = {
-			limit = {
-				NOT = {
-					has_province_modifier = maritime_free_building_slot_province_modifier
-				}
-				owner = { has_idea = grand_navy_new }
-			}
-			hidden_effect = {
-				add_province_modifier = {
-					name = "maritime_free_building_slot_province_modifier"
-					duration = -1
-				}
-			}
-		}
 		add_development_from_building = {
 			building = shipyard
 			type = production
@@ -331,14 +333,6 @@ shipyard = {
 		}
 	}
 	on_destroyed = {
-		if = {
-			limit = {
-				has_province_modifier = maritime_free_building_slot_province_modifier
-			}
-			hidden_effect = {
-				remove_province_modifier = maritime_free_building_slot_province_modifier
-			}
-		}
 		remove_development_from_building = {
 			building = shipyard
 			type = production
@@ -366,111 +360,14 @@ shipyard = {
 }
 
 fort_15th = {
-	cost = 150
+	cost = 200
 	time = 30
-
-	build_trigger = {
-		OR = {
-			is_capital = yes
-			has_strait_scripted_trigger = yes
-			NOT = {
-				any_neighbor_province = {
-					owner = {
-						tag = ROOT
-					}
-					OR = {
-						has_building = fort_15th
-						has_construction = fort_15th
-						has_building = fort_16th
-						has_construction = fort_16th
-						has_building = fort_17th
-						has_construction = fort_17th
-						has_building = fort_18th
-						has_construction = fort_18th
-					}
-					NOT = { is_capital = yes }
-				}
-			}
-		}
-	}
-
-	keep_trigger = {
-		OR = {
-			AND = {
-				has_province_flag = PR_new_conquest_fort_delay
-				NOT = { had_province_flag = { flag = PR_new_conquest_fort_delay days = 182 } }
-			}
-			is_capital = yes
-			has_strait_scripted_trigger = yes
-			NOT = {
-				any_neighbor_province = {
-					owner = {
-						tag = ROOT
-					}
-					OR = {
-						has_building = fort_15th
-						has_construction = fort_15th
-						has_building = fort_16th
-						has_construction = fort_16th
-						has_building = fort_17th
-						has_construction = fort_17th
-						has_building = fort_18th
-						has_construction = fort_18th
-					}
-					NOT = { is_capital = yes }
-				}
-			}
-			NOT = {
-				any_neighbor_province = {
-					owner = {
-						tag = ROOT
-					}
-					OR = {
-						has_building = fort_15th
-						has_construction = fort_15th
-						has_building = fort_16th
-						has_construction = fort_16th
-						has_building = fort_17th
-						has_construction = fort_17th
-						has_building = fort_18th
-						has_construction = fort_18th
-					}
-					NOT = {
-						AND = {
-							has_province_flag = PR_new_conquest_fort_delay
-							NOT = { 
-								had_province_flag = { 
-									flag = PR_new_conquest_fort_delay 
-									days = 220
-								} 
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-	
-
 	modifier = {
 		fort_level = 2
 	}
-	
+
+	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
 	on_built = {
-		if = {
-			limit = {
-				NOT = {
-					has_province_modifier = scorched_earth
-				}
-				owner = { has_idea = guerrilla_warfare_idea }
-			}
-			hidden_effect = {
-				add_province_modifier = {
-					name = "scorched_earth"
-					duration = -1
-				}
-			}
-		}
 		if = {
 			limit = {
 				FROM = { NOT = { mil_tech = 14 } has_government_attribute = on_fort_built_nobles_loyalty }
@@ -505,17 +402,32 @@ fort_15th = {
 				}
 			}
 		}
+		if = {
+			limit = {
+				owner = {
+					has_estate_privilege = estate_nobles_development_of_castles
+				}
+				NOT = { has_province_modifier = estate_nobles_development_of_castles_mod }
+			}
+			add_province_modifier = {
+				name = estate_nobles_development_of_castles_mod
+				duration = -1
+			}
+		}
 	}
-	
+
+	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
 	on_destroyed = {
 		if = {
 			limit = {
-				has_province_modifier = scorched_earth
+				has_province_modifier = estate_nobles_development_of_castles_mod
 			}
-			hidden_effect = {
-				remove_province_modifier = scorched_earth
-			}
+			remove_province_modifier = estate_nobles_development_of_castles_mod
 		}
+	}
+
+	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
+	on_obsolete = {
 	}
 
 	onmap = yes
@@ -549,7 +461,7 @@ coastal_defence = {
 # Tier 2, 16th Century Buildings
 ################################################
 courthouse = {
-	cost = 125
+	cost = 100
 	time = 12
 	modifier = {
 		local_state_maintenance_modifier = -0.25
@@ -563,6 +475,15 @@ courthouse = {
 			type = tax
 			value = 1
 		}
+		if = { 
+			limit = { 
+				FROM = { has_country_flag = fra_courthouse_bonus_flag }
+			}
+			add_province_modifier = {
+				name = fra_improved_court_houses_modifier
+				duration = -1 
+			}
+		}
 	}
 	on_destroyed = {
 		remove_development_from_building = {
@@ -570,6 +491,7 @@ courthouse = {
 			type = tax
 			value = 1
 		}
+		remove_province_modifier = fra_improved_court_houses_modifier
 	}
 	on_obsolete = {
 	}
@@ -642,34 +564,21 @@ dock = {
 	}
 	modifier = {
 		local_sailors_modifier = 0.5
+		local_has_man_of_war = yes
+		local_has_galleass = yes
 	}
 	
 	on_built = {
 		if = {
 			limit = {
 				FROM = {
-					has_reform = corvee_reform
+					has_government_attribute = manpower_sailors_on_build
 				}
 			}
 			FROM = {
 				add_sailors = 200
 			}
 		}
-		if = {
-			limit = {
-				NOT = {
-					has_province_modifier = maritime_free_building_slot_province_modifier
-				}
-				owner = { has_idea = grand_navy_new }
-			}
-			hidden_effect = {
-				add_province_modifier = {
-					name = "maritime_free_building_slot_province_modifier"
-					duration = -1
-				}
-			}
-		}
-
 		add_development_from_building = {
 			building = dock
 			type = production
@@ -677,23 +586,11 @@ dock = {
 		}
 	}
 	
-	on_destroyed = {			
-		if = {
-			limit = {
-				has_province_modifier = maritime_free_building_slot_province_modifier
-				OR = {
-					NOT = { has_building = shipyard }
-					NOT = { has_building = grand_shipyard }
-				}
-			}
-			hidden_effect = {
-				remove_province_modifier = maritime_free_building_slot_province_modifier
-			}
-		}
+	on_destroyed = {
 		if = {
 			limit = {
 				FROM = {
-					has_reform = corvee_reform
+					has_government_attribute = manpower_sailors_on_build
 				}
 			}
 			FROM = {
@@ -710,15 +607,56 @@ dock = {
 	}
 
 	ai_will_do = {
-		factor = 0.2 #AI gets infinite sailors anyway..
+		factor = 1
 		modifier = {
+			current_age = age_of_discovery 
+			owner = { NOT = { navy_size = 25 } }
+			factor = 0.25
+		}
+		modifier = {
+			current_age = age_of_reformation
+			owner = { NOT = { navy_size = 50 } }
+			factor = 0.35
+		}
+		modifier = {
+			current_age = age_of_absolutism
+			owner = { NOT = { navy_size = 75 } }
 			factor = 0.5
+		}
+		modifier = {
+			current_age = age_of_revolutions 
+			owner = { NOT = { navy_size = 100 } }
+			factor = 0.75
+		}
+		modifier = {
+			owner = {
+				OR = {
+					full_idea_group = naval_ideas
+					has_idea_group = maritime_ideas
+				}
+			}
+			factor = 1.25
+		}
+		modifier = {
+			owner = {
+				capital_scope = { 
+					has_port = yes 
+					is_island = yes 
+				}
+			}
+			factor = 1.35
+		}
+		modifier = {
+			owner = {
+				sailors_percentage = 0.75 
+			}
+			factor = 0
 		}
 	}
 }
 
 regimental_camp = {
-	cost = 250
+	cost = 200
 	time = 12
 	modifier = {
 		land_forcelimit = 1
@@ -752,12 +690,40 @@ regimental_camp = {
 			type = manpower
 			value = 1
 		}
+		update_improved_military_buildings_modifier = {
+			building = regimental_camp
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = jap_tanegashima_teppo
+					has_dlc = "Cradle of Civilization" 
+				}
+			}
+			FROM = {
+				add_army_professionalism = 0.001
+			}
+		}
 	}
 	on_destroyed = {
 		remove_development_from_building = {
 			building = regimental_camp
 			type = manpower
 			value = 1
+		}
+		update_improved_military_buildings_modifier = {
+			building = regimental_camp
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = jap_tanegashima_teppo
+					has_dlc = "Cradle of Civilization" 
+				}
+			}
+			FROM = {
+				add_army_professionalism = -0.001
+			}
 		}
 	}
 	on_obsolete = {
@@ -777,7 +743,7 @@ regimental_camp = {
 }
 
 fort_16th = {
-	cost = 300
+	cost = 400
 	time = 30
 	make_obsolete = fort_15th
 	modifier = {
@@ -820,96 +786,32 @@ fort_16th = {
 				}
 			}
 		}
+		if = {
+			limit = {
+				owner = {
+					has_estate_privilege = estate_nobles_development_of_castles
+				}
+				NOT = { has_province_modifier = estate_nobles_development_of_castles_mod }
+			}
+			add_province_modifier = {
+				name = estate_nobles_development_of_castles_mod
+				duration = -1
+			}
+		}
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
 	on_destroyed = {
+		if = {
+			limit = {
+				has_province_modifier = estate_nobles_development_of_castles_mod
+			}
+			remove_province_modifier = estate_nobles_development_of_castles_mod
+		}
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
 	on_obsolete = {
-	}
-
-	build_trigger = {
-		OR = {
-			is_capital = yes
-			has_strait_scripted_trigger = yes
-			NOT = {
-				any_neighbor_province = {
-					owner = {
-						tag = ROOT
-					}
-					OR = {
-						has_building = fort_15th
-						has_construction = fort_15th
-						has_building = fort_16th
-						has_construction = fort_16th
-						has_building = fort_17th
-						has_construction = fort_17th
-						has_building = fort_18th
-						has_construction = fort_18th
-					}
-					NOT = { is_capital = yes }
-				}
-			}
-		}
-	}
-
-	keep_trigger = {
-		OR = {
-			AND = {
-				has_province_flag = PR_new_conquest_fort_delay
-				NOT = { had_province_flag = { flag = PR_new_conquest_fort_delay days = 182 } }
-			}
-			is_capital = yes
-			has_strait_scripted_trigger = yes
-			NOT = {
-				any_neighbor_province = {
-					owner = {
-						tag = ROOT
-					}
-					OR = {
-						has_building = fort_15th
-						has_construction = fort_15th
-						has_building = fort_16th
-						has_construction = fort_16th
-						has_building = fort_17th
-						has_construction = fort_17th
-						has_building = fort_18th
-						has_construction = fort_18th
-					}
-					NOT = { is_capital = yes }
-				}
-			}
-			NOT = {
-				any_neighbor_province = {
-					owner = {
-						tag = ROOT
-					}
-					OR = {
-						has_building = fort_15th
-						has_construction = fort_15th
-						has_building = fort_16th
-						has_construction = fort_16th
-						has_building = fort_17th
-						has_construction = fort_17th
-						has_building = fort_18th
-						has_construction = fort_18th
-					}
-					NOT = {
-						AND = {
-							has_province_flag = PR_new_conquest_fort_delay
-							NOT = { 
-								had_province_flag = { 
-									flag = PR_new_conquest_fort_delay 
-									days = 220
-								} 
-							}
-						}
-					}
-				}
-			}
-		}
 	}
 
 	onmap = yes
@@ -947,13 +849,14 @@ naval_battery = {
 cathedral = {
 	make_obsolete = temple
 
-	cost = 375
+	cost = 300
 	time = 12
 	modifier = {
 		local_missionary_strength = 0.03
-		local_tax_modifier = 0.66
+		local_tax_modifier = 0.6
 	}
 	on_built = {
+		on_built_tax_building_effect = yes
 		on_province_tax_building_built_estate_privileges_effect = yes
 		add_development_from_upgrading_or_building = {
 			building = cathedral
@@ -962,56 +865,6 @@ cathedral = {
 			value = 2
 			upgrade_value = 1
 		}
-		if = {
-			limit = {
-				NOT = {
-					has_province_modifier = religious_tradition_province_modifier
-				}
-				owner = { has_idea = religious_tradition_new }
-				has_owner_religion = yes
-			}
-			hidden_effect = {
-				add_province_modifier = {
-					name = "religious_tradition_province_modifier"
-					duration = -1
-				}
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					OR = {
-						religion = buddhism
-						religion = mahayana
-						religion = vajrayana
-					}
-					has_estate_privilege = estate_church_karma_temples
-				}
-			}
-			FROM = {
-				add_karma = 3
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					religion = catholic
-					has_estate_privilege = estate_church_influence_temples
-				}
-			}
-			FROM = {
-				add_papal_influence = 3
-			}
-		}
-		add_development_from_upgrading_or_building = {
-			building = cathedral
-			obsolete_building = temple
-			type = tax
-			value = 2
-			upgrade_value = 1
-		}
-	}
-	on_destroyed = {	
 		if = {
 			limit = {
 				FROM = { has_government_attribute = on_church_built_clergy_loyalty }
@@ -1026,10 +879,33 @@ cathedral = {
 		if = {
 			limit = {
 				FROM = { has_government_attribute = temples_modifier }
+				owned_by = FROM 
 			}
 			add_province_modifier = {
 				name = gov_expanded_temple_rights_mod
 				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = mosque_local_unrest_flag
+				}
+			}
+			add_province_modifier = {
+				name = turkoman_peaceful_worshipping
+				duration = -1
+			}
+		}
+		if = {
+			limit = {
+				FROM = { has_country_modifier = mam_mosque_great_mosque_generates_crown_land_modifier }
+			}
+			FROM = {
+				change_estate_land_share = {
+					estate = all
+					share = -0.25
+				}
 			}
 		}
 	}
@@ -1038,7 +914,15 @@ cathedral = {
 		remove_development_from_building = {
 			building = cathedral
 			type = tax
-			value = 3
+			value = 2
+		}
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = mosque_local_unrest_flag
+				}
+			}
+			remove_province_modifier = turkoman_peaceful_worshipping
 		}
 		if = {
 			limit = {
@@ -1051,45 +935,17 @@ cathedral = {
 				}
 			}
 		}
-		remove_province_modifier = gov_expanded_temple_rights_mod	
+		remove_province_modifier = gov_expanded_temple_rights_mod
 		if = {
 			limit = {
-				has_province_modifier = religious_tradition_province_modifier
-			}
-			hidden_effect = {
-				remove_province_modifier = religious_tradition_province_modifier
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					OR = {
-						religion = buddhism
-						religion = mahayana
-						religion = vajrayana
-					}
-					has_estate_privilege = estate_church_karma_temples
-				}
+				FROM = { has_country_modifier = mam_mosque_great_mosque_generates_crown_land_modifier }
 			}
 			FROM = {
-				add_karma = -3
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					religion = catholic
-					has_estate_privilege = estate_church_influence_temples
+				change_estate_land_share = {
+					estate = all
+					share = 0.25
 				}
 			}
-			FROM = {
-				add_papal_influence = -3
-			}
-		}
-		remove_development_from_building = {
-			building = cathedral
-			type = tax
-			value = 3
 		}
 	}
 	on_obsolete = {
@@ -1102,10 +958,10 @@ cathedral = {
 
 
 university = {
-	cost = 400
+	cost = 300
 	time = 12
 	modifier = {
-		local_development_cost = -0.10
+		local_development_cost = -0.20
 		allowed_num_of_buildings = 1
 	}
 
@@ -1194,7 +1050,7 @@ university = {
 }
 
 trade_depot = {
-	cost = 375
+	cost = 300
 	time = 12
 
 	make_obsolete = marketplace
@@ -1240,6 +1096,8 @@ grand_shipyard = {
 		naval_forcelimit = 4
 		ship_recruit_speed = -0.50
 		local_ship_repair = 0.50
+		local_has_man_of_war = yes
+		local_has_galleass = yes
 	}
 
 	on_built = {
@@ -1250,38 +1108,12 @@ grand_shipyard = {
 			value = 2
 			upgrade_value = 1
 		}
-		if = {
-			limit = {
-				NOT = {
-					has_province_modifier = maritime_free_building_slot_province_modifier
-				}
-				owner = { has_idea = grand_navy_new }
-			}
-			hidden_effect = {
-				add_province_modifier = {
-					name = "maritime_free_building_slot_province_modifier"
-					duration = -1
-				}
-			}
-		}
 	}
 	on_destroyed = {
 		remove_development_from_building = {
 			building = grand_shipyard
 			type = production
 			value = 2
-		}
-		if = {
-			limit = {
-				has_province_modifier = maritime_free_building_slot_province_modifier
-				OR = {
-					NOT = { has_building = dock }
-					NOT = { has_building = drydock }
-				}
-			}
-			hidden_effect = {
-				remove_province_modifier = maritime_free_building_slot_province_modifier
-			}
 		}
 		if = {
 			limit = { has_province_modifier = sca_swe_danish_shipyard }
@@ -1305,7 +1137,7 @@ grand_shipyard = {
 }
 
 training_fields = {
-	cost = 375
+	cost = 300
 	time = 12
 
 	make_obsolete = barracks
@@ -1341,7 +1173,7 @@ training_fields = {
 		if = {
 			limit = {
 				FROM = {
-					has_reform = corvee_reform
+					has_government_attribute = manpower_sailors_on_build
 				}
 			}
 			FROM = {
@@ -1355,25 +1187,53 @@ training_fields = {
 			value = 2
 			upgrade_value = 1
 		}
+		update_improved_military_buildings_modifier = {
+			building = training_fields
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = jap_tanegashima_teppo
+					has_dlc = "Cradle of Civilization" 
+				}
+			}
+			FROM = {
+				add_army_professionalism = 0.001
+			}
+		}
 	}
 	on_destroyed = {
 		if = {
 			limit = {
 				FROM = {
-					has_reform = corvee_reform
+					has_government_attribute = manpower_sailors_on_build
 				}
 			}
 			FROM = {
 				add_manpower = -1
 			}
 		}
-	}
-	on_obsolete = {
+		update_improved_military_buildings_modifier = {
+			building = training_fields
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = jap_tanegashima_teppo
+					has_dlc = "Cradle of Civilization" 
+				}
+			}
+			FROM = {
+				add_army_professionalism = -0.001
+			}
+		}
 		remove_development_from_building = {
 			building = training_fields
 			type = manpower
 			value = 2
 		}
+	}
+	on_obsolete = {
 	}
 
 	ai_will_do = {
@@ -1383,7 +1243,7 @@ training_fields = {
 
 
 fort_17th = {
-	cost = 450
+	cost = 600
 	time = 30
 
 	make_obsolete = fort_16th
@@ -1428,96 +1288,32 @@ fort_17th = {
 				}
 			}
 		}
+		if = {
+			limit = {
+				owner = {
+					has_estate_privilege = estate_nobles_development_of_castles
+				}
+				NOT = { has_province_modifier = estate_nobles_development_of_castles_mod }
+			}
+			add_province_modifier = {
+				name = estate_nobles_development_of_castles_mod
+				duration = -1
+			}
+		}
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
 	on_destroyed = {
+		if = {
+			limit = {
+				has_province_modifier = estate_nobles_development_of_castles_mod
+			}
+			remove_province_modifier = estate_nobles_development_of_castles_mod
+		}
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
 	on_obsolete = {
-	}
-
-	build_trigger = {
-		OR = {
-			is_capital = yes
-			has_strait_scripted_trigger = yes
-			NOT = {
-				any_neighbor_province = {
-					owner = {
-						tag = ROOT
-					}
-					OR = {
-						has_building = fort_15th
-						has_construction = fort_15th
-						has_building = fort_16th
-						has_construction = fort_16th
-						has_building = fort_17th
-						has_construction = fort_17th
-						has_building = fort_18th
-						has_construction = fort_18th
-					}
-					NOT = { is_capital = yes }
-				}
-			}
-		}
-	}
-
-	keep_trigger = {
-		OR = {
-			AND = {
-				has_province_flag = PR_new_conquest_fort_delay
-				NOT = { had_province_flag = { flag = PR_new_conquest_fort_delay days = 182 } }
-			}
-			is_capital = yes
-			has_strait_scripted_trigger = yes
-			NOT = {
-				any_neighbor_province = {
-					owner = {
-						tag = ROOT
-					}
-					OR = {
-						has_building = fort_15th
-						has_construction = fort_15th
-						has_building = fort_16th
-						has_construction = fort_16th
-						has_building = fort_17th
-						has_construction = fort_17th
-						has_building = fort_18th
-						has_construction = fort_18th
-					}
-					NOT = { is_capital = yes }
-				}
-			}
-			NOT = {
-				any_neighbor_province = {
-					owner = {
-						tag = ROOT
-					}
-					OR = {
-						has_building = fort_15th
-						has_construction = fort_15th
-						has_building = fort_16th
-						has_construction = fort_16th
-						has_building = fort_17th
-						has_construction = fort_17th
-						has_building = fort_18th
-						has_construction = fort_18th
-					}
-					NOT = {
-						AND = {
-							has_province_flag = PR_new_conquest_fort_delay
-							NOT = { 
-								had_province_flag = { 
-									flag = PR_new_conquest_fort_delay 
-									days = 220
-								} 
-							}
-						}
-					}
-				}
-			}
-		}
 	}
 
 	onmap = yes
@@ -1535,7 +1331,7 @@ fort_17th = {
 # Tier 4, 18th Century Buildings
 ################################################
 stock_exchange = {
-	cost = 500
+	cost = 400
 	time = 12
 
 	make_obsolete = trade_depot
@@ -1549,20 +1345,24 @@ stock_exchange = {
 			limit = {
 				has_province_flag = built_dev_trade_depot
 			}
-			add_development_from_building = {
+			add_development_from_upgrading_or_building = {
 				building = stock_exchange
+				obsolete_building = trade_depot
 				type = production
-				value = 1
+				value = 3
+				upgrade_value = 1
 			}
 		}
 		else_if = {
 			limit = {
 				has_province_flag = built_dev_marketplace
 			}
-			add_development_from_building = {
+			add_development_from_upgrading_or_building = {
 				building = stock_exchange
+				obsolete_building = marketplace
 				type = production
-				value = 2
+				value = 3
+				upgrade_value = 2
 			}
 		}
 		else = {
@@ -1589,7 +1389,7 @@ stock_exchange = {
 }
 
 counting_house = {
-	cost = 475
+	cost = 400
 	time = 12
 
 	make_obsolete = workshop
@@ -1627,7 +1427,7 @@ counting_house = {
 
 
 town_hall = {
-	cost = 250
+	cost = 200
 	time = 12
 
 	make_obsolete = courthouse
@@ -1647,6 +1447,16 @@ town_hall = {
 			value = 2
 			upgrade_value = 1
 		}
+		if = { 
+			limit = { 
+				FROM = { has_country_flag = fra_courthouse_bonus_flag }
+				NOT = { has_province_modifier = fra_improved_court_houses_modifier }
+			}
+			add_province_modifier = {
+				name = fra_improved_court_houses_modifier
+				duration = -1 
+			}
+		}
 	}
 	on_destroyed = {
 		remove_development_from_building = {
@@ -1654,6 +1464,7 @@ town_hall = {
 			type = tax
 			value = 2
 		}
+		remove_province_modifier = fra_improved_court_houses_modifier 
 	}
 	on_obsolete = {
 	}
@@ -1734,27 +1545,15 @@ drydock = {
 
 	modifier = {
 		local_sailors_modifier = 1.0
+		local_has_man_of_war = yes
+		local_has_galleass = yes
 	}
 	
-	on_built = {		
-		if = {
-			limit = {
-				NOT = {
-					has_province_modifier = maritime_free_building_slot_province_modifier
-				}
-				owner = { has_idea = grand_navy_new }
-			}
-			hidden_effect = {
-				add_province_modifier = {
-					name = "maritime_free_building_slot_province_modifier"
-					duration = -1
-				}
-			}
-		}
+	on_built = {
 		if = {
 			limit = {
 				FROM = {
-					has_reform = corvee_reform
+					has_government_attribute = manpower_sailors_on_build
 				}
 			}
 			FROM = {
@@ -1772,26 +1571,9 @@ drydock = {
 	
 	on_destroyed = {
 		if = {
-			remove_development_from_building = {
-				building = drydock
-				type = production
-				value = 2
-			}
-			limit = {
-				has_province_modifier = maritime_free_building_slot_province_modifier
-				OR = {
-					NOT = { has_building = dock }
-					NOT = { has_building = drydock }
-				}
-			}
-			hidden_effect = {
-				remove_province_modifier = maritime_free_building_slot_province_modifier
-			}
-		}
-		if = {
 			limit = {
 				FROM = {
-					has_reform = corvee_reform
+					has_government_attribute = manpower_sailors_on_build
 				}
 			}
 			FROM = {
@@ -1809,12 +1591,12 @@ drydock = {
 
 
 	ai_will_do = {
-		factor = 0.1 #AI doesn't need sailors
+		factor = 1
 	}
 }
 
 conscription_center = {
-	cost = 500
+	cost = 400
 	time = 12
 
 
@@ -1844,7 +1626,7 @@ conscription_center = {
 #	}
 
 	modifier = {
-		land_forcelimit = 1
+		land_forcelimit = 2
 	}
 	on_built = {
 		add_development_from_upgrading_or_building = {
@@ -1854,12 +1636,40 @@ conscription_center = {
 			value = 2
 			upgrade_value = 1
 		}
+		update_improved_military_buildings_modifier = {
+			building = conscription_center
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = jap_tanegashima_teppo
+					has_dlc = "Cradle of Civilization" 
+				}
+			}
+			FROM = {
+				add_army_professionalism = 0.001
+			}
+		}
 	}
 	on_destroyed = {
 		remove_development_from_building = {
 			building = conscription_center
 			type = manpower
 			value = 2
+		}
+		update_improved_military_buildings_modifier = {
+			building = conscription_center
+		}
+		if = {
+			limit = {
+				FROM = {
+					mission_completed = jap_tanegashima_teppo
+					has_dlc = "Cradle of Civilization" 
+				}
+			}
+			FROM = {
+				add_army_professionalism = -0.001
+			}
 		}
 	}
 	on_obsolete = {
@@ -1881,7 +1691,7 @@ conscription_center = {
 
 
 fort_18th = {
-	cost = 750
+	cost = 800
 	time = 30
 
 
@@ -1927,96 +1737,32 @@ fort_18th = {
 				}
 			}
 		}
+		if = {
+			limit = {
+				owner = {
+					has_estate_privilege = estate_nobles_development_of_castles
+				}
+				NOT = { has_province_modifier = estate_nobles_development_of_castles_mod }
+			}
+			add_province_modifier = {
+				name = estate_nobles_development_of_castles_mod
+				duration = -1
+			}
+		}
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
 	on_destroyed = {
+		if = {
+			limit = {
+				has_province_modifier = estate_nobles_development_of_castles_mod
+			}
+			remove_province_modifier = estate_nobles_development_of_castles_mod
+		}
 	}
 
 	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
 	on_obsolete = {
-	}
-
-	build_trigger = {
-		OR = {
-			is_capital = yes
-			has_strait_scripted_trigger = yes
-			NOT = {
-				any_neighbor_province = {
-					owner = {
-						tag = ROOT
-					}
-					OR = {
-						has_building = fort_15th
-						has_construction = fort_15th
-						has_building = fort_16th
-						has_construction = fort_16th
-						has_building = fort_17th
-						has_construction = fort_17th
-						has_building = fort_18th
-						has_construction = fort_18th
-					}
-					NOT = { is_capital = yes }
-				}
-			}
-		}
-	}
-
-	keep_trigger = {
-		OR = {
-			AND = {
-				has_province_flag = PR_new_conquest_fort_delay
-				NOT = { had_province_flag = { flag = PR_new_conquest_fort_delay days = 182 } }
-			}
-			is_capital = yes
-			has_strait_scripted_trigger = yes
-			NOT = {
-				any_neighbor_province = {
-					owner = {
-						tag = ROOT
-					}
-					OR = {
-						has_building = fort_15th
-						has_construction = fort_15th
-						has_building = fort_16th
-						has_construction = fort_16th
-						has_building = fort_17th
-						has_construction = fort_17th
-						has_building = fort_18th
-						has_construction = fort_18th
-					}
-					NOT = { is_capital = yes }
-				}
-			}
-			NOT = {
-				any_neighbor_province = {
-					owner = {
-						tag = ROOT
-					}
-					OR = {
-						has_building = fort_15th
-						has_construction = fort_15th
-						has_building = fort_16th
-						has_construction = fort_16th
-						has_building = fort_17th
-						has_construction = fort_17th
-						has_building = fort_18th
-						has_construction = fort_18th
-					}
-					NOT = {
-						AND = {
-							has_province_flag = PR_new_conquest_fort_delay
-							NOT = { 
-								had_province_flag = { 
-									flag = PR_new_conquest_fort_delay 
-									days = 220
-								} 
-							}
-						}
-					}
-				}
-			}
-		}
 	}
 
 	onmap = yes
@@ -2033,10 +1779,10 @@ fort_18th = {
 ################################################
 
 manufactory = {
-	cost = 550
+	cost = 500
 	time = 60
 	modifier = {
-		trade_goods_size = 1
+		trade_goods_size = 1.0
 	}
 }
 
@@ -2055,12 +1801,23 @@ wharf = {
 			type = production
 			value = 2
 		}
+		add_dev_from_building = {
+			building = manufactory 
+			type = production 
+			value = 1 
+		}
+		
 	}
 	on_destroyed = {
 		remove_development_from_building = {
 			building = manufactory
 			type = production
 			value = 2
+		}
+		remove_dev_from_building = {
+			building = manufactory 
+			type = production 
+			value = 1
 		}
 	}
 	on_obsolete = {
@@ -2108,12 +1865,22 @@ weapons = {
 			type = production
 			value = 2
 		}
+		add_dev_from_building = {
+			building = manufactory 
+			type = manpower 
+			value = 1 
+		}
 	}
 	on_destroyed = {
 		remove_development_from_building = {
 			building = manufactory
 			type = production
 			value = 2
+		}
+		remove_dev_from_building = {
+			building = manufactory 
+			type = manpower 
+			value = 1
 		}
 	}
 	on_obsolete = {
@@ -2126,11 +1893,10 @@ weapons = {
 
 textile = {
 	manufactory = {
-
+		wool
 		cloth
 		silk
 		dyes
-		wool
 	}
 	onmap = yes
 	on_built = {
@@ -2139,12 +1905,22 @@ textile = {
 			type = production
 			value = 2
 		}
+		add_dev_from_building = {
+			building = manufactory 
+			type = production 
+			value = 1 
+		}
 	}
 	on_destroyed = {
 		remove_development_from_building = {
 			building = manufactory
 			type = production
 			value = 2
+		}
+		remove_dev_from_building = {
+			building = manufactory 
+			type = production 
+			value = 1
 		}
 	}
 	on_obsolete = {
@@ -2171,12 +1947,22 @@ plantations = {
 			type = production
 			value = 2
 		}
+		add_dev_from_building = {
+			building = manufactory 
+			type = production 
+			value = 1 
+		}
 	}
 	on_destroyed = {
 		remove_development_from_building = {
 			building = manufactory
 			type = production
 			value = 2
+		}
+		remove_dev_from_building = {
+			building = manufactory 
+			type = production 
+			value = 1
 		}
 	}
 	on_obsolete = {
@@ -2203,12 +1989,22 @@ tradecompany = {
 			type = production
 			value = 2
 		}
+		add_dev_from_building = {
+			building = manufactory 
+			type = production 
+			value = 1 
+		}
 	}
 	on_destroyed = {
 		remove_development_from_building = {
 			building = manufactory
 			type = production
 			value = 2
+		}
+		remove_dev_from_building = {
+			building = manufactory 
+			type = production 
+			value = 1
 		}
 	}
 	on_obsolete = {
@@ -2232,12 +2028,38 @@ farm_estate = {
 			type = production
 			value = 2
 		}
+		add_dev_from_building = {
+			building = manufactory 
+			type = production 
+			value = 1
+		}
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = geo_wine_manufactory_flag
+				}
+			}
+			add_base_production = 1
+		}
 	}
 	on_destroyed = {
 		remove_development_from_building = {
-			building = manufactory
-			type = production
-			value = 2
+			building = manufactory 
+			type = production 
+			value = 2 
+		}
+		remove_dev_from_building = {
+			building = manufactory 
+			type = production 
+			value = 1
+		}
+		if = {
+			limit = {
+				FROM = {
+					has_country_flag = geo_wine_manufactory_flag
+				}
+			}
+			add_base_production = -1
 		}
 	}
 	on_obsolete = {
@@ -2263,12 +2085,22 @@ mills = {
 			type = production
 			value = 2
 		}
+		add_dev_from_building = {
+			building = manufactory 
+			type = production 
+			value = 1 
+		}
 	}
 	on_destroyed = {
 		remove_development_from_building = {
 			building = manufactory
 			type = production
 			value = 2
+		}
+		remove_dev_from_building = {
+			building = manufactory 
+			type = production 
+			value = 1
 		}
 	}
 	on_obsolete = {
@@ -2319,41 +2151,69 @@ ramparts = {
 	manufactory = {
 		all
 	}
+
+	#build_trigger = {
+	#	is_flatland = yes
+	#}
 	modifier = {
-		fort_level = 2
+		local_hostile_attrition = 1
 		local_defensiveness = 0.15
+		local_defender_dice_roll_bonus = 1
 	}
 	onmap = no
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 	
-	build_trigger = {
-		OR = {
-			has_building = fort_15th
-			has_construction = fort_15th
-			has_building = fort_16th
-			has_construction = fort_16th
-			has_building = fort_17th
-			has_construction = fort_17th
-			has_building = fort_18th
-			has_construction = fort_18th
+	on_built = {
+		add_dev_from_building = {
+			building = manufactory 
+			type = manpower 
+			value = 1 
+		}
+		if = {
+			limit = {
+				owner = {
+					has_estate_privilege = estate_nobles_development_of_castles
+				}
+				NOT = { has_province_modifier = estate_nobles_development_of_castles_ramparts_mod }
+			}
+			add_province_modifier = {
+				name = estate_nobles_development_of_castles_ramparts_mod
+				duration = -1
+			}
 		}
 	}
 	
-	keep_trigger = {
-		OR = {
-			has_building = fort_15th
-			has_construction = fort_15th
-			has_building = fort_16th
-			has_construction = fort_16th
-			has_building = fort_17th
-			has_construction = fort_17th
-			has_building = fort_18th
-			has_construction = fort_18th
+	on_destroyed = {
+		if = {
+			limit = { has_province_modifier = per_reinforced_defenses }
+			remove_province_modifier = per_reinforced_defenses
+		}
+		remove_dev_from_building = {
+			building = manufactory 
+			type = manpower 
+			value = 1
+		}
+		if = {
+			limit = {
+				has_province_modifier = estate_nobles_development_of_castles_ramparts_mod
+			}
+			remove_province_modifier = estate_nobles_development_of_castles_ramparts_mod
 		}
 	}
-
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0
+			from = { num_of_loans = 3 }
+		}
+		modifier = {
+			factor = 20
+			has_terrain = mountain
+		}
+		modifier = {
+			factor = 0
+			from = { personality = ai_militarist }
+		}
 	}
 }
 
@@ -2367,7 +2227,6 @@ soldier_households = {
 		fish
 		livestock
 		wine
-		wool
 	}
 
 	modifier = {
@@ -2384,12 +2243,39 @@ soldier_households = {
 			type = production
 			value = 2
 		}
+		add_dev_from_building = {
+			building = manufactory 
+			type = manpower 
+			value = 1 
+		}
+		if = {
+			limit = {
+				FROM = {
+					has_government_attribute = improved_military_buildings
+				}
+			}
+			add_province_modifier = {
+				name = wei_suo_system_reform_soldier_households_modifier
+				duration = -1
+			}
+		}
 	}
 	on_destroyed = {
 		remove_development_from_building = {
 			building = manufactory
 			type = production
 			value = 2
+		}
+		remove_dev_from_building = {
+			building = manufactory 
+			type = manpower 
+			value = 1
+		}
+		if = {
+			limit = {
+				has_province_modifier = wei_suo_system_reform_soldier_households_modifier
+			}
+			remove_province_modifier = wei_suo_system_reform_soldier_households_modifier
 		}
 	}
 	on_obsolete = {
@@ -2417,12 +2303,12 @@ impressment_offices = {
 	}
 
 	modifier = {
-		local_sailors = 500
+		local_sailors = 250
 		ship_recruit_speed = -0.1
 		local_ship_cost = -0.05
 	}
 	bonus_modifier = {
-		local_sailors = 500
+		local_sailors = 250
 		ship_recruit_speed = -0.1
 		local_ship_cost = -0.05
 	}
@@ -2434,12 +2320,22 @@ impressment_offices = {
 			type = manpower
 			value = 2
 		}
+		add_dev_from_building = {
+			building = impressment_offices 
+			type = manpower 
+			value = 1 
+		}
 	}
 	on_destroyed = {
 		remove_development_from_building = {
 			building = impressment_offices
 			type = manpower
 			value = 2
+		}
+		remove_dev_from_building = {
+			building = impressment_offices 
+			type = manpower 
+			value = 1 
 		}
 	}
 	on_obsolete = {

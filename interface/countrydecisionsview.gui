@@ -453,7 +453,7 @@ guiTypes = {
 				name ="adm_list"
 				position = { x = 18 y = 115 }
 				backGround=""
-				size = { x=313 y = 760}
+				size = { x=313 y = 420}
 				Orientation = "UPPER_LEFT"
 				horizontal = 0
 				spacing = 0
@@ -465,7 +465,7 @@ guiTypes = {
 				name ="dip_list"
 				position = { x = 342 y = 115 }
 				backGround=""
-				size = { x=313 y = 760}
+				size = { x=313 y = 420}
 				Orientation = "UPPER_LEFT"
 				horizontal = 0
 				spacing = 0
@@ -477,7 +477,7 @@ guiTypes = {
 				name ="mil_list"
 				position = { x = 665 y = 115 }
 				backGround=""
-				size = { x=313 y = 760}
+				size = { x=313 y = 420}
 				Orientation = "UPPER_LEFT"
 				horizontal = 0
 				spacing = 0
@@ -498,7 +498,7 @@ guiTypes = {
 			
 			guiButtonType = {
 				name = "back"
-				position = { x= 450 y = 857 }
+				position = { x= 450 y = 537 }
 				quadTextureSprite ="GFX_button_straight_87_32"	
 				buttonText = "BACK"
 				buttonFont = "vic_18"

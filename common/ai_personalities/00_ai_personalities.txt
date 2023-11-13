@@ -1,5 +1,3 @@
-# Removed Reference to Diplomatic Ideas
-
 # New personalities cannot be added to this file
 # Do not change existing personality names!
 
@@ -130,10 +128,10 @@ ai_diplomat = {
 			factor = 1.1
 			spy_ideas = 1
 		}
-		#modifier = {
-		#	factor = 1.1
-		#	diplomatic_ideas = 1
-		#}	
+		modifier = {
+			factor = 1.1
+			diplomatic_ideas = 1
+		}	
 		modifier = {
 			factor = 1.1
 			innovativeness_ideas = 1
@@ -169,11 +167,11 @@ ai_diplomat = {
 			tag = PAP
 		}		
 		modifier = {
-			factor = 1.5
+			factor = 5
 			tag = MNG
 		}
 		modifier = {
-			factor = 1.5
+			factor = 10
 			tag = KOR
 		}
 		modifier = {
@@ -187,7 +185,14 @@ ai_diplomat = {
 		modifier = {
 			factor = 5
 			has_reform = free_city
-		}		
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				tag = POL
+				tag = PLC
+			}
+		}
 	}
 	icon = 3
 }
@@ -298,8 +303,6 @@ ai_militarist = {
 		modifier = {
 			factor = 2
 			OR = {
-				tag = MOS
-				tag = RUS
 				tag = TUR
 				tag = CSU
 			}
@@ -313,13 +316,25 @@ ai_militarist = {
 			tag = PAP
 		}		
 		modifier = {
-			factor = 0.75
+			factor = 0.5
 			tag = MNG
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.1
 			tag = KOR
-		}	
+		}
+		modifier = {
+			factor = 10
+			tag = MOS
+		}
+		modifier = {
+			factor = 15
+			OR = {
+				tag = RUS
+				tag = MJZ
+				tag = MCH
+			}
+		}
 		modifier = {
 			factor = 100
 			religion = nahuatl
@@ -380,10 +395,10 @@ ai_colonialist = {
 			factor = 1.1
 			trade_ideas = 1
 		}			
-		#modifier = {
-		#	factor = 1.1
-		#	exploration_ideas = 1
-		#}			
+		modifier = {
+			factor = 1.1
+			exploration_ideas = 1
+		}			
 		modifier = {
 			factor = 1.1
 			maritime_ideas = 1
@@ -409,8 +424,11 @@ ai_colonialist = {
 			tag = SPA
 		}
 		modifier = {
-			factor = 0.5
-			tag = FRA
+			factor = 0.2
+			OR = {
+				tag = POL
+				tag = PLC
+			}
 		}
 	}
 	icon = 5
@@ -472,6 +490,13 @@ ai_balanced = {
 			adm = 6
 			dip = 6
 			mil = 6
+		}
+		modifier = {
+			factor = 0.2
+			OR = {
+				tag = POL
+				tag = PLC
+			}
 		}
 	}
 	icon = 6

@@ -1,8 +1,8 @@
 #1106 - Te Tai Tokerau
 
-#add_core = TTT
-#owner = TTT
-#controller = TTT
+add_core = TTT
+owner = TTT
+controller = TTT
 culture = maori
 religion = animism
 hre = no

@@ -166,10 +166,6 @@ country_event = {
 	trigger = {
 		has_global_flag = maid_of_orleans
 		OR = {
-			AND = {
-				tag = ORL
-				is_free_or_tributary_trigger = yes
-			}
 			current_age = age_of_absolutism
 			current_age = age_of_revolutions
 		}
@@ -242,6 +238,7 @@ country_event = {
 			}
 			change_government = theocracy
 		}
+		add_government_reform = sisterhood_of_jeanne_darc_reform
 
 		if = {
 			limit = {
@@ -259,6 +256,5 @@ country_event = {
 			}
 			remove_heir = {}
 		}
-		add_government_reform = holy_state_reform
 	}
 }

@@ -22,10 +22,10 @@ discovered_by = north_american
 
 1750.1.1 = {
 	discovered_by = GBR
-	#owner = GBR
-	#controller = GBR
-	#add_core = GBR
-	#is_city = yes
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+	is_city = yes
 	capital = "Fort Richmond"
 	trade_goods = fur
 }

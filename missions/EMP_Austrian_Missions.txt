@@ -170,7 +170,6 @@ emp_hab_empire_branch = {
 									value = 10
 									continent = europe
 								}
-								NOT = { preferred_emperor = ROOT }
 							}
 						}
 					}
@@ -840,7 +839,7 @@ emp_hab_minorities_branch = {
 					NOT = { accepted_culture = hungarian }
 					NOT = { primary_culture = hungarian }
 				}
-				add_accepted_culture_or_dip_power = { culture = hungarian }
+				add_accepted_culture_or_dip_power = { culture = hungarian dip_reward = yes }
 				if = {
 					limit = {
 						153 = { culture = austrian }
@@ -864,7 +863,13 @@ emp_hab_minorities_branch = {
 					NOT = { accepted_culture = slovak }
 					NOT = { primary_culture = slovak }
 				}
-				add_accepted_culture_or_dip_power = { culture = slovak }
+				if = {
+					limit = { has_updated_culture = { culture = slavic } }
+					add_accepted_culture_or_dip_power = { culture = slovak_new dip_reward = yes }
+				}
+				else = {
+					add_accepted_culture_or_dip_power = { culture = slovak dip_reward = yes }
+				}
 				if = {
 					limit = {
 						1772 = { culture = austrian }
@@ -1405,14 +1410,6 @@ emp_hab_western_expansion_branch = {
 	
 	emp_hab_connect_further_austria = {
 		icon = connect_further_austria
-		
-		ai_weight = {
-			factor = 3
-			modifier = {
-				factor = 0.33
-				NOT = { owns = 1880 }
-			}
-		}
 
 		position = 9
 		
@@ -1472,6 +1469,10 @@ emp_hab_western_expansion_branch = {
 			modifier = {
 				is_emperor = yes	#But not when you are the emperor
 				factor = 0
+			}
+			modifier = {
+				factor = 0.33
+				NOT = { owns = 1880 }
 			}
 		}
 	}
@@ -1677,10 +1678,6 @@ emp_hab_balkans = {
 		icon = defeat_the_serbs
 
 		position = 7
-
-		ai_weight = {
-			factor = 2
-		}
 		
 		required_missions = { austrian_croatia }
 		provinces_to_highlight = {
@@ -1770,10 +1767,6 @@ emp_hab_balkans_2 = {
 		icon = push_on_to_bulgaria
 
 		position = 8
-
-		ai_weight = {
-			factor = 2
-		}
 		
 		required_missions = { emp_hab_take_serbia conquer_transylvania }
 		provinces_to_highlight = {
@@ -1830,10 +1823,6 @@ emp_hab_balkans_2 = {
 		icon = mission_ottoman_diplomacy
 
 		position = 10
-
-		ai_weight = {
-			factor = 2
-		}
 		
 		required_missions = { emp_hab_take_wallachia_bulgaria }
 		provinces_to_highlight = {
@@ -1894,10 +1883,6 @@ emp_hab_more_italy_branch = {
 		icon = kingdom_of_lombardy
 
 		position = 9
-		
-		ai_weight = {
-			factor = 3
-		}
 		
 		required_missions = { austrian_italian_ambition }
 		provinces_to_highlight = {
@@ -1966,39 +1951,24 @@ emp_hab_more_italy_branch = {
 			else = {
 				naples_area = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = root }
+						NOT = { is_permanent_claim = root }
 					}
-					add_permanent_claim = ROOT
-				}
-				calabria_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
+					add_permanent_claim = root
 				}
 				apulia_area = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = root }
+						NOT = { is_permanent_claim = root }
 					}
-					add_permanent_claim = ROOT
+					add_permanent_claim = root
 				}
-				#New States
-				central_italy_area = {
+				calabria_area = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = root }
+						NOT = { is_permanent_claim = root }
 					}
-					add_permanent_claim = ROOT
-				}
-				north_apulia_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
+					add_permanent_claim = root
 				}
 			}
 		}
@@ -2014,12 +1984,7 @@ emp_hab_more_italy_branch = {
 	
 	emp_hab_naples = {
 		icon = union_with_naples
-
 		position = 10
-		
-		ai_weight = {
-			factor = 3
-		}
 		
 		required_missions = { emp_hab_veneto_lombardy }
 		provinces_to_highlight = {
@@ -2030,8 +1995,6 @@ emp_hab_more_italy_branch = {
 						area = naples_area
 						area = apulia_area
 						area = calabria_area
-						area = central_italy_area
-						area = north_apulia_area
 					}
 					ROOT = {
 						NOT = {
@@ -2041,8 +2004,6 @@ emp_hab_more_italy_branch = {
 									area = naples_area
 									area = apulia_area
 									area = calabria_area
-									area = central_italy_area
-									area = north_apulia_area
 								}
 							}
 						}
@@ -2059,8 +2020,6 @@ emp_hab_more_italy_branch = {
 					area = naples_area
 					area = apulia_area
 					area = calabria_area
-					area = central_italy_area
-					area = north_apulia_area
 				}
 			}
 		}

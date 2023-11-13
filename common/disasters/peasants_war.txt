@@ -20,6 +20,7 @@ peasant_war = {
 				is_part_of_hre = yes
 			}
 		}
+		NOT = { has_disaster = tur_disaster_ottoman_power_struggle }
 	}
 	
 	
@@ -30,7 +31,6 @@ peasant_war = {
 		}
 		is_at_war = no
 		has_any_disaster = no
-		is_bankrupt = no
 		if = {
 			limit = {
 				has_global_flag = great_peasants_war_flag
@@ -108,7 +108,7 @@ peasant_war = {
 
 	modifier = {
 		global_unrest = 5
-		#stability_cost_modifier = 0.50
+		stability_cost_modifier = 0.50
 	}	
 	
 	

@@ -1,9 +1,9 @@
 # No previous file for Odawa
 
-#owner = OTT
-#controller = OTT
-#add_core = OTT
-#is_city = yes
+owner = OTT
+controller = OTT
+add_core = OTT
+is_city = yes
 culture = anishinabe
 religion = totemism
 capital = "Odawa"

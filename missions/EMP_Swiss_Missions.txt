@@ -371,40 +371,27 @@ swiss_missions_3 = {
 		required_missions = { emp_swi_confederacy }
 		position = 5
 		provinces_to_highlight = {
-			culture = swabian
 			OR = {
-				ROOT = {
-					NOT = {
-						development_in_provinces = {
-							value = 150 #start:122
-							culture = swabian
-						}
-					}
-				}
-				AND = {
-					ROOT = {
-						NOT = {
-							num_of_owned_provinces_with = {
-								value = 5
-								culture = swabian
-								has_manufactory_trigger = yes
-							}
-						}
-					}
-					has_manufactory_trigger = no
-					owned_by = root
-				}
+				area = lower_swabia_area
+				area = upper_swabia_area
+				area = alsace_area
+				area = upper_rhineland_area
+				province_id = 4710
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			development_in_provinces = {
-				value = 150 #start:122
-				culture = swabian
-			}
-			num_of_owned_provinces_with = {
-				value = 5
-				culture = swabian
-				has_manufactory_trigger = yes
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				OR = {
+					area = lower_swabia_area
+					area = upper_swabia_area
+					area = alsace_area
+					area = upper_rhineland_area
+					province_id = 4710
+				}
 			}
 		}
 		effect = {

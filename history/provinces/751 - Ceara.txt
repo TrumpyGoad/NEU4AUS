@@ -1,8 +1,8 @@
 #751 - Ceara
 
-#owner = PTG
-#controller = PTG
-#add_core = PTG
+owner = PTG
+controller = PTG
+add_core = PTG
 culture = tupinamba
 discovered_by = south_american
 religion = animism
@@ -19,15 +19,15 @@ native_hostileness = 3
 extra_cost = 8
 center_of_trade = 1
 
-1500.1.26 = { discovered_by = CAS } # Vicente Yï¿½ï¿½ez Pinzï¿½n, couldn't make a claim due to the Treaty of Tordesillas
-1500.4.23 = { discovered_by = POR } # Pedro ï¿½lvares Cabral
+1500.1.26 = { discovered_by = CAS } # Vicente Yáñez Pinzõn, couldn't make a claim due to the Treaty of Tordesillas
+1500.4.23 = { discovered_by = POR } # Pedro Álvares Cabral
 1516.1.23 = { discovered_by = SPA }
 
 1603.1.1 = {
-	#owner = POR
-	#controller = POR
-	#add_core = POR
-	capital = "Sï¿½o Tiago"
+	owner = POR
+	controller = POR
+	add_core = POR
+	capital = "São Tiago"
 	culture = portugese
 	religion = catholic
 }

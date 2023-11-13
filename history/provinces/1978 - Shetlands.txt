@@ -21,9 +21,16 @@ discovered_by = ottoman
 discovered_by = eastern
 
 
-1444.11.12 = {
+1472.2.20 = {
+	owner = SCO
+	culture = scottish
+	controller = SCO
+	add_core = SCO
 	remove_core = NOR
-	owner = ICE
-	controller = ICE
-	add_core = ICE
+} # Formally ceded to the crown of Scotland
+1609.1.1 = { religion = reformed } # First Protestant Minister Arrives in the Orkneys
+1707.5.12 = {
+	owner = GBR
+	controller = GBR
+	add_core = GBR
 }

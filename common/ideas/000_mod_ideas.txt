@@ -7,7 +7,7 @@ POB_ideas = {
 			movement_speed_in_fleet_modifier = 1 
 		}
 		bonus = {
-			artillery_fire = .5
+			artillery_fire = 1
 		}	
 		trigger = {
 			tag = POB
@@ -25,7 +25,8 @@ POB_ideas = {
 			global_trade_goods_size_modifier = 0.15
 		}
 		pob_settlement_of_brazil = {
-			global_colonial_growth = 30
+			global_colonial_growth = 20
+			may_establish_frontier = yes
 		}
 		pob_the_indian_route = {
 			global_trade_power = 0.15
@@ -33,11 +34,11 @@ POB_ideas = {
 		}
 		pob_banco_do_brasil = {
 			build_cost = -0.15
-			interest = -.25
+			interest = -1
 		}
 		pob_arsenal_real = {
+			heavy_ship_power = 0.1
 			naval_morale = 0.15
-			naval_maintenance -0.15
 		}
 	}
 

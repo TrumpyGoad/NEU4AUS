@@ -516,7 +516,7 @@ eng_row_slot_1 = {
 					estate = all
 					loyalty = 60
 				}
-				num_of_subjects = 3
+				num_of_subjects = 5
 				NOT = {
 					any_subject_country = {
 						liberty_desire = 20
@@ -814,7 +814,7 @@ gbr_row_slot_2 = {
 				limit = { is_random_new_world = no }
 				OR = {
 					colonial_region = colonial_eastern_america
-					region = carribeans_region
+					colonial_region = colonial_the_carribean
 				}
 			}
 			else = {
@@ -831,7 +831,7 @@ gbr_row_slot_2 = {
 				}
 				custom_trigger_tooltip = {
 					tooltip = miss_discover_caribbean
-					carribeans_region = { has_discovered = ROOT }
+					colonial_the_carribean = { has_discovered = ROOT }
 				}
 			}
 			else = {
@@ -866,7 +866,7 @@ gbr_row_slot_2 = {
 		provinces_to_highlight = {
 			if = {
 				limit = { is_random_new_world = no }
-				region = canada_region
+				colonial_region = colonial_canada
 			}
 			else = {
 				continent = new_world
@@ -877,13 +877,19 @@ gbr_row_slot_2 = {
 		trigger = {
 			if = {
 				limit = { is_random_new_world = no }
-				canada_region = {
-					has_discovered = ROOT
+				custom_trigger_tooltip = {
+					tooltip = miss_discover_canada
+					colonial_canada = {
+						has_discovered = ROOT
+					}
 				}
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 10
-					region = canada_region
-					is_city = yes
+				custom_trigger_tooltip = {
+					tooltip = gbr_colonize_canada_ct
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 10
+						colonial_region = colonial_canada
+						is_city = yes
+					}
 				}
 			}
 			else = {
@@ -1570,6 +1576,18 @@ gbr_row_3 = {
 			unlock_issue = {
 				issue = act_of_exploration
 			}
+		
+			126 = { add_permanent_claim = ROOT }
+			163 = { add_permanent_claim = ROOT }
+			321 = { add_permanent_claim = ROOT }
+			4559 = { add_permanent_claim = ROOT }
+			corsica_sardinia_area = { 
+				limit = {
+					NOT = { is_core = EIC }
+					NOT = { is_permanent_claim = EIC }
+				}
+				add_permanent_claim = ROOT 
+			}
 		}
 		ai_weight = {
 			factor = 250
@@ -1994,11 +2012,11 @@ ave_row_3 = {
 				add_adm_power = 50
 			}
 			change_ruler_stat = {
-				stat = adm
+				type = adm
 				amount = 1
 			}
 			change_ruler_stat = {
-				stat = dip
+				type = dip
 				amount = 1
 			}
 		}
@@ -2382,7 +2400,6 @@ ave_row_3 = {
 				duration = -1
 			}
 			custom_tooltip = ave_claim_the_empire_title_bt
-			set_country_flag = ave_automatic_renaming_when_government_changes
 			country_event_with_insight = {
 				id = flavor_gbr.20
 				insight_tooltip = ave_claim_the_empire_title_at
@@ -2566,7 +2583,7 @@ gbr_row_4 = {
 		provinces_to_highlight = {
 			if = {
 				limit = { is_random_new_world = no }
-				region = carribeans_region
+				colonial_region = colonial_the_carribean
 			}
 			else = {
 				continent = new_world
@@ -2577,11 +2594,13 @@ gbr_row_4 = {
 		trigger = { 
 			if = {
 				limit = { is_random_new_world = no }
-				#tooltip = english_colony_in_the_carribean.tooltip
-				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 5
-					region = carribeans_region
-					is_city = yes
+				custom_trigger_tooltip = {
+					tooltip = english_colony_in_the_carribean.tooltip
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 5
+						colonial_region = colonial_the_carribean
+						is_city = yes
+					}
 				}
 			}
 			else = {
@@ -2757,7 +2776,7 @@ gbr_row_4 = {
 				}
 				west_bengal_area = {
 					limit = {
-						NOT = { is_claim = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
 					}
 					add_permanent_claim = ROOT
@@ -3318,7 +3337,7 @@ gbr_ave_the_royal_court_slot = {
 				legitimacy = 95
 			}
 			ruler_total_stats = {
-				stats = 5
+				amount = 5
 			}
 			has_adm_advisor = yes
 			has_dip_advisor = yes
@@ -4189,25 +4208,25 @@ gbr_ave_row_1 = {
 			if = {
 				limit = { is_random_new_world = no }
 				OR = {
-					province_id = 1502
-					province_id = 236
+					province_id = 1500
+					province_id = 1269
 				}
 				has_discovered = ROOT
 			}
 			else = {
-				province_id = 236
+				province_id = 1269
 			}
 		}		
 		trigger = {
 			if = {
 				limit = { is_random_new_world = no }
-				1502 = {
+				1500 = {
 					trade_share = {
 						country = ROOT
 						share = 40
 					}
 				}
-				236 = {
+				1269 = {
 					highest_value_trade_node = yes
 					trade_share = {
 						country = ROOT
@@ -4216,7 +4235,7 @@ gbr_ave_row_1 = {
 				}
 			}
 			else = {
-				236 = {
+				1269 = {
 					highest_value_trade_node = yes
 					trade_share = {
 						country = ROOT
@@ -4245,16 +4264,16 @@ gbr_ave_row_1 = {
 		}
 		position = 12
 		provinces_to_highlight = {
-			province_id = 236
+			province_id = 1269
 		}		
 		trigger = { 
-			236 = {
+			1269 = {
 				is_strongest_trade_power = ROOT
 			}
-			236 = {
+			1269 = {
 				highest_value_trade_node = yes
 			}
-			236 = {
+			1269 = {
 				trade_node_value = 500
 			}
 			reform_level = 8

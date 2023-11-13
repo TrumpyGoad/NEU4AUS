@@ -65,7 +65,7 @@ vassal = {
 	first = OIR
 	second = KHA
 	start_date = 1434.1.1
-	end_date = 1444.11.11
+	end_date = 1454.1.1
 }
 
 #Chagatai Subject
@@ -73,7 +73,7 @@ vassal = {
 	first = CHG
 	second = KAS
 	start_date = 1444.1.1
-	end_date = 1444.11.12
+	end_date = 1462.1.1
 }
 
 #Ming Tributaries
@@ -83,7 +83,7 @@ dependency = {
 	first = MNG
 	second = KOR
 	start_date = 1444.1.1
-	end_date = 1444.11.11
+	end_date = 1644.4.22
 }
 
 dependency = {
@@ -91,7 +91,7 @@ dependency = {
 	first = MNG
 	second = RYU
 	start_date = 1444.1.1
-	end_date = 1444.11.11
+	end_date = 1609.4.5
 }
 
 dependency = {
@@ -99,7 +99,7 @@ dependency = {
 	first = MNG
 	second = DAI
 	start_date = 1444.1.1
-	end_date = 1444.11.11
+	end_date = 1644.4.22
 }
 
 dependency = {
@@ -107,7 +107,7 @@ dependency = {
 	first = MNG
 	second = AYU
 	start_date = 1444.1.1
-	end_date = 1444.11.11
+	end_date = 1644.4.22
 }
 
 dependency = {
@@ -115,7 +115,7 @@ dependency = {
 	first = MNG
 	second = SYG
 	start_date = 1444.1.1
-	end_date = 1444.11.11
+	end_date = 1472.1.1
 }
 
 dependency = {
@@ -123,7 +123,7 @@ dependency = {
 	first = MNG
 	second = HMI
 	start_date = 1444.1.1
-	end_date = 1444.11.11
+	end_date = 1473.1.1
 }
 
 dependency = {
@@ -131,7 +131,7 @@ dependency = {
 	first = MNG
 	second = CHA
 	start_date = 1444.1.1
-	end_date = 1444.11.11
+	end_date = 1644.4.22
 }
 
 dependency = {
@@ -139,7 +139,7 @@ dependency = {
 	first = MNG
 	second = LXA
 	start_date = 1444.1.1
-	end_date = 1444.11.11
+	end_date = 1644.4.22
 }
 
 dependency = {
@@ -147,14 +147,14 @@ dependency = {
 	first = MNG
 	second = KHM
 	start_date = 1444.1.1
-	end_date = 1444.11.11
+	end_date = 1644.4.22
 }
 dependency = {
 	subject_type = "tributary_state"
 	first = MNG
 	second = MMA
 	start_date = 1444.1.1
-	end_date = 1444.11.11
+	end_date = 1449.1.1
 }
 
 dependency = {
@@ -162,7 +162,7 @@ dependency = {
 	first = MNG
 	second = PGS
 	start_date = 1444.1.1
-	end_date = 1444.11.11
+	end_date = 1521.1.1
 }
 
 dependency = {
@@ -170,7 +170,7 @@ dependency = {
 	first = MNG
 	second = TDO
 	start_date = 1444.1.1
-	end_date = 1444.11.11
+	end_date = 1521.1.1
 }
 
 dependency = {
@@ -178,7 +178,7 @@ dependency = {
 	first = MNG
 	second = MJZ
 	start_date = 1444.1.1
-	end_date = 1444.11.11
+	end_date = 1618.1.1
 }
 
 dependency = {

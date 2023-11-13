@@ -1,4 +1,3 @@
-#MOD
 estate_cossacks_land_rights = {
 	icon = privilege_grant_autonomy
 	land_share = 5
@@ -371,6 +370,9 @@ estate_cossacks_establish_the_cossack_regiments = {
 			}
 			NOT = { has_estate_privilege = estate_cossacks_establish_the_cossack_regiments }
 		}
+	}
+	additional_description = {
+		cossacks_regiment
 	}
 }
 

@@ -80,17 +80,6 @@ italy_region = {
 		lazio_area
 		po_valley_area
 		western_sicily_area
-		istria_area
-		aquilea_area
-		venice_po_valley_area
-		piedmont_po_valley_area
-		west_liguria_area
-		western_sicily_area
-		lower_tuscany_area
-		central_sicily_area
-		marche_area
-		corsica_area
-		north_apulia_area
 	}
 }
 
@@ -272,9 +261,6 @@ crimea_region = {
 		zaporizhia_area
 		yedisan_area
 		azov_area
-		kezlev_area
-		stavropol_area
-		tyn_area
 	}
 }
 
@@ -293,19 +279,6 @@ balkan_region = {
 		albania_area
 		silistria_area
 		slavonia_area
-		herz_area
-		nth_bosnia_area
-		montengro_area
-		nis_area
-		popovo_area
-		svoge_area
-		plovdiv_area 
-		feres_area
-		edirne_area
-		north_macedonia_area
-		east_greece_area
-		athens_area
-		achaea_area
 	}
 }
 
@@ -318,18 +291,12 @@ carpathia_region = {
 		southern_transylvania_area
 		wallachia_area
 		moldavia_area
-		bekes_area
-		pest_area
-		daneti_area
-		harsova_area
 	}
 }
 
 egypt_region = {
 	areas = {
 		lower_nubia_area
-		proper_nubia_area
-		lower_gulf_area
 		cyrenaica_area
 		gulf_of_arabia_area
 		al_wahat_area
@@ -337,14 +304,6 @@ egypt_region = {
 		bahari_area
 		vostani_area
 		said_area
-		bangazi_area
-		zaytum_area
-		iskandariyya_area
-		gamasa_area
-		sina_area
-		desert_area 
-		fayyum_area 
-		qus_area
 	}
 }
 
@@ -381,9 +340,6 @@ mashriq_region = {
 		trans_jordan_area
 		syrian_desert_area
 		aleppo_area
-		dufna_area
-		dimashq_area 
-		kobani_area
 	}
 }
 
@@ -401,15 +357,6 @@ anatolia_region = {
 		ankara_area
 		aegean_archipelago_area
 		germiyan_area
-		izmit_area
-		mentese_area
-		saruhan_area
-		hamid_area
-		eretna_area
-		deverek_area 
-		trebizond_area 
-		cyprus_area
-		icel_area
 	}
 }
 
@@ -477,20 +424,6 @@ arabia_region = {
 		qasim_area
 		yamamah_area
 		nafud_area
-		qatar_area
-		pirate_coast2_area
-		baqara_area
-		central_arabia_area
-		trabah_area
-		anizah_area
-		ashayrah_area
-		island_arabia_area
-		nuhaygil_area
-		masabishah_area
-		south_mecca_area
-		raqi_area
-		sabit_area
-		filim_area
 	}
 }
 
@@ -1476,7 +1409,6 @@ mediterrenean_region = {
 		eastern_mediterrenean_area
 		western_mediterrenean_area
 		black_sea_area
-		rivers_area
 	}
 }
 

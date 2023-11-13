@@ -1,4 +1,3 @@
-#MOD
 estate_dhimmi_land_rights = {
 	icon = privilege_grant_autonomy
 	land_share = 5

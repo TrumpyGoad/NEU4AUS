@@ -773,7 +773,13 @@ gc_por_2_c = {
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
-			has_flagship = yes
+			if = {
+				limit = { has_dlc = "Golden Century" }
+				has_flagship = yes
+			}
+			else = {
+				num_of_heavy_ship = 8
+			}
 			227 = { owned_by = ROOT }
 		}
 		effect = {
@@ -820,7 +826,7 @@ gc_por_3_b = {
 		position = 2
 		
 		provinces_to_highlight = {
-			region = carribeans_region
+			colonial_region = colonial_the_carribean
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
@@ -828,16 +834,31 @@ gc_por_3_b = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 5
-				region = carribeans_region
+				colonial_region = colonial_the_carribean
 				is_city = yes
 			}
 		}
 		
 		effect = {
 			custom_tooltip = portuguese_carib_tooltip
-			add_country_modifier = {
-				name = "portuguese_carib_modifier"
-				duration = 7300
+			hidden_effect = {
+				every_subject_country = {
+					limit = {
+						OR = {
+							is_subject_of_type = colony
+							is_subject_of_type = crown_colony
+							is_subject_of_type = private_enterprise
+							is_subject_of_type = self_governing_colony
+						}
+						capital_scope = {
+							colonial_region = colonial_the_carribean
+						}
+					}
+					add_country_modifier = {
+						name = "portuguese_carib_modifier"
+						duration = 7300
+					}
+				}
 			}
 		}
 	}
@@ -1603,13 +1624,13 @@ gc_por_5_dom = {
 				custom_tooltip = por_more_likely_to_get_expansionist_tt
 				set_country_flag = por_more_likely_to_get_expansionist_flag 
 				change_ruler_stat = {
-					stat = dip
+					type = dip
 					amount = 1
 				}
 			}
 			else = {
 				change_ruler_stat = {
-					stat = dip
+					type = dip
 					amount = 2
 				}
 				add_prestige_or_monarch_power = { amount = 10 }
@@ -1884,7 +1905,7 @@ gc_por_5_continued = {
 		icon = mission_wine_monopolies
 		required_missions = {  }
 		position = 9
-
+		
 		provinces_to_highlight = {
 			trade_goods = wine
 			NOT = { owned_by = ROOT }
@@ -1896,15 +1917,23 @@ gc_por_5_continued = {
 			}
 			has_discovered = ROOT
 		}
-
+		
 		trigger = {
-			num_of_owned_provinces_with = {
-				value = 3
-				base_production = 10
-				trade_goods = wine
-				OR = {
-					has_building = workshop
-					has_building = counting_house
+			OR = {
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 10
+					trade_goods = wine
+					OR = {
+						has_building = workshop
+						has_building = counting_house
+					}
+				}
+				trading_bonus = {
+					trade_goods = wine
+					value = yes
+				}
+				production_leader = {
+					trade_goods = wine
 				}
 			}
 		}
@@ -1913,9 +1942,20 @@ gc_por_5_continued = {
 				name = "por_wine_monopolies"
 				duration = 7300
 			}
+			
+			if = { 
+				limit = { has_dlc = "Domination" }
+				custom_tooltip = por_every_wine_prov_tt
+				tooltip = { add_base_production = 1 } 
+				hidden_effect = {
+					every_owned_province = {
+						limit = { trade_goods = wine } 
+						add_base_production = 1 
+					}
+				}
+			}
 		}
 	}
-	
 	gc_por_trading_houses = {
 		icon = mission_great_trading_houses
 		required_missions = { gc_por_wine_monopolies }

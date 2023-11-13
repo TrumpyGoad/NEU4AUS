@@ -1095,29 +1095,24 @@ take_colony = {
 	type = take_colony
 	
 	attacker = {
-		badboy_factor = 0.50
-		prestige_factor = 1
-		peace_cost_factor = 0.50
+		badboy_factor = 0.25
+		prestige_factor = 0.5
+		peace_cost_factor = 0.25
 		peace_cost_factor_non_allowed_treaty = 1.25
 		
 		allowed_provinces = {
-			OR = {
-				colony_claim = ROOT
-				owner = {
-					is_colony_trigger = yes
-				}
-			}
+			colony_claim = ROOT
 		}
 		
 		peace_options = {
 			po_demand_provinces
 		}
 		
-		prov_desc = ALL_COLONIAL_NATIONS
+		prov_desc = ALL_ADJ_COLONIES
 	}
 	
 	defender = {
-		badboy_factor = 0.5
+		badboy_factor = 0.25
 		prestige_factor = 1
 		peace_cost_factor = 0.5	
 		
@@ -1129,7 +1124,7 @@ take_colony = {
 			po_demand_provinces
 		}
 		
-		prov_desc = ALL_COLONIAL_NATIONS
+		prov_desc = ALL_ADJ_COLONIES
 	}
 	
 	war_name = COLONIAL_WAR_NAME	
@@ -2961,4 +2956,77 @@ war_empire_cb_wgt = {
 		prov_desc = ALL_CLAIMS
 	}
 	war_name = CLAIM_WAR_NAME
+}
+
+ARB_spread_islam_wargoal = {
+	type = superiority
+	
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1.5
+		peace_cost_factor = 0.8
+		
+		peace_options = {
+			po_demand_provinces
+			po_change_religion
+		}
+	}
+	
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+		
+		peace_options = {
+			po_demand_provinces
+		}
+	}
+	
+	war_name = CRUSADE_WAR_NAME	
+}
+
+
+superiority_spread_the_true_faith = {
+	type = superiority
+	
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 2
+		peace_cost_factor = 0.25
+		
+		allowed_provinces = {
+			always = no
+		}
+		
+		peace_options = {
+			po_change_religion
+			po_gold
+			po_change_culture
+			po_change_culture_same_culture_group
+		}
+		
+		deny_annex = yes
+		country_desc = ALL_INFIDELS
+		prov_desc = NO_PROVS
+	}
+	
+	defender = {
+		badboy_factor = 0.5
+		prestige_factor = 2
+		peace_cost_factor = 0.5
+		
+		allowed_provinces = {
+			always = yes
+		}
+		
+		peace_options = {
+			po_demand_provinces
+			po_release_vassals
+		}
+		
+		country_desc = ALL_INFIDELS
+		prov_desc = ALL_PROVS
+	}	
+	
+	war_name = WAR_OF_RELIGIOUS_SUPERIORITY_WAR_NAME	
 }

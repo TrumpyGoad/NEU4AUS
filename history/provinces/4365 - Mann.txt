@@ -20,10 +20,9 @@ discovered_by = ottoman
 discovered_by = eastern
 
 
-1444.11.12 = {
-	remove_core = ENG
-	remove_core = SCO
-	owner = LOI
-	controller = LOI
-	add_core = LOI
+1585.1.1 = { religion = protestant }
+1707.5.12 = {
+	owner = GBR
+	controller = GBR
+	add_core = GBR
 }

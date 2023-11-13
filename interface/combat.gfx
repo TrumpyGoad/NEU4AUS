@@ -233,11 +233,6 @@ spriteTypes = {
 		name = "GFX_combat_terrain_farmlands"
 		texturefile = "gfx/interface/combat_terrain_farmlands.dds"
 	}		
-
-	spriteType = {
-		name = "GFX_combat_terrain_dover_terrain"
-		texturefile = "gfx/interface/combat_terrain_dover.dds"
-	}		
 	
 #############################################
 
@@ -251,6 +246,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_combat_modifier_small_strip"	
 		texturefile = "gfx\\interface\\combat_modifier_small_strip.dds"
-		noOfFrames = 8
+		noOfFrames = 9
 	}
 }

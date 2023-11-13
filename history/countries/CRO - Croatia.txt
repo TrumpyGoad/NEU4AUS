@@ -5,7 +5,7 @@ religion = catholic
 add_accepted_culture = dalmatian
 technology_group = eastern
 capital = 131	# Zagreb
-historical_rival = HAB
+
 
 1446.1.1 = {
 	monarch = {
@@ -19,8 +19,8 @@ historical_rival = HAB
 
 1446.1.1 = {
 	heir = {
-		name = "Lï¿½szlï¿½"
-		monarch_name = "Lï¿½szlï¿½"
+		name = "László"
+		monarch_name = "László"
 		dynasty = "Hunyadi"
 		birth_date = 1433.1.1
 		death_date = 1457.3.16
@@ -33,7 +33,7 @@ historical_rival = HAB
 
 1454.1.1 = {
 	monarch = {
-		name = "Lï¿½szlï¿½"
+		name = "László"
 		dynasty = "Hunyadi"
 		adm = 2
 		dip = 2
@@ -116,7 +116,7 @@ historical_rival = HAB
 1512.1.1 = {
 	monarch = {
 		name = "Mirko"
-		dynasty = "Perï¿½nyi"
+		dynasty = "Perényi"
 		adm = 2
 		dip = 2
 		mil = 2

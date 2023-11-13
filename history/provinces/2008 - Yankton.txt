@@ -18,8 +18,8 @@ discovered_by = north_american
 
 
 1810.1.1 = {
-	#owner = LAK
-	#controller = LAK
-	#add_core = LAK
+	owner = LAK
+	controller = LAK
+	add_core = LAK
 	culture = dakota 
 } #Lakota pushes west across the Missouri

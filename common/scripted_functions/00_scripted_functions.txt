@@ -51,21 +51,7 @@ can_increase_stability = {
 
 # ROOT = province, FROM = country
 can_add_province_to_hre = {
-	condition = {
-		tooltip = "ONLY_ELIGIBLE_PROVINCES_MAY_JOIN_HRE"
-		potential = {
-			NOT = { 
-				region = north_german_region 
-				region = south_german_region
-				region = italy_region
-				region = low_countries_region
-				region = france_region
-			}
-		}
-		allow = {
-			always = no
-		}
-	}
+	
 }
 
 #ROOT = province, FROM = country
@@ -134,24 +120,6 @@ can_move_capital = {
 			always = no
 		}
 	}
-	condition = {
-		tooltip = "NO_CAPITAL_MOVE_COLONY"
-		potential = {
-			FROM = {
-				is_colony_trigger = yes
-			}
-			NOT = { 
-				FROM = { 
-					capital_scope = { 
-						colonial_region = ROOT 
-					} 
-				}
-			}
-		}
-		allow = {
-			always = no
-		}
-	}
 }
 
 can_move_trade_port = {
@@ -161,20 +129,6 @@ can_order_assault = {
 }
 
 can_order_force_march = {
-	condition = {
-		tooltip = "FORCE_MARCH_REQUIREMENTS"
-		potential = {
-			NOT = {
-				OR = {
-					FROM = { adm_tech = 15 }
-					has_idea = napoleonic_warfare_new
-				}
-			}
-		}
-		allow = {
-			always = no
-		}
-	}
 }
 
 can_scorch_earth = {
@@ -190,22 +144,15 @@ can_burn_colony = {
 }
 
 can_colonize_province = {
-	
 }
 
 can_colonize_province_siberian_frontier = {
-	condition = {
-           tooltip = "colonial_expansion_limit_tooltip"
-           potential = {
-               FROM = { is_colony_trigger = yes }
-           }
-           allow = {
-               FROM = { capital_scope = { colonial_region = ROOT } }
-           }
-       }
 }
 
 can_add_seat_in_parliament = {
+}
+
+can_remove_seat_in_parliament = {
 }
 
 can_add_estate = {
@@ -262,4 +209,20 @@ will_demand_annexation = {
 			NOT = { hre_reform_passed = landfriede }
 		}
 	}
+}
+
+can_join_hre = {
+	condition = {
+		tooltip = "PERMANENTLY_LEFT_HRE"
+		potential = {
+		}
+		allow = {
+			NOT = {
+				has_country_flag = permanently_left_hre_flag
+			}
+		}
+	}
+}
+
+can_leave_hre = {
 }

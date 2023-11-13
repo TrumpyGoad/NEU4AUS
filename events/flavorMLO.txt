@@ -20,7 +20,7 @@ country_event = {
 	immediate = {
 		hidden_effect = {	
 			set_country_flag = had_ambrosian_republic
-			change_government_to_republic = yes
+			change_government = republic
 			add_government_reform = ambrosian_republic
 		}
 	}
@@ -32,7 +32,7 @@ country_event = {
 			change_government = republic
 			add_government_reform = ambrosian_republic
 		}
-		add_republican_tradition = 50
+		add_republican_tradition = 5
 		add_stability = -2
 		every_neighbor_country  = {
 			limit = {
@@ -78,10 +78,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		OR = [ 
-			tag = MLO
-			tag = LOM
-		}
+		tag = MLO
 		has_reform = ambrosian_republic
 		NOT = { republican_tradition = 75 }
 	}
@@ -119,10 +116,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		OR = [ 
-			tag = MLO
-			tag = LOM
-		}
+		tag = MLO
 		is_year = 1456
 		owns = 104
 		is_at_war = no
@@ -151,10 +145,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		OR = [ 
-			tag = MLO
-			tag = LOM
-		}
+		tag = MLO
 		is_year = 1450
 		is_at_war = no
 		num_of_cities = 3
@@ -293,7 +284,7 @@ country_event = {
 		define_advisor = {
 			type = philosopher
 			culture = tuscan
-			name = "Niccolï¿½ Machiavelli"
+			name = "Niccolò Machiavelli"
 			discount = yes
 			location = 116
 			skill = 2
@@ -310,7 +301,7 @@ country_event = {
 		}
 		define_advisor = {
 			type = statesman
-			name = "Niccolï¿½ Machiavelli"
+			name = "Niccolò Machiavelli"
 			culture = tuscan
 			discount = yes
 			location = 116
@@ -433,10 +424,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		OR = [ 
-			tag = MLO
-			tag = LOM
-		}
+		tag = MLO
 		is_year = 1500
 		owns = 104
 		NOT = { is_year = 1600 }
@@ -463,10 +451,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		OR = [ 
-			tag = MLO
-			tag = LOM
-		}
+		tag = MLO
 		is_year = 1490
 		war_with = FRA
 		owns = 104

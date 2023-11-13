@@ -1,8 +1,8 @@
 #1090 - Eora
 
-#add_core = EOR
-#owner =  EOR
-#controller =  EOR
+add_core = EOR
+owner = EOR
+controller = EOR
 culture = aboriginal
 religion = dreamtime
 capital = "Eora"
@@ -22,13 +22,13 @@ discovered_by = aboriginal_tech
 1770.1.1 = { discovered_by = GBR } # James Cook
 1788.1.26 = {
 	discovered_by = GBR
-	#owner =  GBR
-	#controller =  GBR
-	#add_core = GBR
+	owner = GBR
+	controller = GBR
+	add_core = GBR
 	culture = english
 	religion = protestant
 	is_city = yes
 	trade_goods = naval_supplies
 	capital = "Sydney"
 }
-#1813.1.1 = { #add_core = GBR }
+#1813.1.1 = { add_core = GBR }

@@ -19,13 +19,6 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA9073"
-		every_province = {
-			limit = {
-				is_part_of_hre = yes
-				NOT = { is_core = ROOT }
-			}
-			add_core = emperor
-		}
 	}
 }
 
@@ -44,14 +37,20 @@ country_event = {
 			factor = 10
 			modifier = {
 				factor = 0
-				NOT = {
-					has_opinion = {
-						who = emperor
-						value = 0
+				if = {
+					limit = {
+						has_dlc = "Emperor"
+					}
+					NOT = {
+						will_back_reform = emperor_privilegia_de_non_appelando
 					}
 				}
-			}			
-			
+				else = {
+					NOT = {
+						will_back_reform = privilegia_de_non_appelando
+					}
+				}
+			}
 		}
 		emperor = {
 			vassalize = ROOT
@@ -64,9 +63,14 @@ country_event = {
 			factor = 10
 			modifier = {
 				factor = 0
-				has_opinion = {
-					who = emperor
-					value = 0
+				if = {
+					limit = {
+						has_dlc = "Emperor"
+					}
+					will_back_reform = emperor_privilegia_de_non_appelando
+				}
+				else = {
+					will_back_reform = privilegia_de_non_appelando
 				}
 			}			
 			
@@ -102,14 +106,43 @@ country_event = {
 	option = {
 		name = "EVTOPTA9075"
 		change_tag = HLR
+		on_change_tag_effect = yes
 		restore_country_name_effect = yes
 		add_country_modifier = {
 			name = "rome_reborn"
 			duration = -1
 		}
-		
+		custom_tooltip = hre_core_tt
+		hidden_effect = {
+			every_province = {
+				limit = {
+					is_part_of_hre = yes
+					OR = {
+						owned_by = ROOT
+						owner = { is_neighbor_of = ROOT }
+					}
+					NOT = { is_core = ROOT }
+				}
+				add_core = emperor
+			}
+		}
+		custom_tooltip = hre_inheritance_tt
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_part_of_hre = yes
+					is_emperor = no
+					num_of_cities = 1
+				}
+				country_event = { id = 9076 }
+			}
+		}
 		dismantle_hre = yes
 		set_government_rank = 3
+		if = {
+			limit = { has_dlc = "Domination" }
+			add_government_reform = holy_imperial_monarchy_reform
+		}
 		add_adm_power = 250
 		if = {
 			limit = {

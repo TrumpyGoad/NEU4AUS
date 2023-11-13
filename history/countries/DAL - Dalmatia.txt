@@ -7,8 +7,6 @@ add_accepted_culture = croatian
 technology_group = eastern
 capital = 136 # Split
 add_army_professionalism = 0.05
-historical_rival = HAB
-
 
 #union under Venice
 

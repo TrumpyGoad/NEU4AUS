@@ -26,7 +26,7 @@ pluto_condot_discovery = {
 		current_age = age_of_discovery
 	}
 
-	possible_condottieri = 15
+	possible_condottieri = 0.15
 
 }
 #Age 2
@@ -39,7 +39,7 @@ pluto_condot_reformation = {
 		current_age = age_of_reformation
 	}
 
-	possible_condottieri = 30
+	possible_condottieri = 0.30
 
 }
 #Age 3
@@ -52,7 +52,7 @@ pluto_condot_absolutism = {
 		current_age = age_of_absolutism
 	}
 
-	possible_condottieri = 45
+	possible_condottieri = 0.45
 
 }
 #Age 4
@@ -65,7 +65,8 @@ pluto_condot_revolutions = {
 		current_age = age_of_revolutions
 	}
 
-	possible_condottieri = 60
+	possible_condottieri = 0.60
 
 }
+
 

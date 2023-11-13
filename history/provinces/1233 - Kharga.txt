@@ -1,8 +1,8 @@
 #1233 - Kargah
 
-owner = AZZ
-controller = AZZ
-add_core = AZZ
+owner = MAM
+controller = MAM #Local Badawin in control
+add_core = MAM
 culture = al_misr_arabic
 religion = sunni
 capital = "Kharga"
@@ -12,6 +12,7 @@ trade_goods = livestock
 hre = no
 base_tax = 1 
 base_production = 1
+add_local_autonomy = 50
 discovered_by = MAM
 discovered_by = muslim
 discovered_by = ottoman

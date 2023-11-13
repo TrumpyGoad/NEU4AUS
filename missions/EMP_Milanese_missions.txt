@@ -60,18 +60,11 @@ emp_mlo_conquest_branch = {
 		position = 3
 		required_missions = { emp_mlo_subdue_genoa }
 		provinces_to_highlight = {
-			OR = {
-				area = emilia_romagna_area
-				area = liguria_area
-			}
+			area = emilia_romagna_area
 			NOT = { country_or_non_sovereign_subject_holds = root }
 		}
 		trigger = {
 			emilia_romagna_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = root
-			}
-			liguria_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = root
 			}
@@ -87,13 +80,6 @@ emp_mlo_conquest_branch = {
 				}
 				add_permanent_claim = root
 			}
-			lower_tuscany_area = {
-				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
-				}
-				add_permanent_claim = root
-			}
 		}
 		ai_weight = {
 			factor = 500
@@ -103,18 +89,11 @@ emp_mlo_conquest_branch = {
 		icon = conquer_tuscany
 		required_missions = { emp_mlo_emilia_romagna }
 		provinces_to_highlight = {
-			OR = {
-				area = tuscany_area
-				area = lower_tuscany_area
-			}
+			area = tuscany_area
 			NOT = { country_or_non_sovereign_subject_holds = root }
 		}
 		trigger = {
 			tuscany_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = root
-			}
-			lower_tuscany_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = root
 			}
@@ -151,9 +130,6 @@ emp_mlo_conquest_branch = {
 						area = naples_area
 						area = apulia_area
 						area = calabria_area
-						#New States
-						area = central_italy_area
-						area = north_apulia_area
 					}
 					ROOT = {
 						NOT = {
@@ -163,8 +139,6 @@ emp_mlo_conquest_branch = {
 									area = naples_area
 									area = apulia_area
 									area = calabria_area
-									area = central_italy_area
-						area = north_apulia_area
 								}
 							}
 						}
@@ -181,8 +155,6 @@ emp_mlo_conquest_branch = {
 					area = naples_area
 					area = apulia_area
 					area = calabria_area
-					area = central_italy_area
-					area = north_apulia_area
 				}
 			}
 			is_subject = no
@@ -222,21 +194,6 @@ emp_mlo_conquest_branch = {
 					}
 				}
 				calabria_area = {
-					limit = { owned_by = root }
-					add_province_modifier = {
-						name = mlo_unified_italy
-						duration = 7300
-					}
-				}
-				#New States
-				central_italy_area = {
-					limit = { owned_by = root }
-					add_province_modifier = {
-						name = mlo_unified_italy
-						duration = 7300
-					}
-				}
-				north_apulia_area = {
 					limit = { owned_by = root }
 					add_province_modifier = {
 						name = mlo_unified_italy
@@ -330,8 +287,6 @@ emp_mlo_venice_branch = {
 						area = emilia_romagna_area
 						area = po_valley_area
 						area = tuscany_area
-						area = aquilea_area
-						area = istria_area
 						AND = {
 							area = carinthia_area
 							culture_group = latin
@@ -341,8 +296,7 @@ emp_mlo_venice_branch = {
 							culture_group = latin
 						}
 					}
-					NOT = { province_id = 112 } #Venice
-					NOT = { province_id = 4991 } #Giudecca
+					NOT = { province_id = 112 }
 				}
 				AND = {
 					OR = {
@@ -370,22 +324,46 @@ emp_mlo_venice_branch = {
 			}
 		}
 		trigger = {
-			OR ={ 
-		108 = { 
-                type = all
-				country_or_non_sovereign_subject_holds = ROOT}
-		4984 = { 
-                type = all
-				country_or_non_sovereign_subject_holds = ROOT}
-		
-		4729 = { 
-                type = all
-				country_or_non_sovereign_subject_holds = ROOT}
-		
-		1774 = { 
-                type = all
-				country_or_non_sovereign_subject_holds = ROOT}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				OR = {
+					province_id = 108
+					province_id = 4729
+					province_id = 1774
+					province_id = 111
+					province_id = 114
 				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = emp_mlo_terra_firma_trigger_tooltip
+				
+				VEN = {
+					NOT = {
+						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+							value = 1
+							OR = {
+								area = lombardy_area
+								area = venetia_area
+								area = piedmont_area
+								area = liguria_area
+								area = emilia_romagna_area
+								area = po_valley_area
+								area = tuscany_area
+								AND = {
+									area = carinthia_area
+									culture_group = latin
+								}
+								AND = {
+									area = tirol_area
+									culture_group = latin
+								}
+							}
+							NOT = { province_id = 112 }
+						}
+					}
+				}
+			}
+			is_subject = no
 		}
 		effect = {
 			add_dip_power = 50
@@ -415,30 +393,6 @@ emp_mlo_venice_branch = {
 					add_permanent_claim = root
 				}
 			}
-			#New Provinces
-			west_liguria_area = {
-				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
-				}
-				add_permanent_claim = root
-			}
-			piedmont_po_valley_area = {
-				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
-				}
-				add_permanent_claim = root
-			}
-			4991 = { #Giudecca
-				if = {
-					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
-					}
-					add_permanent_claim = root
-				}
-			}
 		}
 		ai_weight = {
 			factor = 500
@@ -455,10 +409,6 @@ emp_mlo_venice_branch = {
 				area = liguria_area
 				area = emilia_romagna_area
 				area = po_valley_area
-				#New States
-				area = west_liguria_area 
-				area = piedmont_po_valley_area
-				area = venice_po_valley_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = root }
 		}
@@ -484,19 +434,6 @@ emp_mlo_venice_branch = {
 				country_or_non_sovereign_subject_holds = root
 			}
 			liguria_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = root
-			}
-			#New States
-			west_liguria_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = root
-			}
-			piedmont_po_valley_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = root
-			}
-			venice_po_valley_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = root
 			}
@@ -553,22 +490,6 @@ emp_mlo_venice_branch = {
 					}
 					add_permanent_claim = root
 				}
-				#New States
-				central_italy_area = {
-					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
-					}
-					add_permanent_claim = root
-				}
-				north_apulia_area = {
-					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
-					}
-					add_permanent_claim = root
-				}
-
 			}
 			110 = {
 				if = {
@@ -1051,11 +972,11 @@ emp_mlo_security_branch_2 = {
 		required_missions = { emp_mlo_friends_in_high_places }
 		provinces_to_highlight = {
 			OR = {
-				province_id = 4982 #Lucano
-				province_id = 4978 #Aosta
-				province_id = 4977
+				province_id = 4740
+				province_id = 103
+				province_id = 4727
 				province_id = 102
-				province_id = 107
+				province_id = 110
 				province_id = 111
 			}
 			OR = {
@@ -1078,11 +999,11 @@ emp_mlo_security_branch_2 = {
 					has_building = fort_18th
 				}
 				OR = {
-					province_id = 4982 #Lucano
-					province_id = 4978 #Aosta
-					province_id = 4977
+					province_id = 4740
+					province_id = 103
+					province_id = 4727
 					province_id = 102
-					province_id = 107
+					province_id = 110
 					province_id = 111
 				}
 			}
@@ -1095,9 +1016,9 @@ emp_mlo_security_branch_2 = {
 						OR = {
 							province_id = 4740
 							province_id = 103
-							province_id = 4977
+							province_id = 4727
 							province_id = 102
-							province_id = 107
+							province_id = 110
 							province_id = 111
 						}
 						has_building = fort_18th
@@ -1112,9 +1033,9 @@ emp_mlo_security_branch_2 = {
 						OR = {
 							province_id = 4740
 							province_id = 103
-							province_id = 4977
+							province_id = 4727
 							province_id = 102
-							province_id = 107
+							province_id = 110
 							province_id = 111
 						}
 					}

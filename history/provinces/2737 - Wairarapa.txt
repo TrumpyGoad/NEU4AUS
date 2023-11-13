@@ -1,8 +1,8 @@
 #2737 - Wairarapa
 
-#add_core = TAK
-#owner = TAK
-#controller = TAK
+add_core = TAK
+owner = TAK
+controller = TAK
 culture = maori
 religion = animism
 hre = no

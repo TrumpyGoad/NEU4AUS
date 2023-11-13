@@ -1,9 +1,9 @@
 #377 - Aleppo
 
-owner = KOJ
-controller = KOJ
+owner = SYR
+controller = SYR
 culture = al_suryah_arabic
-religion = catholic
+religion = sunni
 capital = "Halab"
 trade_goods = silk
 hre = no
@@ -11,7 +11,7 @@ base_tax = 9
 base_production = 9
 base_manpower = 4
 is_city = yes
-add_core = KOJ
+add_core = SYR
 fort_15th = yes
 discovered_by = east_african
 discovered_by = muslim

@@ -1,8 +1,8 @@
 #1094 - Gubbi Gubbi
 
-#add_core = MIA
-#owner =  MIA
-#controller =  MIA
+add_core = MIA
+owner = MIA
+controller = MIA
 culture = gamilaraay
 religion = dreamtime
 capital = "Turrbal"

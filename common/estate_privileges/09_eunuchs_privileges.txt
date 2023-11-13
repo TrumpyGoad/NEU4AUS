@@ -1,4 +1,3 @@
-#MOD
 estate_eunuchs_bookkeepers_privilege = {
 	icon = estate_eunuchs_bookkeepers_privilege
 	max_absolutism = -10

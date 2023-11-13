@@ -39,27 +39,27 @@ capital = 4383 #Haag
 		mil = 2
 	}
 	heir = {
-		name = "Willem"
-		monarch_name = "Willem"
-		dynasty = "von Nassau"
+		name = "Jacoba"
+		monarch_name = "Jacoba"
+		dynasty = "von Wittelsbach"
 		birth_date = 1401.8.16
-		death_date = 1445.10.8
+		death_date = 1436.10.8
 		claim = 95
 		adm = 2
 		dip = 1
 		mil = 1
+		female = yes
 	}
 }
 
-
 1417.5.31 = {
 	monarch = {
-		name = "Willem"
-		dynasty = "von Nassau"
-		birth_date = 1411.8.16
-		adm = 4
-		dip = 3
-		mil = 5
+		name = "Jacoba"
+		dynasty = "von Wittelsbach"
+		adm = 2
+		dip = 1
+		mil = 1
+		female = yes
 	}
 }
 

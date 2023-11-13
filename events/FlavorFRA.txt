@@ -57,7 +57,6 @@ country_event = {
 }
 
 # The End of the Hundred Years War
-#Regular Version
 country_event = {
 	id = flavor_fra.9104
 	title = "flavor_fra.EVTNAME9104"
@@ -65,286 +64,61 @@ country_event = {
 	picture = DIPLOMACY_eventPicture
 
 	fire_only_once = yes
-	major = yes
 	
 	trigger = {
-		tag = FRA
-		NOT = { is_year = 1500 }
-		NOT = { has_country_flag = had_end_of_HYW_france }
-		NOT = { has_country_flag = france_refuses_peace_with_england_flag }
-		AND = {
-				ENG = {
-					NOT = {
-						any_owned_province = {
-							region = france_region
-							is_core = ROOT
-							owned_by = ENG
-						}
-					}
-				}
-				ENG = {
-					all_subject_country = {
-						NOT = {
-							any_owned_province = {
-								region = france_region
-								is_core = ROOT
-								owner = {
-									is_subject_of = ENG
-								}
-							}
-						}
-					}	
-				}
-			}
-	}
-	
-	mean_time_to_happen = {
-		months = 60
-		modifier = {
-			factor = 0.2
-			FRA = { controls = 87 } # Calais
-		}
-		modifier = {
-			factor = 0.5
-			is_year = 1450
-		}
-		modifier = {
-			factor = 0.01
-			NOT = { war_with = ENG }
-		}
-	}
-
-
-	option = {			# Time to build a stronger nation
-		name = "flavor_fra.EVTOPTA3104"
-
-		add_stability_or_adm_power = yes
-		add_adm_power = 50
-		
-		if = {
-			limit = { war_with = ENG }
-			ENG = {
-				every_owned_province = {
-					limit = {
-						AND = {
-							region = france_region
-							is_core = ROOT
-						}
-					}
-					cede_province = ROOT
-					#add_local_autonomy = 10
-				}
-				every_subject_country = {
-					every_owned_province = {
-						limit = {
-							AND = {
-								region = france_region
-								is_core = ROOT
-							}
-						}
-						cede_province = ROOT
-						#add_local_autonomy = 10
-					}
-				}
-			}
-		}
-		hidden_effect = {
-			set_country_flag = had_end_of_HYW_france
-		}
-		ENG = { country_event = { id = flavor_eng.9104 } }
-		
-	}
-	
-	option = {			# Reject free land for whatever reason
-		name = "flavor_fra.EVTOPTA31042"
-		
-		trigger = {
-			war_with = ENG
-		}
-		
-		hidden_effect = {
-			set_country_flag = france_refuses_peace_with_england_flag
-		}
-		custom_tooltip = france_rejects_peace_1_tt
-		custom_tooltip = france_rejects_peace_2_tt
-		
-	}
-
-	
-}
-
-#End of the Hundred Years War 2
-#Version that can fire after refusing peace and taking back your lands the normal way
-
-country_event = {
-	id = flavor_fra.HYWend2
-	title = "flavor_fra.HYWend2.t"
-	desc = "flavor_fra.HYWend2.d"
-	picture = DIPLOMACY_eventPicture
-
-	fire_only_once = yes
-	major = yes
-	
-	trigger = {
-		tag = FRA
-		NOT = { is_year = 1500 }
-		has_country_flag = france_refuses_peace_with_england_flag
-		NOT = { has_country_flag = had_end_of_HYW_france }
-		is_at_war = no #Only fires after taking all cores back.
-		OR ={
-			AND ={ 
-				ENG = {
-					NOT = {
-						any_owned_province = {
-							region = france_region
-							is_core = ROOT
-							controlled_by = ENG
-						}
-					}
-				}
-				ENG = {
-					all_subject_country = {
-						NOT = {
-							any_owned_province = {
-								region = france_region
-								is_core = ROOT
-								controller = {
-									is_subject_of = ENG
-								}
-							}
-						}
-					}	
-				}
-				
-				FRA = {
-					NOT = {
-						any_owned_province = {
-							region = france_region
-							is_core = ROOT
-							controlled_by = ENG
-						}
-					}
-				}
-				
-				NOT = {
-					ENG = {
-						owns = 183 #Paris
-					}
-				}
-				war_with = ENG
-				is_year = 1448
-			}
+		OR = {
+			has_global_flag = hyw_mission_resolution
 			AND = {
-				ENG = {
-					NOT = {
-						any_owned_province = {
-							region = france_region
-							is_core = ROOT
-							owned_by = ENG
-						}
-					}
+				tag = FRA
+				NOT = { is_year = 1500 }
+				NOT = { has_country_flag = had_end_of_HYW_france }
+				NOT = {
+					france_region = { owned_by = ENG }
+				}
+				NOT = {
+					france_region = { owned_by = GBR }
 				}
 				ENG = {
-					all_subject_country = {
-						NOT = {
-							any_owned_province = {
-								region = france_region
-								is_core = ROOT
-								owner = {
-									is_subject_of = ENG
-								}
-							}
-						}
-					}	
+					NOT = { war_with = FRA }
 				}
+				NOT = { is_subject_of = ENG }
+				GBR = {
+					NOT = { war_with = FRA }
+				}
+				NOT = { is_subject_of = GBR }
 			}
 		}
 	}
 	
 	mean_time_to_happen = {
-		months = 1
-		modifier = {
-			factor = 0.01
-			NOT = { war_with = ENG }
-		}
+		months = 12
 	}
-
-
-	option = {		# Time to build a stronger nation
-		name = "flavor_fra.HYWend2.a"
-
-		add_stability_or_adm_power = yes
-		add_adm_power = 50
-		
-		hidden_effect = {
-			set_country_flag = had_end_of_HYW_france
-		}
-		ENG = { country_event = { id = flavor_eng.9104 } }
-		
-	}
-	
-	
-}
-
-# England gives up France
-country_event = {
-	id = flavor_fra.1300655506
-	title = "flavor_fra.1300655506.t"
-	desc = "flavor_fra.1300655506.d"
-	picture = DIPLOMACY_eventPicture
-
-	fire_only_once = yes
-	
-	is_triggered_only = yes
-	
 	
 	immediate = {
 		hidden_effect = {
 			set_country_flag = had_end_of_HYW_france
+			if = {
+				limit = {
+					exists = ENG
+					NOT = { exists = GBR }
+					NOT = { has_global_flag = eng_had_end_of_hundred_years_war }
+				}
+				ENG = { country_event = { id = flavor_eng.9104 days = 1 } }
+			}
+			if = {
+				limit = {
+					exists = GBR
+					NOT = { has_global_flag = eng_had_end_of_hundred_years_war }
+				}
+				GBR = { country_event = { id = flavor_eng.9104 days = 1 } }
+			}
 		}
 	}
 
 	option = {			# Time to build a stronger nation
 		name = "flavor_fra.EVTOPTA3104"
-		if = {
-				limit = {
-					exists = ENG
-					NOT = { exists = GBR }
-				}
-				ENG = { country_event = { id = flavor_eng.9104 } }
-			}
-			if = {
-				limit = {
-					exists = GBR
-				}
-				GBR = { country_event = { id = flavor_eng.9104 } }
-			}
 		add_stability_or_adm_power = yes
 		add_adm_power = 50
-		ENG = {
-			every_owned_province = {
-				limit = {
-					AND = {
-						region = france_region
-						is_core = ROOT
-					}
-				}
-				cede_province = ROOT
-				#add_local_autonomy = 10
-			}
-			every_subject_country = {
-				every_owned_province = {
-					limit = {
-						AND = {
-							region = france_region
-							is_core = ROOT
-						}
-					}
-					cede_province = ROOT
-					#add_local_autonomy = 10
-				}
-			}
-		}
 	}
 }
 
@@ -900,10 +674,10 @@ country_event = {
 	trigger = {
 		OR = { 
 			AND = { 
-		tag = FRA
-		is_year = 1649
-		NOT = { is_year = 1683 }
-	}
+				tag = FRA
+				is_year = 1649
+				NOT = { is_year = 1683 }
+			}
 			mission_completed = fra_develop_trade
 		}
 	}
@@ -1017,13 +791,11 @@ country_event = {
 				has_dlc = "Leviathan"
 			}
 			183 = {
-				add_great_project_tier = {
+				set_great_project_tier_2 = {
 					type = versailles
-					tier = 1
 				}
 			}
 		}
-
 	}
 	option = {		# Such a project will not benefit us
 		name = "flavor_fra.EVTOPTB3125"
@@ -1431,7 +1203,7 @@ country_event = {
 		add_adm_power = 50
 		define_advisor = {
 			type = statesman
-			name = "Charles Fran?ois de Broglie"
+			name = "Charles François de Broglie"
 			culture = gascon
 			discount = yes
 			skill = 2
@@ -1914,23 +1686,34 @@ country_event = {
 	picture = SIEGE_eventPicture
 	
 	fire_only_once = yes
-	is_triggered_only = yes
 	
 	trigger = {
 		tag = ENG
+		is_subject = no
 		exists = FRA
 		NOT = { alliance_with = FRA }
 		NOT = { war_with = FRA }
+		NOT = { is_year = 1450 }
 		NOT = { truce_with = FRA }
 		177 = {
-			owned_by = ENG
+			OR = {
+				owned_by = ENG
+				owner = {
+					is_subject_of = ENG
+				}
+			}
 		}
 		FRA = {
 			is_subject = no
 		}
+		is_year = 1445
+	}
+	
+	mean_time_to_happen = {
+		months = 12
 	}
 
-	option = { #Return Maine To France
+	option = {
 		name = "flavor_fra.6.a"
 		ai_chance = {
 			factor = 25
@@ -1941,18 +1724,12 @@ country_event = {
 			}
 			add_truce_with = FRA
 		}
-		FRA =  {	
-			country_event = { 
-				id = flavor_fra.8 
-				days = 1
-			} 
-			add_truce_with = ENG 
-		}
+		FRA = { country_event = { id = flavor_fra.8 } }
 		add_prestige = -10
 		add_stability = -1
 		set_country_flag = rb_gave_up_maine
 	}
-	option = { #Declare War on France
+	option = {
 		name = "flavor_fra.6.b"
 		ai_chance = {
 			factor = 75
@@ -1965,22 +1742,15 @@ country_event = {
 				has_any_disaster = yes
 			}
 		}
-		FRA = { 
-			country_event = { 
-				id = flavor_fra.7 
-				days = 1
-			}
-			custom_tooltip = teach_them_how_to_war_tt	
-		}
-		
+		custom_tooltip = flavor_fra.6.a.tt
+		FRA = { country_event = { id = flavor_fra.7 } }
 	}
 }
 
 # The Surrender of Maine
-# England Declares War
 country_event = {
 	id = flavor_fra.7
-	title = "flavor_fra.new.t"
+	title = "flavor_fra.7.t"
 	desc = "flavor_fra.7.d"
 	picture = SIEGE_eventPicture
 	
@@ -1988,29 +1758,61 @@ country_event = {
 
 	major = yes
 	
-	immediate = {
-		hidden_effect = {
-			ENG = {
+	option = {
+		name = "flavor_fra.7.a" #'teach them how to war' /Reversed Henry V
+		ai_chance = {
+			factor = 100 #Shouldn't take this from them really.
+			modifier = {
+				factor = 0
+				is_at_war = yes
+			}
+			modifier = {
+				factor = 0
+				has_any_disaster = yes
+			}
+		}
+		ENG = {
 			declare_war_with_cb = {
 				who = FRA
 				casus_belli = cb_hundred_years_war
-				war_goal_province = 4388
 			}
 		}
-		}
-	}
-	
-	option = {
-		name = "flavor_fra.7.a" #'teach them how to war' /Reversed Henry V
 		177 = {
 			change_controller = FRA
 		}
 	}
-	
+	option = {
+		name = "flavor_fra.7.b" #Unpopular but preserves the peace?
+		ai_chance = {
+			factor = 1
+		}
+		add_prestige = -10
+		FROM = {
+			add_truce_with = ROOT
+		}
+		add_truce_with = FROM
+		if = {
+			limit = { exists = PRO }
+			PRO = {
+				add_opinion = {
+					who = ROOT
+					modifier = fra_gave_up_on_maine
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_estate = estate_nobles
+			}
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = -10
+			}
+		}
+	}
 }
 
 # The Surrender of Maine
-# England Attempts to Return Maine
 country_event = {
 	id = flavor_fra.8
 	title = "flavor_fra.8.t"
@@ -2021,7 +1823,7 @@ country_event = {
 	
 	major = yes
 
-	option = { #Accept Maine and get Truce with England
+	option = {
 		name = "flavor_fra.8.a" #
 		add_prestige = 10
 		hidden_effect = {
@@ -2034,14 +1836,10 @@ country_event = {
 			cede_province = FRA
 			hidden_effect = { add_local_autonomy = -50 }
 		}
-		ai_chance = {
-			factor = 100
-			
-		}
-		
 	}
 }
-# Franï¿½ois Villon
+
+# François Villon
 country_event = {
 	id = flavor_fra.9000
 	title = "flavor_fra.EVTNAME9000"
@@ -2074,7 +1872,7 @@ country_event = {
 		name = "flavor_fra.EVTOPTB9000"
 		define_advisor = {
 			type = artist
-			name = "Franï¿½ois Villon"
+			name = "François Villon"
 			culture = cosmopolitan_french
 			discount = yes
 			skill = 3
@@ -2097,7 +1895,7 @@ country_event = {
 }
 
 #New event by Pierre du Plessis
-#Reference is to Louise Marie Thï¿½rï¿½se, The Black Nun of Moret
+#Reference is to Louise Marie Thérèse, The Black Nun of Moret
 country_event = {
 	id = flavor_fra.9500
 	title = flavor_fra.9500.name
@@ -2192,9 +1990,11 @@ country_event = {
 	desc = {
 		trigger = {
 			NOT = {
-				has_adm_advisor = yes
-				has_dip_advisor = yes
-				has_mil_advisor = yes
+				AND = {
+					has_adm_advisor = yes
+					has_dip_advisor = yes
+					has_mil_advisor = yes
+				}
 			}
 		}
 		desc = emp_mission_events.7.d2
@@ -2400,11 +2200,11 @@ country_event = { #House de Valois
 		name = flavor_fra.106.a 
 		
 		ai_chance = { factor = 10 } 
-		FRA = { create_union = PRO }  
 		if = { 
 			limit = { LOR = { is_subject_of = PRO } }
 			inherit = LOR 
 		}
+		FRA = { create_union = PRO }  
 		add_stability_or_adm_power = yes 
 	}
 	
@@ -3499,7 +3299,7 @@ country_event = { #The Holy Lands of Jerusalem
 		
 		add_papal_influence = 50 
 		change_ruler_stat = {
-			stat = mil
+			type = mil
 			amount = 2
 		}
 	}
@@ -3512,6 +3312,11 @@ country_event = { #France in the 15th Century
 	picture = wihgfx_FEMALE_GENERAL_eventPicture
 	is_triggered_only = yes 
 	fire_only_once = yes 
+	trigger = {
+		has_dlc = "Domination"
+		tag = FRA
+		not = { is_year = 1445 }
+	}
 	immediate = {
 		hidden_effect = {
 			if = { 
@@ -3531,41 +3336,3 @@ country_event = { #France in the 15th Century
 		
 	}
 }
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	

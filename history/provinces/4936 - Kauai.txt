@@ -1,8 +1,8 @@
 #4936 - Kauai
 
-#add_core = KAA
-#owner = KAA
-#controller = KAA
+add_core = KAA
+owner = KAA
+controller = KAA
 culture = polynesian
 religion = animism
 hre = no

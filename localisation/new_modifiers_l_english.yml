@@ -1,6 +1,4 @@
 ﻿l_english:
- 
- control_of_minas_gerais:0 "Endless Gold of Minas Gerais"
  swiss_pikemen:0 "Swiss Pikemen"
  desc_swiss_pikemen:0 "Through the use of new tactics and relentless drill, Swiss Pikemen have become the finest in world."
  sahara:0 "Sahara Desert"
@@ -119,3 +117,15 @@
  spanish_investment:0 "Spanish Investment"
  yemen_united:0 "Yemen United!"
  ser_extended_policy:0 "Novo Brdo Code Extended"
+ por_dream:0 "A Dream"
+ por_city_port:0 "Feitorias"
+ jungle_trained:0 "Jungle Trained"
+ wine_brr:0 "Investments in Wine"
+ por_economic_growth:0 "Economic Growth"
+ burdgeoning_copper_por:0 "Burdgeoning Copper Mine"
+ por_supreme:0 "Portugal Supreme"
+ legacy_por_supreme:0 "Legacy Portugal Supreme"
+ free_colonist:0 "Colonial Ambition"
+ por_church_under:0 "Under New Management"
+ manstonkpor:0 "Population Boom"
+

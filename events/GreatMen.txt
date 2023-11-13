@@ -982,8 +982,6 @@ country_event = {
 	desc = "EVTDESC4114"
 	picture = ADVISOR_eventPicture	
 	
-	major = yes
-	
 	trigger = {
 		grand_captain = 3
 		NOT = { has_country_flag = grand_captain }
@@ -1044,13 +1042,6 @@ country_event = {
 			duration = 2190
 		}
 		set_country_flag = grand_captain
-	}
-
-	option = {
-		name = "EVTOPTC4114"	# Maybe later
-		ai_chance = {
-			factor = 0
-		}
 	}
 }
 
@@ -1133,8 +1124,6 @@ country_event = {
 	desc = "EVTDESC4116"
 	picture = ADVISOR_eventPicture
 	
-	major = yes
-	
 	trigger = {
 		commandant = 3
 		NOT = { has_country_flag = commandant }
@@ -1196,13 +1185,6 @@ country_event = {
 			duration = 2190
 		}
 		set_country_flag = commandant
-	}
-
-	option = {
-		name = "EVTOPTC4116"	# Maybe later
-		ai_chance = {
-			factor = 0
-		}
 	}
 }
 

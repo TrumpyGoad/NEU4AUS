@@ -10,5 +10,3 @@ sail_speed = 7.5
 sailors = 100
 
 sprite_level = 4
-
-trade_power = 0.8

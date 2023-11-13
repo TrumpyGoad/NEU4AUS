@@ -8694,7 +8694,7 @@ country_event = {
 	}
 }
 
-# TÃ¤uferreich von MÃ¼nster / extra event
+# Täuferreich von Münster / extra event
 country_event = {
 	id = ideagroups.1921
 	title = ideagroups.1921.t
@@ -8704,7 +8704,7 @@ country_event = {
 	
 	trigger = {
 		has_idea_group = theocracy_gov_ideas
-		owns = 86 #MÃ¼nster
+		owns = 86 #Münster
 		is_year = 1533
 		NOT = { is_year = 1536 }
 		NOT = { has_country_modifier = "le_prophete" }	
@@ -9630,7 +9630,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = statehood_ideas 
+		has_idea_group = court_ideas 
 	}
 
 	mean_time_to_happen = {
@@ -9658,7 +9658,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = statehood_ideas 
+		has_idea_group = court_ideas 
 		NOT = { has_ruler_modifier = embarassing_display_modifier }
 	}
 
@@ -9692,7 +9692,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = statehood_ideas 
+		has_idea_group = court_ideas 
 		has_any_estates = yes
 	}
 
@@ -9719,7 +9719,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = statehood_ideas 
+		has_idea_group = court_ideas 
 		has_any_estates = yes
 	}
 
@@ -9746,7 +9746,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = statehood_ideas
+		has_idea_group = court_ideas
 		is_free_or_tributary_trigger = yes
 		NOT = { has_country_flag = noble_man_exiled_dynasty_member }
 		NOT = { has_country_flag = noble_man_exiled_politician }
@@ -10332,7 +10332,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = statehood_ideas 
+		has_idea_group = court_ideas 
 		OR = {
 			num_of_loans = 5
 			is_bankrupt = yes
@@ -10360,7 +10360,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = statehood_ideas 
+		has_idea_group = court_ideas 
 	}
 
 	mean_time_to_happen = {
@@ -10385,7 +10385,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_idea_group = statehood_ideas 
+		has_idea_group = court_ideas 
 		
 	}
 
@@ -10418,6 +10418,322 @@ country_event = {
 				factor = 0
 				monthly_income = 60
 			}
+		}
+	}
+}
+
+#Mercenary Ideas Events 
+
+#The Good Mercenary
+country_event = {
+	id = ideagroups.2020
+	title = ideagroups.2004.t
+	desc = ideagroups.2004.d
+	picture = LAND_MILITARY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = mercenary_ideas 
+		is_at_war = yes 
+		NOT = { has_country_modifier = great_reputation_modifier } 
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ideagroups.2004.a
+		add_country_modifier = {
+			name = great_reputation_modifier
+			duration = 3650 
+		}
+	}
+}
+
+#Military Leaders Complain
+country_event = {
+	id = ideagroups.2021
+	title = ideagroups.2005.t
+	desc = ideagroups.2005.d
+	picture = ACCUSATION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = mercenary_ideas 
+		if = {
+			limit = { has_dlc = "Cradle of Civilization" } 
+			NOT = { army_professionalism = 0.5 }
+		}
+		else = {
+			NOT = { army_tradition = 80 }
+		}
+		NOT = { has_country_modifier = shift_on_military_affairs_modifier }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ideagroups.2005.a
+		
+		add_country_modifier = {
+			name = shift_on_military_affairs_modifier
+			duration = 3650
+		}
+	}
+	option = {
+		name = ideagroups.2005.b
+		add_army_professionalism = -0.05
+		add_army_tradition = -20 
+	}
+}
+
+# Poor payments
+country_event = {
+	id = ideagroups.1603
+	title = ideagroups.1603.t
+	desc = ideagroups.1603.d
+	picture = WOUNDED_SOLDIERS_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = mercenary_ideas
+		NOT = { has_country_modifier = "trust_from_mercs" }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = ideagroups.1603.a
+		add_country_modifier = {
+			name = "trust_from_mercs"
+			duration = 3650
+		}
+	}
+}
+
+# Glut of Mercenary Companies
+country_event = {
+	id = ideagroups.1604
+	title = ideagroups.1604.t
+	desc = ideagroups.1604.d
+	picture = MILITARY_CAMP_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = mercenary_ideas
+		NOT = { has_country_modifier = "glut_of_mercs" }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = ideagroups.1604.a
+		add_country_modifier = {
+			name = "glut_of_mercs"
+			duration = 3650
+			hidden = yes
+		}
+		custom_tooltip = generic_more_mercs_available_tt
+	}
+}
+
+# Payment Demands
+country_event = {
+	id = ideagroups.1610
+	title = ideagroups.1610.t
+	desc = ideagroups.1610.d
+	picture = MILITARY_CAMP_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = mercenary_ideas
+		NOT = { has_country_modifier = "payment_demands" }
+		is_at_war = yes	
+		num_of_mercenaries = 1
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ideagroups.1610.a
+		add_country_modifier = {
+			name = "payment_demands"
+			duration = 3650
+		}
+	}
+}
+
+# Mercenary Tactics Taught
+country_event = {
+	id = ideagroups.2025
+	title = ideagroups.2025.t
+	desc = ideagroups.2025.d
+	picture = SIEGE_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = mercenary_ideas 
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ideagroups.2025.a
+		add_army_tradition = 10
+	}
+}
+
+# A Mercenary Advisor
+country_event = {
+	id = ideagroups.2026
+	title = ideagroups.2026.t
+	desc = ideagroups.2026.d
+	picture = ADVISOR_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = mercenary_ideas 
+		NOT = { has_country_modifier = mercenary_leadership }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_list = {
+				1 = {
+					set_country_flag = mercenary_army_reformer
+				}
+				1 = {
+					set_country_flag = mercenary_commandant
+				}
+				1 = {
+					set_country_flag = mercenary_grand_captain
+				}
+			}
+		}
+	}
+
+	after = {
+		clr_country_flag = mercenary_army_reformer
+		clr_country_flag = mercenary_commandant
+		clr_country_flag = mercenary_grand_captain
+	}
+
+	option = {
+		name = ideagroups.2026.a
+		trigger_switch = {
+			on_trigger = has_country_flag
+			mercenary_army_reformer = {
+				define_advisor = {
+					type = army_reformer
+					cost_multiplier = 0.75
+				}
+			}
+			mercenary_commandant = {
+				define_advisor = {
+					type = commandant
+					cost_multiplier = 0.75
+				}
+			}
+			mercenary_grand_captain = {
+				define_advisor = {
+					type = grand_captain
+					cost_multiplier = 0.75
+				}
+			}
+		}
+		add_country_modifier = {
+			name = mercenary_leadership
+			duration = 3650
+		}
+	}
+}
+
+# The Thrill of Combat and Money (merc manpower to your company)
+country_event = {
+	id = ideagroups.2027
+	title = ideagroups.2027.t
+	desc = ideagroups.2027.d
+	picture = LAND_MILITARY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = mercenary_ideas 
+		any_hired_mercenary_company = {
+			NOT = { has_company_manpower = 0.75 }
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_hired_mercenary_company = {
+				limit = {
+					NOT = { has_company_manpower = 0.75 }
+				}
+				save_event_target_as = excited_mercs
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ideagroups.2027.a
+		event_target:excited_mercs = {
+			add_company_manpower = 1
+		}
+
+	}
+}
+
+# Reputation of a Mercenary
+country_event = {
+	id = ideagroups.2028
+	title = ideagroups.2028.t
+	desc = ideagroups.2028.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = mercenary_ideas 
+		NOT = { has_country_modifier = negative_mercenary_reputation }
+		num_of_hired_mercenary_companies = 4
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = ideagroups.2028.a
+		add_country_modifier = {
+			name = negative_mercenary_reputation
+			duration = 3650
 		}
 	}
 }

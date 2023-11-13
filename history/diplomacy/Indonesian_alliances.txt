@@ -95,7 +95,7 @@ vassal = {
 	first = AYU
 	second = SUK
 	start_date = 1438.1.1
-	end_date = 1444.11.12
+	end_date = 1530.1.1
 }
 
 # Vassalization of Lan Na
@@ -118,7 +118,7 @@ vassal = {
 	first = AYU
 	second = LIG
 	start_date = 1400.1.1
-	end_date = 1444.11.12
+	end_date = 1570.1.1
 }
 
 # Pattani
@@ -172,7 +172,7 @@ guarantee = {
 	first = BEI
 	second = SUL
 	start_date = 1405.1.1
-	end_date = 1444.11.12
+	end_date = 1578.1.1
 }
 
 ## Maynila
@@ -180,7 +180,7 @@ alliance = {
 	first = TDO
 	second = MNA
 	start_date = 1400.1.1
-	end_date = 1444.11.12
+	end_date = 1500.1.1
 }
 
 alliance = {
@@ -207,6 +207,7 @@ alliance = {
 	start_date = 1527.1.1
 	end_date = 1552.1.1
 }
+
 # Remaining Mahapahit Tributaries
 
 dependency = {
@@ -214,7 +215,7 @@ dependency = {
 	first = MAJ
 	second = BNJ
 	start_date = 1444.1.1
-	end_date = 1444.11.12
+	end_date = 1468.1.1
 }
 
 dependency = {
@@ -222,7 +223,7 @@ dependency = {
 	first = MAJ
 	second = BLI
 	start_date = 1444.1.1
-	end_date = 1444.11.12
+	end_date = 1475.1.1
 }
 
 dependency = {
@@ -230,7 +231,7 @@ dependency = {
 	first = MAJ
 	second = BLM
 	start_date = 1444.1.1
-	end_date = 1444.11.12
+	end_date = 1475.1.1
 }
 
 dependency = {
@@ -238,7 +239,7 @@ dependency = {
 	first = MAJ
 	second = PLB
 	start_date = 1444.1.1
-	end_date = 1444.11.12
+	end_date = 1475.1.1
 }
 
 # Muan Phuang
@@ -246,14 +247,14 @@ guarantee = {
 	first = LXA
 	second = MPH
 	start_date = 1444.1.1
-	end_date = 1444.11.12
+	end_date = 1531.1.1
 }
 
 guarantee = {
 	first = DAI
 	second = MPH
 	start_date = 1444.1.1
-	end_date = 1444.11.12
+	end_date = 1478.1.1
 }
 
 dependency = {
@@ -261,5 +262,5 @@ dependency = {
 	first = MNG
 	second = MPH
 	start_date = 1444.1.1
-	end_date = 1444.11.12
+	end_date = 1531.1.1
 }

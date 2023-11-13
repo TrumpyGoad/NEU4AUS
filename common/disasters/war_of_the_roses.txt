@@ -1,6 +1,7 @@
 war_of_the_roses = {
 	potential = {
 		tag = ENG
+		current_age = age_of_discovery
 		normal_or_historical_nations = yes
 		government = monarchy
 		is_free_or_tributary_trigger = yes
@@ -30,7 +31,6 @@ war_of_the_roses = {
 		}
 		has_regency = no
 		is_lesser_in_union = no
-		NOT = { has_country_flag = no_wars_of_the_roses_flag }
 	}
 	
 	can_stop = { 
@@ -46,7 +46,6 @@ war_of_the_roses = {
 			}
 			has_regency = yes
 			is_lesser_in_union = yes
-			has_country_flag = no_wars_of_the_roses_flag
 		}
 	}
 	
@@ -79,15 +78,15 @@ war_of_the_roses = {
 			NOT = { stability = 1 }
 		}
 		modifier = {
-			factor = 5
+			factor = 0.5
 			NOT = { ADM = 2 }
 		}		
 		modifier = {
-			factor = 5
+			factor = 0.5
 			NOT = { DIP = 2 }
 		}		
 		modifier = {
-			factor = 5
+			factor = 0.5
 			NOT = { MIL = 2 }
 		}		
 		

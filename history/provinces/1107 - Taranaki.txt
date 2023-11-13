@@ -1,8 +1,8 @@
 #1107 - Taranaki
 
-#add_core = TNK
-#owner = TNK
-#controller = TNK
+add_core = TNK
+owner = TNK
+controller = TNK
 culture = maori
 religion = animism
 hre = no

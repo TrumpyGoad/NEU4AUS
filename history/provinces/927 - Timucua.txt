@@ -19,19 +19,19 @@ discovered_by = north_american
 1526.1.1 = { discovered_by = SPA } # Lucas Vásquez de Ayllón
 
 1564.1.1 = {
-	#owner = FRA
-	#controller = FRA
-	#add_core = FRA
+	owner = FRA
+	controller = FRA
+	add_core = FRA
 	culture = cosmopolitan_french
 	religion = catholic
-	#is_city = yes
+	is_city = yes
 	capital = "Fort Caroline"
 	trade_goods = sugar
 } # French Huguenots founded Fort Caroline & some minor settlements
 1565.8.28 = {
-	#owner = SPA
-	#controller = SPA
-	#add_core = SPA
+	owner = SPA
+	controller = SPA
+	add_core = SPA
 	remove_core = FRA
 	culture = castillian
 	capital = "St. Augustine"
@@ -41,17 +41,17 @@ discovered_by = north_american
 1695.1.1 = { fort_17th = yes } #First star fort completed
 1738.1.1 = { fort_17th = no fort_18th = yes } #Vast upgrade begin 
 1763.2.10 = {
-	#owner = GBR
-	#controller = GBR
-	#add_core = GBR
+	owner = GBR
+	controller = GBR
+	add_core = GBR
 	remove_core = SPA
 	culture = english
 	religion = protestant
 } # Primarily a British province
-1783.9.3 = { #owner = SPA #controller = SPA #add_core = SPA remove_core = GBR }
+1783.9.3 = { owner = SPA controller = SPA add_core = SPA remove_core = GBR }
 1819.2.22 = {
-	#owner = USA
-	#controller = USA
-	#add_core = USA
+	owner = USA
+	controller = USA
+	add_core = USA
 	remove_core = SPA
 } # The Adams-Onís Treaty

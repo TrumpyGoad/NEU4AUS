@@ -2,9 +2,7 @@
 
 #Sea Areas:
 #No restriction on size.
-rivers_area = {
-	1326 1262 1261 5120 5121 5123 5125 5128 5130 5133 5135 5136 5137 5138 5139 5140 5142 5143 5144 5145 5148 5149 5150 5151 5154 5155 5156 5157 5159 5160 5161 5162
-}
+
 western_mediterrenean_area = {
 	1293 1294 1295 1296 1297 1298 1300 1301 1302 1303 1304 1305 1307
 }
@@ -287,11 +285,11 @@ bahama_channel_area = {
 brittany_area = { #5
 	color = { 118  99  151 }
 
-	169 170 171 172 4384 5124
+	169 170 171 172 4384
 }
 
 normandy_area = { #4
-	167 168 1879 4385 5126
+	167 168 1879 4385
 }
 
 provence_area = { #3
@@ -303,7 +301,7 @@ poitou_area = { #4
 }
 
 guyenne_area = { #4
-	194 198 4112 174 5122
+	194 198 4112 174
 }
 
 pyrenees_area = { #4
@@ -316,7 +314,7 @@ languedoc_area = { #5
 
 bourgogne_area = { #3
 	color = { 144 0 32 }
-	192 193 4764 5252 
+	192 193 4764
 }
 
 west_burgundy_area = { #3
@@ -341,11 +339,11 @@ picardy_area = { #4
 }
 
 ile_de_france_area = { #4
-	182 183 185 4388 5127
+	182 183 185 4388
 }
 
 champagne_area = { #3
-	181 186 4390 5254
+	181 186 4390
 }
 
 loire_area = { #5
@@ -366,7 +364,7 @@ wallonia_area = { #4
 }
 
 holland_area = { #4
-	96 97 98 4383 5134
+	96 97 98 4383
 }
 
 flanders_area = { #3
@@ -403,7 +401,7 @@ valencia_area = { #5
 }
 
 lower_andalucia_area = { #5
-	224 225 1748 1749 4548 5116 5118
+	224 225 1748 1749 4548
 }
 
 upper_andalucia_area = { #4
@@ -412,7 +410,7 @@ upper_andalucia_area = { #4
 
 castille_area = { #5
 	color = { 58 58 207 }
-	215 217 2755 4551 4789
+	217 2755 4551 4789
 }
 
 toledo_area = { #5
@@ -420,7 +418,7 @@ toledo_area = { #5
 }
 
 asturias_area = { #4
-	 207 1745 4552 1746
+	1745 4552 1746 215
 }
 
 galicia_area = { #4
@@ -437,11 +435,11 @@ basque_country = { #3
 
 leon_area = { #3
 	color = { 243 235 28 }
-	208 216 4553 
+	208 216 4553 207 
 }
 
 extremadura_area = {
-	4788 218 1747 5119
+	4788 218 1747
 }
 
 beieras_area = { #4
@@ -449,7 +447,7 @@ beieras_area = { #4
 }
 
 alentejo_area = { #5
-	227 229 230 4150 4787 5117
+	227 229 230 4150 4787
 }
 
 macaronesia_area = { #3
@@ -459,93 +457,67 @@ macaronesia_area = { #3
 ########################################
 # Italy					 			   #
 ########################################
-istria_area = {
-	130 4738 4990
-}
+
 venetia_area = { #5
-	112 1774 4729 4991
+	108 111 112 1774 4729
 }
-aquilea_area = { 
-	111 4986 4987 4988
-}
+
 lombardy_area = { #5
-	104 4728 4740 4982
+	104 1862 4728 4740 2979
 }
 
 po_valley_area = { #3
 	color = { 205 190 47 }
-	109 1862 4739
-}
-venice_po_valley_area = {
-	107 108 4984 4985
-}
-piedmont_area = { #4
-	103 4727 4977 4978 4979
-}
-piedmont_po_valley_area = {
-	2979 4975 4976 4980 4981
-}
-liguria_area = { #3
-	101 105 4972 4973 4974
+	109 4739 107
 }
 
-west_liguria_area = {
-	102 1875 2981 2992
+piedmont_area = { #4
+	103 1875 2981 4727
 }
-corsica_sardinia_area = { #4 Sardinia Only
-	127 2986 4735 4949 4950
+
+tuscany_area = { #5
+	115 116 117 2978 2980
+}
+
+liguria_area = { #3
+	101 102 2992
+}
+
+corsica_sardinia_area = { #4
+	127 1247 2986 4735
 }
 
 sicily_area = { #3 # now Eastern Sicily
-	124 126 2982 4944 4945
+	124 126 2982
 }
 
 western_sicily_area = { #3
-	125 4736 4737 4942 4943
-}
-
-#MOD
-tuscany_area = { #5
-	116 117 2978 4968 4970
-}
-lower_tuscany_area = {
-	2980 115 4954 4966 4967
-}
-central_sicily_area = {
-	4946 4947 4948 
-}
-marche_area = {
-	113 114 119 2977 
-}
-corsica_area = {
-	1247 4951 4952 4953
+	125 4736 4737
 }
 
 naples_area = { #3  #Campania
-	121 2983 4732 4963
+	121 2983 4734
 }
 
 lazio_area = { #4 Lazio-Umbria
-	118 2976 4731 4964 4965
+	118 2976 4731 4732
 }
 
 calabria_area = { #3 (+Lucania)
-	123 1934 2984 4955 4957
+	123 1934 2984
 }
 
 apulia_area = { #4
-	122 1933 4956 4958
+	122 1933 2985 4733
 }
-north_apulia_area = {
-	2985 4959 4960 4961
-}
+
 emilia_romagna_area = { #5
 	color = { 24 222 66 }
-	106 4730 4969 4971 4983
+	105 106 113 114 4730
 }
 
 central_italy_area = { #3
-	120 4733 4734 4962
+	119 120 2977
 }
 
 ########################################
@@ -603,9 +575,7 @@ east_midlands_area = { #3
 wessex_area = { #5
 	233 234 4130 4373 4374
 }
-channel_islands_area = {
-	5132 5131
-}
+
 home_counties_area = { #4
 	235 236 237 4371 
 }
@@ -663,7 +633,7 @@ laponia_area = { #3
 }
 
 karelia_area = { #4
-	30 33 34 1961 5158 5152
+	30 33 34 1961
 }
 
 north_karelia = { #3
@@ -743,7 +713,7 @@ podlasie_area = {
 }
 
 mazovia_area = { #4
-	256 257  1938 4525 5141
+	256 257  1938 4525
 }
 
 central_poland_area = {
@@ -783,14 +753,11 @@ sloboda_ukraine_area = { #4
 }
 
 yedisan_area = { #3
-	1974 5310 5311 5313 
-}
-tyn_area = { 
-	2412 2411 5314
+	282 1974 2406
 }
 
 zaporizhia_area = { #3
-	283 2406 282 5312 5309
+	283 2411 2412
 }
 
 azov_area = { #4
@@ -798,16 +765,11 @@ azov_area = { #4
 }
 
 crimea_area = { #4
-	284 285 2410 2447 5306 
+	284 285 2410 2447
 }
-stavropol_area = {
-	5317 5315 5318 468 2416 
-}
-kezlev_area = { 
-	284 5307 5308 5323
-}
+
 white_ruthenia_area = { #3
-	292 771 4246 5146
+	292 771 4246
 }
 
 minsk_area = { #4
@@ -833,7 +795,7 @@ yaroslavl_area = { #4
 }
 
 tver_area = { #5
-	294 1752 4243 4248 4249 5153
+	294 1752 4243 4248 4249 
 }
 
 suzdal_area = { #3
@@ -841,7 +803,7 @@ suzdal_area = { #3
 }
 
 smolensk_area = { #4
-	293 297 4244 4245 5147
+	293 297 4244 4245
 }
 
 oka_area = { #3
@@ -865,11 +827,11 @@ beloozero_area = { #3
 }
 
 astrakhan_area = { #5
-	464 466 2417 5319 5320 
+	464 466 468 2416 2417
 }
 
 lower_don_area = { #4
-	288 467 1971 2409 5322 5321
+	288 467 1971 2409
 }
 
 kazan_area = { #3
@@ -1023,7 +985,7 @@ inner_austria_area = { #4
 
 carinthia_area = { #4 # Carniola in-game
 	color = { 46 217 110 }
-	129 1769 4751 4989
+	129 130 1769 4738 4751
 }
 
 switzerland_area = { #4
@@ -1047,7 +1009,7 @@ palatinate_area = { #3
 }
 
 north_rhine_area = { #4
-	84 85 2975 83 5129
+	84 85 2975 83
 }
 
 lower_rhineland_area = { #4
@@ -1091,116 +1053,72 @@ mecklenburg_area = { #5
 ########################################
 
 macedonia_area = { #5 (Macedonia)
-	148 1853 4702  5217 5218 
-}
-north_macedonia_area = { 
-	3001 5219 4780
+	148 1853 3001 4702 4780
 }
 
 morea_area = { #4 Central Greece & Crete
-	145 4701 5212 5213 5214 
-}
-athens_area = { 
-	146 5215 3003
-}
-achaea_area = { 
-	5210 1773 5211
+	145 146 163 1773 4701
 }
 
 northern_greece_area = { #3 #Northern Greece
-	142 144  4699 4698 5208  
+	142 144 147 4699 4698
 }
-east_greece_area = {
-	5216 147 5209
-}
-
 
 thrace_area = { #5
-	151 1764   5226  5232 5233
-}
-feres_area = { 
-	5227 5229 4705 5228
-}
-edirne_area = { 
-149 5231 4779 5230
+	149 151 1764 4779 4705
 }
 
 bulgaria_area = { #5
-	150  2746 5191 5201 5223 
-}
-plovdiv_area = { 
-	5225 2750 5222 5224
-}
-svoge_area = { 
-	5220 5221 4703 1765
+	150 1765 2746 2750 4703
 }
 
 silistria_area = {
-	4706 159 5205 5206
-}
-popovo_area = { 
-	5204 4704 5203 5202
+	4704 4706 159
 }
 
 wallachia_area = { #5
-	 161  4531   5194 5195 5196 
+	160 161 2998 4531 4532
 }
-daneti_area = { 5192 4532 5193 160}
-harsova_area = {5198 5200 2998 5199 5197 }
 
 moldavia_area = { #5
 	268 1756 2405 4529 4530
 }
 
 transylvania_area = { #4 #Northern Transylvania
-	158 1952 4127 5171 5172
+	157 158 1952 4127
 }
 
 southern_transylvania_area = { #3
-	 1951 4128 5175 5176
+	156 1951 4128
 }
 
 slovakia_area = { #5
-	154 162 1318 1772 4236 5267 5268
+	154 162 1318 1772 4236
 }
 
 serbia_area = { #5
-	141 4239 4757 5182 5183 5184 
-}
-nis_area = { 
-	5189 5190 3000 5186 4176
+	141 3000 4176 4239 4757
 }
 
 rascia_area = { #4
-	1766 1827 5185 5188
-}
-montengro_area = { 
-	5187 4754 138
-
+	138 1766 1827 4754
 }
 
 albania_area = { #4
-	143 4174 4175 4750 5207 
+	143 4174 4175 4750
 }
 
 bosnia_area = { #5
-	   3002 4755 5179 5180 5181
-}
-
-herz_area = { 
-139 1831 5178
-}
-nth_bosnia_area = { 
- 5167 1828 5177 140
+	139 140 1831 3002 4755
 }
 
 croatia_area = { #4
 	color = { 18 126 16 }
-	131 1826 4752 152 4756
+	131 1826 1828 4752
 }
 
 slavonia_area = { #4
-	 1767 4173 5166
+	152 4756 1767 4173
 }
 
 east_adriatic_coast_area = { #3
@@ -1208,18 +1126,12 @@ east_adriatic_coast_area = { #3
 }
 
 alfold_area = { #4
-	4126 5173 1954 5174 156
-}
-pest_area = { 
-	153 5168 4125 1953
-}
-bekes_area = { 
-	155 5169 5170 157
+	155 1953 1954 4125
 }
 
 transdanubia_area = { #5
 	color = { 171 92 22 }
-	135 1864 4240 5163 5164 5165
+	135 153 1864 4126 4240
 }
 
 ########################################
@@ -1244,11 +1156,11 @@ armenia_area = { #5
 
 shirvan_area = { #5 #Northern Azerbaijan
 	color = { 225 231 53 }
-	421 424 4299 4305 4340
+	421 4299 4305 4340
 }
 
 circassia_area = { #4
-	463 2201 2195 2197 5316
+	463 2201 2195 2197
 }
 
 dagestan_area = { #5
@@ -1261,102 +1173,68 @@ dagestan_area = { #5
 ########################################
 
 rum_area = { #5
-	329 4315 5271 5273 
+	329 1846 2300 4314 4315
 }
 
-eretna_area = { 
-	5270 4314 5269 1846 2300
-}
 erzurum_area = { #3	Erzurum and Trebizond
-	 331 2305 5274 5275 
+	330 331 2305
 }
 
 hudavendigar_area = { #3
-	317 2296  5236 5237 5238
+	316 317 2296
 }
 
-izmit_area = { 
-	316 5234 5235
-}
 germiyan_area = { #4
 	color = { 234 145 65 }
-	322  4308 5244 4312
-}
-hamid_area = { 
-5245 1848 4311 5243
+	322 1848 4308 4311
 }
 
 aydin_area = { #5
 	color = { 239 70 86 }
-	318  4309  5241 
-}
-saruhan_area = { 
-	5240 5239 2297
-}
-
-mentese_area = { 
-319 5242 2298 5246
+	318 319 2297 2298 4309
 }
 
 ankara_area = { #3
 	color = { 57 154 172 }
-	326  4313 5247 5248 5261
+	326 4312 4313
 }
 
 aegean_archipelago_area = { #4
-	164 320 2348 4700 163 
+	164 320 2348 3003 4700
 }
 
 kastamonu_area = { #4
-	325 328  5262 5264 
-}
-deverek_area = { 
-	5250 5263 5249 2299
-}
-trebizond_area = { 
-	330 5265 2304 5266
+	325 328 2299 2304
 }
 
 karaman_area = { #4
-	323  2301 4307 5260 5272 5273
+	323 324 2301 4307
 }
 
 cukurova_area = { #3
 	color = { 50 177 200 }
-	 327 5256 5257 5258 
-}
-cyprus_area = { 
-	5255 321 5253 
-}
-icel_area = { 
-2302 5251 324 5259
+	321 327 2302
 }
 
 aleppo_area = { #4
-	377 1849 2313 4992  5282 5283
+	377 1849 2313 4298
 }
 
-kobani_area = { 
-	5277 4298 5276
-}
 syria_area = { #4
-	378 4297 5284 5285 
-}
-dimashq_area = { 
-	382 5287 5288 1855
+	378 382 1855 4297
 }
 
 trans_jordan_area = { #3
-	380 381 2327 5291 5293
+	380 381 2327
 }
 
 palestine_area = { #3
-	364 379 1854 5289 5290
+	364 379 1854
 }
 
 dulkadir_area = { # 4
 	color = { 184 54 72 }
-	332 2303 2308 4310 5281
+	332 2303 2308 4310
 }
 
 iraq_arabi_area = { #5 Lower Mesopotamia
@@ -1372,7 +1250,7 @@ luristan_area = { #4
 }
 
 north_kurdistan_area = { #5
-	418 2306 2307 4295 4296 5278
+	418 2306 2307 4295 4296
 }
 
 khuzestan_area = { #5
@@ -1386,7 +1264,7 @@ shahrizor_area = {	#4
 
 al_jazira_area = { #5
 	color = { 92 200 92 }
-	407 411 2309 2314 4292 5279 5280
+	407 411 2309 2314 4292
 }
 
 
@@ -1395,135 +1273,78 @@ al_jazira_area = { #5
 ########################################
 
 bahrain_area = { #5
-	394 5041 5040 2340 2347
+	394 395 396 2340 2347
 }
 
-qatar_area = {
-	395 396 5039
-}
-
-pirate_coast_area = { #5
-	5037 2333 397 5030 5031
-}
-
-pirate_coast2_area ={
-	398 5036 5035 5032 5034
-}
-
-baqara_area = { 
-	5029 404 5033
+pirate_coast_area = { #4
+	397 398 404 2333
 }
 
 nafud_area = { #3
-	393 2338 5042 2337 
-}
-dufna_area = { 
-	4272 5301 5300
+	393 2338 4272
 }
 
-tabuk_area = { #4 
-	383 2328 4268 4269 5294 5295 5296 5297 5298 5299
+tabuk_area = { #4
+	383 2328 4268 4269
 }
 
 medina_area = { #3
 	color = { 225 158 92 }
-	2331 5068 5069 2329 5067
+	384 2329 2330
 }
-central_arabia_area = { 
-	5045 5046 4273 5044
-}
-trabah_area = { 
-	5047 5048 5049 4274 392
-}
+
 mecca_area = { #5
-	5060 5062 5061 385
-}
-
-anizah_area = { 
-	2330 384 5043 5066
-}
-
-ashayrah_area = { 
-	5063 5064 5065 4277
+	385 2331 2332 4277 4278
 }
 
 asir_area = { #3
-	5001 391 5002 4282
+	386 391 4282
 }
 
 tihama_al_yemen_area = { #3
-	5000 4279 5003 5004
-}
-
-island_arabia_area = { 
-	5005 1099
+	387 2346 4279
 }
 
 upper_yemen_area = { #3
 	color = { 220 41 155 }
-	4996 390 4999 4281 2344
+	390 2344 4281
 }
 
 yemen_area = { #Lower Yemen #
-	4995 4280 4994 387 4993
+	388 2345 4280
 }
-
-nuhaygil_area = {
-	5008 5007 2335 5056 
-}
-
-masabishah_area = { 
-	5006 386 2346
-}
-
-south_mecca_area = { 
-	4278 2332 5057 5058 5059
-}
-
 
 hadramut_area = { #3
-	 5010 2345 4997 4998 388 5009
+	389 2343 4283
 }
 
 mahra_area = { #3
-	402 5012 389 5011 4283
+	402 1099 4284
 }
 
 yamamah_area = { #4
-	5038 2339 5051 5050 4275
+	2335 2336 2339 4275
 }
 
 qasim_area = { #4
-	5055 5054 5053 5052 2336
+	392 2337 4273 4274
 }
 
 dhofar_area = { #3 (Dhofar + Masirah)
-	401 5014 4284 2343 5013
+	401 2341 2342
 }
 
 oman_area = { #3 (Oman Proper)
-	5028 5025 4285 5026 399
+	403 4285 4287  
 }
 
-raqi_area = {
-	5020 5019 5018 5016 5015
-}
-
-sabit_area = { 
-	5027 403 4287 5023
-}
-
-filim_area = {
-	5021 2342 5017
-}
-
-mascat_area = { #3 Batinah and Muscat coast
-	5024 400 5022 4286 2341
+mascat_area = { #3 (Batinah and Muscat coast
+	399 400 4286
 }
 
 syrian_desert_area = { #3
 	color = { 219 30 57 }
-	405 4270 4271 5286 5292
+	405 4270 4271
 }
 
 ########################################
@@ -1532,56 +1353,28 @@ syrian_desert_area = { #3
 
 gulf_of_arabia_area = { #5
 	color = { 19 219 75 }
-	 2315 2320 5084 5091 5092
-}
-
-sina_area = { 
-	5093 5094 5095 365
-
-}
-
-lower_gulf_area = {
-	2321 5076 5077
+	365 2315 2320 2321
 }
 
 al_wahat_area = { #3
-	1233 5081 2318 4323 5083 5086
+	1233 2318 4323
 }
 
 delta_area = { #3
-	362 5101  5103 2316
-}
-
-iskandariyya_area = { 
-	358 5104 5105
-	}
-
-gamasa_area = { 
-	5100 5102 363 
+	358 362 363
 }
 
 bahari_area = { #4 #Lower Egypt
 	color = { 19 193 219 }
-	361 5096 4316 5099 
-}
-desert_area = { 
-	4317 5097 5098
+	361 2316 4316 4317 
 }
 
 vostani_area = { #3 #Middle Egypt
-	2317 4318 5087 5088 
-}
-
-fayyum_area = { 
-	359 5085 5089 5090 
+	359 2317 4318
 }
 
 said_area = { #5 #Upper Egypt
-	1231 4319 5078 5079 5075
-}
-
-qus_area = { 
-	5082 2319 4320 5080 360
+	360 1231 2319 4319 4320
 }
 
 tripolitania_area = { #4
@@ -1589,19 +1382,11 @@ tripolitania_area = { #4
 }
 
 cyrenaica_area = { #5
-	 2325 5106 5107 2326 5108 
+	356 357 2325 2326 
 }
-bangazi_area = {
-	356 5112 5111 357 
-}
-zaytum_area = {
-	5113 5115 5110 5109
-}
-
-
 
 fezzan_area = { #4
-	2448 2449 2474 4567 5114
+	2448 2449 2474 4567
 }
 
 tunisia_area = { #5
@@ -1814,11 +1599,7 @@ kurdufan_area = { #3
 }
 
 lower_nubia_area = { #3
-	1234 2322 5072 5073
-}
-
-proper_nubia_area = {
-	2323 5070 5071
+	1234 2322 2323
 }
 
 dongola_area = { #3
@@ -1834,7 +1615,7 @@ sennar_area = { #3
 }
 
 red_sea_coast_area = { #4
-	1230 1232 2324 2787 5074
+	1230 1232 2324 2787
 }
 
 tigray_area = { #4
@@ -2103,7 +1884,7 @@ sao_tome_area = { #2
 }
 
 west_africa_coast_area = { #5
-    1126 1139 1141 2257 2258  
+    1126 1139 1141 2257 2258 
 }
 
 guinea_coast_area = { #4
@@ -2243,7 +2024,7 @@ isfahan_area = { #3
 }
 
 tabriz_area = { #4 Central Azerbaijan
-	416 2206 2207 4304
+	416 2206 2207 4304 424
 }
 
 tabarestan_area = { #5
@@ -2902,7 +2683,7 @@ ishim_area = { #5
 }
 
 aqmola_area = { #5
-	479 2354 2357 4686 4690 
+	479 2354 2357 4686 4690
 }
 
 ########################################
@@ -3228,12 +3009,12 @@ grao_para_area = { #4
 	748 2890 2928 2929 
 }
 
-amapa_area = { #5
-	747 2935 2938 5302 5303 5304
+amapa_area = { #3
+	747 2935 2938
 }
 
-amazon_area = { #5
-	2889 2930 2933 2934 5302
+amazon_area = { #4
+	2889 2930 2933 2934
 }
 
 paraguay_area = { #5
@@ -3289,7 +3070,7 @@ banda_oriental_area = { #5
 }
 
 guyana_area = { #4
- 	 743 744 2803 
+	502 743 744 2803 
 }
 
 suriname_area = { #3
@@ -3940,7 +3721,7 @@ leeward_islands_area = { #5
 }
 
 windward_islands_area = { #5
-    497 498 499 500 501 502
+    497 498 499 500 501
 }
 
 transvaal_area = { #4

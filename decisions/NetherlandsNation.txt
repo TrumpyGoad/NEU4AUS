@@ -14,6 +14,10 @@ country_decisions = {
 				NOT = { exists = NED }
 				ai = no
 			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
 			NOT = { tag = PAP }
 			NOT = { tag = NED }
 			NOT = { tag = HLR }
@@ -22,13 +26,6 @@ country_decisions = {
 				primary_culture = flemish
 				primary_culture = frisian
 				tag = BUR
-			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 3
-				}
 			}
 		}
 		provinces_to_highlight = {
@@ -118,8 +115,52 @@ country_decisions = {
 					move_capital_effect = yes
 				}
 			}
-
+			if = {
+				limit = {
+					tag = BUR
+					exists = FRA
+				}
+	  			france_region = {
+					limit = {
+						owned_by = BUR
+					}
+	  				remove_core = BUR
+	  				add_core = FRA
+	  				cede_province = FRA
+	  			}
+	  		}
+			if = {
+				limit = {
+					tag = BUR
+					exists = FRA
+					BUR = {
+						any_subject_country = {
+							france_region = {
+								owned_by = PREV
+							}
+						}
+					}
+				}
+				every_subject_country = {
+					limit = {
+						france_region = {
+							owned_by = PREV
+						}
+					}
+					france_region = {
+						limit = {
+							owned_by = PREV
+						}
+						remove_core = BUR
+						remove_core = PREV
+						add_core = FRA
+						cede_province = FRA
+					}
+				}
+	  		}
 			change_tag = NED
+			on_change_tag_effect = yes
+			restore_country_name = yes
 			swap_non_generic_missions = yes
 			low_countries_region = {
 				limit = {
@@ -151,7 +192,30 @@ country_decisions = {
 			factor = 1
 			modifier = {
 				factor = 0
+				NOT = { adm_tech = 9 }
+			}
+			modifier = {
+				factor = 0
 				tag = BUR
+				NOT = { is_year = 1500 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { num_of_cities = 3 }
+			}
+			modifier = {
+				factor = 10
+				NOT = {
+					any_ally = {
+						OR = {
+							owns_or_non_sovereign_subject_of = 95
+							owns_or_non_sovereign_subject_of = 97
+							owns_or_non_sovereign_subject_of = 98
+							owns_or_non_sovereign_subject_of = 99
+							owns_or_non_sovereign_subject_of = 4383
+						}
+					}
+				}
 			}
 		}
 		ai_importance = 400

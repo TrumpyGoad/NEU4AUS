@@ -1,8 +1,8 @@
 #2740 - Waikato
 
-#add_core = TAN
-#owner = TAN
-#controller = TAN
+add_core = TAN
+owner = TAN
+controller = TAN
 culture = maori
 religion = animism
 hre = no

@@ -284,14 +284,6 @@ spriteTypes = {
 		name = "GFX_great_project_kiel_canal"	
 		texturefile = "gfx//interface//great_projects//great_project_suez_canal.dds"
 	}
-	spriteType = {
-		name = "GFX_great_project_don_volga_canal"	
-		texturefile = "gfx//interface//great_projects//great_project_suez_canal.dds"
-	}
-	spriteType = {
-		name = "GFX_great_project_volga_onega_canal"	
-		texturefile = "gfx//interface//great_projects//great_project_suez_canal.dds"
-	}
 
 	### 1.32 MONUMENTS ###
 
@@ -555,10 +547,6 @@ spriteTypes = {
 		texturefile = "gfx//interface//great_projects//great_project_zacatecas_mine_city.dds"
 	}
 
-	spriteType = {
-		name = "GFX_great_project_minas_gerais"	
-		texturefile = "gfx//interface//great_projects//great_project_falun_copper_mine.dds"
-	}
 	### 1.34 MONUMENTS
 
 	spriteType = {
@@ -651,5 +639,45 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_great_project_st_basil_cathedral"	
 		texturefile = "gfx//interface//great_projects//great_project_StBasil_cathedral.dds"
+	}
+
+	spriteType = {
+		name = "GFX_great_project_al_azhar_university"	
+		texturefile = "gfx//interface//great_projects//great_project_al_azhar_university.dds"
+	}
+
+	spriteType = {
+		name = "GFX_great_project_city_of_sanaa"	
+		texturefile = "gfx//interface//great_projects//great_project_city_of_sanaa.dds"
+	}
+
+	spriteType = {
+		name = "GFX_great_project_golestan_palace"	
+		texturefile = "gfx//interface//great_projects//great_project_golestan_palace.dds"
+	}
+
+	spriteType = {
+		name = "GFX_great_project_itchan_kala"	
+		texturefile = "gfx//interface//great_projects//great_project_itchan_kala.dds"
+	}
+
+	spriteType = {
+		name = "GFX_great_project_kazan_kremlin"	
+		texturefile = "gfx//interface//great_projects//great_project_kazan_kremlin.dds"
+	}
+
+	spriteType = {
+		name = "GFX_great_project_narikala_fortress"	
+		texturefile = "gfx//interface//great_projects//great_project_narikala_fortress.dds"
+	}
+
+	spriteType = {
+		name = "GFX_great_project_nizwa_fort"	
+		texturefile = "gfx//interface//great_projects//great_project_nizwa_fort.dds"
+	}
+
+	spriteType = {
+		name = "GFX_great_project_shah_rukn_e_alam_tomb"	
+		texturefile = "gfx//interface//great_projects//great_project_shah_rukn_e_alam_tomb.dds"
 	}
 }

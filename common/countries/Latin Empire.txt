@@ -1,34 +1,39 @@
-#Country Name: Please see filename.
+#Country Name: Please see filename
 
-graphical_culture = asiangfx
+graphical_culture = westerngfx
 
-color = { 150 105 56 }
+color = { 255 212 42 }
+
+revolutionary_colors = { 0 14 0 }
+
 historical_idea_groups = {
-	innovativeness_ideas
+	maritime_ideas
 	religious_ideas
-	spy_ideas
-	offensive_ideas
 	defensive_ideas
+	administrative_ideas
 	trade_ideas
-	economic_ideas
+	quality_ideas
+	innovativeness_ideas
+	diplomatic_ideas
 }
 
 historical_units = {
-	western_medieval_infantry
-	western_medieval_knights
-	western_men_at_arms
-	swiss_landsknechten
-	dutch_maurician
-	austrian_tercio
-	austrian_grenzer
-	austrian_hussar
-	austrian_white_coat
-	prussian_uhlan
-	austrian_jaeger
-	mixed_order_infantry
-	open_order_cavalry
-	napoleonic_square
-	napoleonic_lancers
+	eastern_medieval_infantry
+	eastern_knights
+	slavic_stradioti
+	eastern_militia
+	ottoman_spahi
+	ottoman_sekban
+	ottoman_reformed_spahi
+	ottoman_reformed_janissary
+	ottoman_toprakli_hit_and_run
+	ottoman_nizami_cedid
+	ottoman_toprakli_dragoon
+	eastern_skirmisher
+	eastern_uhlan
+	eastern_carabinier
+	ottoman_new_model
+	ottoman_lancer
 }
 
 monarch_names = {

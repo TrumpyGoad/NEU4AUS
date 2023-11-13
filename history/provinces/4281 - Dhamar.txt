@@ -1,7 +1,7 @@
 #4281 - Dhamar
 
-owner = RAS #Tahirids
-controller = RAS #Tahirids
+owner = ADE #Tahirids
+controller = ADE #Tahirids
 culture = yemeni_culture
 religion = shiite
 capital = "Dhamar"

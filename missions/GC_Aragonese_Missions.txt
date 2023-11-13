@@ -47,7 +47,13 @@ gc_aragon_1 = {
 			1295 = {
 				trade_share = {
 					country = ROOT
-					share = 50
+					share = 70
+				}
+			}
+			1298 = {
+				trade_share = {
+					country = ROOT
+					share = 15
 				}
 			}
 			213 = {

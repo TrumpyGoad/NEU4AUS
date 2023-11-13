@@ -16,9 +16,9 @@ native_hostileness = 2
 
 discovered_by = north_american
 1731.1.1 = {
-	#owner = SPA
-	#controller = SPA
-	#add_core = SPA
+	owner = SPA
+	controller = SPA
+	add_core = SPA
 	remove_core = PIM
 	trade_goods = salt
 	religion = catholic
@@ -27,7 +27,7 @@ discovered_by = north_american
 1751.1.1 = { unrest = 5 }
 1752.1.1 = { unrest = 0 }
 1810.9.16 = {
-	#owner = MEX
-	#add_core = MEX
-	#controller = SPA
+	owner = MEX
+	add_core = MEX
+	controller = SPA
 } # Mexican War of Independence

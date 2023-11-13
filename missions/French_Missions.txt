@@ -2,17 +2,11 @@ french_missions_north = {
 	slot = 1
 	generic = no
 	ai = yes
-	potential_on_load = {
-		NOT = { has_dlc = "Domination" }
-		NOT = { has_dlc = "Emperor" }
-	}
 	potential = {
-		NOT = { has_dlc = "Domination" }
-		NOT = { has_dlc = "Emperor" }
-		OR = {
-			tag = FRA
-		}
+		tag = FRA
 		NOT = { map_setup = map_setup_random }
+		NOT = { has_dlc = "Emperor" }
+		NOT = { has_dlc = "Domination" }
 	}
 	has_country_shield = yes
 
@@ -212,17 +206,11 @@ french_mission_slot_2 = {
 	slot = 2
 	generic = no
 	ai = yes
-	potential_on_load = {
-		NOT = { has_dlc = "Domination" }
-		NOT = { has_dlc = "Emperor" }
-	}
 	potential = {
-		NOT = { has_dlc = "Domination" }
-		NOT = { has_dlc = "Emperor" }
-		OR = {
-			tag = FRA
-		}
+		tag = FRA
 		NOT = { map_setup = map_setup_random }
+		NOT = { has_dlc = "Emperor" }
+		NOT = { has_dlc = "Domination" }
 	}
 	has_country_shield = yes
 	
@@ -281,17 +269,12 @@ french_missions_colonial = {
 	slot = 3
 	generic = no
 	ai = yes
-	potential_on_load = {
-		NOT = { has_dlc = "Domination" }
-		NOT = { has_dlc = "Emperor" }
-	}
 	potential = {
-		NOT = { has_dlc = "Domination" }
-		NOT = { has_dlc = "Emperor" }
-		OR = {
-			tag = FRA
-		}
+		tag = FRA
+		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
+		NOT = { has_dlc = "Emperor" }
+		NOT = { has_dlc = "Domination" }
 	}
 	has_country_shield = yes
 	build_french_fleet = {
@@ -315,13 +298,13 @@ french_missions_colonial = {
 			has_idea = quest_for_the_new_world
 			custom_trigger_tooltip = {
 				tooltip = fra_canada_discovery.tooltip
-				colonial_eastern_america = {
+				colonial_canada = {
 					has_discovered = ROOT
 				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = fra_carib_discovery.tooltip
-				carribeans_region = {
+				colonial_the_carribean = {
 					has_discovered = ROOT
 				}
 			}
@@ -345,9 +328,9 @@ french_missions_colonial = {
 		completed_by = 1608.7.3
 		provinces_to_highlight = {
 			OR = {
-				colonial_region = colonial_eastern_america
+				colonial_region = colonial_canada
 				colonial_region = colonial_louisiana
-				region = carribeans_region
+				colonial_region = colonial_the_carribean
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -356,12 +339,12 @@ french_missions_colonial = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 5
-				region = carribeans_region
+				colonial_region = colonial_the_carribean
 			}
 			OR = {
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 					value = 5
-					colonial_region = colonial_eastern_america
+					colonial_region = colonial_canada
 				}
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 					value = 5
@@ -599,17 +582,11 @@ france_expand_south = {
 	slot = 5
 	generic = no
 	ai = yes
-	potential_on_load = {
-		NOT = { has_dlc = "Domination" }
-		NOT = { has_dlc = "Emperor" }
-	}
 	potential = {
-		NOT = { has_dlc = "Domination" }
-		NOT = { has_dlc = "Emperor" }
-		OR = {
-			tag = FRA
-		}
+		tag = FRA
 		NOT = { map_setup = map_setup_random }
+		NOT = { has_dlc = "Emperor" }
+		NOT = { has_dlc = "Domination" }
 	}
 	has_country_shield = yes
 	reconquer_gascony = {
@@ -803,17 +780,10 @@ france_expand_south_2 = {
 	slot = 4
 	generic = no
 	ai = yes
-	potential_on_load = {
-		NOT = { has_dlc = "Domination" }
-		NOT = { has_dlc = "Emperor" }
-	}
 	potential = {
-		NOT = { has_dlc = "Domination" }
+		tag = FRA
 		NOT = { has_dlc = "Emperor" }
-		OR = {
-			tag = FRA
-		}
-		NOT = { map_setup = map_setup_random }
+		NOT = { has_dlc = "Domination" }
 	}
 	has_country_shield = yes
 	annex_savoy = {

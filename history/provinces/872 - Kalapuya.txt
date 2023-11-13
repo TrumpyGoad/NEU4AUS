@@ -20,9 +20,9 @@ discovered_by = north_american
 1778.1.1 = { discovered_by = GBR }
 
 1800.1.1 = {
-	#owner = CNK
-	#controller = CNK
-	#add_core = CNK
+	owner = CNK
+	controller = CNK
+	add_core = CNK
 	trade_goods = fur
-	#is_city = yes
+	is_city = yes
 } #Migration so Fort Astoria can be properly built

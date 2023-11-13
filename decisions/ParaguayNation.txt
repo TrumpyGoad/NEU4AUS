@@ -13,7 +13,7 @@ country_decisions = {
 				is_former_colonial_nation = yes
 				is_colonial_nation = yes
 			}
-			la_plata_region = {
+			colonial_la_plata = {
 				owned_by = ROOT
 			}
 			OR = {
@@ -54,6 +54,7 @@ country_decisions = {
 				}
 			}
 			change_tag = PRG
+			on_change_tag_effect = yes
 			if = {
 				limit = {
 					NOT = { is_former_colonial_nation = yes }
@@ -67,7 +68,7 @@ country_decisions = {
 				}
 				set_government_rank = 2
 			}
-			la_plata_region = {
+			colonial_la_plata = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}

@@ -1,8 +1,8 @@
 #1242 - Fiji
 
-#add_core = VIL
-#owner = VIL
-#controller = VIL
+add_core = VIL
+owner = VIL
+controller = VIL
 culture = melanesian
 religion = animism
 hre = no

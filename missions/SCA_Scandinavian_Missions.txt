@@ -1220,6 +1220,17 @@ sca_colonialism_slot_4 = {
 					}
 					add_permanent_claim = ROOT
 				}
+				colonial_canada = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+						OR = {
+							province_has_center_of_trade_of_level = 1
+							has_river_estuary_trigger = yes
+						}
+					}
+					add_permanent_claim = ROOT
+				}
 				guinea_region = {
 					limit = {
 						NOT = { is_core = ROOT }
@@ -1262,7 +1273,7 @@ sca_colonialism_slot_4 = {
 		required_missions = { sca_a_grand_fleet }
 		position = 6
 		provinces_to_highlight = {
-			region = carribeans_region
+			colonial_region = colonial_the_carribean
 			OR = {
 				has_river_estuary_trigger = yes
 				province_has_center_of_trade_of_level = 1
@@ -1271,7 +1282,7 @@ sca_colonialism_slot_4 = {
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				region = carribeans_region
+				colonial_region = colonial_the_carribean
 				OR = {
 					has_river_estuary_trigger = yes
 					province_has_center_of_trade_of_level = 1

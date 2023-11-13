@@ -269,7 +269,7 @@ country_event = {
 	trigger = {
 		has_dlc = "Emperor"
 		is_defender_of_faith = yes
-		is_defender_of_faith_of_tier = 2
+		is_defender_of_faith_of_tier = 4
 		religion = catholic
 		any_rival_country = {
 			religion = catholic
@@ -307,7 +307,7 @@ country_event = {
 		ai_chance = {
 			factor = 60
 		}
-		remove_rival = event_target:catholic_rival
+		force_remove_rival = event_target:catholic_rival
 		event_target:catholic_rival = {
 			country_event = { id = dotf.5 days = 3 }
 		}
@@ -362,7 +362,7 @@ country_event = {
 		ai_chance = {
 			factor = 25
 		}
-		remove_rival = FROM
+		force_remove_rival = FROM
 		add_opinion = {
 			who = FROM
 			modifier = opinion_benevolent_dotf
@@ -408,7 +408,7 @@ country_event = {
 		}
 		current_age = age_of_reformation
 		is_defender_of_faith = yes
-		is_defender_of_faith_of_tier = 4
+		is_defender_of_faith_of_tier = 2
 		NOT = {
 			has_country_modifier = held_protestant_council
 		}
@@ -501,7 +501,7 @@ country_event = {
 	trigger = {
 		has_dlc = "Emperor"
 		is_defender_of_faith = yes
-		is_defender_of_faith_of_tier = 2
+		is_defender_of_faith_of_tier = 4
 		religion = catholic
 		current_age = age_of_reformation
 		capital_scope = { continent = europe }
@@ -548,13 +548,13 @@ country_event = {
 		has_dlc = "Emperor"
 		is_defender_of_faith = yes
 		OR = {
-			is_defender_of_faith_of_tier = 1
+			is_defender_of_faith_of_tier = 5
 			AND = {
-				is_defender_of_faith_of_tier = 2
+				is_defender_of_faith_of_tier = 4
 				NOT = {
 					any_country = {
 						religion = catholic
-						is_defender_of_faith_of_tier = 2
+						is_defender_of_faith_of_tier = 4
 					}
 				}
 			}
@@ -597,11 +597,11 @@ country_event = {
 	trigger = {
 		has_dlc = "Emperor"
 		is_defender_of_faith = yes
-		is_defender_of_faith_of_tier = 2
+		is_defender_of_faith_of_tier = 4
 		NOT = {
 			any_country = {
 				religion = sunni
-				is_defender_of_faith_of_tier = 1
+				is_defender_of_faith_of_tier = 5
 			}
 		}
 		OR = {

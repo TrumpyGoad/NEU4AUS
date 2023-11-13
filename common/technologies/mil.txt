@@ -2,8 +2,9 @@ monarch_power = MIL
 
 # applied when a country is ahead of time in this technology
 # no bonus for MIL currently
-# ahead_of_time = {
-# }
+ahead_of_time = {
+	monthly_russian_modernization = 0.05
+}
 
 # Pre-era techs
 technology = {
@@ -109,7 +110,6 @@ technology = {
 
 	land_morale = 	0.5
 	military_tactics 	= 	0.25
-	enable = great_bombard
 }
 
 technology = {
@@ -117,7 +117,7 @@ technology = {
 	year = 1466
 	expects_institution = {
 		feudalism = 0.5
-		#renaissance = 0.15
+		renaissance = 0.15
 	}
 	
 	#Standardised Pikes
@@ -162,7 +162,7 @@ technology = {
 	year = 1479
 	expects_institution = {
 		feudalism = 0.5
-		#renaissance = 0.3
+		renaissance = 0.3
 	}
 	
 	#Arquebus
@@ -202,7 +202,7 @@ technology = {
 	
 	#The limber
 	artillery_fire 		= 	1
-	artillery_shock 	=	0.2
+	artillery_shock 	=	0.05
 	military_tactics 	= 	0.25
 	enable = large_cast_bronze_mortar 
 	enable = houfnice
@@ -231,7 +231,7 @@ technology = {
 	expects_institution = {
 		feudalism = 0.5
 		renaissance = 0.5
-		#new_world_i = 0.15
+		new_world_i = 0.15
 	}
 	
 	#Ditch
@@ -248,7 +248,7 @@ technology = {
 	enable = steppe_raiders
 	enable = ha_xiuhtecuhtli_soldier
 	military_tactics 	= 	0.25
-	combat_width = 2	
+	combat_width = 1	
 }
 
 technology = {
@@ -257,7 +257,7 @@ technology = {
 	expects_institution = {
 		feudalism = 0.5
 		renaissance = 0.5
-		#new_world_i = 0.3
+		new_world_i = 0.3
 	}
 	
 	#Reiter
@@ -279,7 +279,7 @@ technology = {
 	enable = north_american_rifle_cavalry
 	enable = central_american_rifle_cavalry
 	enable = south_american_rifle_cavalry	
-	enable = qizilbash_cavalry	
+	enable = qizilbash_cavalry_unit	
 	enable = east_mongolian_steppe	
 	enable = indian_elephant	
 	enable = steppe_riders
@@ -288,8 +288,6 @@ technology = {
 	enable = aboriginal_cavalry
 	enable = pacific_island_warriors
 	enable = pacific_cavalry
-	weapons = yes
-	land_morale 		=	0.33
 }
 
 technology = {
@@ -304,7 +302,10 @@ technology = {
 	#Matchlock Musket
 	infantry_shock		= 	0.20
 	cavalry_fire		= 	0.5
-	fort_16th = yes
+
+	
+	weapons = yes
+	
 	combat_width = 2
 }
 	
@@ -347,12 +348,12 @@ technology = {
 		feudalism = 0.5
 		renaissance = 0.5
 		new_world_i = 0.5
-		#printing_press = 0.15
+		printing_press = 0.15
 	}
 	
 	#Trunnions
-	artillery_shock 	= 	0.2
-	artillery_fire 		= 	0.5
+	artillery_shock 	= 	0.1
+	artillery_fire 		= 	0.4
 	
 	enable = small_cast_iron_bombard
 	enable = large_cast_iron_bombard
@@ -365,10 +366,11 @@ technology = {
 		feudalism = 0.5
 		renaissance = 0.5
 		new_world_i = 0.5
-		#printing_press = 0.3
+		printing_press = 0.3
 	}
 	
-	
+	#Star Bastions
+	fort_16th = yes
 	infantry_fire		=	0.3
 	
 	enable = african_hussar
@@ -395,19 +397,7 @@ technology = {
 	enable = aboriginal_tasmanian_arquebusier
 	enable = pacific_hussar
 	enable = pacific_arquebusier
-	enable = irish_charge 
-	enable = dutch_maurician	
-	enable = afsharid_reformed_infantry	
-	enable = muscovite_soldaty	
-	enable = polish_tercio
-	enable = asian_mass_infantry	
-	enable = bantu_gunpowder_warfare	
-	enable = niger_kongolese_gunpowder_warfare	
-	enable = adal_gunpowder_warfare		
-	enable = ethiopian_gunpowder_warfare	
-	enable = steppe_musketeers
-	land_morale 		=	0.33
-	military_tactics	=	0.25
+	
 	combat_width = 2
 }
 
@@ -420,14 +410,24 @@ technology = {
 		new_world_i = 0.5
 		printing_press = 0.5
 	}
-	artillery_shock 	= 	0.1
-	artillery_fire 		= 	1.0	
-	fort_17th = yes
-	training_fields = yes
 	
-	combat_width = 2
+	#Maurician Infantry
+	land_morale 		=	1.0
+	military_tactics	=	0.25
 	
-	enable = chambered_demi_cannon
+
+	
+	enable = irish_charge 
+	enable = dutch_maurician	
+	enable = afsharid_reformed_infantry	
+	enable = muscovite_soldaty	
+	enable = polish_tercio
+	enable = asian_mass_infantry	
+	enable = bantu_gunpowder_warfare	
+	enable = niger_kongolese_gunpowder_warfare	
+	enable = adal_gunpowder_warfare		
+	enable = ethiopian_gunpowder_warfare	
+	enable = steppe_musketeers
 }
 
 technology = {
@@ -441,13 +441,16 @@ technology = {
 	}
 	
 	#Standardisation of Calibre
-	cavalry_shock		=	1.0
-	supply_limit		= 	0.5	
+	artillery_shock 	= 	0.1
+	artillery_fire 		= 	1.0	
+
+
+	training_fields = yes
 	
-	enable = maharathan_cavalry		
-	enable = manchu_banner		
-	enable = african_swarm
-	conscription_center = yes
+	combat_width = 1
+	
+	enable = chambered_demi_cannon
+	enable = demi_culverin
 }
 
 technology = {
@@ -458,25 +461,15 @@ technology = {
 		renaissance = 0.5
 		new_world_i = 0.5
 		printing_press = 0.5
-		#global_trade = 0.15
+		global_trade = 0.15
 	}
-	maneuver_value 		= 	0.25
-
-		
-	enable = swedish_gallop	
-	enable = sikh_hit_and_run
-	enable = bhonsle_infantry	
-	enable = ottoman_reformed_spahi		
-	enable = mamluk_musket_charge 
-	enable = afsharid_reformed	
-	enable = leather_cannon	
-	enable = steppe_mounted_raiders
-	enable = ha_xoloti
-	enable = aboriginal_swarm_cav
-	enable = pacific_swarm_cav
 	
-	combat_width = 2
+	cavalry_shock		=	1.0
+	supply_limit		= 	0.5	
 	
+	enable = maharathan_cavalry		
+	enable = manchu_banner		
+	enable = african_swarm
 }
 
 technology = {
@@ -487,12 +480,47 @@ technology = {
 		renaissance = 0.5
 		new_world_i = 0.5
 		printing_press = 0.5
-		#global_trade = 0.3
+		global_trade = 0.3
 	}
+	
+	#Carbine
+	maneuver_value 		= 	0.25
 
+		
+	enable = swedish_gallop	
+	enable = sikh_hit_and_run
+	enable = bhonsle_infantry	
+	enable = ottoman_reformed_spahi		
+	enable = mamluk_musket_charge 
+	enable = afsharid_reformed	
+	enable = leather_cannon	
+	enable = chambered_cannon	
+	enable = steppe_mounted_raiders
+	enable = ha_xoloti
+	enable = aboriginal_swarm_cav
+	enable = pacific_swarm_cav
+	
+	combat_width = 2
+}
+
+technology = {
+	# Tech 19
+	year = 1648
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+		printing_press = 0.5
+		global_trade = 0.5
+	}
+	
+	#Gustavian Infantry
 	military_tactics 	= 	0.25
 	supply_limit		=	0.5
-	artillery_fire		=	1.0
+
+	fort_17th = yes
+
+	
 	enable = austrian_tercio   
 	enable = swedish_gustavian		
 	enable = scottish_highlander	
@@ -511,26 +539,6 @@ technology = {
 	enable = high_american_swarm
 	enable = aboriginal_riflemen
 	enable = pacific_riflemen
-	fort_18th	= yes
-}
-
-technology = {
-	# Tech 19
-	year = 1648
-	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.5
-		new_world_i = 0.5
-		printing_press = 0.5
-		global_trade = 0.5
-	}
-	infantry_fire		= 	0.5
-		
-	enable = swivel_cannon		
-
-	combat_width = 2
-	
-	
 }
 
 technology = {
@@ -545,11 +553,13 @@ technology = {
 	}
 	
 	#Killing Grounds
-	sprite_level = 3
-	military_tactics 	= 	0.25
 	
-	infantry_shock 		=	0.5
-	
+	infantry_fire		= 	0.5
+		
+	enable = swivel_cannon
+	enable = howitzer
+
+	combat_width = 2
 }
 
 technology = {
@@ -561,15 +571,14 @@ technology = {
 		new_world_i = 0.5
 		printing_press = 0.5
 		global_trade = 0.5
-		#manufactories = 0.15
+		manufactories = 0.15
 	}
-	cavalry_fire		=	0.5
-	artillery_shock 	=	0.2
-	artillery_fire		=	1.0
 	
-	combat_width = 2
 	#Line Infantry
+	sprite_level = 3
+	military_tactics 	= 	0.25
 	
+	infantry_shock 		=	0.5
 }
 
 technology = {
@@ -581,19 +590,24 @@ technology = {
 		new_world_i = 0.5
 		printing_press = 0.5
 		global_trade = 0.5
-		#manufactories = 0.3
+		manufactories = 0.3
 	}
 	
-	#Cartridge	(1620)
+	#Cartridge	(1620)?)
+	cavalry_fire		=	0.5
+	artillery_shock 	=	0.1
+	artillery_fire		=	2.0
 	
+	combat_width = 2
 	
-	
+	conscription_center = yes
 
 	
 	enable = polish_winged_hussar	
 	enable = muscovite_cossack	
 
-	enable = coehorn_mortar		
+	enable = horse_artillery_unit
+	enable = coehorn_mortar
 }
 
 technology = {
@@ -653,16 +667,12 @@ technology = {
 		printing_press = 0.5
 		global_trade = 0.5
 		manufactories = 0.5
-		#enlightenment = 0.15
+		enlightenment = 0.15
 	}
 	
 	#Covered Way
-		
+	fort_18th	= yes	
 	military_tactics 	= 	0.25
-	artillery_shock 	=	0.1
-	artillery_fire		=	2.0
-	
-	enable = royal_mortar	
 
 	combat_width = 2
 }
@@ -677,8 +687,31 @@ technology = {
 		printing_press = 0.5
 		global_trade = 0.5
 		manufactories = 0.5
-		#enlightenment = 0.3
+		enlightenment = 0.3
 	}
+	
+	#Metallurgy
+	artillery_shock 	=	0.1
+	artillery_fire		=	2.0
+	
+	enable = royal_mortar
+	enable = licorne
+}
+
+technology = {
+	# Tech 26
+	year = 1745
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+		printing_press = 0.5
+		global_trade = 0.5
+		manufactories = 0.5
+		enlightenment = 0.5
+	}
+	
+	#Light Infantry Companies
 	sprite_level = 4
 
 	land_morale			=	1.0
@@ -714,6 +747,156 @@ technology = {
 	enable = pacific_guerrillas
 	
 	combat_width = 2
+}
+
+technology = {
+	# Tech 27
+	year = 1760
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+		printing_press = 0.5
+		global_trade = 0.5
+		manufactories = 0.5
+		enlightenment = 0.5
+	}
 	
+	#Bayonet
+	supply_limit		=	0.5
+	infantry_fire		= 	0.5	
+}
+
+technology = {
+	# Tech 28
+	year = 1775
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+		printing_press = 0.5
+		global_trade = 0.5
+		manufactories = 0.5
+		enlightenment = 0.5
+		industrialization = 0.25
+	}
 	
+	#Cuirassier
+	maneuver_value 		= 	0.25
+	infantry_shock		=	0.5	
+	
+	enable = african_cuirassier
+	enable = russian_cuirassier	
+	enable = russian_cossack
+	enable = ottoman_toprakli_dragoon		
+	enable = ottoman_lancer 
+	enable = reformed_manchu_rifle	
+	enable = open_order_cavalry
+	enable = napoleonic_lancers	
+	enable = french_cuirassier
+	enable = durrani_dragoon 
+	enable = durrani_swivel	
+	enable = sikh_rifle
+	enable = bhonsle_cavalry
+	enable = reformed_asian_cavalry		
+	enable = french_impulse
+	enable = british_square
+	enable = steppe_uhlans
+}
+
+technology = {
+	# Tech 29
+	year = 1790
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+		printing_press = 0.5
+		global_trade = 0.5
+		manufactories = 0.5
+		enlightenment = 0.5
+		industrialization = 0.5
+	}
+	
+	#Defense in Depth
+		
+	enable = flying_battery
+	enable = grand_battery
+}
+
+technology = {
+	# Tech 30
+	year = 1805
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+		printing_press = 0.5
+		global_trade = 0.5
+		manufactories = 0.5
+		enlightenment = 1
+		industrialization = 0.5
+	}
+	
+	#Impulse Warfare
+	#sprite_level = 5	
+	
+	military_tactics	=	0.25
+	land_morale			=	1.0
+	maneuver_value = 0.25
+	
+	enable = russian_mass
+	enable = mixed_order_infantry	
+	enable = prussian_drill		
+	enable = austrian_jaeger	
+	enable = napoleonic_square
+	enable = persian_rifle
+	enable = ottoman_new_model
+	enable = tipu_sultan_rocket		
+	enable = american_western_franchise_warfare	
+	enable = african_western_franchise_warfare
+	enable = westernized_mayan
+	enable = reformed_westernized_incan		
+	enable = reformed_steppe_rifles
+	enable = ha_reformed_xoloti
+}
+
+technology = {
+	# Tech 31
+	year = 1820
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+		printing_press = 0.5
+		global_trade = 0.5
+		manufactories = 0.5
+		enlightenment = 0.5
+		industrialization = 1
+	}
+	
+	#Rifle
+	cavalry_shock		=	1.0
+	infantry_fire		=	1.0
+	supply_limit		=	0.5
+}
+
+technology = {
+	# Tech 32
+	year = 1835
+	expects_institution = {
+		feudalism = 0.5
+		renaissance = 0.5
+		new_world_i = 0.5
+		printing_press = 0.5
+		global_trade = 0.5
+		manufactories = 1
+		enlightenment = 1
+		industrialization = 1
+	}
+	
+	#Field Howitzer
+	military_tactics	=	0.25
+	artillery_shock		=	0.1
+	artillery_fire		=	2.0	
 }

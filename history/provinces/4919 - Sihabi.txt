@@ -16,10 +16,10 @@ native_hostileness = 6
 discovered_by = north_american
 
 1763.10.9 = {
-	#owner = NAK
-	#controller = NAK
-	#add_core = NAK
-	#is_city = yes
+	owner = NAK
+	controller = NAK
+	add_core = NAK
+	is_city = yes
 	remove_core = NAK
 	religion = totemism
 	culture = bungi

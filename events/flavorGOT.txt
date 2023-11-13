@@ -643,6 +643,7 @@ country_event = {
 			set_government_rank = 2
 		}
 		change_tag = DAN
+		on_change_tag_effect = yes
 		swap_non_generic_missions = yes
 		if = {
 			limit = { NOT = { has_idea_group = DAN_ideas } }
@@ -960,7 +961,7 @@ country_event = {
 			random_subject_country = {
 				limit = {
 					capital_scope = {
-						region = carribeans_region
+						colonial_region = colonial_the_carribean
 					}
 					OR = {
 						is_subject_of_type = colony

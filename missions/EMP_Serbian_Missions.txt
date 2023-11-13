@@ -53,7 +53,6 @@ emp_ser_economy_internal = {
 				}
 				NOT = { average_unrest = 1 }
 			}
-			crown_land_share = 30
 		}
 		effect = {
 			add_stability = 1
@@ -71,7 +70,7 @@ emp_ser_economy_internal = {
 		position = 2
 	
 		trigger = {
-			grown_by_development = 100
+			grown_by_development = 20
 			any_owned_province = {
 				OR = {
 					has_building = workshop
@@ -83,10 +82,6 @@ emp_ser_economy_internal = {
 			add_country_modifier = {
 				name = "ser_novo_brdo_code"
 				duration = 7300
-			}
-			add_country_modifier = { 
-				name = "ser_extended_policy"
-				duration = -1
 			}
 		}
 	}
@@ -103,7 +98,10 @@ emp_ser_economy_internal = {
 		}
 	
 		trigger = {
-			has_institution = renaissance
+			has_institution = printing_press
+			capital_scope = {
+				has_building = university
+			}
 		}
 		effect = {
 			add_country_modifier = {
@@ -141,21 +139,6 @@ emp_ser_danube = {
 				name = "ser_moravian_valor"
 				duration = 3650
 			}
-			bosnia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			nth_bosnia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			
 		}
 	}
 	
@@ -165,38 +148,66 @@ emp_ser_danube = {
 		position = 2
 		
 		provinces_to_highlight = {
-			OR = {
-				area = bosnia_area
-				area = nth_bosnia_area
+			if = {
+				limit = {
+					exists = HUN
+					HUN = { owns = 4239 }
+					OR = {
+						HUN = { is_subject = no }
+						HUN = { is_subject_of = ROOT }
+					}
+				}
+				owned_by = HUN
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		} 
-		trigger = {
-		bosnia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			else = {
+				province_id = 4239
 			}
-		nth_bosnia_area = {
-			type = all
-			country_or_non_sovereign_subject_holds = ROOT
 		}
+		trigger = {
+			if = {
+				limit = {
+					exists = HUN
+					4239 = {
+						owned_by = HUN
+					}
+					OR = {
+						HUN = { is_subject = no }
+						HUN = { is_subject_of = ROOT }
+					}
+				}
+				HUN = { 
+					alliance_with = ROOT 
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+			}
+			else = {
+				4239 = {
+					owned_by = ROOT
+				}
+			}
 		}
 		effect = {
-			vassalize = MON
-			vassalize = HRZ
-			croatia_area = {
+			if = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					exists = HUN
+					4239 = {
+						owned_by = HUN
+					}
+					OR = {
+						HUN = { is_subject = no }
+						HUN = { is_subject_of = ROOT }
+					}
 				}
-				add_permanent_claim = ROOT
+				custom_tooltip = emp_ser_hungarian_belgrade_mission_tooltip
+				hidden_effect = {
+					HUN = { country_event = { id = flavor_ser.1 } }
+				}
 			}
-			slavonia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
+			else = {
+				add_prestige = 20
 			}
 		}
 	}
@@ -272,12 +283,10 @@ emp_ser_danube = {
 		}
 	}
 	
-	
-	
-	emp_ser_northern_trade = {
-		icon = mission_control_venice
+	emp_ser_danubian_power = {
+		icon = danubian_power
 		required_missions = { emp_ser_fortress_of_belgrade }
-		position = 5
+		position = 4
 		
 		provinces_to_highlight = {
 			province_id = 137
@@ -285,6 +294,30 @@ emp_ser_danube = {
 		trigger = {
 			137 = {		# Ragusa
 				is_strongest_trade_power = ROOT
+			}
+			153 = {		# Ragusa
+				is_strongest_trade_power = ROOT
+			}
+		}
+		effect = {
+			add_mercantilism = 2
+		}
+	}
+	
+	emp_ser_northern_trade = {
+		icon = mission_control_venice
+		required_missions = { emp_ser_danubian_power }
+		position = 5
+		
+		provinces_to_highlight = {
+			province_id = 1308
+		}
+		trigger = {
+			1308 = {
+				trade_share = {
+					country = ROOT
+					share = 33 # a third
+				}
 			}
 		}
 		effect = {
@@ -321,7 +354,7 @@ emp_ser_west_balkan_branch = {
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 5
+				value = 3
 				area = albania_area
 			}
 		}
@@ -519,15 +552,7 @@ emp_ser_east_branch = {
 		position = 1
 		
 		trigger = {
-			if = {
-				limit = {
-					has_estate = estate_nobles
-				}
-				estate_loyalty = {
-					estate = estate_nobles
-					loyalty = 60
-				}
-			}
+			crown_land_share = 40
 		}
 		effect = {
 			macedonia_area = {
@@ -700,7 +725,15 @@ emp_ser_east_branch = {
 		position = 6
 		
 		trigger = {
-		
+			if = {
+				limit = {
+					is_revolutionary = no
+				}
+				absolutism = 65
+			}
+			else = {
+				revolutionary_zeal = 65
+			}
 		}
 		effect = {
 			set_government_rank = 3

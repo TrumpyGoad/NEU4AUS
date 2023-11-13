@@ -18,4 +18,8 @@ bookmark =
 	country = MOS
 	country = BUR
 	country = POL
+	
+	easy_country = CAS
+	easy_country = POR
+	easy_country = TUR
 }

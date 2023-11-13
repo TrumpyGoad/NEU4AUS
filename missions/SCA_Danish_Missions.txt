@@ -62,6 +62,16 @@ dan_secure_baltic_mission_slot = {
 				}
 				add_permanent_claim = 45
 			}
+			if = {
+				limit = { ai = yes SWE = { is_subject_of = ROOT } }
+				reverse_add_opinion = {
+					who = SWE
+					modifier = dan_early_victories
+				}
+			}
+		}
+		ai_weight = {
+			factor = 1000
 		}
 	}
 
@@ -196,7 +206,7 @@ dan_secure_baltic_mission_slot = {
 		}
 	}
 
-	dan_the_sound_toll = {	#Dominate Northsea, Baltic and LÃ¼beck trade
+	dan_the_sound_toll = {	#Dominate Northsea, Baltic and Lübeck trade
 		icon = mission_the_sound_toll
 		position = 4
 		required_missions = { 
@@ -434,7 +444,7 @@ dan_north_america_mission_slot = {
 			}
 			custom_tooltip = swe_colonize_delaware_tt
 			hidden_effect = {
-				carribeans_region = {
+				colonial_the_carribean = {
 					limit = {
 						OR = {
 							has_river_estuary_trigger = yes
@@ -452,7 +462,7 @@ dan_north_america_mission_slot = {
 				limit = {
 					tag = SCA
 				}
-				colonial_eastern_america = {
+				colonial_canada = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { is_permanent_claim = ROOT }
@@ -589,7 +599,7 @@ dan_trade_and_colonial_mission_slot = {
 			owns_or_non_sovereign_subject_of = 35
 		}
 		effect = {
-			add_accepted_culture_or_dip_power = { culture = estonian }
+			add_accepted_culture_or_dip_power = { culture = estonian dip_reward = yes }
 			add_country_modifier = {
 				name = dan_estonian_culture_accepted
 				duration = -1
@@ -687,15 +697,15 @@ dan_trade_and_colonial_mission_slot = {
 				}
 			}
 			change_ruler_stat = {
-				stat = adm
+				type = adm
 				amount = 1
 			}
 			change_ruler_stat = {
-				stat = dip
+				type = dip
 				amount = 1
 			}
 			change_ruler_stat = {
-				stat = mil
+				type = mil
 				amount = 1
 			}
 		}
@@ -894,14 +904,14 @@ dan_caribbeans_mission_slot = {
 		position = 11
 		required_missions = { dan_colonize_north_america }
 		provinces_to_highlight = {
-			region = carribeans_region
+			colonial_region = colonial_the_carribean
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		trigger = {
 			owns_or_non_sovereign_subject_of = 493
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				region = carribeans_region
+				colonial_region = colonial_the_carribean
 				value = 5
 			}
 		}
@@ -1282,10 +1292,7 @@ dan_norway_holstein_mission_slot = {
 			}
 		}
 		effect = {
-			custom_tooltip = no_more_comet_sighted_event_tt
-			hidden_effect = {
-				set_country_flag = no_more_comet_sighted_event
-			}
+			remove_comet_sighted_events = yes
 			change_innovativeness = 3
 			add_adm_power = 50
 			add_dip_power = 50
@@ -1611,7 +1618,7 @@ dan_sweden_and_great_power_mission_slot = {
 			}
 			set_country_flag = dan_no_more_swedish_rebels
 			change_ruler_stat = {
-				stat = mil
+				type = mil
 				amount = 2
 			}
 		}
@@ -1731,7 +1738,7 @@ dan_sweden_and_great_power_mission_slot = {
 				stability = 3
 				total_own_and_non_tributary_subject_development = 600
 				custom_trigger_tooltip = {
-					tooltip = kon_absolute_rule_ct
+					tooltip = absolutism_dynamic_reward_tt
 					is_absolutism_active = no
 				}
 			}
@@ -2758,7 +2765,7 @@ dan_religion_mission_slot = {
 			add_papal_influence = 200
 			add_war_exhaustion = -2
 			change_ruler_stat = {
-				stat = mil
+				type = mil
 				amount = 2
 			}
 			if = {
@@ -2801,7 +2808,7 @@ dan_religion_mission_slot = {
 			}
 			else = {
 				change_ruler_stat = {
-					stat = dip
+					type = dip
 					amount = 1
 				}
 			}
@@ -2810,7 +2817,7 @@ dan_religion_mission_slot = {
 			add_fervor = 100
 			add_war_exhaustion = -2
 			change_ruler_stat = {
-				stat = mil
+				type = mil
 				amount = 2
 			}
 			if = {
@@ -2835,7 +2842,7 @@ dan_religion_mission_slot = {
 			}
 			custom_tooltip = swe_humanist_effects_tt
 			change_ruler_stat = {
-				stat = dip
+				type = dip
 				amount = 4
 			}
 		}
@@ -2985,7 +2992,7 @@ dan_catholic_mission_slot = {
 			add_papal_influence = 200
 			add_war_exhaustion = -2
 			change_ruler_stat = {
-				stat = mil
+				type = mil
 				amount = 2
 			}
 			if = {
@@ -3040,7 +3047,7 @@ dan_catholic_mission_slot = {
 			}
 			else = {
 				change_ruler_stat = {
-					stat = dip
+					type = dip
 					amount = 1
 				}
 			}
@@ -3205,7 +3212,7 @@ dan_protestant_mission_slot = {
 			add_fervor = 100
 			add_war_exhaustion = -2
 			change_ruler_stat = {
-				stat = mil
+				type = mil
 				amount = 2
 			}
 			if = {
@@ -3244,7 +3251,7 @@ dan_protestant_mission_slot = {
 				custom_tooltip = dan_spread_the_reformation_tt
 			}
 			change_ruler_stat = {
-				stat = dip
+				type = dip
 				amount = 1
 			}
 		}
@@ -3347,7 +3354,7 @@ dan_humanist_mission_slot = {
 		}
 		effect = {
 			change_ruler_stat = {
-				stat = dip
+				type = dip
 				amount = 3
 			}
 		}
@@ -3817,7 +3824,7 @@ dan_sca_colonize_north_america_mission_slot_1 = {
 		position = 11
 		required_missions = { dan_colonize_north_america }
 		provinces_to_highlight = {
-			colonial_region = colonial_eastern_america
+			colonial_region = colonial_canada
 			has_discovered = ROOT
 			OR = {
 				is_city = no
@@ -3826,7 +3833,7 @@ dan_sca_colonize_north_america_mission_slot_1 = {
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				colonial_region = colonial_eastern_america
+				colonial_region = colonial_canada
 				is_city = yes
 				value = 20
 			}
@@ -3837,7 +3844,7 @@ dan_sca_colonize_north_america_mission_slot_1 = {
 				random_province = {
 					limit = {
 						country_or_non_sovereign_subject_holds = ROOT
-						colonial_region = colonial_eastern_america
+						colonial_region = colonial_canada
 						is_city = yes
 						NOT = { has_province_flag = nor_colonize_canada_and_na_flag }
 						NOT = { has_production_building_trigger = yes }
@@ -3847,7 +3854,7 @@ dan_sca_colonize_north_america_mission_slot_1 = {
 				random_province = {
 					limit = {
 						country_or_non_sovereign_subject_holds = ROOT
-						colonial_region = colonial_eastern_america
+						colonial_region = colonial_canada
 						is_city = yes
 						NOT = { has_province_flag = nor_colonize_canada_and_na_flag }
 						NOT = { has_production_building_trigger = yes }
@@ -3857,7 +3864,7 @@ dan_sca_colonize_north_america_mission_slot_1 = {
 				random_province = {
 					limit = {
 						country_or_non_sovereign_subject_holds = ROOT
-						colonial_region = colonial_eastern_america
+						colonial_region = colonial_canada
 						is_city = yes
 						NOT = { has_province_flag = nor_colonize_canada_and_na_flag }
 						NOT = { has_production_building_trigger = yes }
@@ -3867,7 +3874,7 @@ dan_sca_colonize_north_america_mission_slot_1 = {
 				random_province = {
 					limit = {
 						country_or_non_sovereign_subject_holds = ROOT
-						colonial_region = colonial_eastern_america
+						colonial_region = colonial_canada
 						is_city = yes
 						NOT = { has_province_flag = nor_colonize_canada_and_na_flag }
 						NOT = { has_production_building_trigger = yes }
@@ -3877,7 +3884,7 @@ dan_sca_colonize_north_america_mission_slot_1 = {
 				random_province = {
 					limit = {
 						country_or_non_sovereign_subject_holds = ROOT
-						colonial_region = colonial_eastern_america
+						colonial_region = colonial_canada
 						is_city = yes
 						NOT = { has_province_flag = nor_colonize_canada_and_na_flag }
 						NOT = { has_production_building_trigger = yes }
@@ -4037,9 +4044,12 @@ dan_sca_conquest_slot_2 = {
 								who = ROOT
 								value = 100
 							}
-							trust = {
-								who = ROOT
-								value = 70
+							if = {
+								limit = { has_dlc = "Leviathan" }
+								trust = {
+									who = ROOT
+									value = 70
+								}
 							}
 						}
 					}
@@ -4093,9 +4103,12 @@ dan_sca_conquest_slot_2 = {
 									who = ROOT
 									value = 100
 								}
-								trust = {
-									who = ROOT
-									value = 70
+								if = {
+									limit = { has_dlc = "Leviathan" }
+									trust = {
+										who = ROOT
+										value = 70
+									}
 								}
 							}
 						}
@@ -4108,9 +4121,12 @@ dan_sca_conquest_slot_2 = {
 							who = ROOT
 							value = 100
 						}
-						trust = {
-							who = ROOT
-							value = 70
+						if = {
+							limit = { has_dlc = "Leviathan" }
+							trust = {
+								who = ROOT
+								value = 70
+							}
 						}
 						any_owned_province = {
 							OR = {
@@ -4213,6 +4229,7 @@ dan_sca_conquest_slot_3 = {
 			}
 			add_accepted_culture_or_dip_power = {
 				culture = prussian
+				dip_reward = yes
 			}
 		}
 	}

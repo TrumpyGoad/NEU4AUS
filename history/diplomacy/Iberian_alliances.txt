@@ -15,28 +15,10 @@ union = {
 }
 
 # Ferdinand and Isabel
-vassal = {
+union = {
 	first = CAS
 	second = ARA
-	start_date = 1444.11.11
-	end_date = 1516.1.23
-}
-vassal = {
-	first = CAS
-	second = CAT
-	start_date = 1444.11.11
-	end_date = 1516.1.23
-}
-vassal = {
-	first = CAS
-	second = VAL
-	start_date = 1444.11.11
-	end_date = 1516.1.23
-}
-vassal = {
-	first = CAS
-	second = MJO
-	start_date = 1444.11.11
+	start_date = 1479.9.4
 	end_date = 1516.1.23
 }
 
@@ -49,12 +31,12 @@ union = {
 }
 
 # Aragon and Sicily, Alfons V/Alfonso I
-#union = {
-#	first = ARA
-#	second = NAP
-#	start_date = 1442.3.3
-#	end_date = 1444.11.12
-#}
+union = {
+	first = ARA
+	second = NAP
+	start_date = 1442.3.3
+	end_date = 1458.6.27
+}
 
 # Aragon and Austria (League of Venice)
 alliance = {
@@ -164,7 +146,7 @@ alliance = {
 alliance = {
 	first = SPA
 	second = POR
-	start_date = 1444.11.11
+	start_date = 1793.4.17
 	end_date = 1795.7.22
 }
 
@@ -232,7 +214,7 @@ royal_marriage = {
 	end_date = 1481.8.29
 } 
 
-# Afonso, Heir to Joï¿½o II, and Isabella of Aragon-Castille
+# Afonso, Heir to João II, and Isabella of Aragon-Castille
 royal_marriage = {
 	first = POR
 	second = CAS
@@ -257,9 +239,9 @@ royal_marriage = {
 }
 
 # Manuel I and Leonor of Spain
-# Joï¿½o III and Catarina of Spain
+# João III and Catarina of Spain
 # Charles V of Spain and Isabella of Portugal
-# King Felipe II of Spain (son of Karl V) ~ Isabel (daughter of King Joï¿½o III of Portugal)
+# King Felipe II of Spain (son of Karl V) ~ Isabel (daughter of King Joäo III of Portugal)
 royal_marriage = {
 	first = POR
 	second = SPA
@@ -284,7 +266,7 @@ royal_marriage = {
 }
 
 # Philip V of Spain and Elisabeth Farnese of Parma
-# Joseph of Portugal and Marianne Victoria of Borbï¿½n
+# Joseph of Portugal and Marianne Victoria of Borbón
 # Ferdinand VI of Spain and Maria Magdalena Barbara
 royal_marriage = {
 	first = POR
@@ -293,7 +275,7 @@ royal_marriage = {
 	end_date = 1777.2.24
 }
 	
-# Joï¿½o VI and Carlotta of Spain
+# João VI and Carlotta of Spain
 royal_marriage = {
 	first = POR
 	second = SPA
@@ -342,7 +324,7 @@ royal_marriage = {
 	end_date = 1665.9.17
 } 
 
-# Louis of Spain and Louise Elisabeth d'Orlï¿½ans
+# Louis of Spain and Louise Elisabeth d'Orléans
 royal_marriage = {
 	first = SPA
 	second = FRA

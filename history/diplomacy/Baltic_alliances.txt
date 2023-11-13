@@ -3,7 +3,7 @@ vassal = {
 	first = POL
 	second = MAZ
 	start_date = 1444.1.1
-	end_date = 1444.11.12
+	end_date = 1526.3.9
 }
 
 # Polish guarantee/tribute
@@ -11,7 +11,7 @@ guarantee = {
 	first = POL
 	second = MOL
 	start_date = 1444.1.1
-	end_date = 1444.11.12
+	end_date = 1447.12.12
 }
 
 # Polish vassal

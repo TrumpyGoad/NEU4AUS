@@ -441,7 +441,7 @@ age_of_reformation = {
 		}
 		ab_md_1500s_warscore_vs_religion = {
 			modifier = {
-				warscore_cost_vs_other_religion = -0.25
+				warscore_cost_vs_other_religion = -0.10
 			}
 			ai_will_do = {
 				factor = 10
@@ -486,7 +486,7 @@ age_of_reformation = {
 		}
 		ab_md_1500s_prestige_per_development_from_conversion = {
 			modifier = {
-				prestige_per_development_from_conversion = 0.3
+				prestige_per_development_from_conversion = 0.25
 			}
 			ai_will_do = {
 				factor = 10
@@ -519,7 +519,7 @@ age_of_reformation = {
 		}
 		ab_md_1500s_hardened_soldiers = {
 			modifier = {
-				land_attrition = -0.25
+				land_attrition = -0.10
 			}
 			ai_will_do = {
 				factor = 10
@@ -530,7 +530,7 @@ age_of_reformation = {
 		}
 		ab_md_1500s_persecution_migration = {
 			modifier = {
-				culture_conversion_cost = -0.25
+				core_creation = -0.15
 			}
 			ai_will_do = {
 				factor = 10
@@ -541,7 +541,7 @@ age_of_reformation = {
 		}
 		ab_md_1500s_accepting_new_ideas = {
 			modifier = {
-				idea_cost = -0.1
+				technology_cost = 0.05
 			}
 			ai_will_do = {
 				factor = 10
@@ -587,7 +587,7 @@ age_of_reformation = {
 		ab_md_1500s_converted_merchants = {
 			modifier = {
 				merchants = 1
-				trade_efficiency = 0.15
+				trade_efficiency = 0.05
 			}
 			ai_will_do = {
 				factor = 10

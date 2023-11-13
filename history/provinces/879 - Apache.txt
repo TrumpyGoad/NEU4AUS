@@ -1,9 +1,9 @@
 #879 - Apache
 
-#owner = APA
-#controller = APA
-#is_city = yes
-#add_core = APA 
+owner = APA
+controller = APA
+is_city = yes
+add_core = APA 
 culture = apache 
 religion = totemism
 capital = "Apache" 

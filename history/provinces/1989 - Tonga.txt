@@ -1,8 +1,8 @@
 #1989 - Tonga
 
-#add_core = TOG
-#owner = TOG
-#controller = TOG
+add_core = TOG
+owner = TOG
+controller = TOG
 culture = polynesian
 religion = animism
 hre = no

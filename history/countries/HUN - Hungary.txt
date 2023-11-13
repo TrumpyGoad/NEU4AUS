@@ -25,19 +25,17 @@ change_estate_land_share = {
 }
 
 
-1437.1.1 = { leader = {	name = "Jï¿½nos Hunyadi"         	type = general	fire = 4	shock = 4	manuever = 4	siege = 1	death_date = 1445.1.1 } }
+1437.1.1 = { leader = {	name = "János Hunyadi"         	type = general	fire = 4	shock = 4	manuever = 4	siege = 1	death_date = 1445.1.1 } }
 
 # Personal union with Habsburg under Albrecht II 1437-39
 # Personal union with Poland under Wladyslaw III 1439-44
 
 1444.11.10 = {
 	monarch = {
-		name = "MÃ¡tyÃ¡s"
-		dynasty = Corvin
-		birth_date = 1431.2.23
-		adm = 4
-		mil = 5
-		dip = 5
+		adm = 0
+		mil = 0
+		dip = 0
+		regent = yes
 	}
 }
 
@@ -54,6 +52,17 @@ change_estate_land_share = {
 	}
 }
 
+1457.11.24 = {
+	monarch = {
+		name = "Mátyás"
+		dynasty = Corvin
+		birth_date = 1443.2.23			
+		adm = 4
+		dip = 5
+		mil = 5
+		leader = {	name = "Mátyás Corvin"         	type = general	fire = 3	shock = 4	manuever = 3	siege = 1 }
+	}
+}
 
 1462.1.1 = { leader = {	name = "Pal Kinizsi"           	type = general	fire = 2	shock = 3	manuever = 3	siege = 1	death_date = 1494.1.1 } }
 
@@ -63,21 +72,21 @@ change_estate_land_share = {
 
 1526.8.30 = {
 	monarch = {
-		name = "Jï¿½nos I"
-		dynasty = "Zï¿½polya"
+		name = "János I"
+		dynasty = "Zápolya"
 		birth_date = 1487.2.2			
 		adm = 4
 		dip = 3
 		mil = 2
-		leader = {	name = "Jï¿½nos I Zï¿½polya"       	type = general	fire = 2	shock = 2	manuever = 2	siege = 0}
+		leader = {	name = "János I Zápolya"       	type = general	fire = 2	shock = 2	manuever = 2	siege = 0}
 	}
 }
 
 1540.7.24 = {
 	monarch = {
-		name = "Jï¿½nos II"
+		name = "János II"
 		birth_date = 1540.7.7			
-		dynasty = "Zï¿½polya"
+		dynasty = "Zápolya"
 		adm = 1
 		dip = 2
 		mil = 2
@@ -91,8 +100,8 @@ add_government_reform = autocracy_reform }
 
 1571.5.26 = {
 	monarch = {
-		name = "Istvï¿½n"
-		dynasty = "Bï¿½thory"
+		name = "István"
+		dynasty = "Báthory"
 		birth_date = 1533.9.27			
 		adm = 5
 		dip = 2
@@ -103,7 +112,7 @@ add_government_reform = autocracy_reform }
 1576.5.3 = {
 	monarch = {
 		name = "Christofer"
-		dynasty = "Bï¿½thory"
+		dynasty = "Báthory"
 		birth_date = 1530.5.27			
 		adm = 1
 		dip = 2
@@ -114,7 +123,7 @@ add_government_reform = autocracy_reform }
 1581.1.1 = {
 	monarch = {
 		name = "Sigismund"
-		dynasty = "Bï¿½thory"
+		dynasty = "Báthory"
 		birth_date = 1572.3.27			
 		adm = 1
 		dip = 2
@@ -137,7 +146,6 @@ add_government_reform = autocracy_reform }
 
 1602.1.1 = {
 	monarch = {
-		name = "Interregnum"
 		regent = yes
 		adm = 0
 		dip = 0
@@ -147,7 +155,7 @@ add_government_reform = autocracy_reform }
 
 1605.1.1 = {
 	monarch = {
-		name = "Istvï¿½n"
+		name = "István"
 		dynasty = "Bocskai"
 		birth_date = 1557.1.1		
 		adm = 2
@@ -158,8 +166,8 @@ add_government_reform = autocracy_reform }
 
 1606.12.30 = {
 	monarch = {
-		name = "Gï¿½bor"
-		dynasty = "Bï¿½thory"
+		name = "Gábor"
+		dynasty = "Báthory"
 		birth_date = 1589.8.15		
 		adm = 4
 		dip = 3
@@ -169,7 +177,7 @@ add_government_reform = autocracy_reform }
 
 1613.1.1 = {
 	monarch = {
-		name = "Gï¿½bor"
+		name = "Gábor"
 		dynasty = "Bethlen"
 		birth_date = 1580.1.1
 		adm = 4
@@ -181,8 +189,8 @@ add_government_reform = autocracy_reform }
 
 1629.11.17 = {
 	monarch = {
-		name = "Gyï¿½rgy I"
-		dynasty = "Rï¿½kï¿½czy"
+		name = "György I"
+		dynasty = "Rákóczy"
 		birth_date = 1593.6.8		
 		adm = 2
 		dip = 2
@@ -192,8 +200,8 @@ add_government_reform = autocracy_reform }
 
 1648.1.1 = {
 	monarch = {
-		name = "Gyï¿½rgy II"
-		dynasty = "Rï¿½kï¿½czy"
+		name = "György II"
+		dynasty = "Rákóczy"
 		birth_date = 1621.1.30		
 		adm = 3
 		dip = 1
@@ -206,7 +214,7 @@ add_government_reform = autocracy_reform }
 1665.1.1 = {
 	monarch = {
 		name = "Ferenc I"
-		dynasty = "Rï¿½kï¿½czy"
+		dynasty = "Rákóczy"
 		birth_date = 1645.2.24		
 		adm = 3
 		dip = 0
@@ -219,7 +227,7 @@ add_government_reform = autocracy_reform }
 1691.1.1 = {
 	monarch = {
 		name = "Ferenc II"
-		dynasty = "Rï¿½kï¿½czy"
+		dynasty = "Rákóczy"
 		birth_date = 1676.3.27		
 		adm = 4
 		dip = 5

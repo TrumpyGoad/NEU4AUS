@@ -1,3 +1,4 @@
+
 bri_1 = {
 	slot = 1
 	generic = no
@@ -219,15 +220,15 @@ bri_2 = {
 		icon = mission_invade_island
 		required_missions = { bri_brest }
 		provinces_to_highlight = {
-			colonial_region = colonial_eastern_america
+			colonial_region = colonial_canada
 			NOT = { country_or_non_sovereign_subject_holds = root }
 			has_port = yes
 			has_discovered = root
 		}
 		trigger = {
 			custom_trigger_tooltip = {
-				tooltip = has_colony_in_colonial_canada_fixed
-				colonial_eastern_america = {
+				tooltip = has_colony_in_colonial_canada
+				colonial_canada = {
 					owner = {
 						is_colonial_nation_of = root
 					}
@@ -248,14 +249,14 @@ bri_2 = {
 		icon = mission_iberian_conquistador
 		required_missions = { bri_new_brittany }
 		provinces_to_highlight = {
-			region = carribeans_region
+			colonial_region = colonial_the_carribean
 			NOT = { country_or_non_sovereign_subject_holds = root }
 			has_discovered = root
 		}
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = has_colony_in_colonial_caribbean
-				carribeans_region = {
+				colonial_the_carribean = {
 					owner = {
 						is_colonial_nation_of = root
 					}

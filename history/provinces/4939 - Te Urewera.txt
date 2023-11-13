@@ -1,8 +1,8 @@
 #4939 - Te Urewera
 
-#add_core = MAA
-#owner = MAA
-#controller = MAA
+add_core = MAA
+owner = MAA
+controller = MAA
 culture = maori
 religion = animism
 hre = no

@@ -23,15 +23,12 @@ country_decisions = {
 						}
 					}
 					capital_scope = {
-						OR = {
-							region = peru_region
-							region = upper_peru_region
-						}
+						colonial_region = colonial_peru
 						is_core = ROOT
 					}
 				}
 			}
-			peru_region = {
+			colonial_peru = {
 				owned_by = ROOT
 			}
 			OR = {
@@ -43,10 +40,7 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			OR = {
-				region = peru_region
-				region = upper_peru_region
-			}
+			colonial_region = colonial_peru
 			OR = {
 				NOT = { owned_by = ROOT }
 				is_city = no
@@ -57,19 +51,13 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			capital_scope = {
-				OR = {
-					region = peru_region
-					region = upper_peru_region
-				}
+				colonial_region = colonial_peru
 				is_core = ROOT
 				is_city = yes
 			}
 			num_of_owned_provinces_with = {
 				value = 10
-				OR = {
-					region = peru_region
-					region = upper_peru_region
-				}
+				colonial_region = colonial_peru
 				is_city = yes
 			}
 			NOT = { exists = PEU }
@@ -86,6 +74,7 @@ country_decisions = {
 				}
 			}
 			change_tag = PEU
+			on_change_tag_effect = yes
 			if = {
 				limit = {
 					NOT = { is_former_colonial_nation = yes }
@@ -99,7 +88,7 @@ country_decisions = {
 				}
 				set_government_rank = 2
 			}
-			peru_region = {
+			colonial_peru = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}

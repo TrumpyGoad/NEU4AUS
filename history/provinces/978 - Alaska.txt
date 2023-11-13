@@ -20,10 +20,10 @@ discovered_by = north_american
 1778.1.1 = { discovered_by = GBR } # James Cook
 
 1786.1.1 = {
-	#owner = RUS
-	#controller = RUS
-	#add_core = RUS
-	#is_city = yes
+	owner = RUS
+	controller = RUS
+	add_core = RUS
+	is_city = yes
 	culture = russian
 	religion = orthodox
 	trade_goods = fur

@@ -1,8 +1,8 @@
 #1034 - Kamchatka
 
-#owner = KMC
-#controller = KMC
-#add_core = KMC
+owner = KMC
+controller = KMC
+add_core = KMC
 culture = kamchatkan
 religion = tengri_pagan_reformed
 capital = "Kamchatka"
@@ -27,10 +27,10 @@ discovered_by = ANU
 1647.1.1 = { discovered_by = RUS } # V. Atlasov
 
 1732.1.1 = {
-	#owner = RUS
-	#controller = RUS
+	owner = RUS
+	controller = RUS
 	culture = russian
 	religion = orthodox
 } # Conquered by Russia
 1740.1.1 = { capital = "Petropavlovsk" }
-1757.1.1 = { #add_core = RUS }
+1757.1.1 = { add_core = RUS }

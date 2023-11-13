@@ -2,6 +2,7 @@
 
 capital = "Jokkmokk"
 culture = sapmi
+add_core = SMI
 religion = catholic
 hre = no
 base_tax = 1 
@@ -22,10 +23,9 @@ discovered_by = western
 	add_local_autonomy = 90
 	trade_goods = fur
 }
-1444.11.12 = {
-	remove_core = SWE
-	owner = SMI
-	controller = SMI
-	add_core = SMI
-}
+1640.1.2 = { culture = swedish }
+1640.1.2 = { religion = protestant }
+1650.1.1 = { trade_goods = iron }
+1652.1.1 = { capital = "Kiruna" }
+
 

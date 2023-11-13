@@ -573,7 +573,7 @@ country_event = {
 			spawn_rebels = {
 				type = nationalist_rebels
 				size = 3
-				leader = "Istvï¿½n Bocskay"
+				leader = "István Bocskay"
 				friend = HUN
 			}
 			clr_province_flag = hungarian_revolt
@@ -776,7 +776,7 @@ country_event = {
 	}
 }
 
-# The Insurrection of Duke Imre Thï¿½kï¿½ly
+# The Insurrection of Duke Imre Thököly
 country_event = {
 	id = flavor_hab.3333
 	title = "flavor_hab.EVTNAME3333"
@@ -851,7 +851,7 @@ country_event = {
 				type = nationalist_rebels
 				size = 3
 				friend = HUN
-				leader = "Imre Thï¿½kï¿½ly"
+				leader = "Imre Thököly"
 			}
 			
 
@@ -1712,7 +1712,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 6
+		months = 60
 	}
 
 
@@ -1795,7 +1795,7 @@ country_event = {
 	}
 }
 
-# The Pestsï¿½ule of Vienna.
+# The Pestsäule of Vienna.
 country_event = {
 	id = flavor_hab.14
 	title = flavor_hab.14.t
@@ -1896,7 +1896,7 @@ country_event = {
 	}
 }
 
-# The Mï¿½hlviertel Textile Production
+# The Mühlviertel Textile Production
 country_event = {
 	id = flavor_hab.17
 	title = flavor_hab.17.t

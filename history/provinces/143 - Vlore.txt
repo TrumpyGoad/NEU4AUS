@@ -1,16 +1,17 @@
-#143 - Vlorï¿½ - Southern Albania
+#143 - Vlorë - Southern Albania
 
-owner = ALB
-controller = ALB
+owner = TUR
+controller = TUR
 culture = albanian
 religion = orthodox
-capital = "Vlorï¿½"
-trade_goods = salt
+capital = "Vlorë"
+trade_goods = wool #or salt
 hre = no
 base_tax = 2
 base_production = 1
 base_manpower = 1
 is_city = yes
+add_core = TUR
 add_core = ALB
 discovered_by = KAZ
 discovered_by = CRI
@@ -22,10 +23,11 @@ discovered_by = ottoman
 discovered_by = eastern
 discovered_by = western
 
-1444.11.12 = {
-	owner = ALB
-	controller = ALB
-	add_core = ALB
-	remove_core = TUR
-	remove_core = VEN
-}
+1520.1.1 = { religion = sunni } # Predominant religion under Turkish rule
+1555.1.1 = { unrest = 5 } # General discontent against the Janissaries' dominance
+1556.1.1 = { unrest = 0  }
+1614.1.1 = { capital = "Tirana" } # Established by Sulejman Pasha
+1687.1.1 = { unrest = 6 } # Christian counteroffensive against the Ottomans
+1690.1.1 = { unrest = 0 }
+1797.1.1 = { revolt = { type = revolutionary_rebels size = 1 } controller = REB } # Suliot uprising
+1803.1.1 = { revolt = {} controller = TUR }

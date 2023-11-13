@@ -15,7 +15,7 @@ country_decisions = {
 			}
 		}
 		allow = {
-			#is_at_war = no
+			is_at_war = no
 			primary_culture = turkish
 			religion_group = muslim
 			controls = 151

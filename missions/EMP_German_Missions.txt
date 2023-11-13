@@ -581,6 +581,15 @@ emp_germany_hlr_3 = {
 		provinces_to_highlight = {
 			OR = {
 				AND = {
+					province_id = 4744
+					NOT = {
+						trade_share = {
+							country = ROOT
+							share = 75
+						}
+					}
+				}
+				AND = {
 					province_id = 45
 					NOT = {
 						trade_share = {
@@ -610,6 +619,12 @@ emp_germany_hlr_3 = {
 			}
 		}
 		trigger = {
+			4744 = {
+				trade_share = {
+					country = ROOT
+					share = 75
+				}
+			}
 			45 = {
 				trade_share = {
 					country = ROOT

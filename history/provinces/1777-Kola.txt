@@ -2,6 +2,7 @@
 
 owner = NOV
 controller = NOV 
+add_core = SMI
 capital = "Kola"
 culture = sapmi
 religion = orthodox
@@ -23,9 +24,5 @@ discovered_by = eastern
 
 add_local_autonomy = 25
 
-1444.11.12 = {
-	remove_core = NOV
-	owner = KRL
-	controller = KRL
-	add_core = KRL
-		}
+1478.1.15 = { owner = MOS controller = MOS add_core = MOS remove_core = NOV }
+1503.4.1 = { owner = RUS controller = RUS add_core = RUS remove_core = MOS }

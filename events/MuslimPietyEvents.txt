@@ -1635,7 +1635,6 @@ country_event = {
 		}
 		has_regency = yes
 		has_consort_regency = no
-		always = no
 	}
 	
 	mean_time_to_happen = {

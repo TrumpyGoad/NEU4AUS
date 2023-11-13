@@ -3,13 +3,17 @@ chinese_missions_1 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = MNG
+		NOT = { primary_culture = manchu_new }
+		NOT = { primary_culture = tibetan_new }
+		NOT = { primary_culture = altaic_new }
+		NOT = { primary_culture = vietnamese_new }
+		NOT = { primary_culture = korean_new }
 		NOT = { map_setup = map_setup_random }
-		#culture_group = east_asian
+		culture_group = east_asian
 		NOT = { has_dlc = "Domination" }
 	}
 	has_country_shield = yes
-	
+	# 
 	colonize_taiwan = {
 		icon = mission_invade_island
 		required_missions = {  }
@@ -36,8 +40,11 @@ chinese_missions_1 = {
 				duration = 7300
 			}
 		}
+		ai_weight = {
+			factor = 75	#Default
+		}
 	}
-	
+	# 
 	mandate_of_heaven_mission = {
 		icon = mission_scholar_officials
 		required_missions = { colonize_taiwan }
@@ -93,6 +100,9 @@ chinese_missions_1 = {
 				add_permanent_claim = ROOT
 			}
 		}
+		ai_weight = {
+			factor = 0	#No priority or else Ming will start attacking its own tributaries
+		}
 	}
 	annex_dai_viet = {
 		icon = mission_chinese_general_riding
@@ -120,17 +130,24 @@ chinese_missions_1 = {
 			add_prestige = 20
 			add_adm_power = 100
 		}
+		ai_weight = {
+			factor = 0	#No priority or else Ming will start attacking its own tributaries
+		}
 	}
 }
-
+# 
 chinese_missions_2 = {
 	slot = 2
 	generic = no
 	ai = yes
 	potential = {
-		tag = MNG
+		NOT = { primary_culture = manchu_new }
+		NOT = { primary_culture = tibetan_new }
+		NOT = { primary_culture = altaic_new }
+		NOT = { primary_culture = vietnamese_new }
+		NOT = { primary_culture = korean_new }
 		NOT = { map_setup = map_setup_random }
-		#culture_group = east_asian
+		culture_group = east_asian
 		NOT = { has_dlc = "Domination" }
 	}
 	has_country_shield = yes
@@ -154,6 +171,9 @@ chinese_missions_2 = {
 			add_prestige = 20
 			add_adm_power = 100
 		}
+		ai_weight = {
+			factor = 0	#No priority or else Ming will start attacking its own tributaries
+		}
 	}
-	
+	# 
 }

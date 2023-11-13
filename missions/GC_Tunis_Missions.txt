@@ -29,12 +29,26 @@ gc_tunis_1 = {
 		
 		trigger = {
 			custom_trigger_tooltip = {
-				tooltip = tunis_subjects.tt
-				NOT = {
-					any_subject_country = {
-						liberty_desire = 1
+				tooltip = tun_tribes_tooltip
+				fezzan_area = {
+					type = all
+					OR = {
+						country_or_non_sovereign_subject_holds = ROOT
+						is_empty = yes
 					}
 				}
+			}
+			north_saharan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ouled_nail_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tripolitania_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -301,8 +315,8 @@ gc_tunis_3 = {
 		required_missions = { }
 		
 		trigger = {
-			advisor = naval_reformer
-			owns = 341
+			naval_forcelimit = 20
+			num_of_light_ship = 5
 		}
 		effect = {
 			sicily_area = {
@@ -354,29 +368,6 @@ gc_tunis_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			#New States
-			corsica_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			central_sicily_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			341 = {
-				add_unit_construction = {
-					type = galley
-					amount = 10
-					speed = 0.01
-					cost = 0
-				}
-			}
 		}
 	}
 	gc_tun_med_islands = {
@@ -388,8 +379,7 @@ gc_tunis_3 = {
 				area = sicily_area
 				area = western_sicily_area
 				area = corsica_sardinia_area
-				#area = baleares_area
-				area = central_sicily_area
+				area = baleares_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -403,18 +393,14 @@ gc_tunis_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			central_sicily_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 			corsica_sardinia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			#baleares_area = {
-			#	type = all
-			#	country_or_non_sovereign_subject_holds = ROOT
-			#}
+			baleares_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			add_country_modifier = {

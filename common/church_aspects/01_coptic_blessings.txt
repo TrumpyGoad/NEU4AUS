@@ -6,7 +6,6 @@ legitimize_government = {
 		horde_unity = 0.5
 		republican_tradition = 0.2
 		devotion = 0.5
-		max_absolutism = 5
 	}
 	ai_will_do = {
 		factor = 10
@@ -73,7 +72,7 @@ promote_territorial_rights = {
 	is_blessing = yes
 
 	modifier = {
-		core_creation = -0.15
+		core_creation = -0.1
 	}
 	ai_will_do = {
 		factor = 10
@@ -92,7 +91,7 @@ will_of_the_martyrs = {
 	is_blessing = yes
 
 	modifier = {
-		discipline = 0.05
+		discipline = 0.025
 	}
 	ai_will_do = {
 		factor = 15

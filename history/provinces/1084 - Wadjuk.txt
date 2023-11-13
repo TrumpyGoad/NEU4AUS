@@ -1,8 +1,8 @@
 #1084 - Wadjuk
 
-#add_core = NOO
-#owner =  NOO
-#controller =  NOO
+add_core = NOO
+owner = NOO
+controller = NOO
 culture = nyoongah
 religion = dreamtime
 capital = "Wadjuk"

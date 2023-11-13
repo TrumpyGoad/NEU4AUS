@@ -7,13 +7,13 @@ primary_culture = swiss
 capital = 165 # Bern
 add_army_professionalism = 0.1
 
-1444.1.1 = {
+1399.1.1 = {
 	monarch = {
-		name = "Tarik"
-		birth_date = 1420.1.1
+		name = "Die Tagsatzung"
 		adm = 3
 		dip = 3
 		mil = 3
+		regent = yes
 	}
 }
 

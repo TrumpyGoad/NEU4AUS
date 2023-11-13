@@ -6,6 +6,7 @@ capital = "Kem"
 culture = karelian
 religion = orthodox
 add_core = NOV
+add_core = KRL
 hre = no
 is_city = yes
 base_tax = 1 
@@ -20,9 +21,5 @@ discovered_by = eastern
 
 add_local_autonomy = 25
 
-1444.11.12 = {
-	remove_core = NOV
-	owner = KRL
-	controller = KRL
-	add_core = KRL
-		}
+1478.1.15 = { owner = MOS controller = MOS add_core = MOS remove_core = NOV }
+1503.4.1 = { owner = RUS controller = RUS add_core = RUS remove_core = MOS }

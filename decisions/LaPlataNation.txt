@@ -23,12 +23,12 @@ country_decisions = {
 						}
 					}
 					capital_scope = {
-						region = la_plata_region
+						colonial_region = colonial_la_plata
 						is_core = ROOT
 					}
 				}
 			}
-			la_plata_region = {
+			colonial_la_plata = {
 				owned_by = ROOT
 			}
 			OR = {
@@ -40,7 +40,7 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			region = la_plata_region
+			colonial_region = colonial_la_plata
 			OR = {
 				NOT = { owned_by = ROOT }
 				is_city = no
@@ -52,12 +52,12 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			capital_scope = {
-				region = la_plata_region
+				colonial_region = colonial_la_plata
 				is_core = ROOT
 			}
 			num_of_owned_provinces_with = {
 				value = 10
-				region = la_plata_region
+				colonial_region = colonial_la_plata
 				is_city = yes
 			}
 			NOT = { exists = LAP }
@@ -73,6 +73,7 @@ country_decisions = {
 				}
 			}
 			change_tag = LAP
+			on_change_tag_effect = yes
 			if = {
 				limit = {
 					NOT = { is_former_colonial_nation = yes }
@@ -100,7 +101,7 @@ country_decisions = {
 				}
 				change_primary_culture = platinean
 			}
-			la_plata_region = {
+			colonial_la_plata = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}

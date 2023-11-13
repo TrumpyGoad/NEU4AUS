@@ -3,7 +3,7 @@ vassal = {
 	first = MRA
 	second = LDU
 	start_date = 1444.1.1
-	end_date = 1444.11.12
+	end_date = 1572.1.1
 }
 
 vassal = {
@@ -25,7 +25,7 @@ vassal = {
 	first = ZIM
 	second = RZW
 	start_date = 1440.1.1
-	end_date = 1444.11.12
+	end_date = 1650.1.1
 }
 
 vassal = {
@@ -61,7 +61,7 @@ guarantee = {
 	first = TUN
 	second = FZA
 	start_date = 1444.1.1
-	end_date = 1444.11.12
+	end_date = 1558.1.1
 }
 
 # Tlemcen vassal of the Hafsids
@@ -149,7 +149,7 @@ vassal = {
 	first = ZAN
 	second = SFA
 	start_date = 1444.1.1
-	end_date = 1444.11.12
+	end_date = 1490.1.1
 }
 
 vassal = {
@@ -179,7 +179,7 @@ vassal = {
 	first = AJU
 	second = MDI
 	start_date = 1444.1.1
-	end_date = 1444.11.12
+	end_date = 1615.1.1
 }
 
 #Kongo
@@ -195,14 +195,14 @@ vassal = {
 	first = KON
 	second = NDO
 	start_date = 1444.1.1
-	end_date = 1444.11.12
+	end_date = 1556.1.1
 }
 
 vassal = {
 	first = KON
 	second = LOA
 	start_date = 1444.1.1
-	end_date = 1444.11.12
+	end_date = 1564.1.1
 }
 
 vassal = {
@@ -227,7 +227,7 @@ vassal = {
 	first = ETH
 	second = DAM
 	start_date = 1444.1.1
-	end_date = 1444.11.12
+	end_date = 1670.1.1
 }
 
 #Hadiya
@@ -235,7 +235,7 @@ vassal = {
 	first = ETH
 	second = HDY
 	start_date = 1444.1.1
-	end_date = 1444.11.12
+	end_date = 1534.1.1
 }
 
 #Malikate of Dongola

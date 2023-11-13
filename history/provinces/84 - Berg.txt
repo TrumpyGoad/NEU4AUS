@@ -1,12 +1,12 @@
 # 84 - Berg
 
-owner = KOL
-controller = KOL
-add_core = KOL
+owner = BRG
+controller = BRG
+add_core = BRG
 culture = hessian
 religion = catholic
 trade_goods = cloth
-capital = "Dï¿½sseldorf"
+capital = "Düsseldorf"
 base_tax = 4
 base_production = 4
 base_manpower = 1
@@ -18,7 +18,7 @@ discovered_by = ottoman
 
 hre = yes
 
-1511.9.6 = { owner = KLE controller = KLE add_core = KLE } # John III of Cleves inherits Berg through his marriage to Maria of Jï¿½lich-Berg
+1511.9.6 = { owner = KLE controller = KLE add_core = KLE } # John III of Cleves inherits Berg through his marriage to Maria of Jülich-Berg
 1545.1.1 = { fort_15th = yes }
 1584.1.1 = { fort_15th = no fort_16th = yes }
 1610.1.1 = { owner = PAL controller = PAL add_core = PAL remove_core = KLE } # Berg is inherited by Pfalsz-Neuenburg

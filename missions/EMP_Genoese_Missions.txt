@@ -17,17 +17,26 @@ emp_gen_missions_general = {
 		icon = purely_for_commerce
 		required_missions = { }
 		trigger = {
-			# ally with two countries with capitals in Italy
-			custom_trigger_tooltip = {
-				tooltip = emp_lan_italian_league_tt
-				calc_true_if = {
-					all_ally = {
-						capital_scope = {
-							region = italy_region
-						}
+			if = {
+				limit = {
+					OR = {
+						has_reform = merchants_reform
+						has_reform = venice_merchants_reform
 					}
-					amount = 2
+					has_dlc = "Mare Nostrum"
 				}
+				is_trade_league_leader = yes
+
+				calc_true_if = {
+					desc = emp_gen_trade_league_tooltip
+					amount = 6
+					all_country = {
+						is_in_trade_league_with = ROOT
+					}
+				}
+			}
+			else = {
+				num_of_allies = 4
 			}
 		}
 		effect = {
@@ -79,6 +88,9 @@ emp_gen_missions_general = {
 			create_admiral = {
 				tradition = 65
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }
@@ -153,6 +165,9 @@ emp_gen_missions_general_2 = {
 				name = gen_prosperous_republic
 				duration = 7300
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 	
@@ -342,6 +357,9 @@ emp_gen_missions_western_med = {
 			add_adm_power = 100
 			add_yearly_sailors = 3
 		}
+		ai_weight = {
+			factor = 75
+		}
 	}
 	
 	emp_gen_grand_fleet = {
@@ -420,6 +438,9 @@ emp_gen_missions_western_med = {
 				}
 				add_permanent_claim = ROOT
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 	
@@ -722,6 +743,9 @@ emp_gen_missions_western_med = {
 					}
 				}
 			}
+		}
+		ai_weight = {
+			factor = 75
 		}
 	}
 }

@@ -2,7 +2,7 @@ government = monarchy
 add_government_reform = league_of_lezhe_reform
 government_rank = 1
 primary_culture = albanian
-religion = orthodox
+religion = catholic
 technology_group = eastern
 capital = 4175 # Lezhe
 

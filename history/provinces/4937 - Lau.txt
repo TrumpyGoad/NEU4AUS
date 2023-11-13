@@ -1,8 +1,8 @@
 #4937 - Lau
 
-#add_core = LAI
-#owner = LAI
-#controller = LAI
+add_core = LAI
+owner = LAI
+controller = LAI
 culture = melanesian
 religion = animism
 hre = no

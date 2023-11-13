@@ -1,9 +1,9 @@
 #989 - Ontario
 
-#owner = AGG
-#controller = AGG
-#add_core = AGG
-#is_city = yes
+owner = AGG
+controller = AGG
+add_core = AGG
+is_city = yes
 culture = huron
 religion = totemism
 capital = "Attigneenongnahac"
@@ -23,25 +23,25 @@ discovered_by = north_american
 1609.1.1 = { discovered_by = FRA } # Samuel de Champlain.
 1629.1.1 = { discovered_by = ENG }
 1649.1.1 = { 
-	#owner = ---
-	#controller = ---
-	#is_city = NO
+	owner = ---
+	controller = ---
+	is_city = no
 	remove_core = AGG
 	culture = anishinabe
 } #Anishinabe expands post-beaver wars in deserted huron lands. 
 1674.1.1 = {
-	#owner = FRA
-	#controller = FRA
-	#add_core = FRA
+	owner = FRA
+	controller = FRA
+	add_core = FRA
 	culture = cosmopolitan_french
 	religion = catholic
-	#is_city = yes
+	is_city = yes
 } # Construction of Fort Frontenac
 1707.5.12 = { discovered_by = GBR } 
 1763.2.10 = {
-	#owner = GBR
-	#controller = GBR
-	#add_core = GBR
+	owner = GBR
+	controller = GBR
+	add_core = GBR
 	culture = english
 	religion = protestant
 	remove_core = FRA

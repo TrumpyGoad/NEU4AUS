@@ -1,8 +1,8 @@
 #4847 - Yunawa
 
-#add_core = YNU
-#owner =  YNU
-#controller =  YNU
+add_core = YNU
+owner = YNU
+controller = YNU
 culture = paman
 religion = dreamtime
 capital = "Yunawa"

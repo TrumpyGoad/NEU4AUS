@@ -33,7 +33,7 @@ priests_may_marry_aspect = {
 		}
 	}
 	modifier = {
-		church_influence_modifier = -0.1
+		same_religion_advisor_cost = -0.15
 	}
 	ai_will_do = {
 		factor = 10

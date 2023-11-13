@@ -1067,6 +1067,16 @@ type={
 		name="Seagulls_english_channel"
 		hidden_on_start=no
 		position={
+			3090.000 0.100 99.000 
+		}
+		rotation={
+			0.000 -60.000 0.000 
+		}
+	}
+	object={
+		name="Seagulls_english_channel"
+		hidden_on_start=no
+		position={
 			1765.000 0.100 28.000 
 		}
 		rotation={
@@ -1088,16 +1098,6 @@ type={
 		hidden_on_start=no
 		position={
 			1682.000 0.100 177.000 
-		}
-		rotation={
-			0.000 -60.000 0.000 
-		}
-	}
-	object={
-		name="Seagulls_english_channel"
-		hidden_on_start=no
-		position={
-			3090.000 0.100 99.000 
 		}
 		rotation={
 			0.000 -60.000 0.000 
@@ -1369,20 +1369,20 @@ type={
 		name="Seagulls_english_channel"
 		hidden_on_start=no
 		position={
-			1747.000 9.300 153.000 
+			3210.000 5.000 260.000 
 		}
 		rotation={
-			0.000 45.000 0.000 
+			0.000 135.000 0.000 
 		}
 	}
 	object={
 		name="Seagulls_english_channel"
 		hidden_on_start=no
 		position={
-			3210.000 5.000 260.000 
+			1747.000 9.300 153.000 
 		}
 		rotation={
-			0.000 135.000 0.000 
+			0.000 45.000 0.000 
 		}
 	}
 	object={
@@ -2033,7 +2033,7 @@ type={
 		name="Seagulls_english_channel"
 		hidden_on_start=no
 		position={
-			1764.000 0.100 272.000 
+			3150.000 0.100 270.000 
 		}
 		rotation={
 			0.000 50.000 0.000 
@@ -2043,7 +2043,7 @@ type={
 		name="Seagulls_english_channel"
 		hidden_on_start=no
 		position={
-			3150.000 0.100 270.000 
+			1764.000 0.100 272.000 
 		}
 		rotation={
 			0.000 50.000 0.000 
@@ -2456,26 +2456,6 @@ type={
 			0.000 70.000 0.000 
 		}
 	}
-	object={
-		name="stpeters"
-		hidden_on_start=no
-		position={
-			3000.000 0.260 1364.300 
-		}
-		rotation={
-			0.000 70.000 0.000 
-		}
-	}
-	object={
-		name="stpeters"
-		hidden_on_start=no
-		position={
-			3000.000 0.260 1364.300 
-		}
-		rotation={
-			0.000 70.000 0.000 
-		}
-	}
 }
 type={
 	type="nammi_tower_of_london_entity"
@@ -2720,8 +2700,8 @@ type={
 type={
 	type="kiel_canal"
 	use_animation=no
-	scale=1.200000
 	time_duration=300.000000
+	scale=1.200000
 	always_visible=yes
 	visible_in_all_map_modes=yes
 	object={

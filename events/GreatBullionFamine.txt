@@ -51,7 +51,6 @@ country_event = {
 		any_owned_province = {
 			NOT = { continent = europe }
 			trade_goods = gold
-			NOT = { province_id = 346 }
 		}
 	}
 	

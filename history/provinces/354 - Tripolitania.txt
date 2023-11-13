@@ -3,7 +3,7 @@
 owner = TUN
 controller = TUN
 culture = tunisian
-religion = ibadi
+religion = sunni
 capital = "Tripoli" #Tripoli in the West.
 trade_goods = cloth
 hre = no

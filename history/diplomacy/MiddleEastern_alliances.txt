@@ -1,12 +1,12 @@
 #Shah Rokhs Empire
 
 #Ulugh Begh
-#vassal = {
-#	first = TIM
-#	second = TRS
-#	start_date = 1444.1.1
-#	end_date = 1444.11.12
-#}
+vassal = {
+	first = TIM
+	second = TRS
+	start_date = 1444.1.1
+	end_date = 1447.3.13 #Death of Shah Rokh
+}
 #Muhammad bin Baysonqor
 #Starts as independent as Shah Rukh/Goharshad has already decided to move against him in late 1444.
 # vassal = {
@@ -16,35 +16,35 @@
 	# end_date = 1446.1.1 #Shah Rokh falls ill in 1444, Muhammad sees his chance and rebels on the invitation of the Isfahan city council in 1446.
 # }
 #Sons of Soyurghatmish
-#vassal = {
-#	first = TIM
-#	second = AFG
-#	start_date = 1444.1.1
-#	end_date = 1444.11.12
-#}
+vassal = {
+	first = TIM
+	second = AFG
+	start_date = 1444.1.1
+	end_date = 1447.3.13 #Death of Shah Rokh
+}
 #Abdallah bin Ibrahim, the Child ruler.
-#vassal = {
-#	first = TIM
-#	second = FRS
-#	start_date = 1444.1.1
-#	end_date = 1444.11.12
-#}
+vassal = {
+	first = TIM
+	second = FRS
+	start_date = 1444.1.1
+	end_date = 1447.3.13 #Death of Shah Rokh
+}
 #Babur bin Baysonqor
-#vassal = {
-#	first = TIM
-#	second = KHO
-#	start_date = 1444.1.1
-#	end_date = 1444.11.12
-#}
+vassal = {
+	first = TIM
+	second = KHO
+	start_date = 1444.1.1
+	end_date = 1447.3.13 #Death of Shah Rokh
+}
 
 #End of Timurid Princes
 
 #Atabegs of Samtskhe under Georgia
-guarantee = {
+vassal = {
 	first = GEO
 	second = SME
 	start_date = 1444.1.1
-	end_date = 1444.11.12
+	end_date = 1446.12.1
 }
 
 #Safavid Order
@@ -75,7 +75,7 @@ vassal = {
 	first = QAR
 	second = BTL
 	start_date = 1435.1.1
-	end_date = 1444.11.12
+	end_date = 1469.2.4
 }
 
 #Melikdoms of Kharabak
@@ -84,7 +84,7 @@ vassal = {
 	first = QAR
 	second = MLK
 	start_date = 1435.1.1
-	end_date = 1444.11.12
+	end_date = 1469.2.4
 }
 
 #Biapis
@@ -93,7 +93,7 @@ alliance = {
 	first = ARL
 	second = KRY
 	start_date = 1440.1.1
-	end_date = 1444.11.12
+	end_date = 1504.1.1
 }
 
 vassal = {
@@ -123,7 +123,7 @@ vassal = {
 	first = GAZ
 	second = AVR
 	start_date = 1435.1.1
-	end_date = 1444.11.12
+	end_date = 1770.1.1
 }
 
 #Basra Pashas
@@ -150,7 +150,7 @@ vassal = {
 	end_date = 1830.1.1
 }
 
-# The Timurids - Khorasan (Abï¿½ Sa'id)
+# The Timurids - Khorasan (Abû Sa'id)
 union = {
 	first = TIM
 	second = KHO
@@ -163,7 +163,7 @@ vassal = {
 	first = QOM
 	second = ARD
 	start_date = 1444.1.1
-	end_date = 1444.11.12
+	end_date = 1446.1.1
 }
 
 vassal = {
@@ -198,14 +198,14 @@ vassal = {
 vassal = {
 	first = PER
 	second = MGR
-	start_date = 1612.11.20 #Retaken from Ottoman Troops by Shah Abbas, granted to the Mï¿½keddem
+	start_date = 1612.11.20 #Retaken from Ottoman Troops by Shah Abbas, granted to the Mükeddem
 	end_date = 1725.1.1 #Conquered by the Ottomans
 }
 
 vassal = {
 	first = PER
 	second = MGR
-	start_date = 1729.1.1 #Retaken from the Ottomans, once again under the Mï¿½keddem
+	start_date = 1729.1.1 #Retaken from the Ottomans, once again under the Mükeddem
 	end_date = 1747.1.1 #Death of Nader Shah, varyingly de facto or de iure independent up until Fath Ali Shah
 }
 
@@ -237,16 +237,16 @@ vassal = {
 	first = QOM
 	second = LRI
 	start_date = 1444.1.1
-	end_date = 1444.11.12
+	end_date = 1446.1.1
 }
 
-##Sistan
-#vassal = {
-#	first = TIM
-#	second = SIS
-#	start_date = 1444.1.1 #1383 
-#	end_date = 1444.11.12 #Khorasan
-#}
+#Sistan
+vassal = {
+	first = TIM
+	second = SIS
+	start_date = 1444.1.1 #1383 
+	end_date = 1449.2.1 #Khorasan
+}
 
 vassal = {
 	first = KHO
@@ -270,9 +270,26 @@ vassal = {
 } 
 
 # Cyprus, a Mamluk tributary
+guarantee = {
+	first = MAM
+	second = CYP
+	start_date = 1444.1.1
+	end_date = 1489.1.1
+}
 
+vassal = { #Viceroy of the Hejaz
+	first = MAM
+	second = HED
+	start_date = 1444.1.1
+	end_date = 1517.1.1
+}
 
-
+vassal = { #Syrian Territories
+	first = MAM
+	second = SYR
+	start_date = 1444.1.1
+	end_date = 1517.1.1
+}
 
 vassal = { #Mamluks fall
 	first = TUR
@@ -282,7 +299,12 @@ vassal = { #Mamluks fall
 }
 
 #Hejaz protected by the Mamluks
-
+guarantee = {
+	first = MAM
+	second = MDA
+	start_date = 1444.1.1
+	end_date = 1482.6.1
+}
 
 #Hormuz under the Portuguese
 vassal = {
@@ -293,6 +315,12 @@ vassal = {
 }
 
 #Amir al Arab
+vassal = {
+	first = MAM
+	second = FAD
+	start_date = 1444.11.10
+	end_date = 1516.8.24
+}
 
 #Mikhlaf subservient to the Zaidi Imams
 

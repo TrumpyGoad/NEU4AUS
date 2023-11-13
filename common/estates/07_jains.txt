@@ -1,4 +1,3 @@
-#MOD
 estate_jains = {
 	icon = 11
 
@@ -7,37 +6,35 @@ estate_jains = {
 	trigger = {	
 		has_dlc = "Dharma"
 		NOT = { has_government_attribute = disables_estate_jains }
-		NOT = { has_country_flag = disables_estate_jains_flag }
+		NOT = { has_disabled_estate = { estate = estate_jains } }
 		OR = {
 			has_government_attribute = enables_estate_jains
-			has_country_flag = enables_estate_jains_flag
+			has_enabled_estate = { estate = estate_jains }
+			has_unlocked_estate = { estate = estate_jains }
 			AND = {
-		technology_group = indian
-		#NOT = { has_government_attribute = is_merchant_republic }
+				technology_group = indian
+				#NOT = { has_government_attribute = is_merchant_republic }
 				#NOT = { has_reform = trading_city }
-		#NOT = { has_reform = veche_republic }	
-		NOT = { is_revolutionary_republic_trigger = yes }
-		NOT = { government = native }
-		NOT = { has_reform = siberian_tribe }
-		NOT = { has_reform = cossacks_reform }
+				#NOT = { has_reform = veche_republic }
+				NOT = { is_revolutionary_republic_trigger = yes }
+				NOT = { government = native }
+				NOT = { has_reform = siberian_tribe }
 				NOT = { has_government_attribute = is_pirate_republic_reform }
-		is_nomad = no
-		is_colonial_nation = no
-		NOT = { has_reform = celestial_empire }
-		NOT = { has_reform = revolutionary_empire_reform }
-	}
+				is_nomad = no
+				is_colonial_nation = no
+				NOT = { has_reform = celestial_empire }
+				NOT = { has_reform = revolutionary_empire_reform }
+			}
 		}
 	}
 
 	# These scale with loyalty & power
 	country_modifier_happy = {
-		build_cost = -0.05
-		inflation_reduction	= 0.05
+		build_cost = -0.1
 		build_time = -0.1
 	}
 	country_modifier_neutral = {
-		build_cost = -0.05
-		inflation_reduction	= 0.05
+		build_cost = -0.10
 	}	
 	country_modifier_angry = {
 		interest = 1
@@ -94,13 +91,8 @@ estate_jains = {
 	influence_modifier = {
 		desc = EST_VAL_OTHER_ESTATE_IN_POWER
 		trigger = {
-			OR = {
-				has_disaster = estate_nobility_disaster
-				has_disaster = estate_church_disaster
-				has_disaster = estate_burghers_disaster
-				has_disaster = estate_brahmins_disaster
-				has_disaster = estate_vaisyas_disaster
-			}
+			has_any_estate_disaster_active = yes
+			has_not_own_estate_disaster_active = { estate = estate_jains }
 		}
 		influence = -40
 	}
@@ -108,13 +100,8 @@ estate_jains = {
 	loyalty_modifier = {
 		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
 		trigger = {
-			OR = {
-				has_disaster = estate_nobility_disaster
-				has_disaster = estate_church_disaster
-				has_disaster = estate_burghers_disaster
-				has_disaster = estate_brahmins_disaster
-				has_disaster = estate_vaisyas_disaster
-			}
+			has_any_estate_disaster_active = yes
+			has_not_own_estate_disaster_active = { estate = estate_jains }
 		}
 		loyalty = -20
 	}

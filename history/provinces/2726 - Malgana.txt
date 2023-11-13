@@ -1,8 +1,8 @@
 #2726 - Malgana
 
-#add_core = MLG
-#owner =  MLG
-#controller =  MLG
+add_core = MLG
+owner = MLG
+controller = MLG
 culture = nyoongah
 religion = dreamtime
 capital = "Malgana"

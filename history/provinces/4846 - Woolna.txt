@@ -1,8 +1,8 @@
 #4846 - Woolna
 
-#add_core = LAR
-#owner =  LAR
-#controller =  LAR
+add_core = LAR
+owner = LAR
+controller = LAR
 culture = gunwinyguan
 religion = dreamtime
 capital = "Woolna"

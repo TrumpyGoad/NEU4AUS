@@ -1,7 +1,7 @@
 #964 - Mohawk
 
-#owner = MOH
-#controller = MOH
+owner = MOH
+controller = MOH
 culture = iroquois
 religion = totemism
 capital = "Mohawk"
@@ -10,8 +10,8 @@ hre = no
 base_tax = 2 
 base_production = 2
 base_manpower = 2
-#is_city = yes
-#add_core = MOH
+is_city = yes
+add_core = MOH
 native_size = 15
 native_ferocity = 7
 native_hostileness = 3
@@ -25,9 +25,9 @@ discovered_by = north_american
 1707.5.12 = { discovered_by = GBR }
 
 1784.10.22 = {
-	#owner = USA
-	#controller = USA
+	owner = USA
+	controller = USA
 	culture = american
 	religion = protestant 
 } #Second Treaty of Fort Stanwix, Iroquois confederacy no longer dominant
-1809.10.22 = {	#add_core = USA }
+1809.10.22 = {	add_core = USA }

@@ -22,10 +22,10 @@ discovered_by = north_american
 } #French explorers and Henday
 
 1795.1.1 = {
-	#owner = GBR
-	#controller = GBR
-	#add_core = GBR
-	#is_city = yes
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+	is_city = yes
 	capital = "Fort Edmonton"
 	trade_goods = fur
 }

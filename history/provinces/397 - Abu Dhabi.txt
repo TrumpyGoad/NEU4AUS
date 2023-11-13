@@ -1,9 +1,9 @@
 #397 - Abu Dhabi
 
-owner = SHR
-controller = SHR
+owner = ORM
+controller = ORM
 culture = gulf_arabic
-religion = ibadi
+religion = shiite
 capital = "Abu Dhabi"
 trade_goods = livestock #Pearls
 hre = no
@@ -11,7 +11,9 @@ base_tax = 1
 base_production = 1
 base_manpower = 1
 is_city = yes
+add_core = ORM
 add_core = SHR
+add_core = YAS
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = indian

@@ -15,32 +15,29 @@ country_decisions = {
 		allow = {
 			is_core = 33
 			is_at_war = no
-			absolutism = 20
+			33 = {
+				is_state = yes
+			}
 		}
 		effect = {
 			33 = {
 				change_province_name = "St. Petersburg"
 				rename_capital = "St. Petersburg"
-				add_base_tax = 6 
+				add_base_tax = 3
+				add_base_production = 3
 				add_base_manpower = 3
-				change_culture = capital
+				change_culture = ROOT
+				if = {
+					limit = { NOT = { province_has_center_of_trade_of_level = 3 } }
+					add_center_of_trade_level = 1
+				}
+				move_capital_effect = yes
 			}
 			set_country_flag = relocated_capital_st_petersburg
 			add_years_of_income = -1
-			add_prestige = 100
-			33 = {
-				move_capital_effect = yes
+			add_prestige_or_monarch_power = {
+				amount = 100
 			}
-			if = {
-				limit = {
-					33 = {	
-						NOT = { province_has_center_of_trade_of_level = 3 }
-					}
-				}
-				33 = {
-					add_center_of_trade_level = 1
-				}
-			}							
 		}
 		ai_will_do = {
 			factor = 1
@@ -53,9 +50,8 @@ country_decisions = {
 	
 	establish_russian_patriarchate = {
 		potential = {
-			NOT = {
-				has_mission = rus_patriarchate_mission
-			}
+			NOT = { has_mission = rus_patriarchate_mission }
+			NOT = { has_mission = mos_rus_russian_patriarchate }
 			tag = RUS
 			normal_or_historical_nations = yes
 			OR = {

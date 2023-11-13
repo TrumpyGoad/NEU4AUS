@@ -1,11 +1,10 @@
 government = monarchy
-add_government_reform = feudalism_reform
+add_government_reform = scottish_monarchy_reform
 primary_culture = scottish
 add_accepted_culture = highland_scottish
 religion = catholic
 technology_group = western
 capital = 248 # Edinburgh
-historical_rival = FRA
 
 
 1390.1.1 = {

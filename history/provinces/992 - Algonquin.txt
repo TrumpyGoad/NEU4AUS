@@ -1,9 +1,9 @@
 #992 - Algonquin
 
-#owner = AGQ
-#controller = AGQ
-#add_core = AGQ
-#is_city = yes
+owner = AGQ
+controller = AGQ
+add_core = AGQ
+is_city = yes
 culture = algonquin
 religion = totemism
 capital = "Algonquin"

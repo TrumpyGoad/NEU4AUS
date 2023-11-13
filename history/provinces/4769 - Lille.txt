@@ -1,8 +1,7 @@
 # 4769 - Lille, meant to represent Waals Vlaanderen. Principal cities: Lille, Douai, Orchies
 
-owner = BUR
-controller = BUR
-add_core = BUR
+owner = FLA
+controller = FLA
 add_core = FLA
 is_city = yes
 capital = "Lille"
@@ -26,7 +25,7 @@ fort_15th = yes
 1549.11.4 = { add_core = NED }
 1555.1.1 = { religion = reformed }
 1582.1.1 = { religion = catholic } # defeat of the Hurlus
-1648.1.30 = { remove_core = NED } # Peace of Mï¿½nster/Westphalia
+1648.1.30 = { remove_core = NED } # Peace of Münster/Westphalia
 1665.9.17 = { add_claim = FRA } # Louis XIV's father-in-law, Philip IV of Spain, dies
 1667.1.1 = { controller = FRA }
 1668.5.2 = { owner = FRA remove_claim = FRA add_core = FRA remove_core = SPA } # Treaty of Aix-la-Chapelle (1668)

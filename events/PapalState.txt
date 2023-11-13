@@ -7,7 +7,7 @@ country_event = {
 	
 	trigger = {
 		papacy_active = yes
-		owns = 4965		# Il Vaticano
+		owns = 118		# Rome
 		normal_or_historical_nations = yes
 		religion = catholic
 		NOT = { tag = ITA }
@@ -15,6 +15,7 @@ country_event = {
 		NOT = { tag = HLR }
 		NOT = { exists = PAP }
 		NOT = { has_country_flag = no_support }
+		NOT = { has_country_flag = general_flag_for_FU_Rome_flag }	
 	}
 	
 	mean_time_to_happen = {
@@ -73,7 +74,7 @@ country_event = {
 				is_core = 118
 			}
 		}
-		4965 = {
+		118 = {
 			add_core = PAP
 			cede_province = PAP
 			if = {
@@ -114,7 +115,7 @@ country_event = {
 			religion = catholic
 			continent = europe
 		}
-		4965 = { #Il Vaticano
+		118 = {
 			owner = {
 				OR = {
 					NOT = { religion = catholic }

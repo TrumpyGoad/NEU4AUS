@@ -1,8 +1,8 @@
 #2729 - Yolngu
 
-#add_core = YOL
-#owner =  YOL
-#controller =  YOL
+add_core = YOL
+owner = YOL
+controller = YOL
 culture = gunwinyguan
 religion = dreamtime
 capital = "Yolngu"

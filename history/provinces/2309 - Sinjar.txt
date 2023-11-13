@@ -7,9 +7,9 @@ religion = sunni
 capital = "Sindjar"
 trade_goods = sugar
 hre = no
-base_tax = 1
-base_production = 1
-base_manpower = 1
+base_tax = 2 
+base_production = 2
+base_manpower = 2
 is_city = yes
 add_core = IRQ
 add_core = QAR
@@ -19,7 +19,7 @@ discovered_by = indian
 discovered_by = ottoman
 discovered_by = eastern
 discovered_by = nomad_group
-
+add_local_autonomy = 20
 
 1469.2.4 = {
 	owner = AKK

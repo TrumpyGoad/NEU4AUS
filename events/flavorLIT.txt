@@ -1,7 +1,7 @@
 ########################################
 # Flavor Events for Lithuania
 #
-# Scripted by Sara Wendel-ï¿½rtqvist
+# Scripted by Sara Wendel-Örtqvist
 ########################################
 
 namespace = flavor_lit
@@ -805,7 +805,7 @@ country_event = {
 		}
 	}
 }
-### Scandinavian DLC Lithuania Events scripted by William 'Big Boss' Samelis
+### Scandinavian DLC Lithuania Events scripted by Big Boss
 
 country_event = { 
 	id = flavor_lit.14 
@@ -862,34 +862,6 @@ country_event = {
 		POL = { 
 			create_union = LIT 
 			country_event = { id = flavor_pol.20 }
-			set_variable = {
-				which = rulerStatsTracker
-				value = 0
-			}
-			export_to_variable = {
-				which = rulerStatsTrackerADM
-				value = ADM
-			}
-			change_variable = {
-				which = rulerStatsTracker
-				which = rulerStatsTrackerADM
-			}
-			export_to_variable = {
-				which = rulerStatsTrackerDIP
-				value = DIP
-			}
-			change_variable = {
-				which = rulerStatsTracker
-				which = rulerStatsTrackerDIP
-			}
-			export_to_variable = {
-				which = rulerStatsTrackerMIL
-				value = MIL
-			}
-			change_variable = {
-				which = rulerStatsTracker
-				which = rulerStatsTrackerMIL
-			}
 		}
 		if = {
 			limit = { has_dlc = "Lions of the North" }

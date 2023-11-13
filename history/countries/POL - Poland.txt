@@ -1,5 +1,5 @@
 government = monarchy
-add_government_reform = feudalism_reform
+add_government_reform = polish_great_sejm
 primary_culture = polish
 religion = catholic
 technology_group = eastern
@@ -7,8 +7,7 @@ historical_friend = LIT
 historical_rival = TEU
 capital = 262 # Krakow
 add_accepted_culture = ruthenian
-
-national_focus = MIL
+add_truce_with = HUN
 
 1444.10.1 = {
 	set_estate_privilege = estate_nobles_golden_liberty
@@ -16,23 +15,10 @@ national_focus = MIL
 
 1444.11.11 = {
 	monarch = {
-		adm = 2
-		mil = 2
-		dip = 2
+		adm = 0
+		mil = 0
+		dip = 0
 		regent = yes
-	}
-}
-
-1444.1.1 = {
-	leader = {
-		name = "Piotr Dunin"
-		type = general
-
-		fire = 2
-		shock = 3
-		manuever = 3
-		siege = 1
-		death_date = 1484.1.1
 	}
 }
 
@@ -80,7 +66,18 @@ national_focus = MIL
 	add_heir_personality = silver_tongue_personality
 }
 
+1461.1.1 = {
+	leader = {
+		name = "Piotr Dunin"
+		type = general
 
+		fire = 2
+		shock = 3
+		manuever = 3
+		siege = 1
+		death_date = 1484.1.1
+	}
+}
 
 1465.1.1 = {
 	leader = {

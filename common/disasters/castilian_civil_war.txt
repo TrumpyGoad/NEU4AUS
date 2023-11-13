@@ -3,21 +3,20 @@
 
 castilian_civil_war = {
 	potential = {
-		#tag = CAS
-		#NOT = { has_country_flag = had_cas_civil_war }
-		#is_free_or_tributary_trigger = yes
-		#exists = ARA
-		#exists = POR
-		#ARA = {
-		#	is_free_or_tributary_trigger = yes
-		#}
-		#POR = {
-		#	is_free_or_tributary_trigger = yes
-		#}
-		#government = monarchy
-		#normal_or_historical_nations = yes
-		#uses_doom = no
-		always = no
+		tag = CAS
+		NOT = { has_country_flag = had_cas_civil_war }
+		is_free_or_tributary_trigger = yes
+		exists = ARA
+		exists = POR
+		ARA = {
+			is_free_or_tributary_trigger = yes
+		}
+		POR = {
+			is_free_or_tributary_trigger = yes
+		}
+		government = monarchy
+		normal_or_historical_nations = yes
+		uses_doom = no
 	}
 
 
@@ -104,6 +103,7 @@ castilian_civil_war = {
 	
 	on_start = castilian_civil_war.1
 	on_end = castilian_civil_war.100
+	ended_by_country_breaking_to_rebels = no
 	
 	on_monthly = {
 		events = {

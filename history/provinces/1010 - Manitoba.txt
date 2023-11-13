@@ -20,20 +20,20 @@ discovered_by = north_american
 1732.1.1 = { discovered_by = FRA } # Pierre Gaultier de Varennes
 
 1741.1.1 = {
-	#owner = FRA
-	#controller = FRA
-	#add_core = FRA
+	owner = FRA
+	controller = FRA
+	add_core = FRA
 	culture = cosmopolitan_french
 	religion = catholic
 	capital = "Fort Dauphin"
-	#is_city = yes
+	is_city = yes
 }
 1763.2.10 = {
 	discovered_by = GBR
-	#owner = GBR
-	#controller = GBR
+	owner = GBR
+	controller = GBR
 	remove_core = FRA
-	#add_core = GBR
+	add_core = GBR
 	culture = english
 	religion = protestant
 	trade_goods = fur

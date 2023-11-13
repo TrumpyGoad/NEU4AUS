@@ -8,6 +8,7 @@ yem_formation = {
 		NOT = { map_setup = map_setup_random }
 		OR = {
 			tag = RAS
+			tag = ADE
 		}
 	}
 	has_country_shield = yes
@@ -33,32 +34,29 @@ yem_formation = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
-				add_core = ROOT
+				add_permanent_claim = ROOT
 			}
 			upper_yemen_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
-				add_core = ROOT
+				add_permanent_claim = ROOT
 			}
 			hadramut_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
-				add_core= ROOT
+				add_permanent_claim = ROOT
 			}
 			tihama_al_yemen_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
-				add_core = ROOT
+				add_permanent_claim = ROOT
 			}
-			unlock_estate_privilege = {
-                estate_privilege = estate_burghers_hydraulic_rights
-            }
 		}
 		ai_weight = {
 			factor = 500	#Having an army to conquer Yemen is probably a good idea
@@ -90,10 +88,9 @@ yem_formation = {
 		}
 		
 		effect = {
-			add_mil_power = 75
-			add_adm_power = 150
-			add_dip_power = 150
-			add_prestige = 20
+			add_mil_power = 50
+			add_adm_power = 50
+			add_prestige = 15
 		}
 		ai_weight = {
 			factor = 500	#Conquering Yemen is also a good idea
@@ -126,20 +123,9 @@ yem_formation = {
 		}
 		
 		effect = {
-			add_country_modifier = {
-				name = "yemen_united"
-				duration = 9125
-			}
-			arabia_region = { 
-						limit = { 
-							NOT = { owned_by = ROOT } 
-							NOT = { is_core = ROOT } 
-						}
-						add_permanent_claim = ROOT 
-					}
-
-			add_mil_power = 75
-			add_prestige = 10
+			add_adm_power = 50
+			add_mil_power = 50
+			add_prestige = 15
 		}
 		ai_weight = {
 			factor = 500	#Man, look at all these good ideas Aden and Rassids have!

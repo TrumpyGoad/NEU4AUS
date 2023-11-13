@@ -7,11 +7,6 @@ country_decisions = {
 			OR = {
 				tag = QNG
 				tag = MNG
-				tag = CSH
-				tag = CYI
-				tag = YAN
-				tag = YUE
-				tag = CHC
 				has_reform = celestial_empire
 			}
 			normal_or_historical_nations = yes
@@ -58,11 +53,6 @@ country_decisions = {
 				tag = MCH
 				tag = MNG
 				tag = QNG
-				tag = CSH
-				tag = CYI
-				tag = YAN
-				tag = YUE
-				tag = CHC
 				has_reform = celestial_empire
 			}
 			normal_or_historical_nations = yes

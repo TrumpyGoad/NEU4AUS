@@ -1,8 +1,8 @@
 #1243 - Samoa
 
-#add_core = SAM
-#owner = SAM
-#controller = SAM
+add_core = SAM
+owner = SAM
+controller = SAM
 culture = polynesian
 religion = animism
 hre = no

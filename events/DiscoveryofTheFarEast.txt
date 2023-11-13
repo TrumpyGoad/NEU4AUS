@@ -1,5 +1,3 @@
-#Only removed reference to grand_navy idea to remove error
-
 # Japan Discovered!
 country_event = {
 	id = 9000
@@ -296,10 +294,10 @@ country_event = {
 			factor = 0.8
 			mercantilism = 90
 		}
-		#modifier = {
-		#	factor = 0.9
-		#	has_idea = grand_navy
-		#}
+		modifier = {
+			factor = 0.9
+			has_idea = grand_navy
+		}
 		modifier = {
 			factor = 0.9
 			advisor = trader

@@ -10,6 +10,7 @@ spa_colonial_group = {
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_dlc = "Golden Century" }
+		NOT = { has_dlc = "Domination" }
 	}
 	has_country_shield = yes
 	
@@ -26,7 +27,7 @@ spa_colonial_group = {
 				}
 				custom_trigger_tooltip = {
 					tooltip = miss_discover_caribbean
-					carribeans_region = {
+					colonial_the_carribean = {
 						has_discovered = ROOT
 					}
 				}
@@ -53,7 +54,7 @@ spa_colonial_group = {
 		completed_by = 1493.1.1
 		
 		provinces_to_highlight = {
-			region = carribeans_region
+			colonial_region = colonial_the_carribean
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = yes
 		}
@@ -63,7 +64,7 @@ spa_colonial_group = {
 				tooltip = miss_colonize_caribbean
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 					value = 1
-					region = carribeans_region
+					colonial_region = colonial_the_carribean
 					is_city = yes
 				}
 			}
@@ -78,6 +79,32 @@ spa_colonial_group = {
 		}
 	}
 	
+	spa_rb_la_plata = {
+		icon = mission_iberian_conquistador
+		required_missions = { spa_rb_caribbean_colony }
+		completed_by = 1508.1.1
+		
+		provinces_to_highlight = {
+			colonial_region = colonial_la_plata
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			has_discovered = yes
+		}
+		
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 5
+				colonial_region = colonial_la_plata
+				is_city = yes
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "spa_rb_overseas_trade"
+				duration = 5475
+			}
+		}
+	}
 }
 
 spa_colonial_group_rnw_off = {
@@ -92,6 +119,7 @@ spa_colonial_group_rnw_off = {
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_dlc = "Golden Century" }
+		NOT = { has_dlc = "Domination" }
 	}
 	
 	has_country_shield = yes
@@ -225,7 +253,7 @@ spa_colonial_group_rnw_off = {
 		
 		effect = {
 			add_treasury = 800
-			peru_region = {
+			colonial_peru = {
 				limit = {
 					NOT = { is_empty = yes }
 				}
@@ -268,6 +296,7 @@ spa_colonial_group_two = {
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_dlc = "Golden Century" }
+		NOT = { has_dlc = "Domination" }
 	}
 	has_country_shield = yes
 	
@@ -447,6 +476,7 @@ spa_colonial_group_two_rnw_off = {
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_dlc = "Golden Century" }
+		NOT = { has_dlc = "Domination" }
 	}
 	has_country_shield = yes
 	
@@ -492,6 +522,7 @@ spa_iberia_convert = {
 		}
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_dlc = "Golden Century" }
+		NOT = { has_dlc = "Domination" }
 	}
 	has_country_shield = yes
 	
@@ -543,6 +574,7 @@ spa_colonial_group_three_rnw_off = {
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_dlc = "Golden Century" }
+		NOT = { has_dlc = "Domination" }
 	}
 	has_country_shield = yes
 	
@@ -588,6 +620,7 @@ spa_reconquista = {
 		}
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_dlc = "Golden Century" }
+		NOT = { has_dlc = "Domination" }
 	}
 	has_country_shield = yes
 	
@@ -764,6 +797,7 @@ spa_reconquista_por = {
 		}
 		NOT = { map_setup = map_setup_random }
 		NOT = { has_dlc = "Golden Century" }
+		NOT = { has_dlc = "Domination" }
 	}
 	has_country_shield = yes
 	

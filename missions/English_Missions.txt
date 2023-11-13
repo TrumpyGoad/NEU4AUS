@@ -26,7 +26,6 @@ eng_british_conquest = {
 			army_size_percentage = 1
 			manpower_percentage = 0.6
 			num_of_generals = 1
-			NOT = { war_with = FRA }
 		}
 		
 		effect = {
@@ -96,6 +95,7 @@ eng_british_conquest = {
 				add_casus_belli = {
 					target = SCO
 					type = cb_vassalize_mission
+					months = 120
 				}
 			}
 		}
@@ -183,7 +183,9 @@ eng_british_conquest_ire = {
 				}
 			}
 		}
-	
+		ai_weight = {
+			factor = 500
+		}
 	}
 }
 
@@ -273,7 +275,9 @@ eng_british_conquest_scotland = {
 				371 = {add_claim = ROOT }
 			}
 		}
-	
+		ai_weight = {
+			factor = 500
+		}
 	}
 }
 
@@ -312,6 +316,7 @@ eng_french_conquest = {
 						tooltip = eng_war_france.tooltip
 						has_country_flag = rb_gave_up_maine
 					}
+					FRA = { is_subject_of = ROOT }
 				}
 			}
 			else_if = {
@@ -338,7 +343,7 @@ eng_french_conquest = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
-				add_core = ROOT
+				add_permanent_claim = ROOT
 			}
 			champagne_area = {
 				limit = {
@@ -356,23 +361,89 @@ eng_french_conquest = {
 		position = 3
 		
 		provinces_to_highlight = {
-			area = ile_de_france_area
+			OR = {
+				AND = {
+					owned_by = FRA
+					is_capital = yes
+				}
+				AND = {
+					province_id = 183
+					NOT = { owned_by = FRA }
+					owner = {
+						NOT = { exists = FRA }
+					}
+				}
+			}
+			NOT = { controlled_by = ROOT }
 		}
 		
 		trigger = {
-			AND = {
-				ile_de_france_area = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT
+			if = {
+				limit = {
+					exists = FRA
+					NOT = { FRA = { is_subject_of = ROOT } }
+				}
+				FRA = {
+					capital_scope = {
+						OR = {
+							controlled_by = ROOT
+							AND = {
+								controller = {
+									OR = {
+										is_subject_of = ROOT
+										alliance_with = ROOT
+										overlord = {
+											alliance_with = ROOT
+										}
+									}
+									custom_trigger_tooltip = {
+										tooltip = joint_war_with_root_vs_france
+										OR = {
+											is_in_war = {
+												attackers = root
+												attackers = this
+												defenders = FRA
+											}
+											is_in_war = {
+												defenders = root
+												defenders = this
+												attackers = FRA
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 			}
-			NOT = {
-				has_country_flag = eng_had_end_of_hundred_years_war
+			else_if = {
+				limit = {
+					exists = FRA
+					FRA = { is_subject_of = ROOT }
+				}
+				FRA = { is_subject_of = ROOT }
+			}
+			else = {
+				183 = {
+					owned_by = ROOT
+				}
 			}
 		}
 		
 		effect = {
-			
+			if = {
+				limit = {
+					FRA = {
+						is_subject = no
+					}
+				}
+				add_casus_belli = {
+					target = FRA
+					type = cb_hundred_years_union
+					months = 360
+				}
+			}
 			if = {
 				limit = {
 					has_dlc = "Rule Britannia"
@@ -385,19 +456,6 @@ eng_french_conquest = {
 					add_permanent_claim = ROOT
 				}
 			}
-			if = {
-				limit = {
-					ROOT = { has_ruler = "Henry VI" }
-				}
-				change_adm = 2
-				change_dip = 2
-				change_mil = 2
-			}
-			hidden_effect = {
-				set_country_flag = no_wars_of_the_roses_flag
-			}
-			custom_tooltip = no_wars_of_the_roses.tt
-			
 		}
 	}
 	
@@ -407,20 +465,43 @@ eng_french_conquest = {
 		position = 5
 		
 		provinces_to_highlight = {
-			region = france_region
-			NOT = {
-				owned_by = ROOT
+			OR = {
+				area = ile_de_france_area
+				province_id = 186
+				province_id = 4390
 			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
-			num_of_owned_provinces_with  = {
-				value = 25
-				region = france_region
+			OR = {
+				FRA = { is_subject_of = ROOT }
+				AND = {
+					ile_de_france_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					186 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					4390 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
 			}
 		}
 		
 		effect = {
+			if = {
+				limit = {
+					has_heir = yes
+					has_ruler_flag = henry_vi_lancaster
+					NOT = { has_country_flag = rb_gave_up_maine }
+				}
+				change_adm = 1
+				change_dip = 1
+				change_mil = 1
+			}
 			add_prestige = 25
 			add_country_modifier = {
 				name = "eng_french_recovery"
@@ -445,6 +526,7 @@ eng_exploration_americas = {
 			tag = ENG
 			tag = GBR
 		}
+		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -462,7 +544,7 @@ eng_exploration_americas = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = miss_discover_caribbean
-				carribeans_region = { has_discovered = ROOT }
+				colonial_the_carribean = { has_discovered = ROOT }
 			}
 		}
 		
@@ -473,7 +555,9 @@ eng_exploration_americas = {
 			}
 			add_dip_power = 50
 		}
-	
+		ai_weight = {
+			factor = 500
+		}
 	}
 	
 	english_colony_in_north_america = {
@@ -503,6 +587,9 @@ eng_exploration_americas = {
 				tradition = 80
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 	
 	english_colony_in_the_carribean = {
@@ -511,7 +598,7 @@ eng_exploration_americas = {
 		completed_by = 1610.1.1
 		
 		provinces_to_highlight = {
-			region = carribeans_region
+			colonial_region = colonial_the_carribean
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
@@ -521,7 +608,7 @@ eng_exploration_americas = {
 			tooltip = english_colony_in_the_carribean.tooltip
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 					value = 5
-					region = carribeans_region
+					colonial_region = colonial_the_carribean
 					is_city = yes
 				}
 			}
@@ -532,6 +619,9 @@ eng_exploration_americas = {
 				name = "eng_caribbean_trade"
 				duration = 5475
 			}
+		}
+		ai_weight = {
+			factor = 500
 		}
 	}
 }
@@ -550,6 +640,10 @@ eng_chesapeake_dominance = {
 			tag = ENG
 			tag = GBR
 		}
+		is_random_new_world = no
+		NOT = {
+			has_dlc = "Rule Britannia"
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -561,12 +655,12 @@ eng_chesapeake_dominance = {
 		completed_by = 1618.5.1
 		
 		provinces_to_highlight = {
-			province_id = 1499
+			province_id = 1500
 			has_discovered = ROOT
 		}
 		
 		trigger = { 
-			1499 = {	# Massachusets Bay
+			1500 = {	# Chesapeake Bay
 				is_strongest_trade_power = ROOT
 			}
 		}
@@ -584,6 +678,9 @@ eng_chesapeake_dominance = {
 					add_permanent_claim = ROOT
 				}
 			}
+		}
+		ai_weight = {
+			factor = 500
 		}
 	}
 
@@ -610,7 +707,7 @@ eng_indian_ocean_exploration = {
 	england_discovers_india = {
 		icon = mission_junk_boat
 		required_missions = { }
-		position = 7
+		position = 6
 		completed_by = 1579.1.1
 		
 		trigger = {
@@ -640,6 +737,9 @@ eng_indian_ocean_exploration = {
 					add_claim = ROOT
 				}
 			}
+		}
+		ai_weight = {
+			factor = 500
 		}
 	}
 	
@@ -675,7 +775,9 @@ eng_indian_ocean_exploration = {
 				duration = 5475
 			}
 		}
-	
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 }
@@ -693,6 +795,9 @@ eng_indian_cot_dominance = {
 		OR = {
 			tag = ENG
 			tag = GBR
+		}
+		NOT = {
+			has_dlc = "Rule Britannia"
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -736,6 +841,9 @@ eng_indian_cot_dominance = {
 				duration = 5475
 			}
 		}
+		ai_weight = {
+			factor = 500
+		}
 	}
 
 }
@@ -754,6 +862,10 @@ eng_british_cot_dominance = {
 			tag = ENG
 			tag = GBR
 		}
+		NOT = {
+			has_dlc = "Rule Britannia"
+		}
+		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes

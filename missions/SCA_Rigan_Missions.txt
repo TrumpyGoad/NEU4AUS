@@ -70,7 +70,7 @@ rig_hansa_mission_slot = {
 			province_id = 1926
 		}
 		trigger = {
-			1927 = {
+			1926 = {
 				OR = {
 					is_strongest_trade_power = ROOT
 					trade_share = {

@@ -28,12 +28,12 @@ country_decisions = {
 						}
 					}
 					capital_scope = {
-						region = canada_region
+						colonial_region = colonial_canada
 						is_core = ROOT
 					}
 				}
 			}
-			canada_region = {
+			colonial_canada = {
 				owned_by = ROOT
 			}
 			OR = {
@@ -45,7 +45,7 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			region = canada_region
+			colonial_region = colonial_canada
 			OR = {
 				NOT = { owned_by = ROOT }
 				is_city = no
@@ -56,12 +56,12 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			capital_scope = {
-				region = canada_region
+				colonial_region = colonial_canada
 				is_core = ROOT
 			}
 			num_of_owned_provinces_with = {
 				value = 10
-				region = canada_region
+				colonial_region = colonial_canada
 				is_city = yes
 			}
 			NOT = { exists = CAN }
@@ -84,6 +84,7 @@ country_decisions = {
 				change_primary_culture = quebecois
 			}
 			change_tag = CAN
+			on_change_tag_effect = yes
 			if = {
 				limit = {
 					NOT = { is_former_colonial_nation = yes }
@@ -97,7 +98,7 @@ country_decisions = {
 				}
 				set_government_rank = 2
 			}
-			canada_region = {
+			colonial_canada = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}

@@ -1,8 +1,8 @@
 #4323 - Farafreh
 
-owner = AZZ
-controller = AZZ #Local Badawin in control
-add_core = AZZ
+owner = MAM
+controller = MAM #Local Badawin in control
+add_core = MAM
 culture = al_misr_arabic
 religion = sunni
 capital = "Farafreh"
@@ -13,6 +13,7 @@ hre = no
 base_tax = 1 
 base_production = 1
 discovered_by = MAM
+add_local_autonomy = 50
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = eastern

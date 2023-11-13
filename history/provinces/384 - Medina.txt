@@ -1,7 +1,7 @@
 #384 - Medina
 
-owner = HED
-controller = HED
+owner = MDA
+controller = MDA
 culture = hejazi_culture
 religion = sunni
 capital = "Medina"
@@ -11,8 +11,7 @@ base_tax = 3
 base_production = 3
 base_manpower = 3
 is_city = yes
-fort_15th = yes
-add_core = HED
+add_core = MDA
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = western

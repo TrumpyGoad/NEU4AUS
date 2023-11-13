@@ -121,7 +121,6 @@ bishop_elector_group_2 = {
 						OR = {
 							alliance_with = root
 							is_subject_of = root
-							is_enemy = root
 						}
 					}
 				}
@@ -137,7 +136,6 @@ bishop_elector_group_2 = {
 				OR = {
 					alliance_with = KOL
 					overlord_of = KOL
-					is_enemy = KOL
 				}
 			}
 			else = {
@@ -151,7 +149,6 @@ bishop_elector_group_2 = {
 				OR = {
 					alliance_with = TRI
 					overlord_of = TRI
-					is_enemy = TRI
 				}
 			}
 			else = {
@@ -165,7 +162,6 @@ bishop_elector_group_2 = {
 				OR = {
 					alliance_with = MAI
 					overlord_of = MAI
-					is_enemy = TRI
 				}
 			}
 			else = {
@@ -178,10 +174,6 @@ bishop_elector_group_2 = {
 				name = bishop_elector_ecclesiastic_league
 				duration = 7300
 			}
-			add_core = 80 #Trier
-			add_core = 1760 #Coblenz
-			add_core = 78 #Mainz
-			add_core = 4718 #Aschaffenberg
 		}
 	}
 	bishop_elector_unity_in_faith = {
@@ -396,8 +388,9 @@ kol_group_1 = {
 			north_westphalia_area = {
 				limit = {
 					NOT = { is_core = root }
+					NOT = { is_permanent_claim = root }
 				}
-				add_core = root
+				add_permanent_claim = root
 			}
 		}
 	}

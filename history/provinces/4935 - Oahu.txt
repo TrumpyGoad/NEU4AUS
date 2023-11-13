@@ -1,8 +1,8 @@
 #4935 - Oahu
 
-#add_core = OAH
-#owner = OAH
-#controller = OAH
+add_core = OAH
+owner = OAH
+controller = OAH
 culture = polynesian
 religion = animism
 hre = no

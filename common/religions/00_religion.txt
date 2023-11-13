@@ -32,7 +32,7 @@ christian = {
 			diplomatic_reputation = 1
 			advisor_pool = 1
 		}
-		declare_war_in_regency = yes
+		
 		hre_religion = yes
 		
 		on_convert = {
@@ -46,8 +46,8 @@ christian = {
 			add_country_modifier = {
 				name = "conversion_zeal"
 				duration = 3650
-			}
-			
+			}			
+		
 		}
 		
 		heretic = { BOGOMILIST WALDENSIAN FRATICELLI LOLLARD SOCINIAN }
@@ -317,13 +317,13 @@ christian = {
 		color = { 135 77 255 }
 		icon = 28
 		allow_female_defenders_of_the_faith = yes
-		declare_war_in_regency = yes
+
 		allowed_center_conversion = {
 			catholic
 		}
 		country = {
 			development_cost = -0.1
-			innovativeness_gain = 0.5
+			technology_cost = -0.05
 		}
 		
 		country_as_secondary = {
@@ -342,6 +342,7 @@ christian = {
 			expel_heretics_aspect
 			diplomats_of_the_reformation_aspect
 			icons_of_the_church_aspect
+			spread_the_book_of_common_prayer
 		}
 		aspects_name = ANGLICAN_ASPECTS
 		
@@ -361,7 +362,7 @@ christian = {
 			shock_damage_received = -0.05
 			global_heretic_missionary_strength = 0.02
 		}
-		declare_war_in_regency = yes
+		
 		country_as_secondary = {
 			shock_damage_received = -0.025
 		}
@@ -401,7 +402,7 @@ christian = {
 			improve_relation_modifier = 0.15
 			church_loyalty_modifier = 0.1
 		}
-		declare_war_in_regency = yes
+		
 		country_as_secondary = {
 			idea_cost = -0.1
 		}
@@ -423,6 +424,7 @@ christian = {
 			justified_religious_war_aspect
 			war_preaches_aspect
 			head_of_the_church_aspect
+			anglican_aspect
 		}
 		aspects_name = PROTESTANT_ASPECTS
 		
@@ -540,7 +542,7 @@ christian = {
 			tolerance_heretic = 2
 			advisor_pool = 1
 		}
-		declare_war_in_regency = yes
+		
 		country_as_secondary = {
 			global_unrest = -1
 			advisor_cost = -0.1
@@ -659,7 +661,7 @@ christian = {
 		province = {
 			local_missionary_strength = -0.01
 		}
-		declare_war_in_regency = yes
+		
 		
 		heretic = { OLD_BELIEVER MOLOKAN DUKHOBOR KHLYST SKOPTSY ICONOCLAST }
 		
@@ -732,7 +734,7 @@ christian = {
 			}
 
 			icon_pancreator = {
-				development_cost = -0.05
+				development_cost = -0.10
 				build_cost = -0.1
 				
 				allow = {
@@ -812,7 +814,7 @@ christian = {
 		color = { 178 38 76 }
 		icon = 14
 		country = {
-			defensiveness = 0.1
+			defensiveness = 0.15
 			tolerance_own = 1
 		}
 		country_as_secondary = {
@@ -822,7 +824,13 @@ christian = {
 		province = {
 			local_missionary_strength = -0.02
 		}
-		declare_war_in_regency = yes
+		allowed_center_conversion = {
+			orthodox
+			sunni
+			shiite
+			ibadi
+		}
+		
 		heretic = { ZAMIKAELITES STEPHANITES EUSTATHIANS }
 		
 		misguided_heretic = yes
@@ -925,7 +933,7 @@ muslim = {
 			picture = "GFX_icon_muslim_school_hanafi"
 
 			# religion_sub_modifier = no is possible, will hide icon in religious screen
-			core_creation = -0.1
+			adm_tech_cost_modifier = -0.05
 		}
 		hanbali_school = {
 			potential_invite_scholar = {
@@ -997,7 +1005,7 @@ muslim = {
 
 			picture = "GFX_icon_muslim_school_hanbali"
 
-			cav_to_inf_ratio = 0.1
+			ae_impact = -0.1
 		}
 		maliki_school = {
 			potential_invite_scholar = {
@@ -1218,7 +1226,6 @@ muslim = {
 			legitimacy = 1
 			republican_tradition = 0.2
 			devotion = 1
-			max_absolutism = 5
 		}
 		jafari_school = {
 			potential_invite_scholar = {
@@ -1370,15 +1377,18 @@ muslim = {
 	sunni = {
 		color = { 0 153 0 }
 		icon = 5
+		allowed_center_conversion = {
+			ibadi
+			shiite
+		}
 		country = {
-			tolerance_own = 1
-			tolerance_heathen = 1
+			cav_to_inf_ratio = 0.10
+			heir_chance = 1.0
 		}
 		country_as_secondary = {
 			trade_efficiency = 0.1
 			heir_chance = 1.0
 		}
-		declare_war_in_regency = yes
 		province = {
 			local_missionary_strength = -0.02
 		}
@@ -1390,16 +1400,19 @@ muslim = {
 
 	shiite = {
 		color = { 0 204 0 }
-		icon = 6
+		icon = 6	
+		allowed_center_conversion = {
+			sunni
+			ibadi
+		}
 		country = {
-			global_heretic_missionary_strength = 0.01
+			heir_chance = 1.0
 			land_morale = 0.05
 		}
 		country_as_secondary = {
 			land_morale = 0.05
 			advisor_cost = -0.1
 		}
-		declare_war_in_regency = yes
 		province = {
 			local_missionary_strength = -0.02
 		}
@@ -1411,19 +1424,23 @@ muslim = {
 	
 	ibadi = {
 		color = { 0 102 0 }
-		icon = 16
+		icon = 16	
+		allowed_center_conversion = {
+			sunni
+			shiite
+		}
 		country = {
-			naval_morale = 0.1
+			heir_chance = 1.0
 			global_trade_goods_size_modifier = 0.1
 		}
 		country_as_secondary = {
 			global_ship_cost = -0.1
 			advisor_cost = -0.1
 		}
-		declare_war_in_regency = yes
 		province = {
 			local_missionary_strength = -0.02
 		}
+		
 		heretic = { HARURI SUFRI NAJADAT AZRAQI }
 		
 		uses_piety = yes				# Uses piety mechanics
@@ -1435,14 +1452,13 @@ muslim = {
 }
 
 eastern = {
-	defender_of_faith = yes
+
 	flags_with_emblem_percentage = 33
 	flag_emblem_index_range = { 58 80 }
 
 	buddhism = { #Theravada
 		color = { 204 76 0 }
 		icon = 24
-		declare_war_in_regency = yes
 		allowed_conversion = {
 			vajrayana
 			mahayana
@@ -1478,9 +1494,8 @@ eastern = {
 			mahayana
 			buddhism #Theravada
 		}
-		declare_war_in_regency = yes
 		country = {
-			tolerance_heretic = 1
+			tolerance_heretic = 2
 			land_morale = 0.05
 		}
 		country_as_secondary = {
@@ -1510,7 +1525,6 @@ eastern = {
 			vajrayana
 			buddhism #Theravada
 		}
-		declare_war_in_regency = yes
 		country = {
 			tolerance_heretic = 2
 			idea_cost = -0.05
@@ -1542,7 +1556,6 @@ eastern = {
 			tolerance_heretic = 2
 			adm_tech_cost_modifier = -0.1
 		}
-		declare_war_in_regency = yes
 		country_as_secondary = {
 			adm_tech_cost_modifier = -0.1
 			stability_cost_modifier = -0.1
@@ -1556,9 +1569,8 @@ eastern = {
 		icon = 10
 		country = {
 			land_morale = 0.1
-			tolerance_heathen = 1
+			tolerance_heretic = 2
 		}
-		declare_war_in_regency = yes
 		province = {
 			local_missionary_strength = -0.02
 		}
@@ -1581,14 +1593,13 @@ dharmic = {
 
 	flags_with_emblem_percentage = 33
 	flag_emblem_index_range = { 61 82 } #Many shared with Eastern
-	defender_of_faith = yes
+
 	hinduism = {
 		color = { 0 204 204 }
 		icon = 8
 		allowed_conversion = {
 			sikhism
 		}
-		declare_war_in_regency = yes
 		country = {
 			tolerance_heathen = 1
 			tolerance_own = 1
@@ -1598,7 +1609,7 @@ dharmic = {
 			tolerance_heretic = 1
 			tolerance_heathen = 2
 		}
-
+		
 		personal_deity = yes
 		
 		on_convert = {
@@ -1622,7 +1633,6 @@ dharmic = {
 			sunni
 			shiite
 		}
-		declare_war_in_regency = yes
 		country = {
 			mil_tech_cost_modifier = -0.1
 			land_morale = 0.1
@@ -2233,7 +2243,7 @@ dharmic = {
 }
 
 pagan = {
-	defender_of_faith = yes
+
 	flags_with_emblem_percentage = 10
 	flag_emblem_index_range = { 83 96 }
 
@@ -2244,7 +2254,6 @@ pagan = {
 			tolerance_own = 1
 			global_unrest = -1
 		}
-		declare_war_in_regency = yes
 		country_as_secondary = {
 			tolerance_own = 2
 			loot_amount = 0.25
@@ -2252,7 +2261,7 @@ pagan = {
 		province = {
 			local_missionary_strength = 0.02
 		}
-
+		
 		heretic = { SNAKE_CLAN }
 	}
 	shamanism = { #Fetishism, tag kept to avoid breaking saves.
@@ -2262,7 +2271,6 @@ pagan = {
 			tolerance_heathen = 2
 			diplomatic_reputation = 1
 		}
-		declare_war_in_regency = yes
 		country_as_secondary = {
 			tolerance_own = 2
 			loot_amount = 0.25
@@ -2278,7 +2286,6 @@ pagan = {
 			tolerance_own = 1
 			global_unrest = -1
 		}
-		declare_war_in_regency = yes
 		country_as_secondary = {
 			tolerance_own = 2
 			loot_amount = 0.25
@@ -2286,8 +2293,6 @@ pagan = {
 		province = {
 			local_missionary_strength = 0.02
 		}
-
-
 
 		ancestors = yes
 		
@@ -2298,19 +2303,19 @@ pagan = {
 		color = { 64 115 115 }
 		icon = 18
 		country = {
-			tolerance_own = 1
+			tolerance_own = 2
 			global_autonomy = -0.05
 		}
-		declare_war_in_regency = yes
+
 		country_as_secondary = {
-			tolerance_own = 1
+			tolerance_own = 2
 			global_autonomy = -0.05
 		}
 		
 		province = {
 			local_missionary_strength = 0.02
 		}
-
+		
 		authority = yes
 		religious_reforms = yes
 		reform_tooltip = INTI_REFORM_TOOLTIP
@@ -2326,7 +2331,6 @@ pagan = {
 			global_unrest = -2
 			burghers_influence_modifier = -0.05
 		}
-		declare_war_in_regency = yes
 		country_as_secondary = {
 			land_morale = 0.05
 			raze_power_gain = 0.2
@@ -2334,7 +2338,7 @@ pagan = {
 		province = {
 			local_missionary_strength = 0.02
 		}
-
+		
 		doom = yes
 		declare_war_in_regency = yes
 		religious_reforms = yes
@@ -2351,7 +2355,6 @@ pagan = {
 			tolerance_own = 1
 			advisor_pool = 1
 		}
-		declare_war_in_regency = yes
 		country_as_secondary = {
 			advisor_pool = 1
 			stability_cost_modifier = -0.1
@@ -2359,7 +2362,7 @@ pagan = {
 		province = {
 			local_missionary_strength = 0.02
 		}
-
+		
 		religious_reforms = yes
 		reform_tooltip = MESOAMERICAN_REFORM_TOOLTIP
 		
@@ -2373,7 +2376,6 @@ pagan = {
 			land_forcelimit_modifier = 0.10
 			naval_forcelimit_modifier = 0.10
 		}
-		declare_war_in_regency = yes
 		country_as_secondary = {
 			merc_maintenance_modifier = -0.1
 			galley_power = 0.2
@@ -2381,7 +2383,7 @@ pagan = {
 		province = {
 			local_missionary_strength = 0.02
 		}
-
+		
 		personal_deity = yes
 		
 		heretic = { OLD_NORSE }	
@@ -2390,12 +2392,10 @@ pagan = {
 	tengri_pagan_reformed = {
 		icon = 27
 		color = { 25 76 217 }
-		declare_war_in_regency = yes
 		country = {
-			cavalry_flanking = 0.5
+			cav_to_inf_ratio = 0.25
 			global_regiment_cost = -0.2
 		}
-
 		can_have_secondary_religion = yes
 		heretic = { OLD_TENGRI }
 	}
@@ -2407,8 +2407,6 @@ pagan = {
 			shock_damage_received = -0.05
 			diplomatic_reputation = 1
 		}
-		declare_war_in_regency = yes
-
 		country_as_secondary = {
 			shock_damage = 0.1
 			hostile_attrition = 2
@@ -2423,10 +2421,9 @@ pagan = {
 }
 
 jewish_group = {
-
 	flags_with_emblem_percentage = 33
-	defender_of_faith = yes
 	flag_emblem_index_range = { 106 107 }
+	defender_of_faith = yes
 
 	jewish = {
 		icon = 20
@@ -2435,7 +2432,6 @@ jewish_group = {
 			tolerance_own = 2
 			advisor_pool = 1
 		}
-		declare_war_in_regency = yes
 		country_as_secondary = {
 			advisor_pool = 1
 			advisor_cost = -0.1
@@ -2443,7 +2439,7 @@ jewish_group = {
 		province = {
 			local_missionary_strength = -0.02
 		}
-
+		
 		uses_judaism_power = yes
 		aspects_name = JEWISH_ASPECTS
 			
@@ -2492,7 +2488,7 @@ jewish_group = {
 					limit = {
 						has_church_aspect = judaism_simchat_torah_aspect
 					}
-					change_government_reform_progress = 20
+					change_government_reform_progress = 25
 					add_legitimacy_equivalent = {
 						amount = 5
 						republican_tradition = 5
@@ -2568,13 +2564,19 @@ zoroastrian_group = {
 			tolerance_own = 2
 			trade_efficiency = 0.1
 		}
-		declare_war_in_regency = yes
 		country_as_secondary = {
 			merchants = 1
 			tolerance_own = 1
 		}
+		allowed_center_conversion = {
+			sunni
+			shiite
+			orthodox
+			coptic
+			hinduism
+		}
 
-		holy_sites = { 421 4430 2223 441 2235 }
+		holy_sites = { 2212 4430 2223 441 4336 }
 
 		blessings = {
 			blessing_yasna
@@ -2583,7 +2585,7 @@ zoroastrian_group = {
 			blessing_manthras
 			blessing_dakhma
 		}
-
+		
 		heretic = { MAZDAKI MANICHEAN }	
 	}
 	

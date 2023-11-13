@@ -4,26 +4,26 @@ primary_culture = nubian
 religion = coptic
 technology_group = east_african
 unit_type = sub_saharan
-capital = 1221	# El Obeid
+capital = 1222	# Sennar
 
 #Sultans of Senar
 
 1503.1.1 = {
 	monarch = {
-		name = "'Amï¿½ra I Dï¿½nqas"
+		name = "'Amâra I Dûnqas"
 		dynasty = "Senar"
 		adm = 3
 		dip = 4
 		mil = 5
-		leader = {	name = "'Amï¿½ra I Dï¿½nqas"       	type = general	fire = 2	shock = 2	manuever = 4	siege = 0}
+		leader = {	name = "'Amâra I Dûnqas"       	type = general	fire = 2	shock = 2	manuever = 4	siege = 0}
 	}
 
 }
 
 1503.1.1 = {
 	heir = {
-		name = "'Abd al-Qï¿½dir"
-		monarch_name = "'Abd al-Qï¿½dir I"
+		name = "'Abd al-Qâdir"
+		monarch_name = "'Abd al-Qâdir I"
 		dynasty = "Senar"
 		birth_date = 1503.1.1
 		death_Date = 1543.1.1
@@ -42,7 +42,7 @@ capital = 1221	# El Obeid
 
 1534.1.1 = {
 	monarch = {
-		name = "'Abd al-Qï¿½dir I"
+		name = "'Abd al-Qâdir I"
 		dynasty = "Senar"
 		adm = 3
 		dip = 1
@@ -52,8 +52,8 @@ capital = 1221	# El Obeid
 
 1534.1.1 = {
 	heir = {
-		name = "Nï¿½'l"
-		monarch_name = "Nï¿½'l"
+		name = "Nâ'l"
+		monarch_name = "Nâ'l"
 		dynasty = "Senar"
 		birth_date = 1520.1.1
 		death_date = 1550.1.1
@@ -66,7 +66,7 @@ capital = 1221	# El Obeid
 
 1543.1.1 = {
 	monarch = {
-		name = "Nï¿½'l"
+		name = "Nâ'l"
 		dynasty = "Senar"
 		adm = 2
 		dip = 4
@@ -76,8 +76,8 @@ capital = 1221	# El Obeid
 
 1543.1.1 = {
 	heir = {
-		name = "'Amï¿½ra"
-		monarch_name = "'Amï¿½ra II"
+		name = "'Amâra"
+		monarch_name = "'Amâra II"
 		dynasty = "Senar"
 		birth_date = 1543.1.1
 		death_date = 1563.1.1
@@ -90,7 +90,7 @@ capital = 1221	# El Obeid
 
 1550.1.1 = {
 	monarch = {
-		name = "'Amï¿½ra II"
+		name = "'Amâra II"
 		dynasty = "Senar"
 		adm = 2
 		dip = 2
@@ -100,8 +100,8 @@ capital = 1221	# El Obeid
 
 1550.1.1 = {
 	heir = {
-		name = "Dakï¿½n al-'Adil"
-		monarch_name = "Dakï¿½n al-'Adil"
+		name = "Dakîn al-'Adil"
+		monarch_name = "Dakîn al-'Adil"
 		dynasty = "Senar"
 		birth_date = 1540.1.1
 		death_date = 1578.1.1
@@ -114,7 +114,7 @@ capital = 1221	# El Obeid
 
 1563.1.1 = {
 	monarch = {
-		name = "Dakï¿½n al-'Adil"
+		name = "Dakîn al-'Adil"
 		dynasty = "Senar"
 		adm = 0
 		dip = 3
@@ -125,8 +125,8 @@ capital = 1221	# El Obeid
 
 1563.1.1 = {
 	heir = {
-		name = "Dï¿½ra"
-		monarch_name = "Dï¿½ra"
+		name = "Dûra"
+		monarch_name = "Dûra"
 		dynasty = "Senar"
 		birth_date = 1553.1.1
 		death_date = 1588.1.1
@@ -139,7 +139,7 @@ capital = 1221	# El Obeid
 
 1578.1.1 = {
 	monarch = {
-		name = "Dï¿½ra"
+		name = "Dûra"
 		dynasty = "Senar"
 		adm = 1
 		dip = 4
@@ -149,8 +149,8 @@ capital = 1221	# El Obeid
 
 1578.1.1 = {
 	heir = {
-		name = "Taiyï¿½b"
-		monarch_name = "Taiyï¿½b I"
+		name = "Taiyîb"
+		monarch_name = "Taiyîb I"
 		dynasty = "Senar"
 		birth_date = 1568.1.1
 		death_date = 1592.1.1
@@ -163,7 +163,7 @@ capital = 1221	# El Obeid
 
 1588.1.1 = {
 	monarch = {
-		name = "Taiyï¿½b I"
+		name = "Taiyîb I"
 		dynasty = "Senar"
 		adm = 1
 		dip = 2
@@ -198,8 +198,8 @@ capital = 1221	# El Obeid
 
 1592.1.1 = {
 	heir = {
-		name = "'Abd al-Qï¿½dir"
-		monarch_name = "'Abd al-Qï¿½dir II"
+		name = "'Abd al-Qâdir"
+		monarch_name = "'Abd al-Qâdir II"
 		dynasty = "Senar"
 		birth_date = 1560.1.1
 		death_date = 1606.11.3
@@ -212,7 +212,7 @@ capital = 1221	# El Obeid
 
 1604.1.1 = {
 	monarch = {
-		name = "'Abd al-Qï¿½dir II"
+		name = "'Abd al-Qâdir II"
 		dynasty = "Senar"
 		adm = 1
 		dip = 0
@@ -246,8 +246,8 @@ capital = 1221	# El Obeid
 
 1606.11.3 = {
 	heir = {
-		name = "Bï¿½dï¿½"
-		monarch_name = "Bï¿½dï¿½ I"
+		name = "Bâdî"
+		monarch_name = "Bâdî I"
 		dynasty = "Senar"
 		birth_date = 1590.1.1
 		death_date = 1616.1.1
@@ -260,7 +260,7 @@ capital = 1221	# El Obeid
 
 1611.1.1 = {
 	monarch = {
-		name = "Bï¿½dï¿½ I"
+		name = "Bâdî I"
 		dynasty = "Senar"
 		adm = 1
 		dip = 2
@@ -270,8 +270,8 @@ capital = 1221	# El Obeid
 
 1611.1.1 = {
 	heir = {
-		name = "Rubï¿½t"
-		monarch_name = "Rubï¿½t I"
+		name = "Rubât"
+		monarch_name = "Rubât I"
 		dynasty = "Senar"
 		birth_date = 1600.1.1
 		death_Date = 1644.1.1
@@ -284,7 +284,7 @@ capital = 1221	# El Obeid
 
 1616.1.1 = {
 	monarch = {
-		name = "Rubï¿½t I"
+		name = "Rubât I"
 		dynasty = "Senar"
 		adm = 1
 		dip = 3
@@ -295,8 +295,8 @@ capital = 1221	# El Obeid
 
 1620.1.1 = {
 	heir = {
-		name = "Bï¿½dï¿½"
-		monarch_name = "Bï¿½dï¿½ II"
+		name = "Bâdî"
+		monarch_name = "Bâdî II"
 		dynasty = "Senar"
 		birth_date = 1620.1.1
 		death_date = 1680.12.30
@@ -304,18 +304,18 @@ capital = 1221	# El Obeid
 		adm = 5
 		dip = 5
 		mil = 5
-		leader = {	name = "Bï¿½dï¿½ II"               	type = general	fire = 3	shock = 4	manuever = 3	siege = 0}
+		leader = {	name = "Bâdî II"               	type = general	fire = 3	shock = 4	manuever = 3	siege = 0}
 	}
 }
 
 1644.1.1 = {
 	monarch = {
-		name = "Bï¿½dï¿½ II"
+		name = "Bâdî II"
 		dynasty = "Senar"
 		adm = 5
 		dip = 5
 		mil = 5
-		leader = {	name = "Bï¿½dï¿½ II"               	type = general	fire = 3	shock = 4	manuever = 3	siege = 0}
+		leader = {	name = "Bâdî II"               	type = general	fire = 3	shock = 4	manuever = 3	siege = 0}
 	}
 
 }
@@ -346,8 +346,8 @@ capital = 1221	# El Obeid
 
 1680.12.30 = {
 	heir = {
-		name = "Bï¿½dï¿½"
-		monarch_name = "Bï¿½dï¿½ III"
+		name = "Bâdî"
+		monarch_name = "Bâdî III"
 		dynasty = "Senar"
 		birth_date = 1660.1.1
 		death_date = 1716.4.15
@@ -360,7 +360,7 @@ capital = 1221	# El Obeid
 
 1692.6.8 = {
 	monarch = {
-		name = "Bï¿½dï¿½ III"
+		name = "Bâdî III"
 		dynasty = "Senar"
 		adm = 1
 		dip = 2
@@ -394,8 +394,8 @@ capital = 1221	# El Obeid
 
 1716.4.15 = {
 	heir = {
-		name = "Nï¿½l"
-		monarch_name = "Nï¿½l"
+		name = "Nûl"
+		monarch_name = "Nûl"
 		dynasty = "Senar"
 		birth_date = 1700.1.1
 		death_date = 1724.6.10
@@ -408,7 +408,7 @@ capital = 1221	# El Obeid
 
 1720.6.15 = {
 	monarch = {
-		name = "Nï¿½l"
+		name = "Nûl"
 		dynasty = "Senar"
 		adm = 2
 		dip = 2
@@ -418,8 +418,8 @@ capital = 1221	# El Obeid
 
 1720.6.15 = {
 	heir = {
-		name = "Bï¿½dï¿½"
-		monarch_name = "Bï¿½dï¿½ IV"
+		name = "Bâdî"
+		monarch_name = "Bâdî IV"
 		dynasty = "Senar"
 		birth_date = 1700.1.1
 		death_date = 1762.3.29
@@ -432,7 +432,7 @@ capital = 1221	# El Obeid
 
 1724.6.10 = {
 	monarch = {
-		name = "Bï¿½dï¿½ IV"
+		name = "Bâdî IV"
 		dynasty = "Senar"
 		adm = 6
 		dip = 4
@@ -442,8 +442,8 @@ capital = 1221	# El Obeid
 
 1740.1.1 = {
 	heir = {
-		name = "Nï¿½sir"
-		monarch_name = "Nï¿½sir"
+		name = "Nâsir"
+		monarch_name = "Nâsir"
 		dynasty = "Senar"
 		birth_date = 1740.1.1
 		death_Date = 1769.1.1
@@ -456,7 +456,7 @@ capital = 1221	# El Obeid
 
 1762.3.29 = {
 	monarch = {
-		name = "Nï¿½sir"
+		name = "Nâsir"
 		dynasty = "Senar"
 		adm = 0
 		dip = 1
@@ -466,8 +466,8 @@ capital = 1221	# El Obeid
 
 1762.3.29 = {
 	heir = {
-		name = "Ismï¿½'ï¿½l"
-		monarch_name = "Ismï¿½'ï¿½l"
+		name = "Ismâ'îl"
+		monarch_name = "Ismâ'îl"
 		dynasty = "Senar"
 		birth_date = 1750.1.1
 		death_date = 1778.1.1
@@ -480,7 +480,7 @@ capital = 1221	# El Obeid
 
 1769.1.1 = {
 	monarch = {
-		name = "Ismï¿½'ï¿½l"
+		name = "Ismâ'îl"
 		dynasty = "Senar"
 		adm = 0
 		dip = 0
@@ -490,8 +490,8 @@ capital = 1221	# El Obeid
 
 1769.1.1 = {
 	heir = {
-		name = "Adlï¿½n"
-		monarch_name = "Adlï¿½n"
+		name = "Adlân"
+		monarch_name = "Adlân"
 		dynasty = "Senar"
 		birth_date = 1760.1.1
 		death_date = 1788.12.2
@@ -504,7 +504,7 @@ capital = 1221	# El Obeid
 
 1778.1.1 = {
 	monarch = {
-		name = "Adlï¿½n"
+		name = "Adlân"
 		dynasty = "Senar"
 		adm = 0
 		dip = 0
@@ -514,8 +514,8 @@ capital = 1221	# El Obeid
 
 1778.1.1 = {
 	heir = {
-		name = "Taiyï¿½b"
-		monarch_name = "Taiyï¿½b II"
+		name = "Taiyîb"
+		monarch_name = "Taiyîb II"
 		dynasty = "Senar"
 		birth_date = 1778.1.1
 		death_date = 1790.4.1
@@ -528,7 +528,7 @@ capital = 1221	# El Obeid
 
 1788.12.2 = {
 	monarch = {
-		name = "Taiyï¿½b II"
+		name = "Taiyîb II"
 		dynasty = "Senar"
 		adm = 0
 		dip = 1
@@ -538,8 +538,8 @@ capital = 1221	# El Obeid
 
 1788.12.2 = {
 	heir = {
-		name = "Bï¿½dï¿½"
-		monarch_name = "Bï¿½dï¿½ V"
+		name = "Bâdî"
+		monarch_name = "Bâdî V"
 		dynasty = "Senar"
 		birth_date = 1760.1.1
 		death_date = 1790.10.1
@@ -552,7 +552,7 @@ capital = 1221	# El Obeid
 
 1790.4.1 = {
 	monarch = {
-		name = "Bï¿½dï¿½ V"
+		name = "Bâdî V"
 		dynasty = "Senar"
 		adm = 2
 		dip = 0
@@ -586,8 +586,8 @@ capital = 1221	# El Obeid
 
 1790.10.1 = {
 	heir = {
-		name = "Bï¿½dï¿½"
-		monarch_name = "Bï¿½dï¿½ VI"
+		name = "Bâdî"
+		monarch_name = "Bâdî VI"
 		dynasty = "Senar"
 		birth_date = 1770.1.1
 		death_date = 1798.1.1
@@ -600,7 +600,7 @@ capital = 1221	# El Obeid
 
 1791.1.1 = {
 	monarch = {
-		name = "Bï¿½dï¿½ VI"
+		name = "Bâdî VI"
 		dynasty = "Senar"
 		adm = 1
 		dip = 1
@@ -658,8 +658,8 @@ capital = 1221	# El Obeid
 
 1804.1.1 = {
 	heir = {
-		name = "Bï¿½dï¿½"
-		monarch_name = "Bï¿½dï¿½ VII"
+		name = "Bâdî"
+		monarch_name = "Bâdî VII"
 		dynasty = "Senar"
 		birth_date = 1780.1.1
 		death_Date = 1821.1.1
@@ -672,7 +672,7 @@ capital = 1221	# El Obeid
 
 1805.1.1 = {
 	monarch = {
-		name = "Bï¿½dï¿½ VII" #2nd reign
+		name = "Bâdî VII" #2nd reign
 		dynasty = "Senar"
 		adm = 1
 		dip = 1

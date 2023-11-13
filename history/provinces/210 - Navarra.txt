@@ -1,8 +1,8 @@
 #210 - Navarra
 
-owner = CAS		#Juan I de Navarra
-controller = CAS
-add_core = CAS
+owner = NAV		#Juan I de Navarra
+controller = NAV
+add_core = NAV
 culture = basque
 religion = catholic
 hre = no
@@ -13,7 +13,6 @@ base_manpower = 2
 #fort_15th = yes #Fortifications of Pamplona and Saint-Jean-Pied-de-Port
 capital = "Pamplona" 
 is_city = yes
-fort_15th = yes
 
 
 
@@ -33,7 +32,7 @@ discovered_by = ottoman
 	remove_core = CAS
 } # King Fernando dies, Carlos inherits Aragon and becomes co-regent of Castille
 1521.5.1 = { controller = FRA } # Exploiting the turmoil provoked by the revolt of the Comunidades, France attacks the unprotected Navarrese border.
-1521.6.30 = { controller = SPA } # French troops are defeated at the battle of Quirï¿½s
+1521.6.30 = { controller = SPA } # French troops are defeated at the battle of Quirós
 1569.1.1 = { fort_15th = no fort_16th = yes } #Fortifications of Pamplona
 1808.6.6 = { revolt = { type = pretender_rebels size = 1 } controller = REB }
 1808.12.1 = { revolt = {} controller = SPA }

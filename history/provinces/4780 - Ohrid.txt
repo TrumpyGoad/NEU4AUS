@@ -1,8 +1,8 @@
 # 4780 - Ohrid
 
-owner = THS
-controller = THS
-culture = serbian
+owner = TUR
+controller = TUR
+culture = bulgarian
 religion = orthodox
 capital = "Ohrid"
 trade_goods = wool
@@ -11,7 +11,9 @@ base_tax = 2
 base_production = 2
 base_manpower = 2
 is_city = yes
-add_core = THS
+add_core = TUR
+add_core = BUL
+add_core = SER
 discovered_by = KAZ
 discovered_by = CRI
 discovered_by = GOL
@@ -24,11 +26,6 @@ discovered_by = ottoman
 discovered_by = nomad_group
 
 
-1444.11.12 = {
-	owner = THS
-	controller = THS
-	add_core = THS
-	remove_core = TUR
-	remove_core = BUL
-	remove_core = SER
-}
+1555.1.1  = { unrest = 5 } # General discontent with the Janissaries' dominance
+1556.1.1  = { unrest = 0 }
+

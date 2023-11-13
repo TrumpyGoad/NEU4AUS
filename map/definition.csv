@@ -1,25 +1,25 @@
 province;red;green;blue;x;x
 1;128;34;64;Stockholm;x
-2;0;36;128;ï¿½stergï¿½tland;x
-3;128;38;192;Smï¿½land;x
+2;0;36;128;Östergötland;x
+3;128;38;192;Småland;x
 4;0;40;255;Bergslagen;x
-5;128;42;0;Vï¿½rmland;x
-6;0;44;64;Skï¿½ne;x
-7;129;46;128;Vï¿½stergï¿½tland;x
+5;128;42;0;Värmland;x
+6;0;44;64;Skåne;x
+7;129;46;128;Västergötland;x
 8;1;48;192;Dalaskogen;x
-9;129;50;255;Hï¿½lsingland;x
-10;1;52;0;Jï¿½mtland;x
-11;129;54;64;Vï¿½sterbotten;x
-12;1;56;128;Sjï¿½lland;x
+9;129;50;255;Hälsingland;x
+10;1;52;0;Jämtland;x
+11;129;54;64;Västerbotten;x
+12;1;56;128;Sjælland;x
 13;129;58;192;Slesvig;x
 14;2;60;255;Fyn;x
 15;130;62;0;Midtjylland;x
-16;2;64;64;Bohuslï¿½n;x
+16;2;64;64;Bohuslän;x
 17;130;66;128;Akershus;x
-18;2;68;192;Umeï¿½;x
-19;130;70;255;ï¿½sterbotten;x
-20;2;72;0;Trï¿½ndelag;x
-21;131;74;64;Hï¿½logaland;x
+18;2;68;192;Umeå;x
+19;130;70;255;Österbotten;x
+20;2;72;0;Trøndelag;x
+21;131;74;64;Hålogaland;x
 22;3;76;128;Oplandene;x
 23;131;78;192;Bergenshus;x
 24;3;80;255;Stavanger;x
@@ -33,7 +33,7 @@ province;red;green;blue;x;x
 32;4;96;128;Kexholm;x
 33;132;98;192;Neva;x
 34;4;100;255;Ingermanland;x
-35;133;102;0;ï¿½sel;x
+35;133;102;0;Ösel;x
 36;5;104;64;Estland;x
 37;133;106;128;Livland;x
 38;5;108;192;Riga;x
@@ -43,7 +43,7 @@ province;red;green;blue;x;x
 42;6;116;128;Warmia;x
 43;134;118;192;Danzig;x
 44;6;120;255;Hamburg;x
-45;134;122;0;Lï¿½beck;x
+45;134;122;0;Lübeck;x
 46;6;124;64;Mecklenburg;x
 47;134;126;128;Stralsund;x
 48;6;128;192;Kolberg;x
@@ -51,10 +51,10 @@ province;red;green;blue;x;x
 50;7;132;0;Berlin;x
 51;135;134;64;Ruppin;x
 52;7;136;128;Magdeburg;x
-53;135;138;192;Lï¿½neburg;x
+53;135;138;192;Lüneburg;x
 54;7;140;255;Bremen;x
 55;135;142;0;Oldenburg;x
-56;8;144;64;Osnabrï¿½ck;x
+56;8;144;64;Osnabrück;x
 57;136;146;128;Hannover;x
 58;8;148;192;Anhalt;x
 59;136;150;255;Meissen;x
@@ -63,12 +63,12 @@ province;red;green;blue;x;x
 62;8;156;128;Leipzig;x
 63;137;158;192;Erfurt;x
 64;9;32;255;Niederbayern;x
-65;137;34;0;Mï¿½nchen;x
+65;137;34;0;München;x
 66;9;36;64;Bamberg;x
 67;137;38;128;Franken;x
 68;9;40;192;Memmingen;x
 69;137;42;255;Konstanz;x
-70;10;44;0;Wï¿½rttemberg;x
+70;10;44;0;Württemberg;x
 71;138;46;64;Leiningen;x
 72;10;48;128;Breisgau;x
 73;138;50;192;Tirol;x
@@ -77,21 +77,21 @@ province;red;green;blue;x;x
 76;10;56;64;Salzburg;x
 77;139;58;128;Worms;x
 78;11;60;192;Pfalz;x
-79;139;62;255;Wï¿½rzburg;x
+79;139;62;255;Würzburg;x
 80;11;64;0;Trier;x
 81;139;66;64;Hessen;x
 82;11;68;128;Lippe;x
 83;139;70;192;Nassau;x
 84;12;72;255;Berg;x
-85;140;74;0;Kï¿½ln;x
-86;12;76;64;Mï¿½nster;x
+85;140;74;0;Köln;x
+86;12;76;64;Münster;x
 87;140;78;128;Calais;x
 88;12;80;192;Artois;x
 89;140;82;255;Picardie;x
 90;12;84;0;Vlaanderen;x
 91;141;86;64;Hainault;x
 92;13;88;128;Brabant;x
-93;141;90;192;Liï¿½ge;x
+93;141;90;192;Liège;x
 94;13;92;255;Luxemburg;x
 95;141;94;0;Noord;x
 96;13;96;64;Zeeland;x
@@ -126,7 +126,7 @@ province;red;green;blue;x;x
 125;145;154;0;Palermo;x
 126;18;156;64;Malta;x
 127;146;158;128;Sardinia;x
-128;18;32;192;Kï¿½rnten;x
+128;18;32;192;Kärnten;x
 129;146;34;255;Krain;x
 130;18;36;0;Istria;x
 131;146;38;64;Croatia;x
@@ -168,21 +168,21 @@ province;red;green;blue;x;x
 167;151;110;128;Caux;x
 168;24;112;192;Normandie;x
 169;152;114;255;Armor;x
-170;24;116;0;Finistï¿½re;x
+170;24;116;0;Finistère;x
 171;152;118;64;Morbihan;x
-172;24;120;128;Vendï¿½e;x
+172;24;120;128;Vendée;x
 173;152;122;192;Labourd;x
 174;24;124;255;Gascogne;x
 175;153;126;0;Armagnac;x
-176;25;128;64;Bï¿½arn;x
+176;25;128;64;Béarn;x
 177;153;130;128;Maine;x
 178;25;132;192;Anjou;x
 179;153;134;255;Berry;x
 180;25;136;0;Poitou;x
 181;153;138;64;Valenciennes;x
 182;26;140;128;Vermandois;x
-183;154;142;192;ï¿½le-de-France;x
-184;26;144;255;Orlï¿½annais;x
+183;154;142;192;Île-de-France;x
+184;26;144;255;Orléannais;x
 185;147;222;218;Nemours;x
 186;26;148;64;Champagne;x
 187;154;150;128;Barrois;x
@@ -191,8 +191,8 @@ province;red;green;blue;x;x
 190;27;156;0;Bourbon;x
 191;155;158;64;Nevers;x
 192;27;32;128;Bourgogne;x
-193;155;34;192;Franche-Comtï¿½;x
-194;27;36;255;Pï¿½rigord;x
+193;155;34;192;Franche-Comté;x
+194;27;36;255;Périgord;x
 195;155;38;0;Limousin;x
 196;28;40;64;Toulouse;x
 197;156;42;128;Roussillon;x
@@ -202,11 +202,11 @@ province;red;green;blue;x;x
 201;156;50;64;Toulon;x
 202;28;52;128;Avignon;x
 203;157;54;192;Lyonnais;x
-204;29;56;255;Dauphinï¿½;x
+204;29;56;255;Dauphiné;x
 205;157;58;0;Savoie;x
 206;29;60;64;Galicia;x
 207;157;62;128;Asturias;x
-208;29;64;192;Leï¿½n;x
+208;29;64;192;León;x
 209;157;66;255;Vizcaya;x
 210;30;68;0;Navarra;x
 211;158;70;64;Pirineo;x
@@ -218,19 +218,19 @@ province;red;green;blue;x;x
 217;159;82;128;Madrid;x
 218;31;84;192;Badajoz;x
 219;159;86;255;Toledo;x
-220;31;88;0;Valï¿½ncia;x
+220;31;88;0;València;x
 221;159;90;64;Murcia;x
-222;31;92;128;Almerï¿½a;x
+222;31;92;128;Almería;x
 223;159;94;192;Granada;x
-224;32;96;255;Andalucï¿½a;x
-225;160;98;0;Cï¿½rdoba;x
+224;32;96;255;Andalucía;x
+225;160;98;0;Córdoba;x
 226;32;100;64;Gibraltar;x
 227;160;102;128;Lisboa;x
 228;32;104;192;Beira;x
 229;160;106;255;Beja;x
 230;32;108;0;Algarve;x
 231;161;110;64;Porto;x
-232;33;112;128;Braganï¿½a;x
+232;33;112;128;Bragança;x
 233;166;203;93;Cornwall;x
 234;33;116;255;Wessex;x
 235;161;118;0;Kent;x
@@ -315,12 +315,12 @@ province;red;green;blue;x;x
 314;44;148;255;Ustyug;x
 315;173;150;0;Finnmark;x
 316;45;152;64;Kocaeli;x
-317;173;154;128;Hï¿½davendigar;x
+317;173;154;128;Hüdavendigar;x
 318;45;156;192;Sugla;x
 319;173;158;255;Mentese;x
 320;45;32;0;Rhodes;x
 321;173;34;64;Cyprus;x
-322;46;36;128;Kï¿½tahya;x
+322;46;36;128;Kütahya;x
 323;174;38;192;Konya;x
 324;46;40;255;Karaman;x
 325;174;42;0;Kastamonu;x
@@ -825,7 +825,7 @@ province;red;green;blue;x;x
 824;117;144;255;Mariquita;x
 825;245;146;0;Bogota;x
 826;118;148;64;Choco;x
-827;246;150;128;Antioquï¿½a;x
+827;246;150;128;Antioquía;x
 828;118;152;192;Cartagena;x
 829;246;154;255;Magdalena;x
 830;118;156;0;Maracaibo;x
@@ -840,7 +840,7 @@ province;red;green;blue;x;x
 839;128;42;79;Pipil;x
 840;0;44;126;Honduras;x
 841;129;46;173;Guatemala;x
-842;1;48;32;Petï¿½n;x
+842;1;48;32;Petén;x
 843;129;50;79;Belize;x
 844;1;52;126;Zapotec;x
 845;129;54;173;Campeche;x
@@ -1248,17 +1248,17 @@ province;red;green;blue;x;x
 1247;187;90;79;Corsica;x
 1248;59;92;126;Maldives;x
 1249;187;94;173;Yola;x
-1250;1;200;200;Vï¿½nern;x
-1251;2;200;250;Vï¿½ttern;x
+1250;1;200;200;Vänern;x
+1251;2;200;250;Vättern;x
 1252;3;220;250;Gulf of Bothnia;x
-1253;4;250;250;ï¿½lands Hav;x
+1253;4;250;250;Ålands Hav;x
 1254;5;200;200;Gulf of Finland;x
 1255;6;200;250;Western Baltic Sea;x
 1256;7;220;250;Gulf of Riga;x
 1257;8;250;250;Southern Baltic Sea;x
-1258;9;200;200;ï¿½resund;x
+1258;9;200;200;Öresund;x
 1259;10;200;250;Kattegat;x
-1260;11;220;250;Peipsi Jï¿½rv;x
+1260;11;220;250;Peipsi Järv;x
 1261;12;250;250;Ladoga;x
 1262;13;200;200;Onega;x
 1263;14;200;250;Barents Sea;x
@@ -1767,7 +1767,7 @@ province;red;green;blue;x;x
 1766;70;116;126;Kosovo;x
 1767;198;118;173;Osijek;x
 1768;70;120;32;Lienz;x
-1769;198;122;79;Gï¿½rz;x
+1769;198;122;79;Görz;x
 1770;70;124;126;Ostmarch;x
 1771;198;126;173;Erz;x
 1772;70;128;32;Presburg;x
@@ -1803,7 +1803,7 @@ province;red;green;blue;x;x
 1802;203;62;173;Northern Amazonas;x
 1803;75;64;32;Southern Amazonas;x
 1804;203;66;79;Greenland;x
-1805;75;68;126;Quï¿½bec;x
+1805;75;68;126;Québec;x
 1806;203;70;173;Weagamow;x
 1807;76;72;32;Baffin Island;x
 1808;204;74;79;Great Basin;x
@@ -1864,10 +1864,10 @@ province;red;green;blue;x;x
 1863;84;56;32;Graz;x
 1864;212;58;79;Somogy;x
 1865;84;60;126;Ghent;x
-1866;212;62;173;Namur;x
+1866;212;62;173;Namur ;x
 1867;84;64;32;Freiburg;x
 1868;212;66;79;Augsburg;x
-1869;84;68;126;Zï¿½rich;x
+1869;84;68;126;Zürich;x
 1870;213;70;173;S:t Gallen;x
 1871;85;72;32;Wallis;x
 1872;86;84;126;Ulm;x
@@ -1879,8 +1879,8 @@ province;red;green;blue;x;x
 1878;214;86;173;Aachen;x
 1879;86;88;32;Alencon;x
 1880;214;90;79;Sundgau;x
-1881;213;74;79;St. Barthï¿½lemy;x
-1882;214;94;173;Bï¿½ne;x
+1881;213;74;79;St. Barthélemy;x
+1882;214;94;173;Bône;x
 1883;0;0;232;Western Finish lakes;x
 1884;1;0;236;East Finish lakes;x
 1885;2;0;240;Central finish lakes;x
@@ -1928,7 +1928,7 @@ province;red;green;blue;x;x
 1927;62;218;252;Eastern baltic sea;x
 1928;62;234;252;Western Alands sea;x
 1929;62;210;252;Western Norwegian Sea;x
-1930;237;154;79;ï¿½land;x
+1930;237;154;79;Åland;x
 1931;130;60;50;East Frisia;x
 1932;49;150;248;Gulf of Satalia;x
 1933;50;0;232;Bari;x
@@ -1936,7 +1936,7 @@ province;red;green;blue;x;x
 1935;52;0;240;Semigallia;x
 1936;55;0;0;Kovno;x
 1937;65;0;250;Grodno;x
-1938;75;0;25;Wizna;x
+1938;75;0;25;Wizna;x 
 1939;85;0;225;Leczyca;x
 1940;95;0;50;Belz;x
 1941;105;0;200;Turov;x
@@ -1975,15 +1975,15 @@ province;red;green;blue;x;x
 1974;215;110;173;Yedishkul;x
 1975;105;225;255;Sea of Jutland;x
 1976;93;0;244;Dead Sea;x
-1977;94;0;248;Mï¿½laren;x
+1977;94;0;248;Mälaren;x
 1978;95;0;232;Shetlands;x
-1979;96;0;236;Fï¿½rï¿½arnax;x
+1979;96;0;236;Färöarnax;x
 1980;136;253;253;Sea of Japan;x
 1981;98;0;244;Bornholm;x
 1982;99;0;248;Blekinge;x
 1983;100;0;232;Lolland;x
 1984;101;0;236;Nordjylland;x
-1985;102;240;0;Nï¿½rke;x
+1985;102;240;0;Närke;x
 1986;103;0;244;New Caledonia;x
 1987;104;0;248;Society Islands;x
 1988;105;0;232;Rapa Nui;x
@@ -2000,11 +2000,11 @@ province;red;green;blue;x;x
 1999;116;0;236;Cocos Island;x
 2000;60;221;221;Qinghai Lake;x
 2001;95;200;200;Siling Lake;x
-2002;200;135;255;Galï¿½pagos Islands;x
-2003;120;2;232;Ktunaxa;x
+2002;200;135;255;Galápagos Islands;x
+2003;120;2;232;Ktunaxa;X
 2004;125;4;236;Niitsitapi;x
 2005;130;8;240;Asinaan;x
-2006;135;16;244;Apsï¿½alooke;x
+2006;135;16;244;Apsáalooke;x
 2007;140;32;248;Arikara;x
 2008;145;64;232;Yankton;x
 2009;150;128;236;Teton;x
@@ -2237,7 +2237,7 @@ province;red;green;blue;x;x
 2236;131;211;134;Bojnord;x
 2237;160;109;157;Tekrur;x
 2238;80;73;160;Kantor;x
-2239;120;75;185;Siine;x
+2239;120;75;185;Siine;x 
 2240;120;137;132;Galam;x
 2241;200;111;182;Beafada;x
 2242;240;69;110;Karou;x
@@ -2248,8 +2248,8 @@ province;red;green;blue;x;x
 2247;80;117;83;Walata;x
 2248;120;119;108;Do;x
 2249;160;151;133;Sibiridugu;x
-2250;160;77;210;Bendugu;x
-2251;80;61;184;Bagoe;x
+2250;160;77;210;Bendugu;x 
+2251;80;61;184;Bagoe;x 
 2252;200;117;235;Lobi;x
 2253;160;121;133;Gwiriko;x
 2254;240;125;232;Bonoman;x
@@ -2275,8 +2275,8 @@ province;red;green;blue;x;x
 2274;160;145;234;Agades;x
 2275;120;125;161;Tenere;x
 2276;80;123;136;Itesan;x
-2277;240;161;86;Kawar;x
-2278;240;149;110;Kebbi;x
+2277;240;161;86;Kawar;x 
+2278;240;149;110;Kebbi;x 
 2279;120;155;185;Daura;x
 2280;160;157;210;Biram;x
 2281;200;159;235;Rano;x
@@ -2287,7 +2287,7 @@ province;red;green;blue;x;x
 2286;240;131;236;Logone;x
 2287;40;163;11;Kotoko;x
 2288;40;133;82;Yao;x
-2289;40;71;135;Ondo;x
+2289;40;71;135;Ondo;x 
 2290;240;81;86;Ijebu;x
 2291;120;87;161;Ketu;x
 2292;140;145;232;Moshi;x
@@ -2651,7 +2651,7 @@ province;red;green;blue;x;x
 2650;25;31;246;Champutun;x
 2651;150;231;196;Ah Canul;x
 2652;87;31;145;Ecab;x
-2653;213;213;95;Iximchï¿½;x
+2653;213;213;95;Iximché;x
 2654;45;131;46;Baracoa;x
 2655;171;31;246;Bayamo;x
 2656;108;31;196;Camaguey;x
@@ -2664,7 +2664,7 @@ province;red;green;blue;x;x
 2663;153;31;95;Nicoya;x
 2664;90;31;46;Veraguas;x
 2665;216;31;246;Ais;x
-2666;48;31;196;Tuintsundï¿½;x
+2666;48;31;196;Tuintsundé;x
 2667;174;231;145;Cacaxtes;x
 2668;111;31;95;Borrado;x
 2669;237;31;46;Hasinai;x
@@ -2951,7 +2951,7 @@ province;red;green;blue;x;x
 2950;32;218;173;Buhera;x
 2951;236;57;116;Manikya;x
 2952;236;220;116;Madanda;x
-2953;236;222;116;Hjï¿½lmaren;x
+2953;236;222;116;Hjälmaren;x
 2954;29;59;159;Djerba;x
 2955;107;121;191;Ingolstadt;x
 2956;224;134;54;Straubing;x
@@ -4112,7 +4112,7 @@ province;red;green;blue;x;x
 4111;119;212;150;Saintonge;x
 4112;157;124;213;Aurilac;x
 4113;103;160;108;Uleaborg;x
-4114;145;85;134;Luleï¿½;x
+4114;145;85;134;Luleå;x
 4115;156;39;189;Mazyr;x
 4116;119;162;166;Belyov;x
 4117;205;163;151;Bezhetsk;x
@@ -4126,7 +4126,7 @@ province;red;green;blue;x;x
 4125;210;205;68;Szolnok;x
 4126;229;71;55;Bacs;x
 4127;146;198;217;Turda;x
-4128;142;201;142;Kiralyfï¿½ld;x
+4128;142;201;142;Kiralyföld;x
 4129;53;164;53;Ust-Vym;x
 4130;222;47;96;Somerset;x
 4131;227;54;54;Nanbu;x
@@ -4137,18 +4137,18 @@ province;red;green;blue;x;x
 4136;45;225;227;Zaysan;x
 4137;79;222;224;Alakol;x
 4138;40;196;198;Issyk-Kul;x
-4139;54;54;236;Oulujï¿½rvi;x
+4139;54;54;236;Oulujärvi;x
 4140;34;34;210;Saimaa;x
 4141;207;42;19;Ditmarschen;x
 4142;198;219;57;Aarhus;x
-4143;127;186;98;Smï¿½lenene;x
+4143;127;186;98;Smålenene;x
 4144;222;69;44;Bratsberg;x
 4145;201;191;169;Agdesiden;x
 4146;225;223;19;Jotenheimen;x
 4147;74;217;74;Rostov;x
 4148;222;151;200;Luki;x
 4149;44;184;44;Kolding;x
-4150;145;151;212;ï¿½vora;x
+4150;145;151;212;Évora;x
 4151;208;10;168;Kuusamo;x
 4152;113;153;0;Enare;x
 4153;225;223;21;Scandes;x
@@ -4163,8 +4163,8 @@ province;red;green;blue;x;x
 4162;231;224;22;Alps5;x
 4163;220;144;23;Elfsborg;x
 4164;150;213;76;Dalsland;x
-4165;220;78;202;Gï¿½inge;x
-4166;54;157;76;Tiohï¿½rad/Vï¿½rend;x
+4165;220;78;202;Göinge;x
+4166;54;157;76;Tiohärad/Värend;x
 4167;195;207;97;High Atlas;x
 4168;135;142;79;High Atlas2;x
 4169;222;203;239;Aures;x
@@ -4310,7 +4310,7 @@ province;red;green;blue;x;x
 4309;118;176;123;Aydin;x
 4310;135;155;105;Divrigi;x
 4311;67;121;108;Karahisar;x
-4312;105;195;57;Sultanï¿½nï¿½;x
+4312;105;195;57;Sultanönü;x
 4313;94;189;108;Kangiri;x
 4314;159;73;73;Kirshehir;x
 4315;124;60;86;Tokat;x
@@ -4650,7 +4650,7 @@ province;red;green;blue;x;x
 4649;62;137;250;Mayo;x
 4650;82;176;150;Opata;x
 4651;214;134;156;Tsushima;x
-4652;140;69;200;Haicheng;x
+4652;140;69;200;Haicheng;
 4653;117;192;171;Maolian;x
 4654;60;240;76;Fuerhe;x
 4655;194;93;131;Shilimian;x
@@ -4709,7 +4709,7 @@ province;red;green;blue;x;x
 4708;136;148;128;Freising;x
 4709;71;104;32;Passau;x
 4710;48;231;108;Bregenz;x
-4711;226;210;106;Donauwï¿½rth;x
+4711;226;210;106;Donauwörth;x
 4712;27;146;0;Konstanz;x
 4713;185;110;79;Urach;x
 4714;139;150;128;Durlach;x
@@ -4743,7 +4743,7 @@ province;red;green;blue;x;x
 4742;24;36;126;Nordhausen;x
 4743;70;32;26;Weimar;x
 4744;35;63;199;Zwickau;x
-4745;86;194;97;Rï¿½gen;x
+4745;86;194;97;Rügen;x
 4746;213;132;0;Wolgast;x
 4747;111;118;8;Dramburg;x
 4748;170;79;248;Brandenburg;x
@@ -4771,12 +4771,12 @@ province;red;green;blue;x;x
 4770;181;160;75;s-Hertogenbosch;x
 4771;52;36;48;Verden;x
 4772;228;189;115;Celle;x
-4773;70;135;54;Gï¿½ttingen;x
+4773;70;135;54;Göttingen;x
 4774;175;138;37;Fulda;x
 4775;199;14;89;Bielefeld;x
 4776;177;186;20;Blois;x
 4777;202;126;16;Forez;x
-4778;32;31;94;Gï¿½rlitz;x
+4778;32;31;94;Görlitz;x
 4779;124;10;162;Gallipoli;x
 4780;25;224;138;Ohrid;x
 4781;197;9;45;Transvaal;x
@@ -4940,388 +4940,3 @@ province;red;green;blue;x;x
 4939;210;80;11;Te Moana-a-Toi;x
 4940;29;216;197;Lake Tulare;x
 4941;30;216;201;Lake Cahuilla;x
-4942;252;100;59;Pantelleria;x
-4943;219;142;3;Cefalu;x
-4944;13;99;164;Catania;x
-4945;205;192;120;Vittoria;x
-4946;125;184;211;Caltanissetta;x
-4947;61;59;214;Enna;x
-4948;140;209;142;Caltagirone;x
-4949;106;187;227;Olbia;x
-4950;107;186;206;Nuoro;x
-4951;19;60;28;Ajaccio;x
-4952;95;215;238;Bonifacio;x
-4953;38;118;55;Corte;x
-4954;239;154;103;Elba;x
-4955;85;142;94;Catanzaro;x
-4956;128;161;203;Matera;x
-4957;101;153;140;Sapri;x
-4958;151;176;128;Barletta;x
-4959;183;241;186;Vieste;x
-4960;137;144;191;Termoli;x
-4961;215;174;215;Pescara;x
-4962;191;135;11;Sulmona;x
-4963;129;0;84;Formia;x
-4964;54;94;185;Terni;x
-4965;36;86;141;Vatican;x
-4966;152;123;39;Grosseto;x
-4967;181;224;36;Piombino;x
-4968;22;54;69;Bibbiena;x
-4969;201;91;183;Monghidoro;x
-4970;164;196;90;Pistoia;x
-4971;61;113;184;Barga;x
-4972;129;145;104;LaSpezia;x
-4973;206;75;141;Borgotaro;x
-4974;190;179;251;Alessandria;x
-4975;185;71;218;Asti;x
-4976;124;238;217;Bra;x
-4977;30;187;51;Dronero;x
-4978;157;41;7;Aosta;x
-4979;115;110;100;Vercelli;x
-4980;32;186;121;Vigevano;x
-4981;220;117;138;Borgomanero;x
-4982;92;158;216;Lugano;x
-4983;144;234;72;Suzzara;x
-4984;227;221;248;Legnago;x
-4985;101;25;180;Polesine;x
-4986;39;235;62;Belluno;x
-4987;236;17;10;Pordenone;x
-4988;191;41;199;Monfalcone;x
-4989;8;20;97;Buzet;x
-4990;220;253;8;Rovinj;x
-4991;150;55;65;Giudecca;x
-4992;214;220;99;test;x
-4993;29;192;70;Albahiya;x
-4994;28;46;210;Yakhtul;x
-4995;213;198;19;Kadamat;x
-4996;32;171;183;Rahidah;x
-4997;173;24;190;Lahij;x
-4998;190;132;24;Kawd;x
-4999;186;193;89;Ibb;x
-5000;75;75;214;Hays;x
-5001;155;203;44;Hababah;x
-5002;214;55;33;Walan;x
-5003;66;205;41;Amran;x
-5004;244;19;19;Hudaydah;x
-5005;243;15;249;Kamaran;x
-5006;134;230;201;Masabishah;x
-5007;21;115;208;Khab;x
-5008;18;211;28;Nuhayyil;x
-5009;130;240;135;Lawdar;x
-5010;207;140;230;Hanad;x
-5011;62;79;236;Dhimrah;x
-5012;181;205;44;Qawz;x
-5013;128;237;249;Ariqim;x
-5014;181;188;48;Jadib;x
-5015;226;71;231;Thumrait;x
-5016;69;233;89;Marsawdad;x
-5017;115;71;231;Mirbat;x
-5018;207;240;94;Haima;x
-5019;247;87;87;Qarn Al Alam;x
-5020;53;11;251;Raqi;x
-5021;203;58;73;Filim;x
-5022;35;184;43;Al Hadd;x
-5023;19;200;196;Fulayj;x
-5024;255;43;48;Sur;x
-5025;57;222;39;Garara;x
-5026;80;158;182;Tawa;x
-5027;208;213;49;Sabit;x
-5028;124;184;124;Sayq;x
-5029;159;218;95;Baqara;x
-5030;220;28;22;Jirab;x
-5031;204;200;38;Arada;x
-5032;17;225;44;Sweihan;x
-5033;206;235;7;Mahdah;x
-5034;40;146;202;Hatta;x
-5035;232;33;11;Sharjah;x
-5036;26;230;51;Margham;x
-5037;21;172;60;Zayqat;x
-5038;184;27;10;Alkhen;x
-5039;176;172;17;Nebak;x
-5040;140;23;170;Qusaybi;x
-5041;179;15;15;Udhailiyah;x
-5042;233;206;20;Shamli;x
-5043;241;12;12;Hait;x
-5044;45;237;39;Henahiyah;x
-5045;55;24;228;Afif;x
-5046;219;235;18;Dariyah;x
-5047;13;236;30;Trabah;x
-5048;213;222;27;Az Zulfi;x
-5049;41;207;187;Huraymilla;x
-5050;210;225;23;Dhurma;x
-5051;29;225;23;Layla;x
-5052;166;13;17;Burudan;x
-5053;21;157;41;Akwan;x
-5054;11;2;176;Waset;x
-5055;158;162;17;Himam;x
-5056;162;17;17;Khairan;x
-5057;31;168;11;Ranyah;x
-5058;164;60;15;Al Lith;x
-5059;29;132;150;Dahaban;x
-5060;40;138;116;Bahrah;x
-5061;166;163;17;Al Barzal;x
-5062;51;244;61;Al Hada;x
-5063;112;23;159;Ashayrah;x
-5064;17;166;66;Rahat;x
-5065;233;10;10;Enboan;x
-5066;206;21;221;Shajwa;x
-5067;181;230;13;Al Bar;x
-5068;233;32;10;Badr;x
-5069;218;19;223;Unluj;x
-5070;80;204;226;Hrata;x
-5071;210;220;86;Nubiilya;x
-5072;135;124;233;Aadi;x
-5073;82;69;233;Ibris;x
-5074;73;235;85;Fudukawan;x
-5075;15;36;227;Kom Umbu;x
-5076;236;6;12;Port Ghalib;x
-5077;38;180;204;Marsa Alam;x
-5078;24;224;180;Edfu;x
-5079;58;226;39;Esnna;x
-5080;224;205;73;Qena;x
-5081;199;224;22;Ezbet;x
-5082;97;176;83;Tahta;x
-5083;47;209;29;Minqar;x
-5084;135;173;20;Hurghada;x
-5085;14;6;106;Mallaui;x
-5086;233;238;23;Bawiti;x
-5087;245;126;145;Samalut;x
-5088;142;13;123;Minya;x
-5089;129;146;10;Matay;x
-5090;49;230;23;Kudyat;x
-5091;18;7;154;El Hafair;x
-5092;13;152;10;Ain Sokha;x
-5093;135;17;145;Taba;x
-5094;12;150;15;Ras Sedr;x
-5095;181;0;0;Nekhel;x
-5096;17;225;220;Helliopolis;x
-5097;9;9;153;Tabarcih;x
-5098;162;0;4;Izbat Eunc;x
-5099;147;150;12;Wusushah;x
-5100;250;61;65;Faraskur;x
-5101;228;69;241;Marzuq;x
-5102;73;241;69;Gamasa;x
-5103;147;166;13;Mutubas;x
-5104;20;158;28;Abu Shineine;x
-5105;191;221;21;El Hamam;x
-5106;70;241;61;Galal;x
-5107;60;64;242;Cara;x
-5108;202;6;26;Katret;x
-5109;185;189;19;Az Zaytum;x
-5110;32;176;176;Martuba;x
-5111;48;237;62;Birbin;x
-5112;150;3;6;Sultanib;x
-5113;230;238;77;Adjdabiya;x
-5114;6;9;100;Jikharra;x
-5115;19;210;29;Gabr;x
-5116;60;37;141;Donana;x
-5117;228;27;174;Moura;x
-5118;191;254;133;Sierra Morena;x
-5119;134;251;113;Almaden;x
-5120;100;177;233;Guadiana River;x
-5121;50;88;120;Guadalquivir River;x
-5122;12;32;93;Blaye;x
-5123;45;240;208;Garonne River;x
-5124;101;27;13;Pornic;x
-5125;19;150;163;Loire River;x
-5126;168;115;172;Lisieux;x
-5127;121;58;125;Beauvais;x
-5128;112;135;217;Seine River;x
-5129;239;81;95;Emmerich;x
-5130;15;169;206;Rhine River;x
-5131;150;64;106;Jersey;x
-5132;212;55;133;Isle of Wight;x
-5133;54;229;200;Thames River;x
-5134;119;51;49;Terschelling;x
-5135;19;127;249;Elbe River;x
-5136;46;175;131;Rhone River;x
-5137;57;94;200;Po River;x
-5138;44;197;210;Upper Danube;x
-5139;133;195;205;Central Danube;x
-5140;63;133;244;Lower Danube;x
-5141;54;220;48;Wolomin;x
-5142;7;68;219;Vistula River;x
-5143;43;189;231;Dnister River;x
-5144;36;106;130;Lower Dnipro;x
-5145;28;180;246;Upper Dnipro;x
-5146;157;128;157;Kirovo;x
-5147;70;16;66;Dovsk;x
-5148;4;231;236;Daugava River;x
-5149;122;194;208;Neva River;x
-5150;153;20;86;Volkhov River;x
-5151;196;191;45;Svir River;x
-5152;251;72;230;Volkhov;x
-5153;128;212;113;Vereya;x
-5154;37;102;163;Don River;x
-5155;32;1;186;Lower Volga;x
-5156;3;132;162;Central Volga;x
-5157;73;213;197;Upper Volga;x
-5158;106;20;27;Primorsky;x
-5159;89;177;218;Lower Nile;x
-5160;66;205;230;Upper Nile;x
-5161;22;237;218;Damietta Branch;x
-5162;37;181;161;Dvina;x
-5163;255;1;0;Savuar;x
-5164;1;255;0;Papa;x
-5165;1;0;255;Komlo;x
-5166;255;1;1;Pozeg;x
-5167;2;255;0;Cazin;x
-5168;2;0;255;Gyongyos;x
-5169;255;1;2;Gyula;x
-5170;3;255;0;Arad;x
-5171;3;0;255;Marghira;x 
-5172;255;1;3;Jibou;x
-5173;4;255;0;Szeyed;x
-5174;4;0;255;Lygoi;x
-5175;255;1;4;Deja;x
-5176;5;255;0;Sibiu;x
-5177;5;0;255;Banja Luka;x
-5178;255;1;5;Livno;x
-5179;6;255;0;Sarajevo;x
-5180;6;0;255;Foca;x
-5181;255;1;6;Tuzla;x
-5182;7;255;0;Virbas;x
-5183;7;0;255;Coznica;x
-5184;255;1;7;Lazorevas;x
-5185;8;255;0;Zajecar;x
-5186;8;0;255;Pozeya;x
-5187;255;1;8;Zablijak;x
-5188;9;255;0;Pristina;x
-5189;9;0;255;Leskoval;x
-5190;255;1;9;Canaw;x
-5191;10;255;0;Belogradchik;x
-5192;10;0;255;Turceni;x
-5193;255;1;10;Daneti;x
-5194;11;255;0;Cateaca;x
-5195;11;0;255;Bradin;x
-5196;255;1;11;Coutesti;x
-5197;12;255;0;Turnu;x
-5198;12;0;255;Ianca;x
-5199;255;1;12;Wiziru;x
-5200;13;255;0;Harsova;x
-5201;13;0;255;Pleven;x
-5202;255;1;13;Lavech;x
-5203;14;255;0;Razgrad;x
-5204;14;0;255;Popovo;x
-5205;255;1;14;Varna;x
-5206;15;255;0;Balchik;x
-5207;15;0;255;Sarande;x
-5208;255;1;15;Parga;x
-5209;16;255;0;Aginio;x
-5210;16;0;255;Varda;x
-5211;255;1;16;Kyparissa;x
-5212;17;255;0;Astras;x
-5213;17;0;255;Skala;x
-5214;255;1;17;Molaoi;x
-5215;18;255;0;Chalise;x
-5216;18;0;255;Volos;x
-5217;255;1;18;Neapoli;x
-5218;19;255;0;Giannitsa;x
-5219;19;0;255;Shtip;x
-5220;255;1;19;Svoge;x
-5221;20;255;0;Dupinika;x
-5222;20;0;255;Plovdiv;x
-5223;255;1;20;Hashovo;x
-5224;21;255;0;Kardzali;x
-5225;21;0;255;Nedelino;x
-5226;255;1;21;Burgus;x
-5227;22;255;0;Feres;x
-5228;22;0;255;Arriana;x
-5229;255;1;22;Tychero;x
-5230;23;255;0;Eceabat;x
-5231;23;0;255;Corlu;x
-5232;255;1;23;Karaburun;x
-5233;24;255;0;Goheeali;x
-5234;24;0;255;Gebze;x
-5235;255;1;24;Izmit;x
-5236;25;255;0;Bursa;x
-5237;25;0;255;Bandirma;x
-5238;255;1;25;Kepez;x
-5239;26;255;0;Balihesir;x
-5240;26;0;255;Bergama;x
-5241;255;1;26;Manisa;x
-5242;27;255;0;Ortaca;x
-5243;27;0;255;Honaz;x
-5244;255;1;27;Usah;x
-5245;28;255;0;Kortukeli;x
-5246;28;0;255;Antayla;x
-5247;255;1;28;Eskisehir;x
-5248;29;255;0;Nalihan;x
-5249;29;0;255;Zongulduh;x
-5250;255;1;29;Deverek;x
-5251;30;255;0;Silikthe;x
-5252;30;0;255;Limmasoli;x
-5253;255;1;30;Dafra;x
-5254;31;255;0;Chapgagne;x
-5255;31;0;255;Nicosia;x
-5256;255;1;31;Mersin;x
-5257;32;255;0;Osmaniye;x
-5258;32;0;255;Kardirili;x
-5259;255;1;32;Mut;x
-5260;33;255;0;Ermeneh;x
-5261;33;0;255;Bayat;x
-5262;255;1;33;Cide;x
-5263;34;255;0;Bartin;x
-5264;34;0;255;Bafra;x
-5265;255;1;34;Ordu;x
-5266;35;255;0;Tirebolu;x
-5267;35;0;255;Plinz;x
-5268;255;1;35;Emizlyn;x
-5269;36;255;0;Kangal;x
-5270;36;0;255;Yozgat;x
-5271;255;1;36;Zara;x
-5272;37;255;0;Kulu;x
-5273;37;0;255;Talas;x
-5274;255;1;37;Ovacik;x
-5275;38;255;0;Pulumtur;x
-5276;38;0;255;Araban;x
-5277;255;1;38;Kobani;x
-5278;39;255;0;Siirt;x
-5279;39;0;255;Nusabiyah;x
-5280;255;1;39;Snumy;x
-5281;40;255;0;Sanlurfa;x
-5282;40;0;255;Idib;x
-5283;255;1;40;Shaykhan;x
-5284;41;255;0;Tartus;x
-5285;41;0;255;Sulaniyah;x
-5286;255;1;41;Palmyra;x
-5287;42;255;0;Yabud;x
-5288;42;0;255;Beirut;x
-5289;255;1;42;Ashdad;x
-5290;43;255;0;Hebron;x
-5291;43;0;255;Irbid;x
-5292;255;1;43;Suwadya;x
-5293;44;255;0;Madaba;x
-5294;44;0;255;Alytaar;x
-5295;255;1;44;Gayali;x
-5296;45;255;0;Haqi;x
-5297;45;0;255;Duba;x
-5298;255;1;45;Mayba;x
-5299;46;255;0;Tayma;x
-5300;46;0;255;Arar;x
-5301;255;1;46;Sakaka;x
-5302;225;49;48;Cacau Pirera;x
-5303;47;197;48;Monte Alegre;x
-5304;47;47;47;Porto de Moz;x
-5305;46;85;252;Amazon River;x
-5306;200;44;0;Kerch;x
-5307;144;249;253;Kezlev;x
-5308;94;159;86;Cankoy;x
-5309;125;249;67;Kherson;x
-5310;66;201;96;Kakhovka;x
-5311;218;108;222;Nikopol;x
-5312;192;54;107;Odessa;x
-5313;69;33;154;Mariupol;x
-5314;159;58;115;Donetsk;x
-5315;104;48;149;Tikhoretsk;x
-5316;64;98;49;Armavir;x
-5317;84;208;232;Stavropol;x
-5318;54;196;249;Salsk;x
-5319;87;208;104;Yashkul;x
-5320;222;63;26;Lagan;x
-5321;133;60;14;Saqsin;x
-5322;205;88;151;Volgograd;x
-5323;243;255;63;X Karasu;x
-
-
-

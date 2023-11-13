@@ -7,8 +7,8 @@ religion = shiite
 technology_group = muslim
 capital = 416 # Tabriz
 religious_school = ismaili_school
-historical_rival = TUR
-historical_rival = MAM
+
+set_estate_privilege = estate_nobles_emirs_of_baghdad
 
 1390.1.1 = {
 	monarch = {
@@ -46,8 +46,8 @@ historical_rival = MAM
 
 1420.1.1 = {
 	heir = {
-		name = "Jahï¿½n"
-		monarch_name = "Jahï¿½n Shï¿½h"
+		name = "Jahân"
+		monarch_name = "Jahân Shâh"
 		dynasty = "Qara Qoyunlu"
 		birth_date = 1420.1.1
 		death_date = 1467.11.11
@@ -60,7 +60,7 @@ historical_rival = MAM
 
 1438.4.22 = {
 	monarch = {
-		name = "Jahï¿½n Shï¿½h"
+		name = "Jahân Shâh"
 		dynasty = "Qara Qoyunlu"
 		birth_date = 1420.1.1
 		adm = 3

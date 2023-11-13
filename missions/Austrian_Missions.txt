@@ -7,13 +7,13 @@ hab_holy_roman_ambitions = {
 		tag = HAB
 	}
 	has_country_shield = yes
-
+	
 	secure_the_imperial_crown = {
 		icon = mission_alliances
 		required_missions = {  } #None
-
+		
 		completed_by = 1526.8.30
-
+		
 		provinces_to_highlight = {
 			OR = {
 				AND = {
@@ -25,7 +25,7 @@ hab_holy_roman_ambitions = {
 						is_elector = yes
 						OR = {
 							NOT = { preferred_emperor = ROOT }
-							#NOT = { has_opinion = { who = ROOT value = 100 } }
+							NOT = { has_opinion = { who = ROOT value = 100 } }
 						}
 					}
 					NOT = {
@@ -33,9 +33,9 @@ hab_holy_roman_ambitions = {
 							calc_true_if = {
 								all_elector = {
 									preferred_emperor = ROOT
-									#has_opinion = { who = ROOT value = 100 }
+									has_opinion = { who = ROOT value = 100 }
 								}
-								amount = 4
+								amount = 5
 							}
 						}
 					}
@@ -46,14 +46,13 @@ hab_holy_roman_ambitions = {
 		trigger = {
 			is_emperor = yes
 			calc_true_if = {
-				desc = secure_the_imperial_crown_new.tooltip
+				desc = secure_the_imperial_crown.tooltip
 				all_elector = {
 					preferred_emperor = ROOT
-					#has_opinion = { who = ROOT value = 100 }
+					has_opinion = { who = ROOT value = 100 }
 				}
-				amount = 4
+				amount = 5
 			}
-			is_year = 1446
 		}
 		effect = {
 			if = {
@@ -105,21 +104,9 @@ hab_holy_roman_ambitions = {
 	subjugate_bohemia = {
 		icon = mission_empire
 		required_missions = { secure_the_imperial_crown }
-
+		
 		completed_by = 1526.8.30
-
-		ai_weight = {
-			factor = 3
-			modifier = {
-				factor = 0
-				bohemia_area = {
-					owner = {
-						alliance_with = ROOT
-					}
-				}
-			}
-		}
-
+		
 		provinces_to_highlight = {
 			OR = {
 				province_id = 266
@@ -145,7 +132,7 @@ hab_holy_roman_ambitions = {
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
-
+		
 		trigger = {
 			owns_or_non_sovereign_subject_of = 266
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -174,15 +161,20 @@ hab_holy_roman_ambitions = {
 		}
 		ai_weight = {
 			factor = 500	#Historical conquest (though they got the crown not through war, but marriages are a little bit too mysterious and complex for the AI)
+			modifier = {
+				factor = 0
+				bohemia_area = {
+					owner = {
+						alliance_with = ROOT
+					}
+				}
+			}
 		}
 	}
 	recover_silesia = {
 		icon = mission_unite_home_region
 		required_missions = { subjugate_bohemia }
 		completed_by = 1620.11.8
-		ai_weight = {
-			factor = 2
-		}
 		trigger = {
 			silesia_area = {
 				type = all
@@ -214,7 +206,7 @@ hab_holy_roman_ambitions = {
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
-
+				
 			}
 			red_ruthenia_area = {
 				limit = {
@@ -239,35 +231,6 @@ hab_holy_roman_ambitions = {
 		icon = mission_noble_council
 		completed_by = 1772.8.5
 		required_missions = { recover_silesia }
-		ai_weight = {
-			factor = 0.5
-			modifier = {
-				factor = 0
-				malopolska_area = {
-					owner = {
-						alliance_with = ROOT
-					}
-				}
-			}
-			modifier = {
-				factor = 2
-				slovakia_area = {
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-			}
-			modifier = {
-				factor = 2
-				malopolska_area = {
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-			}
-			modifier = {
-				factor = 2
-				red_ruthenia_area = {
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-			}
-		}
 		provinces_to_highlight = {
 			OR = {
 				area = slovakia_area
@@ -348,6 +311,32 @@ hab_holy_roman_ambitions = {
 		}
 		ai_weight = {
 			factor = 500	#Historical conquest
+			modifier = {
+				factor = 0
+				malopolska_area = {
+					owner = {
+						alliance_with = ROOT
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				slovakia_area = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			modifier = {
+				factor = 2
+				malopolska_area = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			modifier = {
+				factor = 2
+				red_ruthenia_area = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
 		}
 	}
 }
@@ -361,8 +350,8 @@ hab_protect_the_balkans = {
 		tag = HAB
 	}
 	has_country_shield = yes
-
-
+	
+	
 	subjugate_hungary = { #Decline of Hungary
 		icon = mission_eastern_european_city
 		required_missions = {  } #None
@@ -442,7 +431,7 @@ hab_protect_the_balkans = {
 				}
 			}
 		}
-
+		
 		provinces_to_highlight = {
 			OR = {
 				area = slovakia_area
@@ -506,7 +495,7 @@ hab_protect_the_balkans = {
 		required_missions = { austrian_hungary }
 		position = 6
 		completed_by = 1526.8.30
-
+		
 		ai_weight = {
 			factor = 500
 			modifier = {
@@ -586,14 +575,6 @@ hab_protect_the_balkans = {
 				}
 				add_permanent_claim = ROOT
 			}
-			#New States
-			aquilea_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 	conquer_transylvania = {
@@ -633,9 +614,6 @@ hab_protect_the_balkans = {
 			}
 		}
 		effect = {
-			unlock_estate_privilege = {
-				estate_privilege = estate_burghers_orthodox_tolerance
-			}
 			wallachia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -658,19 +636,19 @@ hab_italian_ambitions = {
 	slot = 3
 	generic = no
 	ai = yes
-
+	
 	potential = {
 		tag = HAB
 		NOT = { map_setup = map_setup_random }
 	}
-
+	
 	has_country_shield = yes
-
+	
 	austrian_italian_ambition = {
 		icon = mission_italian_condottiere
 		position = 7
 		completed_by = 1797.10.17
-
+		
 		ai_weight = {
 			factor = 500
 			modifier = {
@@ -687,13 +665,10 @@ hab_italian_ambitions = {
 				}
 			}
 		}
-
+		
 		required_missions = { austrian_croatia }
 		provinces_to_highlight = {
-			OR = {
-				area = venetia_area
-				area = aquilea_area
-			}
+			area = venetia_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -701,20 +676,10 @@ hab_italian_ambitions = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			aquilea_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 		}
 		effect = {
 			add_mercantilism = 5
 			venetia_area = {
-				add_province_modifier = {
-					name = "protected_italian_interests"
-					duration = 3650
-				}
-			}
-			aquilea_area = {
 				add_province_modifier = {
 					name = "protected_italian_interests"
 					duration = 3650

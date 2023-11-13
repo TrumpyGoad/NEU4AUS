@@ -147,7 +147,7 @@ nor_colonialism_mission_slot = {
 					}
 				}
 				AND = {
-					province_id = 4163
+					province_id = 1975
 					NOT = {
 						trade_share = {
 							country = ROOT
@@ -156,7 +156,7 @@ nor_colonialism_mission_slot = {
 					}
 				}
 				AND = {
-					province_id = 1927
+					province_id = 1926
 					NOT = { is_strongest_trade_power = ROOT }
 					NOT = {
 						trade_share = {
@@ -168,7 +168,7 @@ nor_colonialism_mission_slot = {
 			}
 		}
 		trigger = {
-			4163 = {
+			1975 = {
 				trade_share = {
 					country = ROOT
 					share = 75
@@ -183,7 +183,7 @@ nor_colonialism_mission_slot = {
 					}
 				}
 			}
-			1927 = {
+			1926 = {
 				OR = {
 					is_strongest_trade_power = ROOT
 					trade_share = {
@@ -298,7 +298,7 @@ nor_colonialism_mission_slot = {
 						}
 						add_permanent_claim = ROOT
 					}
-					canada_region = {
+					colonial_canada = {
 						limit = {
 							NOT = { is_core = ROOT }
 							NOT = { is_permanent_claim = ROOT }
@@ -309,7 +309,7 @@ nor_colonialism_mission_slot = {
 						}
 						add_permanent_claim = ROOT
 					}
-					carribeans_region = {
+					colonial_the_carribean = {
 						limit = {
 							NOT = { is_core = ROOT }
 							NOT = { is_permanent_claim = ROOT }
@@ -364,6 +364,7 @@ nor_colonize_north_america_slot = {
 		required_missions = { nor_discover_new_world }
 		provinces_to_highlight = {
 			OR = {
+				colonial_region = colonial_canada
 				colonial_region = colonial_eastern_america
 			}
 			has_discovered = ROOT
@@ -375,7 +376,7 @@ nor_colonize_north_america_slot = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
-					region = canada_region
+					colonial_region = colonial_canada
 					colonial_region = colonial_eastern_america
 				}
 				is_city = yes
@@ -388,7 +389,10 @@ nor_colonize_north_america_slot = {
 				random_province = {
 					limit = {
 						country_or_non_sovereign_subject_holds = ROOT
-						colonial_region = colonial_eastern_america
+						OR = {
+							colonial_region = colonial_canada
+							colonial_region = colonial_eastern_america
+						}
 						is_city = yes
 						NOT = { has_province_flag = nor_colonize_canada_and_na_flag }
 						NOT = { has_production_building_trigger = yes }
@@ -398,7 +402,10 @@ nor_colonize_north_america_slot = {
 				random_province = {
 					limit = {
 						country_or_non_sovereign_subject_holds = ROOT
-						colonial_region = colonial_eastern_america
+						OR = {
+							colonial_region = colonial_canada
+							colonial_region = colonial_eastern_america
+						}
 						is_city = yes
 						NOT = { has_province_flag = nor_colonize_canada_and_na_flag }
 						NOT = { has_production_building_trigger = yes }
@@ -408,7 +415,10 @@ nor_colonize_north_america_slot = {
 				random_province = {
 					limit = {
 						country_or_non_sovereign_subject_holds = ROOT
-						colonial_region = colonial_eastern_america
+						OR = {
+							colonial_region = colonial_canada
+							colonial_region = colonial_eastern_america
+						}
 						is_city = yes
 						NOT = { has_province_flag = nor_colonize_canada_and_na_flag }
 						NOT = { has_production_building_trigger = yes }
@@ -418,7 +428,10 @@ nor_colonize_north_america_slot = {
 				random_province = {
 					limit = {
 						country_or_non_sovereign_subject_holds = ROOT
-						colonial_region = colonial_eastern_america
+						OR = {
+							colonial_region = colonial_canada
+							colonial_region = colonial_eastern_america
+						}
 						is_city = yes
 						NOT = { has_province_flag = nor_colonize_canada_and_na_flag }
 						NOT = { has_production_building_trigger = yes }
@@ -428,7 +441,10 @@ nor_colonize_north_america_slot = {
 				random_province = {
 					limit = {
 						country_or_non_sovereign_subject_holds = ROOT
-						colonial_region = colonial_eastern_america
+						OR = {
+							colonial_region = colonial_canada
+							colonial_region = colonial_eastern_america
+						}
 						is_city = yes
 						NOT = { has_province_flag = nor_colonize_canada_and_na_flag }
 						NOT = { has_production_building_trigger = yes }
@@ -475,7 +491,10 @@ nor_colonize_north_america_slot = {
 		position = 7
 		required_missions = { nor_colonize_canada_and_na }
 		provinces_to_highlight = {
-			colonial_region = colonial_louisiana
+			OR = {
+				colonial_region = colonial_alaska
+				colonial_region = colonial_louisiana
+			}
 			has_discovered = ROOT
 			OR = {
 				is_city = no
@@ -484,7 +503,10 @@ nor_colonize_north_america_slot = {
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				colonial_region = colonial_louisiana
+				OR = {
+					colonial_region = colonial_alaska
+					colonial_region = colonial_louisiana
+				}
 				is_city = yes
 				value = 20
 			}
@@ -1399,7 +1421,7 @@ nor_dominate_colonialism_slot = {
 		position = 6
 		required_missions = { nor_discover_new_world }
 		provinces_to_highlight = {
-			region = carribeans_region
+			colonial_region = colonial_the_carribean
 			has_discovered = ROOT
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -1408,7 +1430,7 @@ nor_dominate_colonialism_slot = {
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				region = carribeans_region
+				colonial_region = colonial_the_carribean
 				is_city = yes
 				value = 15
 			}
@@ -2251,7 +2273,7 @@ nor_religion_mission_slot = {
 			}
 			custom_tooltip = swe_humanist_effects_tt
 			change_ruler_stat = {
-				stat = dip
+				type = dip
 				amount = 3
 			}
 		}
@@ -2597,7 +2619,7 @@ nor_humanist_mission_slot = {
 		}
 		effect = {
 			change_ruler_stat = {
-				stat = dip
+				type = dip
 				amount = 3
 			}
 		}
@@ -2969,6 +2991,14 @@ nor_sca_colonize_sa_slot = {
 				}
 				add_permanent_claim = ROOT
 			}
+			colonial_peru = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { owner = { is_subject_of = ROOT } }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	
@@ -3045,7 +3075,7 @@ nor_sca_colonize_peru_slot = {
 		position = 8
 		required_missions = { nor_sca_control_the_panama }
 		provinces_to_highlight = {
-			colonial_region = colonial_colombia
+			colonial_region = colonial_peru
 			has_discovered = ROOT
 			OR = {
 				is_city = no
@@ -3054,7 +3084,7 @@ nor_sca_colonize_peru_slot = {
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				colonial_region = colonial_colombia
+				colonial_region = colonial_peru
 				is_city = yes
 				value = 25
 			}

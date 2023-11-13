@@ -20,10 +20,10 @@ discovered_by = north_american
 1707.5.12 = { discovered_by = GBR }
 
 1776.1.1 = {
-	#owner = GBR
-	#controller = GBR
-	#add_core = GBR
-	#is_city = yes
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+	is_city = yes
 	culture = english
 	religion = protestant 
 	trade_goods = fur 

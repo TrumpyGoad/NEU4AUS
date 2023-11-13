@@ -163,11 +163,11 @@ province_event = {
 		owner = { add_adm_power = -25 }
 	}
 
-	#option = {
-	#	trigger = { owner = { has_idea = privateers } }
-	#	name = "tyw_events.5.b"
-	#	owner = { add_dip_power = -25 }
-	#}
+	option = {
+		trigger = { owner = { has_idea = privateers } }
+		name = "tyw_events.5.b"
+		owner = { add_dip_power = -25 }
+	}
 
 	option = {
 		name = "tyw_events.5.c"
@@ -1293,7 +1293,7 @@ country_event = {
 	}
 }
 
-# ï¿½ï¿½igo Vï¿½lez de Guevara
+# Íñigo Vélez de Guevara
 country_event = {
 	id = tyw_events.30
 	title = "tyw_events.30.t"

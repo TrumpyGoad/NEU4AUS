@@ -178,16 +178,57 @@ country_event = {
 	title = "flavor_eng.EVTNAME9104"
 	desc = "flavor_eng.EVTDESC9104"
 	picture = DIPLOMACY_eventPicture
+	
 	fire_only_once = yes
-	major = yes
-	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				has_global_flag = hyw_mission_resolution
+				tag = ENG
+			}
+			AND = {
+				NOT = { is_year = 1500 }
+				NOT = { has_global_flag = eng_had_end_of_hundred_years_war }
+				OR = {
+					AND = {
+						tag = ENG
+						NOT = { exists = GBR }
+					}
+					tag = GBR
+				}
+				primary_culture = english
+				NOT = {
+					france_region = {
+						owned_by = ROOT
+					}
+				}
+				FRA = {
+					exists = yes
+					NOT = { is_subject_of = ENG }
+					NOT = { is_subject_of = GBR }
+					NOT = { war_with = ENG }
+					NOT = { war_with = GBR }
+				}
+			}
+		}
+	}
 	
 	immediate = {
 		hidden_effect = {
-			set_country_flag = eng_had_end_of_hundred_years_war
+			set_global_flag = eng_had_end_of_hundred_years_war
+			if = {
+				limit = {
+					FRA = { NOT = { has_country_flag = had_end_of_HYW_france } }
+				}
+				FRA = { country_event = { id = flavor_fra.9104 days = 1 } }
+			}
 		}
 	}
-
+	
+	mean_time_to_happen = {
+		months = 12
+	}
 	
 	option = {			# We have lost our foothold in France
 		name = "flavor_eng.EVTOPTA9104"
@@ -206,9 +247,6 @@ country_event = {
 				modifier = eng_no_english_in_france
 			}
 		}
-		white_peace = FRA
-		remove_accepted_culture = gascon
-		remove_accepted_culture = normand
 	}
 	option = {		# We will never give this up!
 		name = "flavor_eng.EVTOPTB9104"
@@ -221,38 +259,6 @@ country_event = {
 			}
 		}
 	}
-}
-
-# Madness of King Henry VI
-
-country_event = {
-	id = flavor_eng.123456789
-	title = "flavor_eng_henry.t"
-	desc = "flavor_eng_henry.d"
-	picture = DIPLOMACY_eventPicture
-	
-	fire_only_once = yes
-	trigger = {
-		ROOT = { has_country_flag = eng_had_end_of_hundred_years_war }
-		NOT = {
-			ROOT = { has_country_flag = war_of_the_roses }
-		}
-		ROOT = { has_ruler = "Henry VI" }
-	}
-
-	
-	mean_time_to_happen = {
-		months = 3
-	}
-	
-	option = {			# God Save the King!
-		name = "flavor_eng_henry.a"
-		change_adm = -6
-		change_mil = -6
-		change_dip = -6
-		
-	}
-
 }
 
 # The Justices of Peace
@@ -679,7 +685,7 @@ country_event = {
 	}
 }
 
-# Bloody Mary and King Felipï¿½ of England
+# Bloody Mary and King Felipé of England
 country_event = {
 	id = flavor_eng.9114
 	title = "flavor_eng.EVTNAME9114"
@@ -874,7 +880,7 @@ country_event = {
 			define_advisor = {
 				type = spymaster
 				name = "Francis Walsingham"
-				culture = english
+				#culture = english
 				location = 235
 				skill = 3
 				discount = yes
@@ -888,7 +894,7 @@ country_event = {
 			define_advisor = {
 				type = spymaster
 				name = "Francis Walsingham"
-				culture = english
+				#culture = english
 				location = 236
 				skill = 3
 				discount = yes
@@ -941,7 +947,7 @@ country_event = {
 		define_advisor = {
 			type = treasurer
 			name = "Thomas Gresham"
-			culture = english
+			#culture = english
 			discount = yes
 			location = 236
 			skill = 3
@@ -1250,7 +1256,7 @@ country_event = {
 					area = leinster_area
 					area = ulster_area
 				}
-				culture = irish   
+				culture = irish
 			}
 			spawn_rebels = {
 				type = noble_rebels
@@ -1743,7 +1749,7 @@ country_event = {
 			define_advisor = {
 				type = statesman
 				name = "Robert Walpole"
-				culture = english
+				#culture = english
 				discount = yes
 				location = 238
 				skill = 3
@@ -1757,7 +1763,7 @@ country_event = {
 			define_advisor = {
 				type = statesman
 				name = "Robert Walpole"
-				culture = english
+				#culture = english
 				discount = yes
 				location = 236
 				skill = 3
@@ -1942,7 +1948,7 @@ country_event = {
 			define_advisor = {
 				type = statesman
 				name = "W. Pitt the Elder"
-				culture = english
+				#culture = english
 				discount = yes
 				location = 236
 				skill = 3
@@ -2009,7 +2015,7 @@ country_event = {
 			define_advisor = {
 				type = statesman
 				name = "W. Pitt the Younger"
-				culture = english
+				#culture = english
 				discount = yes
 				location = 235
 				skill = 3
@@ -2023,7 +2029,7 @@ country_event = {
 			define_advisor = {
 				type = statesman
 				name = "W. Pitt the Younger"
-				culture = english
+				#culture = english
 				discount = yes
 				location = 236
 				skill = 3
@@ -2492,7 +2498,7 @@ country_event = {
 		define_advisor = {
 			name = "William Shakespeare" #The greatest writer of all   
 			location = 236 #London
-			culture = english
+			#culture = english
 			skill = 2
 			type = artist
 			discount = yes

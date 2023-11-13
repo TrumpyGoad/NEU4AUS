@@ -19,10 +19,10 @@ discovered_by = north_american
 
 1806.1.1 = {
  	discovered_by = GBR
-	#owner = GBR
-	#controller = GBR
-	#add_core = GBR
-	#is_city = yes
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+	is_city = yes
 	culture = english
 	religion = protestant 
 	trade_goods = grain

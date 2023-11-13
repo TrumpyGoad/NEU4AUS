@@ -18,9 +18,9 @@ discovered_by = north_american
 
 
 1710.1.1 = {
-	#owner = ---
-	#controller = ---
-	#is_city = no
+	owner = ---
+	controller = ---
+	is_city = no
 	remove_core = COM 
 } #Horses cause waves of migration on the Great Plains
 

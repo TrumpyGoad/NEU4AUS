@@ -1,8 +1,8 @@
 #4938 - Vanua Levu
 
-#add_core = VNL
-#owner = VNL
-#controller = VNL
+add_core = VNL
+owner = VNL
+controller = VNL
 culture = melanesian
 religion = animism
 hre = no

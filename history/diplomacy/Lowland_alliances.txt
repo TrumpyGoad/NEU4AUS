@@ -1,21 +1,21 @@
 #Dutch states
-#vassal = {
-#	first = BUR
-#	second = FLA
-#	start_date = 1444.1.1
-#	end_date = 1444.11.12
-#}
-vassal = {
+union = {
+	first = BUR
+	second = FLA
+	start_date = 1444.1.1
+	end_date = 1493.1.1
+}
+union = {
 	first = BUR
 	second = BRB
 	start_date = 1444.1.1
-	end_date = 1444.11.12
+	end_date = 1477.1.5
 }
-vassal = {
+union = {
 	first = BUR
 	second = HOL
 	start_date = 1444.1.1
-	end_date = 1444.11.12
+	end_date = 1477.1.5
 }
 #vassal = {
 #	first = HAB
@@ -41,7 +41,7 @@ vassal = {
 	first = BUR
 	second = NEV
 	start_date = 1444.1.1
-	end_date = 1444.11.12
+	end_date = 1465.1.1
 }
 
 # Hainaut and Holland

@@ -27,9 +27,9 @@ emp_pap_slot_1 = {
 
 		trigger = {
 			custom_trigger_tooltip = {
-				tooltip = emp_pap_patrimony_of_st_peter_tt_updated
+				tooltip = emp_pap_patrimony_of_st_peter_tt
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 4 # out of 8
+					value = 6 # out of 8
 					OR = {
 						area = central_italy_area
 						area = emilia_romagna_area
@@ -59,27 +59,6 @@ emp_pap_slot_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			piedmont_po_valley_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			west_liguria_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			lower_tuscany_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 
@@ -93,10 +72,6 @@ emp_pap_slot_1 = {
 				area = tuscany_area
 				area = liguria_area
 				area = piedmont_area
-				#New States
-				area = west_liguria_area
-				area = piedmont_po_valley_area
-				area = lower_tuscany_area
 			}
 			NOT = {
 				owned_by = ROOT
@@ -110,10 +85,6 @@ emp_pap_slot_1 = {
 					area = tuscany_area
 					area = liguria_area
 					area = piedmont_area
-					#New States
-					area = west_liguria_area
-					area = piedmont_po_valley_area
-					area = lower_tuscany_area
 				}
 			}
 		}
@@ -139,21 +110,6 @@ emp_pap_slot_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			#New States
-			venice_po_valley_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			aquilea_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 	
@@ -167,9 +123,6 @@ emp_pap_slot_1 = {
 				area = venetia_area
 				area = lombardy_area
 				area = po_valley_area
-				#New States
-				area = venice_po_valley_area
-				area = aquilea_area
 			}
 			NOT = {
 				owned_by = ROOT
@@ -183,9 +136,6 @@ emp_pap_slot_1 = {
 					area = venetia_area
 					area = lombardy_area
 					area = po_valley_area
-					#New States
-					area = venice_po_valley_area
-					area = aquilea_area
 				}
 			}
 		}
@@ -211,21 +161,6 @@ emp_pap_slot_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			#New States
-			central_sicily_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			corsica_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 	
@@ -239,9 +174,6 @@ emp_pap_slot_1 = {
 				area = corsica_sardinia_area
 				area = sicily_area
 				area = western_sicily_area
-				#New States
-				area = central_sicily_area
-				area = corsica_area
 			}
 			NOT = {
 				owned_by = ROOT
@@ -255,9 +187,6 @@ emp_pap_slot_1 = {
 					area = corsica_sardinia_area
 					area = sicily_area
 					area = western_sicily_area
-					#New States
-					area = central_sicily_area
-					area = corsica_area
 				}
 			}
 		}
@@ -277,21 +206,6 @@ emp_pap_slot_1 = {
 				add_permanent_claim = ROOT
 			}
 			apulia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			#New States
-			central_italy_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			north_apulia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }

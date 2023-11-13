@@ -5,7 +5,7 @@ controller = MHR
 culture = mahri_culture
 religion = sunni
 capital = "Al Ghaydah"
-trade_goods = livestock
+trade_goods = fish
 hre = no
 base_tax = 1 
 base_production = 1
@@ -19,7 +19,7 @@ discovered_by = nomad_group
 discovered_by = east_african
 
 1480.1.1 = { discovered_by = TUR }
-1488.1.1 = { discovered_by = POR } # Pï¿½ro da Covilhï¿½
+1488.1.1 = { discovered_by = POR } # Pêro da Covilhã
 1546.1.1 = {
 	owner = HDR
 	controller = HDR

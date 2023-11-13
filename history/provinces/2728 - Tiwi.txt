@@ -1,8 +1,8 @@
 #2728 - Tiwi
 
-#add_core = TIW
-#owner =  TIW
-#controller =  TIW
+add_core = TIW
+owner = TIW
+controller = TIW
 culture = gunwinyguan
 religion = dreamtime
 capital = "Tiwi"
