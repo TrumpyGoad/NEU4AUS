@@ -1,8 +1,0 @@
-government = monarchy
-add_government_reform = feudalism_reform
-technology_group = chinese
-primary_culture = shandong_culture
-religion = confucianism
-government_rank = 2
-
-capital = 2113 # Gaizhou
