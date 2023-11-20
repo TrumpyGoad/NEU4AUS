@@ -443,10 +443,10 @@ estate_burghers_commercial_board_of_advice = {
 	influence = 0.05
 	loyalty = 0.05
 	penalties = {
-		stability_cost_modifier = 0.1
+		stability_cost_modifier = 0.05
 	}
 	benefits = {
-		dip_advisor_cost = -0.15
+		dip_advisor_cost = -0.10
 	}
 	conditional_modifier = {
 		trigger = { has_government_mechanic = russian_modernization_mechanic }
@@ -566,10 +566,9 @@ estate_burghers_indebted_to_burghers = {
 		custom_tooltip = estate_burghers_indebted_to_burghers_effect_tooltip
 		if = {
 			limit = { NOT = { has_government_attribute = no_mercantilism_loss_from_privilege } }
-			add_mercantilism = -1
 		}
 		tooltip = {
-			add_inflation = 0.5
+			
 		}
 		hidden_effect = {
 			add_loan = {
@@ -718,12 +717,12 @@ estate_burghers_land_trade_rights = {
 	on_granted = {
 	}
 	modifier_by_land_ownership = {
-		global_trade_power = 0.33
+		global_trade_power = 0.25
 	}
 	penalties = {
 	}
 	benefits = {
-		trade_range_modifier = 0.1
+		trade_range_modifier = 0.2
 	}
 	mechanics = {
 		exempt_from_seize_land
@@ -1278,7 +1277,7 @@ estate_burghers_exclusive_trade_rights = {
 	icon = privilege_make_generous_donation
 	max_absolutism = -5
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
-	influence = 0.05
+	influence = 0.10
 	loyalty = 0.05
 	is_valid = {
 		has_dlc = "Emperor"
@@ -1368,11 +1367,9 @@ estate_burghers_control_over_monetary_policy = {
 		has_dlc = "Emperor"
 	}
 	penalties = {
-		all_power_cost = 0.05
 	}
 	benefits = {
 		inflation_reduction = 0.15
-		interest = -0.5
 		production_efficiency = 0.05
 	}
 	conditional_modifier = {
@@ -2350,8 +2347,8 @@ estate_burghers_autonomous_trade_companies = {
 	influence = 0.05
 	loyalty = 0.05
 	benefits = { 
-		placed_merchant_power = 5 
-		center_of_trade_upgrade_cost = -0.1 
+		
+		center_of_trade_upgrade_cost = -0.33
 	}
 	penalties = {
 	}
@@ -2519,7 +2516,6 @@ estate_burghers_economical_boost = {
 			}
 		}
 		modifier = {
-			placed_merchant_power = 5
 			global_prov_trade_power_modifier = 0.25
 		}
 	}
@@ -2531,7 +2527,6 @@ estate_burghers_economical_boost = {
 			}
 		}
 		modifier = {
-			placed_merchant_power = 10
 			global_prov_trade_power_modifier = 0.5
 		}
 	}
@@ -2592,7 +2587,7 @@ estate_burghers_expanded_monopoly_rights = {
 estate_burghers_force_impressment = {
 	icon = privilege_heavy_ship
 	loyalty = 0.0
-	influence = 0.05
+	influence = 0.075
 	max_absolutism = -5
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
 	is_valid = {
@@ -2677,7 +2672,7 @@ estate_burghers_naval_school_right = {
 }
 estate_burghers_financial_demand = {
 	icon = privilege_ducats
-	loyalty = 0.0
+	loyalty = 0.05
 	influence = 0.1
 	max_absolutism = -5
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
@@ -2685,7 +2680,7 @@ estate_burghers_financial_demand = {
 		has_dlc = "Domination"
 	}
 	benefits = {
-		global_tax_modifier = 0.1
+		global_tax_modifier = 0.05
 	}
 	
 	on_granted = {
@@ -2717,7 +2712,7 @@ estate_burghers_financial_demand = {
 }
 estate_burghers_promote_burgher_bookkeeping = {
 	icon = privilege_investigate_corruption
-	loyalty = 0.0
+	loyalty = 0.05
 	influence = 0.1
 	max_absolutism = -5
 	conditional_modifier = { trigger = { has_absolutism_reduction_for_estate_privileges = yes } modifier = { max_absolutism = 1 } }
@@ -2727,8 +2722,7 @@ estate_burghers_promote_burgher_bookkeeping = {
 	loyalty_scaled_conditional_modifier = {
 		trigger = { always = yes }
 		modifier = {
-			inflation_action_cost = -0.5
-			interest = -0.5
+			inflation_action_cost = -0.33
 			state_maintenance_modifier = -0.25
 		}
 	}

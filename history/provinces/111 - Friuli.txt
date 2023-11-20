@@ -13,6 +13,7 @@ capital = "Udine"
 is_city = yes
 add_core = VEN
 add_core = AQU
+fort_15th = yes
 
 
 

@@ -37,6 +37,47 @@ country_decisions = {
 			factor = 0
 		}
 	}
+	free_colonist = {
+		potential = {
+				NOT = {
+					capital_scope = {
+						continent = north_america
+					}
+				}
+				NOT = {
+					capital_scope = {
+						continent = south_america
+					}
+				}
+				NOT = {
+					capital_scope = {
+						continent = asia
+					}
+				}
+				NOT = {
+					capital_scope = {
+						region = ural_region
+					}
+				}
+				NOT = { has_country_modifier = free_colonist}	
+				###X###
+				ai = no
+				#######
+			}
+
+		allow = {
+			dip_tech = 6
+					
+					
+			 
+		}
+		effect = {
+			add_country_modifier = {
+				name = "free_colonist"
+				duration = -1
+			}
+		}
+	}	
 
 	holy_orders_allowed_by_pope =  {
 

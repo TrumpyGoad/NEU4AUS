@@ -2,7 +2,7 @@
 
 owner = FZA
 controller = FZA
-culture = al_misr_arabic
+culture = tunisian
 religion = sunni
 capital = "Qus"
 trade_goods = grain

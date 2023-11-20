@@ -3,7 +3,7 @@ monarch_power = ADM
 # applied when a country is ahead of time in this technology
 ahead_of_time = {
 	production_efficiency = 0.1
-	core_creation = -0.1
+	core_creation = -0.10
 	governing_capacity_modifier = 0.15
 	yearly_corruption = -0.05
 }
@@ -320,7 +320,6 @@ technology = { #Absolute Rulership
 		#manufactories = 0.15
 	}
 	governing_capacity = 250
-	core_creation = -0.15
 	
 }
 
@@ -353,7 +352,6 @@ technology = { #Measuring the World
 		manufactories = 0.5
 	}
 	production_efficiency 	=	0.05
-	core_creation = -0.15
 }
 
 technology = { #Bonds and Tontines

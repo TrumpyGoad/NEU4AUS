@@ -198,6 +198,8 @@ iberia_region = {
 		galicia_area
 		baleares_area
 		extremadura_area
+		lisboa_area
+		porto_area
 	}
 }
 
@@ -220,6 +222,7 @@ british_isles_region = {
 		connacht_area
 		leinster_area
 		ulster_area
+		channel_islands_area
 	}
 }
 
@@ -274,6 +277,7 @@ crimea_region = {
 		azov_area
 		kezlev_area
 		stavropol_area
+		tyn_area
 	}
 }
 
@@ -321,6 +325,7 @@ carpathia_region = {
 		pest_area
 		daneti_area
 		harsova_area
+		zemplin_area
 	}
 }
 
@@ -426,6 +431,8 @@ persia_region = {
 		khuzestan_area
 		shahrizor_area
 		mogostan_area
+		birjand_area
+		mashhad_area
 	}
 }
 
@@ -438,9 +445,8 @@ khorasan_region = {
 		sistan_area
 		makran_area
 		kalat_area
-		birjand_area
 		herat_area
-		mashhad_area
+		
 	}
 }
 

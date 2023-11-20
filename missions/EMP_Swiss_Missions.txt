@@ -36,70 +36,30 @@ swiss_missions_1 = {
 	emp_swi_geneva = {
 		icon = sway_geneva
 		required_missions = { emp_swi_vaud_wallis }
-		position = 2
+		position = 3
 		provinces_to_highlight = {
-			province_id = 4720
+			province_id = 1880
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
 			}
 		}
 		trigger = {
-			SWI = {
-				NOT = { 
-					is_subject_of = GNV 
+			if = { 
+				limit = { 
+					TIR = { exists = yes } 
 				}
-			}
-			OR = {
-				4720 = { country_or_non_sovereign_subject_holds = ROOT }
-				GNV = {
-					is_at_war = no
-					NOT = { is_subject_of = ROOT }
-					has_opinion = { who = ROOT value = 100 }
-					NOT = { num_of_cities = 2 }
+				TIR = {
+					has_opinion = {
+						who = ROOT 
+						value = 125
+					}
 				}
-			}
+			} 
 		}
 		effect = {
-			if = {
-				limit = {
-					NOT = { owns = 4720 }
-					GNV = {
-						NOT = { is_subject_of = ROOT }
-					}
-				}
-				custom_tooltip = swi_geneva_mission_tt
-			}
-			if = {
-				limit = {
-					GNV = {
-						is_subject = no
-						has_opinion = { who = ROOT value = 100 }
-						NOT = { num_of_cities = 2 }
-						is_at_war = no
-					}
-				}
-				country_event = { id = emp_mission_events.2 }		
-			}
-			else_if = {
-				limit = {
-					GNV = {
-						is_subject = yes
-						is_at_war = no
-						NOT = { is_subject_of = ROOT }
-						NOT = { num_of_cities = 2 }
-						has_opinion = { who = ROOT value = 100 }
-					}
-				}
-				GNV = {
-					add_liberty_desire = 100
-					overlord = {
-						country_event = { id = emp_mission_events.4 }
-					}
-				}
-				support_independence_of = GNV
-			}
-			add_mil_power = 50
+			vassalize = TIR
+			add_dip_power = -50
 		}
 	}
 }
@@ -120,6 +80,7 @@ swiss_missions_2 = {
 	emp_swi_start = {
 		icon = consolidate_switzerland
 		required_missions = { }
+		position = 1
 		provinces_to_highlight = {
 		}
 		trigger = {
@@ -144,6 +105,7 @@ swiss_missions_2 = {
 	emp_swi_three_leagues = {
 		icon = integrate_the_three_leagues
 		required_missions = { emp_swi_start }
+		position = 2
 		provinces_to_highlight = {
 			area = switzerland_area
 			NOT = {
@@ -160,6 +122,7 @@ swiss_missions_2 = {
 					is_subject_of = ROOT
 				}
 			}
+			
 		}
 		effect = {
 			add_country_modifier = {
@@ -188,12 +151,6 @@ swiss_missions_2 = {
 		}
 		trigger = {
 			stability = 2
-			if = {
-				limit = {
-					government = republic
-				}
-				republican_tradition = 90
-			}
 			switzerland_area = {
 				type = all
 				owned_by = ROOT
@@ -385,13 +342,13 @@ swiss_missions_3 = {
 					ROOT = {
 						NOT = {
 							num_of_owned_provinces_with = {
-								value = 5
+								value = 8
 								culture = swabian
-								has_manufactory_trigger = yes
+								has_production_building_trigger = yes
 							}
 						}
 					}
-					has_manufactory_trigger = no
+					has_production_building_trigger = no
 					owned_by = root
 				}
 			}
@@ -402,9 +359,9 @@ swiss_missions_3 = {
 				culture = swabian
 			}
 			num_of_owned_provinces_with = {
-				value = 5
+				value = 8
 				culture = swabian
-				has_manufactory_trigger = yes
+				has_production_building_trigger = yes
 			}
 		}
 		effect = {
@@ -429,21 +386,25 @@ swiss_missions_4 = {
 		has_dlc = "Emperor"
 	}
 	has_country_shield = yes
+
 	emp_swi_mountain_forts = {
 		icon = fortress_switzerland
 		required_missions = { }
+		position = 1
 		provinces_to_highlight = {
 			has_terrain = mountain
 			owned_by = ROOT
-			NOT = { fort_level = 3 }
+			NOT = { fort_level = 2 }
 		}
+
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 3
-				fort_level = 3
+				value = 2
+				fort_level = 2
 				has_terrain = mountain
 			}
 		}
+
 		effect = {
 			add_country_modifier = {
 				name = "swiss_mountains_modifier"
@@ -644,7 +605,7 @@ swiss_missions_5 = {
 							continent = europe
 						}
 					}
-					amount = 12
+					amount = 1
 				}
 			}
 			else_if = {
@@ -659,14 +620,7 @@ swiss_missions_5 = {
 							continent = europe
 						}
 					}
-					amount = 20
-				}
-			}
-			OR = {
-				full_idea_group = humanist_ideas
-				custom_trigger_tooltip = {
-					tooltip = obj_force_converted_tooltip
-					has_country_flag = force_converted
+					amount = 1
 				}
 			}
 		}

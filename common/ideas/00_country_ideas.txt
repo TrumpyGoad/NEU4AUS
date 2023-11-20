@@ -675,7 +675,7 @@ MOS_ideas = {
 RUS_ideas = {
 	start = {
 		core_creation = -0.10
-		global_manpower_modifier = 0.33
+		global_manpower_modifier = 0.25
 	}
 
 	bonus = {
@@ -695,13 +695,14 @@ RUS_ideas = {
 	siberian_frontier = {
 		may_establish_frontier = yes
 		auto_explore_adjacent_to_colony = yes
+		colony_development_boost = 1
 	}
 	russian_artillery_yard = {
 		artillery_cost = -0.1
 		artillery_power = 0.1
 	}
 	life_long_conscription  = {
-		land_forcelimit_modifier = 0.33
+		land_forcelimit_modifier = 0.25
 	}
 
 	abolish_the_mestnichestvo = {
@@ -750,7 +751,7 @@ SPA_ideas = {
 	}
 	spa_casa_de_contracion = {
 		envoy_travel_time = -0.33
-		core_creation = 0.2
+		core_creation = -0.15
 	}
 	spa_cortes = { 
 		global_colonial_growth = 30
@@ -839,7 +840,7 @@ NED_ideas = {
 	}
 	platoon_fire = {
 		fire_damage = 0.1
-		infantry_fire = 0.5
+		infantry_fire = 0.2
 	}
 }
 
@@ -850,7 +851,7 @@ FRA_ideas = {
 	}
 	
 	bonus = {
-		development_cost = -0.1
+		fire_damage = 0.1
 	}	
 
 	trigger = {
@@ -878,7 +879,7 @@ FRA_ideas = {
 		native_assimilation = 0.5
 	}
 	divine_right_to_rule = {
-		core_creation = -0.1
+		core_creation = -0.15
 		max_absolutism = 5
 	}
 	europes_first_standing_army = {
@@ -886,7 +887,7 @@ FRA_ideas = {
 	}
 	vauban_fortifications = {
 		defensiveness = 0.15
-		garrison_damage = 0.5
+		garrison_damage = 0.1
 	}
 }
 TUR_ideas = {
@@ -1474,7 +1475,7 @@ BRA_ideas = {
 	}
 	
 	bonus = {
-		discipline = 0.05
+		global_unrest = -2
 	}
 	
 	trigger = {
@@ -1499,7 +1500,7 @@ BRA_ideas = {
 		imperial_authority_value = 0.1
 	}
 	iron_tooth = {
-		global_unrest = -2
+		discipline = 0.05
 	}
 	margrave_council = {
 		burghers_loyalty_modifier = 0.05

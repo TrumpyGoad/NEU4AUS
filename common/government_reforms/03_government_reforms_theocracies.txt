@@ -184,9 +184,26 @@ prussian_theocratic_reform = {
 	}
 	
 	conditional = {
-		allow = { has_dlc = "Rights of Man" }
-		#militarised_society = yes
+		
+			
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			prussian_militarization_mechanic_1
+		}
 	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			prussian_militarization_mechanic_2
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			prussian_militarization_mechanic_3
+		}
+	}
+	
 	rulers_can_be_generals = yes
 	heirs_can_be_generals = yes
 }
@@ -799,6 +816,27 @@ zoroastrian_theocracy_reform = {
 		church_influence_modifier = -0.2
 		manpower_in_accepted_culture_provinces = 0.15
 	}
+	conditional = {
+		allow = { has_dlc = "King of Kings" }
+		government_abilities = {
+			the_three_royal_fires_mechanic
+		}
+	}
+	#post_removed_effect = {
+	#	hidden_effect = {
+	#		if = {
+	#			limit = { NOT = { has_government_mechanic = the_three_royal_fires_mechanic } }
+	#			clr_country_flag = can_place_center_of_reformation
+	#			every_owned_province = {
+	#				limit = {
+	#					is_reformation_center = yes
+	#					religion = root
+	#				}
+	#				remove_reform_center = zoroastrian
+	#			}
+	#		}
+	#	}
+	#}
 }
 
 ajuuraan_theocracy_reform = {
@@ -1353,8 +1391,8 @@ combat_heresy_reform = {
 	icon = "soldiers_2"
 	allow_normal_conversion = yes
 	modifiers = {
-		land_morale = 0.1
-		shock_damage = 0.05
+		land_morale = 0.05
+		shock_damage = 0.075
 			}
 		}
 

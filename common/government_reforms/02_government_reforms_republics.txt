@@ -1678,9 +1678,14 @@ roman_republic_government = {
 		enables_plutocratic_idea_group = yes
 		enables_aristocratic_idea_group = no
 	}
+	conditional = {
+		allow = { has_dlc = "King of Kings" }
+		custom_attributes = {
+			enables_pronoias = yes 
+		}
+	}
 	duration = 5
 }
-
 civic_republicanism_government = {
 	icon = "parliament"
 	valid_for_nation_designer = no

@@ -95,3 +95,5 @@
  ifriqiya_nation_desc:0 "We have recovered many of the lands lost to crusaders in centuries past. It is time for us to proclaim a new era for Tunisia"
  persian_nation_safavid_title:0 "Form Safavid Empire"
  persian_nation_safavid_desc:0 "At the mere age of 15, [Root.GetHeir] has taken his father's position as head of the Shiite Turkmen tribe. He has quickly established a base of power in the northwest and proclaimed himself Shah of Iran. Several of the neighbouring regions have been conquered and the possibility of a resurrected Iranian nation doesn't seem so absent anymore."
+ free_colonist_title:0 "Colonial Ambition"
+ free_colonist_desc:0 ""

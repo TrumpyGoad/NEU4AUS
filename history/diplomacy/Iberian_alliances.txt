@@ -55,6 +55,12 @@ union = {
 #	start_date = 1442.3.3
 #	end_date = 1444.11.12
 #}
+alliance = {
+	first = CAS
+	second = POR
+	start_date = 1444.11.11
+	end_date = 1499.1.1
+}	
 
 # Aragon and Austria (League of Venice)
 alliance = {

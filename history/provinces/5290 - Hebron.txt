@@ -1,7 +1,7 @@
 owner = KNI
 controller = KNI
 culture = al_suryah_arabic
-religion = sunni
+religion = catholic
 capital = "Al Quds"
 trade_goods = grain
 hre = no

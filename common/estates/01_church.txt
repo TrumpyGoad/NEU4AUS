@@ -16,7 +16,7 @@ estate_church = {
 			has_government_attribute = enables_estate_church
 			has_country_flag = enables_estate_church_flag
 			AND = {
-				NOT = { has_government_attribute = is_pirate_republic_reform }
+				
 		NOT = { has_reform = cossacks_reform }
 		NOT = { has_reform = siberian_tribe }
 		NOT = { government = native }
@@ -416,7 +416,6 @@ estate_church = {
 		estate_church_bishopric_of_reval
 		estate_church_mysticism_privilege
 		estate_church_japanese_christian_communities_privilege
-		estate_church_development_of_temples
 		estate_church_expand_the_theology
 		estate_church_clerical_education
 		estate_church_religious_delegation

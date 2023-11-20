@@ -176,7 +176,7 @@ horse_artillery = {
 		full_idea_group = economic_ideas
 	}
 	global_regiment_cost = -0.05
-	shock_damage = 0.1
+	shock_damage = 0.05
 
 	ai_will_do = {
 		factor = 1
@@ -281,7 +281,7 @@ modern_siege_weapons = {
 	}
 
 	infantry_fire = 0.1
-	idea_cost = -0.1
+	idea_cost = -0.05
 
 	ai_will_do = {
 		factor = 1
@@ -327,8 +327,7 @@ modern_firearm_techniques = {
 		full_idea_group = quality_ideas
 	}
 
-	infantry_fire = 0.1
-	infantry_power = 0.1
+	infantry_power = 0.125
 	infantry_cost = -0.05
 
 	ai_will_do = {
@@ -599,7 +598,7 @@ autonomous_estates = {
 	}
 
 	vassal_income = 0.25
-	fire_damage_received = -0.1
+	fire_damage_received = -0.075
 
 	ai_will_do = {
 		factor = 1
@@ -715,7 +714,7 @@ local_militias = {
 		full_idea_group = defensive_ideas
 	}
 
-	shock_damage_received = -0.1
+	shock_damage_received = -0.05
 	land_morale = 0.05
 
 	ai_will_do = {
@@ -883,7 +882,7 @@ nobles_in_navy_act = {
 	}
 
 	naval_morale = 0.05
-	fire_damage_received = -0.1
+	fire_damage_received = -0.075
 	tactic= 0.05
 
 	ai_will_do = {
@@ -909,7 +908,7 @@ military_allotment_act = {
 	}
 
 	burghers_loyalty_modifier = 0.1
-	fire_damage = 0.15
+	fire_damage = 0.10
 
 	ai_will_do = {
 		factor = 0.8
@@ -1011,7 +1010,7 @@ deserteur_act = {
 	}
 
 	yearly_corruption = -0.25
-	infantry_fire = 0.2
+	infantry_fire = 0.1
 
 	ai_will_do = {
 		factor = 0.75
@@ -1335,7 +1334,7 @@ fear_tactics_policy = {
 		full_idea_group = infrastructure_ideas
 	}
 
-	shock_damage = 0.1
+	shock_damage = 0.075
 	siege_ability = 0.1
 
 	ai_will_do = {

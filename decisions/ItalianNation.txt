@@ -3,7 +3,6 @@ country_decisions = {
 	italian_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = { has_country_flag = formed_italy_flag }
 			OR = {
@@ -132,7 +131,6 @@ country_decisions = {
 	gods_kingdom = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
 			OR = {
 				ai = no
 				is_playing_custom_nation = no

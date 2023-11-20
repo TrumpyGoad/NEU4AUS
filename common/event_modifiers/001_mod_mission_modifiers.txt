@@ -37,3 +37,48 @@ bountiful_nile = {
 france_lowland_production = {
 	global_trade_goods_size = 0.1
 }
+
+por_dream = { 
+	colonists = 1
+	range = 0.25
+	may_explore = yes
+}
+
+por_city_port = { 
+	local_defensiveness = 0.15
+	local_manpower_modifier = 0.25
+	local_tax_modifier = 0.25
+}
+
+jungle_trained = { 
+	movement_speed = 0.075
+	shock_damage_received = -0.05
+}
+
+wine_brr = { 
+	trade_goods_size_modifier = 0.2
+}
+
+por_economic_growth = { 
+	local_development_cost = -0.15
+	local_production_efficiency = 0.25
+}
+burdgeoning_copper_por = { 
+	trade_goods_size_modifier = 0.5
+}
+
+por_supreme = { 
+	naval_morale = 0.05
+	heavy_ship_power = 0.15
+	naval_forcelimit_modifier = 0.3
+}
+
+legacy_por_supreme = { 
+	naval_morale = 0.05
+	ship_durability = 0.05
+}
+
+por_norther_relation = { 
+	spy_offence = 0.33
+	global_spy_defence = 0.25
+}

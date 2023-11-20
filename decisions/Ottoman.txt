@@ -18,14 +18,10 @@ country_decisions = {
 			#is_at_war = no
 			primary_culture = turkish
 			religion_group = muslim
-			controls = 151
+			owns = 151
 			owns = 149		# Edirne
 			owns = 316		# Bithnyia
 			owns = 317		# Bursa
-			owns = 1764		# Burgas
-			151 = {
-				is_state = yes
-			}
 		}
 		effect = {
 			set_country_flag = relocated_capital_constantinople

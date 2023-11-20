@@ -233,7 +233,7 @@ infra_innovative_policy = {
 		full_idea_group = humanist_ideas
 	}
 	
-	shock_damage_received = -0.1
+	shock_damage_received = -0.075
 	num_accepted_cultures = 2
 	
 	ai_will_do = {
@@ -254,7 +254,7 @@ infra_admin_policy = {
 	}
 	
 	shock_damage = 0.10
-	merc_maintenance_modifier = -0.2
+	merc_maintenance_modifier = -0.1
 	
 	ai_will_do = {
 		factor = 0.5

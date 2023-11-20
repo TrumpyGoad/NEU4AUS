@@ -1,7 +1,7 @@
 # 174 Gascogne - Principal cities: Bordeaux
 
-owner = ENG
-controller = ENG
+owner = FRA
+controller = FRA
 capital = "Blaye"
 is_city = yes
 culture = gascon
@@ -11,9 +11,7 @@ base_tax = 3
 base_production = 3
 trade_goods = wine
 base_manpower = 3
-add_core = ENG
 add_core = FRA
-add_core = GUY
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim

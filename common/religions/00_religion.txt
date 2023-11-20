@@ -2568,13 +2568,19 @@ zoroastrian_group = {
 			tolerance_own = 2
 			trade_efficiency = 0.1
 		}
-		declare_war_in_regency = yes
 		country_as_secondary = {
 			merchants = 1
 			tolerance_own = 1
 		}
+		allowed_center_conversion = {
+			sunni
+			shiite
+			orthodox
+			coptic
+			hinduism
+		}
 
-		holy_sites = { 421 4430 2223 441 2235 }
+		holy_sites = { 2212 2223 441 421 4336 }
 
 		blessings = {
 			blessing_yasna
@@ -2583,7 +2589,7 @@ zoroastrian_group = {
 			blessing_manthras
 			blessing_dakhma
 		}
-
+		
 		heretic = { MAZDAKI MANICHEAN }	
 	}
 	

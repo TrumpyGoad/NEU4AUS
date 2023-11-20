@@ -1050,6 +1050,7 @@ ottoman_government = {
 	}
 }
 
+
 byzantine_autocracy_reform = {
 	icon = "king"
 	allow_normal_conversion = yes
@@ -1065,10 +1066,13 @@ byzantine_autocracy_reform = {
 		max_absolutism = -25
 		prestige = 0.5
 	}
-	
-	#custom_attributes = {
-	#	civil_war_on_every_new_ruler = yes
-	#}
+	conditional = {
+		allow = { has_dlc = "King of Kings" }
+		custom_attributes = {
+			civil_war_on_every_new_ruler = yes
+			enables_pronoias = yes 
+		}
+	}
 }
 
 reformed_byzantine_monarchy_reform = {
@@ -1087,7 +1091,7 @@ reformed_byzantine_monarchy_reform = {
 		global_autonomy = -0.05
 		culture_conversion_cost = -0.2
 		years_of_nationalism = -5
-		max_possible_parliament_seats = 8
+		yearly_absolutism = 1
 	}
 	
 	conditional = {
@@ -1096,8 +1100,15 @@ reformed_byzantine_monarchy_reform = {
 				has_dlc = "Common Sense"
 				has_dlc = "Domination"
 			}
+			NOT = { has_dlc = "King of Kings" }
 		}
 		has_parliament = yes
+	}
+	conditional = {
+		allow = { has_dlc = "King of Kings" }
+		custom_attributes = {
+			enables_pronoias = yes 
+		}
 	}
 }
 
@@ -1469,6 +1480,12 @@ roman_empire_reform = {
 		}
 		has_parliament = yes
 	}
+	conditional = {
+		allow = { has_dlc = "King of Kings" }
+		custom_attributes = {
+			enables_pronoias = yes 
+		}
+	}
 	ai = {
 		factor = 1
 	}
@@ -1520,6 +1537,70 @@ persian_government_reform = {
 	}
 }
 
+zoroastrian_persian_government_reform = {
+	icon = "zoroastrian_persian_government_reform"
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			tag = PER
+			tag = ERS
+			AND = {
+				OR = {
+					has_reform = persian_government_reform
+					have_had_reform = persian_government_reform
+				}
+				is_playing_custom_nation = yes
+			}
+		}
+		religion_group = zoroastrian_group
+	}
+	trigger = {
+		religion_group = zoroastrian_group
+	}
+	nation_designer_trigger = {
+		religion_group = zoroastrian_group
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	modifiers = {
+		innovativeness_gain = 0.25
+		global_missionary_strength = 0.01
+		tolerance_own = 2
+		development_cost = -0.05
+		monarch_admin_power = 2
+	}
+	custom_attributes = {
+		enables_divine_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
+	maintain_dynasty = yes
+	conditional = {
+		allow = { has_dlc = "King of Kings" }
+		government_abilities = {
+			the_three_royal_fires_mechanic
+		}
+	}
+	#post_removed_effect = {
+	#	hidden_effect = {
+	#		if = {
+	#			limit = { NOT = { has_government_mechanic = the_three_royal_fires_mechanic } }
+	#			clr_country_flag = can_place_center_of_reformation
+	#			every_owned_province = {
+	#				limit = {
+	#					is_reformation_center = yes
+	#					religion = root
+	#				}
+	#				remove_reform_center = zoroastrian
+	#			}
+	#		}
+	#	}
+	#}
+	ai = {
+		factor = 1
+	}
+}
+
 portuguese_monarchy_reform = {
 	icon = "portuguese_king"
 	allow_normal_conversion = yes
@@ -1536,6 +1617,7 @@ portuguese_monarchy_reform = {
 		global_tax_modifier = 0.1
 		sailors_recovery_speed = 0.2
 	}
+	has_parliament = yes
 	ai = {
 		factor = 1
 	}
@@ -2200,12 +2282,26 @@ prussian_monarchy = {
 		max_absolutism = 10
 		monarch_military_power = 1
 		nobles_loyalty_modifier = 0.1
-		#governing_capacity_modifier = -0.33
+		governing_capacity_modifier = -0.5
 	}
 
 	conditional = {
-		allow = { has_dlc = "Rights of Man" }
-		#militarised_society = yes
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			prussian_militarization_mechanic_1
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			prussian_militarization_mechanic_2
+		}
+	}
+	conditional = {
+		allow = { has_dlc = "Domination" }
+		government_abilities = {
+			prussian_militarization_mechanic_3
+		}
 	}
 }
 
@@ -4821,6 +4917,67 @@ ministerialis_promotion_reform = {
 }
 
 #Bureaucracy:
+pronoiar_monarchy_reform = {
+	icon = "pronoiar_monarchy_reform"
+	allow_normal_conversion = yes
+	potential = {
+		or = {
+			AND = {
+				is_playing_custom_nation = yes
+				has_reform = pronoiar_monarchy_reform
+			}
+			have_had_reform = pronoiar_monarchy_reform
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 100
+	modifiers = {
+		allow_client_states = yes
+		num_of_pronoiars = 3
+
+	}
+	conditional = {
+		allow = { has_dlc = "King of Kings" }
+		custom_attributes = {
+			enables_pronoias = yes 
+		}
+	}
+	ai = {
+		factor = 10
+	}
+}
+court_of_art_and_culture_reform = {
+	icon = "court_of_art_and_culture_reform"
+	allow_normal_conversion = yes
+	potential = {
+		has_dlc = "King of Kings"
+		has_unlocked_government_reform = {
+			government_reform = court_of_art_and_culture_reform
+		}
+	}
+	modifiers = {
+		advisor_pool = 1
+		culture_conversion_cost = -0.1
+		prestige_decay = -0.005
+	}
+	conditional = {
+		allow = { has_dlc = "King of Kings" }
+		government_abilities = {
+			persian_influence_mechanic
+		}
+	}
+	custom_attributes = {
+		can_enforce_primary_culture = yes
+	}
+	removed_effect = {
+		country_event = {
+			id = persian_influence_events.3000
+		}
+	}
+	ai = {
+		factor = 5
+	}
+}
 
 centralize_reform = {
 	icon = "paper_with_seal_3"
@@ -5909,7 +6066,6 @@ strengthened_parliament_reform = {
 	}
 	modifiers = {
 		max_absolutism = -20
-		development_cost_in_primary_culture = -0.1
 		parliament_backing_chance = 0.05
 	}
 	ai = {

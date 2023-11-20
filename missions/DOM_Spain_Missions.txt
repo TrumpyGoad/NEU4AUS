@@ -1565,8 +1565,7 @@ dom_cas_missions_3 = {
 
 		trigger = {
 			210 = { 
-                type = all
-				country_or_non_sovereign_subject_holds = ROOT
+                owned_by = ROOT
 				}
 		}
 
@@ -3102,8 +3101,7 @@ dom_cas_missions_5 = {
 		position = 2
 		provinces_to_highlight = {
 			OR = {
-				area = beieras_area
-				area = alentejo_area
+				area = lisboa_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT  }
 		}
@@ -3111,7 +3109,7 @@ dom_cas_missions_5 = {
 		trigger = {
 			if {
 			any_ally = {
-						capital_scope = { area = alentejo_area } 
+						capital_scope = { area = lisboa_area } 
 			}
 		}
 		}

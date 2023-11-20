@@ -932,7 +932,7 @@ country_event = {
 }
 
 # Mercenaries flock to the Standard
-country_event = {
+#country_event = {
 	id = ideagroups.212
 	title = ideagroups.212.t
 	desc = ideagroups.212.d

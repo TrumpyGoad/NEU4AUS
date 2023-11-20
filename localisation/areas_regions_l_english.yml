@@ -3048,6 +3048,16 @@
  tyn_area:0 "Tyn"
  tyn_area_adj:0 "Tyn"
  tyn_area_name:0 "Tyn"
+ porto_area:0 "Porto"
+ porto_area_adj:0 "Porto"
+ porto_area_name:0 "Porto"
+ lisboa_area:0 "Lisboa"
+ lisboa_area_adj:0 "Lisboa"
+ lisboa_area_name:0 "Lisboa"
+ zemplin_area:0 "Zemplin"
+ zemplin_area_adj:0 "Zemplin"
+ zemplin_area_name:0 "Zemplin"
+
 
 
 

@@ -1,17 +1,17 @@
 # - Syracusa
 
-owner = VEN
-controller = VEN
+owner = VRN
+controller = VRN
 culture = venetian 
 religion = catholic 
-hre = no 
+hre = yes
 base_tax = 2
 base_production = 2
 trade_goods = grain
 base_manpower = 1
 capital = "Legnago"
 is_city = yes
-add_core = VEN
+add_core = VRN
 
 
 

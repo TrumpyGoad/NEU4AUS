@@ -667,82 +667,7 @@ french_missions_1_Continuation_a = {
 		}
 	}
 	
-	dom_fra_indian_dominance = {
-		icon = indian_dominance
-		required_missions = { fra_colonial_approach }
-		position = 12 
-		provinces_to_highlight = {
-			superregion = india_superregion 
-			if = { 
-				limit = { 
-					ROOT = { 
-						NOT = { 
-							num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-								superregion = india_superregion
-								value = 20
-							}
-						}
-					}
-				}
-				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			}
-			else = { 
-				AND = {
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
-					province_has_center_of_trade_of_level = 1 
-				}
-			}
-			# OR = {
-				# NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				# AND = {
-					# NOT = { country_or_non_sovereign_subject_holds = ROOT }
-					# province_has_center_of_trade_of_level = 1 
-				# }
-			# }
-		}
-		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				superregion = india_superregion
-				value = 20
-			}
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				superregion = india_superregion
-				value = 4
-				province_has_center_of_trade_of_level = 1 
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = fra_masters_of_india_modifier
-				duration = -1 
-			}
-			if = { 
-				limit = { has_dlc = "Dharma" }
-				custom_tooltip = fra_coastal_cot_level_3_marketplace_estuary_tt
-				tooltip = {
-					add_province_modifier = {
-						name = fra_compagnie_francaise_modifier
-						duration = -1 
-					}
-				}
-				hidden_effect = {
-					random_owned_province = {
-						limit = {
-							superregion = india_superregion
-							has_trade_building_trigger = yes 
-							province_has_center_of_trade_of_level = 3 
-							base_production = 15 
-							has_river_estuary_trigger = yes 
-						}
-						add_province_modifier = {
-							name = fra_compagnie_francaise_modifier
-							duration = -1 
-						}
-					}
-				}
-			}
-		}
-	}
+	
 	
 	fra_appease_the_princes = {
 		icon = fra_appease_the_princes
@@ -867,65 +792,65 @@ french_missions_1_Continuation_a = {
 			hidden_effect = {
 				if = {
 					limit = { monthly_adm = 20 } 
-					change_government_reform_progress = 400 
-				}
-				else_if = {
-					limit = { monthly_adm = 19 } 
-					change_government_reform_progress = 380 
-				}
-				else_if = {
-					limit = { monthly_adm = 18 } 
-					change_government_reform_progress = 360 
-				}
-				else_if = {
-					limit = { monthly_adm = 17 } 
-					change_government_reform_progress = 340 
-				}
-				else_if = {
-					limit = { monthly_adm = 16 } 
-					change_government_reform_progress = 320 
-				}
-				else_if = {
-					limit = { monthly_adm = 15 } 
-					change_government_reform_progress = 300
-				}
-				else_if = {
-					limit = { monthly_adm = 14 } 
-					change_government_reform_progress = 280
-				}
-				else_if = {
-					limit = { monthly_adm = 13 } 
-					change_government_reform_progress = 260
-				}
-				else_if = {
-					limit = { monthly_adm = 12 } 
-					change_government_reform_progress = 240
-				}
-				else_if = {
-					limit = { monthly_adm = 11 } 
-					change_government_reform_progress = 220
-				}
-				else_if = {
-					limit = { monthly_adm = 10 } 
 					change_government_reform_progress = 200
 				}
 				else_if = {
-					limit = { monthly_adm = 9 } 
-					change_government_reform_progress = 180
+					limit = { monthly_adm = 19 } 
+					change_government_reform_progress = 190
 				}
 				else_if = {
-					limit = { monthly_adm = 8 } 
+					limit = { monthly_adm = 18 } 
+					change_government_reform_progress = 180 
+				}
+				else_if = {
+					limit = { monthly_adm = 17 } 
+					change_government_reform_progress = 170 
+				}
+				else_if = {
+					limit = { monthly_adm = 16 } 
 					change_government_reform_progress = 160
 				}
 				else_if = {
-					limit = { monthly_adm = 7 } 
+					limit = { monthly_adm = 15 } 
+					change_government_reform_progress = 150
+				}
+				else_if = {
+					limit = { monthly_adm = 14 } 
 					change_government_reform_progress = 140
 				}
 				else_if = {
-					limit = { monthly_adm = 6 } 
+					limit = { monthly_adm = 13 } 
+					change_government_reform_progress = 130
+				}
+				else_if = {
+					limit = { monthly_adm = 12 } 
 					change_government_reform_progress = 120
 				}
-				else = { change_government_reform_progress = 100 }
+				else_if = {
+					limit = { monthly_adm = 11 } 
+					change_government_reform_progress = 110
+				}
+				else_if = {
+					limit = { monthly_adm = 10 } 
+					change_government_reform_progress = 100
+				}
+				else_if = {
+					limit = { monthly_adm = 9 } 
+					change_government_reform_progress = 90
+				}
+				else_if = {
+					limit = { monthly_adm = 8 } 
+					change_government_reform_progress = 80
+				}
+				else_if = {
+					limit = { monthly_adm = 7 } 
+					change_government_reform_progress = 70
+				}
+				else_if = {
+					limit = { monthly_adm = 6 } 
+					change_government_reform_progress = 60
+				}
+				else = { change_government_reform_progress = 50 }
 			}
 		}
 	}
@@ -2171,6 +2096,34 @@ french_missions_3 = {
 					173 = { add_devastation = -10 } 
 					174 = { add_devastation = -10 }
 				}
+			}
+			savoy_dauphine_area = { 
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			provence_area = { 
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			normandy_area = { 
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			loire_area = { 
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -4298,28 +4251,21 @@ french_missions_5_normal = {
 		provinces_to_highlight = { 
 			OR = { 
 				province_id = 178
-				province_id = 2991
-				province_id = 201
-				province_id = 4696
+				province_id = 177
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 		}
+
 		trigger = { 
 			AND = { 
-				
-				
 					178 = { country_or_non_sovereign_subject_holds = ROOT } 
-					2991 = { country_or_non_sovereign_subject_holds = ROOT }
-					201 = { country_or_non_sovereign_subject_holds = ROOT }
-					4696 = { country_or_non_sovereign_subject_holds = ROOT }
-				
+					177 = { country_or_non_sovereign_subject_holds = ROOT }
 			}
 		}
+
 		effect = { 
 					change_heir_adm = 1 
-					change_heir_dip = 1 
-					change_heir_mil = 1 
-					add_stability_or_adm_power = yes 
+					change_heir_dip = 1  
 				add_country_modifier = { 
 						name = fra_conquered_the_capetian_house_of_anjou_modifier
 						duration = 5475 
@@ -4340,18 +4286,6 @@ french_missions_5_normal = {
 		}
 		trigger = { 
 					202 = { country_or_non_sovereign_subject_holds = ROOT }
-					PAP = { 
-						OR = { 
-							has_opinion_modifier = {
-								who = ROOT
-								modifier = scornfully_insulted
-							}
-							has_opinion_modifier = {
-								who = ROOT
-								modifier = insulted
-							}
-						}
-					}
 		}
 		effect = {
 					set_country_flag = fra_chose_to_piss_off_pope_flag 

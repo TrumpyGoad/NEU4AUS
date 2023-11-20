@@ -124,7 +124,7 @@ aragonese_fleet = {
 	}
 
 	country_modifier = {
-		global_naval_engagement_modifier = 0.15
+		global_naval_engagement_modifier = 0.10
 	}
 
 	button_gfx = 8
@@ -492,4 +492,69 @@ basque_marines = {
 	removed_effect = {}
 	
 	button_gfx = 29 
+}
+
+mamluk_galley_doctrine = {
+	can_select = {
+		has_country_flag = mam_unlock_galley_doctrine_flag
+	}
+
+	cost = 0.1
+	country_modifier = {
+		galley_power = 0.15
+		galley_cost = -0.25
+	}
+	effect = {} #TODO link with naval professionalism ?
+	removed_effect = {}
+	
+	button_gfx = 30
+}
+
+mamluk_light_doctrine = {
+	can_select = {
+		has_country_flag = mam_unlock_light_doctrine_flag
+	}
+
+	cost = 0.1
+	country_modifier = {
+		global_ship_trade_power = 0.15
+		light_ship_cost = -0.25
+	}
+	effect = {} #TODO link with naval professionalism ?
+	removed_effect = {}
+	
+	button_gfx = 30
+}
+
+mamluk_warships_doctrine = {
+	can_select = {
+		has_country_flag = mam_unlock_warships_doctrine_flag
+	}
+
+	cost = 0.1
+	country_modifier = {
+		heavy_ship_power = 0.1
+		global_naval_engagement_modifier = 0.1
+	}
+	effect = {} #TODO link with naval professionalism ?
+	removed_effect = {}
+	
+	button_gfx = 30
+}
+
+mamluk_transports_doctrine = {
+	can_select = {
+		has_country_flag = mam_unlock_transports_doctrine_flag
+	}
+	
+	cost = 0.1
+	country_modifier = {
+		transport_attrition = -0.5
+		allowed_marine_fraction = 0.1
+		movement_speed_in_fleet_modifier = 1
+	}
+	effect = {} #TODO link with naval professionalism ?
+	removed_effect = {}
+	
+	button_gfx = 30
 }

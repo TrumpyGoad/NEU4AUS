@@ -1,8 +1,8 @@
 #1858 - Stettin
 
-owner = STE
-controller = STE
-add_core = STE
+owner = WOL
+controller = WOL
+add_core = WOL
 culture = pommeranian
 religion = catholic
 trade_goods = naval_supplies
@@ -16,7 +16,8 @@ discovered_by = eastern
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
-fort_15th = yes
+center_of_trade = 1
+
 
 extra_cost = 10
 

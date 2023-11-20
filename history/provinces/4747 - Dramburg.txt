@@ -1,8 +1,8 @@
 # 4747 - Dramburg
 
-owner = TEU
-controller = TEU
-add_core = TEU
+owner = BRA
+controller = BRA
+add_core = BRA
 culture = pommeranian
 religion = catholic
 hre = yes
@@ -12,6 +12,7 @@ trade_goods = livestock
 base_manpower = 1
 capital = "Dramburg"
 is_city = yes
+fort_15th = yes
 
 discovered_by = eastern
 discovered_by = western
