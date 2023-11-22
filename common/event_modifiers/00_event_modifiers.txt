@@ -7039,7 +7039,6 @@ no_tribal_leaders = {
 }
 
 armed_cossacks = {
-	land_forcelimit_modifier = 0.15
 }
 
 ### Women in History ###

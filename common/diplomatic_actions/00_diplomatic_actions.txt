@@ -597,9 +597,162 @@ ask_for_tributary_state_action = {
 		}
 	}
 }
+takeondebt = {
+	condition = {
+		tooltip = STOP_EXPLOITING
+		potential = {
+		}
+		allow = {
+			ROOT = {
+				NOT = { num_of_loans = 1 }
+			}
+		}
+	}
+}
 
-break_alliance = {
-	effect = {
-		on_alliance_broken_effect = yes
+infiltrate_administration = {
+	condition = {
+		tooltip = DIP_TECH_NOT_30
+		potential = {
+		}
+		allow = {
+			OR = {
+				dip_tech = 30
+				has_idea = agent_training_new
+			}
+		}
+	}
+}
+
+stealmap = {
+	condition = {
+		tooltip = DIP_TECH_NOT_6
+		potential = {
+		}
+		allow = {
+			OR = {
+				dip_tech = 6
+				has_idea = agent_training_new
+			}
+		}
+	}
+}
+
+
+sow_discontent = {
+	condition = {
+		tooltip = DIP_TECH_NOT_18
+		potential = {
+		}
+		allow = {
+			OR = {
+				dip_tech = 18
+				has_idea = agent_training_new
+			}
+		}
+	}
+}
+
+sabotage_reputation = {
+	condition = {
+		tooltip = DIP_TECH_NOT_21
+		potential = {
+		}
+		allow = {
+			OR = {
+				dip_tech = 21
+				has_idea = agent_training_new
+			}
+		}
+	}
+}
+
+
+
+agitate_for_liberty = {
+	condition = {
+		tooltip = DIP_TECH_NOT_27
+		potential = {
+		}
+		allow = {
+			OR = {
+				dip_tech = 27
+				has_idea = agent_training_new
+			}
+		}
+	}
+}
+
+guaranteeaction = {
+	condition = {
+		tooltip = AE_BELOW_25
+		potential = {
+		}
+		allow = {
+			if = {
+				limit = {
+					FROM = { ai = yes }
+				}
+				NOT = {
+					FROM = {
+						has_opinion_modifier = {
+							who = root
+							modifier = aggressive_expansion
+						}
+						NOT = {
+							has_opinion_modifier = {
+								who = root
+								modifier = aggressive_expansion
+								value = -25
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	condition = {
+		tooltip = RELATIONS_BELOW_100
+		potential = {
+		}
+		allow = {
+			if = {
+				limit = {
+					FROM = { ai = no }
+				}
+				FROM = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+				
+			}
+		}
+	}
+}
+
+declarewar = {
+	condition = {
+		tooltip = mams_cant_dec_ethiopia
+		potential = {
+
+		}
+		allow = {
+			if = {
+				limit = {
+					AND = {
+						tag = MAM
+						FROM = {
+							tag = ETH
+						} 
+					}
+				}
+				has_country_flag = fate_of_the_copts_flag
+			}
+			else = {
+				always = yes
+			}
+		}
 	}
 }

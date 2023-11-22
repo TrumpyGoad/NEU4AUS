@@ -2676,6 +2676,8 @@ qollar_aghasi_regiments_reform = {
 		leader_land_shock = 2
 		mil_tech_cost_modifier = -0.1
 		global_autonomy = -0.03
+		has_mamluks = yes 
+		allowed_mamluks_fraction = 0.2
 	}
 
 	ai = {
@@ -2763,6 +2765,8 @@ ghazi_reform = {
 		land_attrition = -0.1
 		loot_amount = 0.5
 		available_province_loot = 0.5
+		has_mamluks = yes 
+		allowed_mamluks_fraction = 0.2
 	}
 	
 	ai = {
@@ -3072,24 +3076,14 @@ musketeers_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		has_dlc = "Domination"
-		tag = FRA 
+		culture = francien
+		culture = norman  
 	}
 	trigger = {
-		NOT = { current_age = age_of_discovery }
-		NOT = { current_age = age_of_reformation }
-		mission_completed = fra_musketeers
-		if = {
-			limit = { has_modifier_locking_military_tier = yes }
-			OR = {
-				has_reform = musketeers_reform
-				has_not_modifier_locking_military_tier = yes
-			}
-		}
+	
 	}
 	modifiers = {
-		has_musketeer = yes
-		allowed_musketeer_fraction = 0.2
-		nobles_influence_modifier = -0.1
+		
 	}
 	
 	ai = {
@@ -3105,13 +3099,7 @@ gendarmes_reform = {
 		culture_group = french 
 	}
 	trigger = {
-		OR = {
-			has_reform = gendarmes_reform 
-			custom_trigger_tooltip = {
-				tooltip = has_unlocked_this_reform_tt
-				has_country_flag = fra_unlock_gendarmes
-			}
-		}
+		
 		if = {
 			limit = { has_modifier_locking_military_tier = yes }
 			OR = {
@@ -3121,9 +3109,9 @@ gendarmes_reform = {
 		}
 	}
 	modifiers = {
-		cavalry_power = 0.1 
-		nobles_loyalty_modifier = 0.05
-		morale_damage = 0.05
+		has_musketeer = yes
+		allowed_musketeer_fraction = 0.2
+		nobles_influence_modifier = -0.1
 	}
 	ai = {
 		factor = 1
@@ -3613,6 +3601,8 @@ boyars_army_reform = {
 		land_maintenance_modifier = -0.05
 		nobles_influence_modifier = 0.1
 		nobles_privilege_slots = 1
+		has_streltsy = yes
+		allowed_streltsy_fraction = 0.1
 	}
 	custom_attributes = {
 		unlock_boyars_military_privileges = yes

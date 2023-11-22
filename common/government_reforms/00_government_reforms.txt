@@ -5,7 +5,7 @@ defaults_reform = {
 	heirs_can_be_generals = yes
 	fixed_rank = 0
 	republican_name = no
-	claim_states = no
+	claim_states = yes
 	religion = no
 	republic = no
 	dictatorship = no
@@ -376,15 +376,18 @@ merchant_republic = {
 venetian_merchant_republic = {
 	# government mechanics flags go here
 	icon = "politician"
-	allow_normal_conversion = no
+	allow_normal_conversion = yes
 	legacy_government = yes
-	valid_for_new_country = no
+	valid_for_new_country = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 40
 	has_term_election = no
 
 	republican_name = yes
 	royal_marriage = no
+	primary_culture = venetian
+		
+	
 
 	boost_income = yes
 
