@@ -1,8 +1,0 @@
-government = monarchy
-add_government_reform = feudalism_reform
-technology_group = western
-primary_culture = swedish
-religion = catholic
-add_accepted_culture = danish
-
-capital = 6 #Lund
