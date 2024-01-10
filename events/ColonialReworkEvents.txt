@@ -1,0 +1,211 @@
+namespace = colonial_rework
+
+
+#Event to set crown colonies to crown_colony_2 after spawning:
+country_event = {
+
+	id = colonial_rework.111
+	title = "colonial_rework.111.t"
+	desc = "colonial_rework.111.d"
+	picture = TRADEGOODS_eventPicture
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	hidden = yes
+
+	trigger = {
+		any_subject_country = {
+			is_subject_of_type = crown_colony
+		}
+	}
+
+    #Crown Colony
+	option = {
+		name = colonial_rework.111.a
+		every_subject_country = {
+			limit = {
+				is_subject_of_type = crown_colony
+			}
+            country_event = {
+                id = colonial_rework.1 #Converts to new crown colony
+            }
+            
+        }
+	}
+}
+
+#Choose Colony Type, fired via decision
+country_event = {
+
+	id = colonial_rework.11
+	title = "colonial_rework.11.t"
+	desc = "colonial_rework.11.d"
+	picture = TRADEGOODS_eventPicture
+
+	is_triggered_only = yes
+
+    #Crown Colony
+	option = {
+		name = colonial_rework.11.a
+		if = {
+			limit = {
+				any_subject_country = {
+					has_country_flag = about_to_change_cn_flag
+					NOT = { is_subject_of_type = crown_colony_2 }
+				}
+			}
+			hidden_effect = {
+				every_subject_country = {
+					limit = {
+						has_country_flag = about_to_change_cn_flag
+					}
+					country_event = {
+						id = colonial_rework.1
+					}
+					
+				}
+			}
+			custom_tooltip = convert_to_crown_colony_tt
+			add_treasury = -1000
+		}
+		clr_country_flag = convert_cn_event_flag
+	}
+    #Private Enterprise
+    option = {
+		name = colonial_rework.11.b
+        if = {
+			limit = {
+				any_subject_country = {
+					has_country_flag = about_to_change_cn_flag
+					NOT = { is_subject_of_type = private_enterprise }
+				}
+			}
+			hidden_effect = {
+				every_subject_country = {
+					limit = {
+						has_country_flag = about_to_change_cn_flag
+					}
+					country_event = {
+						id = colonial_rework.2
+					}
+					
+				}
+			}
+			custom_tooltip = convert_to_private_enterprise_tt
+			add_treasury = -1000
+		}
+		clr_country_flag = convert_cn_event_flag
+	}
+    #Self Governing Colony
+    option = {
+		name = colonial_rework.11.c
+		if = {
+			limit = {
+				any_subject_country = {
+					has_country_flag = about_to_change_cn_flag
+					NOT = { is_subject_of_type = self_governing_colony }
+				}
+			}
+			hidden_effect = {
+				every_subject_country = {
+					limit = {
+						has_country_flag = about_to_change_cn_flag
+					}
+					country_event = {
+						id = colonial_rework.3
+					}
+					
+				}
+			}
+			custom_tooltip = convert_to_self_governing_colony_tt
+			add_treasury = -1000
+		}
+		clr_country_flag = convert_cn_event_flag
+	}
+}
+
+#Crown Colony
+country_event = {
+
+	id = colonial_rework.1
+	title = "colonial_rework.1.t"
+	desc = "colonial_rework.1.d"
+	picture = TRADEGOODS_eventPicture
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = colonial_rework.1.a
+		ROOT = {
+			grant_independence = yes
+			clr_country_flag = about_to_change_cn_flag
+		}
+		FROM = { 
+			create_subject = {
+				subject_type = crown_colony_2
+				subject = ROOT
+			}
+		}
+		ROOT = {
+			add_government_reform = crown_colony_government
+		}
+	}
+}
+
+#Private Enterprise
+country_event = {
+
+	id = colonial_rework.2
+	title = "colonial_rework.2.t"
+	desc = "colonial_rework.2.d"
+	picture = TRADEGOODS_eventPicture
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = colonial_rework.2.a
+		ROOT = {
+			grant_independence = yes
+			clr_country_flag = about_to_change_cn_flag
+		}
+		FROM = { 
+			create_subject = {
+				subject_type = private_enterprise
+				subject = ROOT
+			}
+		}
+	}
+}
+
+#Self Governing Colony
+country_event = {
+
+	id = colonial_rework.3
+	title = "colonial_rework.3.t"
+	desc = "colonial_rework.3.d"
+	picture = TRADEGOODS_eventPicture
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = colonial_rework.3.a
+		ROOT = {
+			grant_independence = yes
+			clr_country_flag = about_to_change_cn_flag
+		}
+		FROM = { 
+			create_subject = {
+				subject_type = self_governing_colony
+				subject = ROOT
+			}
+		}
+	}
+}

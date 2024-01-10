@@ -1,0 +1,129 @@
+#London
+trade_company_london = {
+	color = { 83 149 105 }
+	
+	provinces = {
+		5335 5336 5337 5338 5339 5340 369 5131 5132 245 4367 4368 4785 239 240 4372 243 1861 4376 233 234 4130 4373 4374 235 236 237 4371 238 1860 4370 4118 4377 4378 375 376 4119 373 374 4120 4379 372 4121 4380 241 242 4366 4369 246 247 244 4375 1285 4361 4362 248 249 251 250 252 4110 4363 253 4364 4365 
+		
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_LONDON_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_LONDON_European_Trade_Company"
+	}
+}
+
+#Scandes
+trade_company_scandes = {
+	color = { 8 82 165 }
+	
+	provinces = {
+		1 2 3 4 5 1985 8 9 11 18 25 1930 4114 4166 1978 1979 370 371 23 24 2752 4145 17 22 4143 4144 10 20 21 4164 16 4163 7 26 6 1982 4165 
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_SCANDES_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_SCANDES_European_Trade_Company"
+	}
+}
+
+#Lviv
+trade_company_lviv = {
+	color = { 84 152 93 }
+	
+	provinces = {
+			268 4529 2405 4530 1756 5267 162 5268 4706 5223 5191 5234 5274
+		153 4125 1953 5168 5169 157 5171 4127 5172 158 5170 155 4126 5173 5174 1954 156 1951 5176 5175 4128 2746  150 
+		5201 5202 5203 4704 5204 5206 5205 159 4532 5192 5193 160 4531 5196 5194 5195 161 5197 5199 5200 5198 2998 5259 5227 5222 5264
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_LVIV_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_LVIV_European_Trade_Company"
+	}
+}
+
+#Thrace
+trade_company_thrace = {
+	color = { 149 45 102 }
+	
+	provinces = {
+		5297 5298 5299 2328 4269 5296 383 5300 5295 5294 2327 5301 4270 4268 5095 5093 5094 365 5289 364 379 5290 380 5293 5291 381 
+		1854 5288 5287 5292 1855 382 4271 5286 378 4297 5285 405 2314 2313 377 5282 5280 407 4992 5258 327 5256 5257 332 5277 4298 5276 
+		4310 5275 2303 5281 2308 4292 321 5253 5255 5284 1849 5283
+		2309 5279 324 2302 5251
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_THRACE_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_THRACE_European_Trade_Company"
+	}
+}
+
+trade_company_napoli = {
+	color = { 100 0 100 }
+	
+	provinces = {
+		4942 4736 125 4943 4737 126 4945 2982 4944 124 4946 4947 4948 123 4955 2984 4957 1934 4956 122 1933 4958 2983 121 4963 4734 4733 4962 120 2985 4959 4960 4961 4732 
+
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_NAPOLI_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_NAPOLI_European_Trade_Company"
+	}
+}
+trade_company_firenze = {
+	color = { 100 0 0 }
+	
+	provinces = {
+		2986 4735 4950 4949 127 4953 4952 1247 4951 118 4965 4964 4731 2976 4954 4966 4967 115 2980 117 2978 116 4968 4970 
+
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_FIRENZE_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_FIRENZE_European_Trade_Company"
+	}
+}
+trade_company_venice = {
+	color = { 0 0 100 }
+	
+	provinces = {
+		119 2977 114 113 4969 4730 4983 106 4971 107 108 4984 4985 112 4991 4729 1774 4986 4987 4988 111 4738 4990 130 
+
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_VENICE_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_VENICE_European_Trade_Company"
+	}
+}

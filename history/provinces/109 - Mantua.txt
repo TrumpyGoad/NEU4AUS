@@ -1,0 +1,23 @@
+# - Syracusa
+
+owner = MAN
+controller = MAN
+culture = romagnan 
+religion = catholic 
+hre = yes 
+base_tax = 6
+base_production = 6
+trade_goods = paper
+base_manpower = 3
+capital = "Mantova"
+is_city = yes
+add_core = MAN
+center_of_trade = 2
+
+fort_15th = yes
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+

@@ -1,0 +1,25 @@
+#151 - Constantinople
+
+owner = BYZ
+controller = BYZ
+culture = greek
+religion = orthodox
+capital = "Constantinople"
+trade_goods = livestock
+hre = no
+base_tax = 1
+base_production = 3
+base_manpower = 2
+is_city = yes
+add_core = BYZ
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = nomad_group
+extra_cost = 26
+
+add_permanent_claim = TUR
+
+
+

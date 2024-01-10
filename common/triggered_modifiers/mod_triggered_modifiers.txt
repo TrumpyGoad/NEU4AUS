@@ -1,0 +1,72 @@
+free_march_slot = {
+	potential = {
+		is_free_or_tributary_trigger = yes
+		
+	}
+
+	trigger = {
+		any_subject_country = {
+			march_of = ROOT
+		}
+	}
+
+	diplomatic_upkeep = 1
+}
+
+#Condottieri from Pluto
+
+#Age 1
+
+pluto_condot_discovery = {
+	potential = {
+		has_idea = emancipation_new
+	}
+	trigger = {
+		has_idea = emancipation_new
+		current_age = age_of_discovery
+	}
+
+	possible_condottieri = 0.15
+
+}
+#Age 2
+pluto_condot_reformation = {
+	potential = {
+		has_idea = emancipation_new
+	}
+	trigger = {
+		has_idea = emancipation_new
+		current_age = age_of_reformation
+	}
+
+	possible_condottieri = 0.30
+
+}
+#Age 3
+pluto_condot_absolutism = {
+	potential = {
+		has_idea = emancipation_new
+	}
+	trigger = {
+		has_idea = emancipation_new
+		current_age = age_of_absolutism
+	}
+
+	possible_condottieri = 0.45
+
+}
+#Age 4
+pluto_condot_revolutions = {
+	potential = {
+		has_idea = emancipation_new
+	}
+	trigger = {
+		has_idea = emancipation_new
+		current_age = age_of_revolutions
+	}
+
+	possible_condottieri = 0.60
+
+}
+
+

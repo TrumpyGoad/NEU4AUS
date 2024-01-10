@@ -1,0 +1,22 @@
+# - Syracusa
+
+owner = SAV
+controller = SAV
+culture = piedmontese 
+religion = catholic 
+hre = yes 
+base_tax = 2
+base_production = 1
+trade_goods = wine
+base_manpower = 1
+capital = "Vercelli"
+is_city = yes
+add_core = SAV
+
+
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+

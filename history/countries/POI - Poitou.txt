@@ -1,0 +1,8 @@
+government = monarchy
+add_government_reform = feudalism_reform
+technology_group = western
+primary_culture = cosmopolitan_french
+religion = catholic
+government_rank = 1
+
+capital = 4386 #Bas-Poitou

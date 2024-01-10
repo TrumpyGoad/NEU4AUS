@@ -1,0 +1,41 @@
+mod_insult_poland = {
+	trigger = {
+		OR = {
+			tag = POL
+			tag = PLC
+		}
+	}
+}
+mod_insult_white_power = {
+	trigger = {
+		AND = {
+			FROM = {
+				OR = {
+					tag = PAP
+					tag = HIN
+					tag = ADU
+					tag = HAB
+					tag = GRA
+					tag = MAL
+					tag = AJU
+				}
+			}
+			OR = {
+				tag = PAP
+				tag = HIN
+				tag = ADU
+				tag = HAB
+				tag = GRA
+				tag = MAL
+				tag = AJU
+			}
+		}
+	}
+}
+
+mod_insult_france = {
+	trigger = {
+		tag = FRA
+	}
+}
+

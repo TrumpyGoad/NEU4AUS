@@ -1,0 +1,94 @@
+country_decisions = {
+
+	danish_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_danish_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { tag = DAN }
+			NOT = { tag = PAP }
+			NOT = { tag = SWE }		
+			NOT = { tag = PRU }
+			OR = {
+				ai = no
+				NOT = { exists = DAN }
+			}
+			OR = {
+				primary_culture = danish
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			always = no #Disabled for now
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 12
+				province_id = 6
+				province_id = 4149
+				province_id = 1984
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no			
+			NOT = { exists = DAN }
+			owns_core_province = 12       
+			owns_core_province = 6
+			owns_core_province = 4149
+			owns_core_province = 1984
+			
+			
+		}
+		effect = {
+			change_tag = DAN
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					OR = {
+						ai = no
+						AND = {
+							ai = yes
+							has_idea_group = default_ideas
+						}
+					}
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_denmark_flag_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}
