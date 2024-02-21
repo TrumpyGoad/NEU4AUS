@@ -1,6 +1,0 @@
-government = monarchy
-add_government_reform = principality
-technology_group = eastern
-primary_culture = byelorussian
-religion = orthodox
-capital = 276	# Minsk
