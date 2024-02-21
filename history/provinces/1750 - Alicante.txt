@@ -1,0 +1,29 @@
+#1750 - Al�cant
+
+owner = VAL		#Mart� I of Aragon
+controller = VAL
+add_core = VAL
+culture = catalan
+religion = catholic
+hre = no
+base_tax = 3
+base_production = 3
+trade_goods = wine
+base_manpower = 3 
+capital = "Al�cant" 
+is_city = yes
+
+
+
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = ottoman
+	
+
+1444.11.12 = {
+	remove_core = ARA
+	owner = VAL
+	controller = VAL
+	add_core = VAL
+}

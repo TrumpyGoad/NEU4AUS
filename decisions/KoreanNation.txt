@@ -1,0 +1,82 @@
+country_decisions = {
+
+	korean_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_korea_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = KOR }
+			culture_group = korean
+			
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1845 #Pyeongyang
+				province_id = 735 #Hanseong
+				province_id = 2745 #Gyeongju
+				province_id = 737 #Jeonju
+				province_id = 2743 #Gyeongseong
+				province_id = 2744 #Nyeongbyeon
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			NOT = { exists = KOR }
+			owns_core_province = 1845 #Pyeongyang
+			owns_core_province = 735 #Hanseong
+			owns_core_province = 2745 #Gyeongju
+			owns_core_province = 737 #Jeonju
+			owns_core_province = 2743 #Gyeongseong
+			owns_core_province = 2744 #Nyeongbyeon
+		}
+		effect = {
+
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = formed_korea_flag
+			change_tag = KOR
+			swap_non_generic_missions = yes
+			korea_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = KOR
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}	
+			
+	}
+		
+}
+	
+
+
+

@@ -1,0 +1,27 @@
+#Bornholm
+
+add_core = DAN
+owner = DAN
+controller = DAN
+culture = danish
+religion = catholic
+hre = no
+base_tax = 1 
+base_production = 1
+trade_goods = fish
+base_manpower = 1
+capital = "Ronne"
+is_city = yes
+estate = estate_church
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+
+
+1444.11.12 = {
+	remove_core = DAN
+	owner = SJL
+	controller = SJL
+	add_core = SJL
+}

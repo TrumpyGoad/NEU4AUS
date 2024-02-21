@@ -1,0 +1,247 @@
+namespace = idea_selection
+
+#Selects Military Ideas
+country_event = {
+	id = idea_selection.1
+	title = idea_selection.1.t
+	desc = idea_selection.1.d
+	picture = WESTERNISATION_eventPicture
+	
+    is_triggered_only = yes
+
+    #Aristocratic Ideas
+	option = {
+		name = idea_selection.1.aristo
+		trigger = {
+			NOT = {
+				has_idea_group = aristocracy_ideas
+			}
+		}
+		aristocratic_ideas_effect = yes
+		clr_country_flag = temp_idea_decision_flag
+	}
+    #Plutocratic Ideas
+	option = {
+		name = idea_selection.1.pluto
+		trigger = {
+			NOT = {
+				has_idea_group = plutocracy_ideas
+			}
+		}
+		plutocratic_ideas_effect = yes
+		clr_country_flag = temp_idea_decision_flag
+	}
+    #Offensive Ideas
+	option = {
+		name = idea_selection.1.off
+		trigger = {
+			NOT = {
+				has_idea_group = offensive_ideas
+			}
+		}
+		offensive_ideas_effect = yes
+		clr_country_flag = temp_idea_decision_flag
+	}
+    #Defensive Ideas
+	option = {
+		name = idea_selection.1.def
+		trigger = {
+			NOT = {
+				has_idea_group = defensive_ideas
+			}
+		}
+		defensive_ideas_effect = yes
+		clr_country_flag = temp_idea_decision_flag
+	}
+    #Quality Ideas
+	option = {
+		name = idea_selection.1.qual
+		trigger = {
+			NOT = {
+				has_idea_group = quality_ideas
+			}
+		}
+		quality_ideas_effect = yes
+		clr_country_flag = temp_idea_decision_flag
+	}
+    #Quantity Ideas
+	option = {
+		name = idea_selection.1.quan
+		trigger = {
+			NOT = {
+				has_idea_group = quantity_ideas
+			}
+		}
+		quantity_ideas_effect = yes
+		clr_country_flag = temp_idea_decision_flag
+	}
+	#Cancel
+	option = {
+		name = idea_selection.1.g
+		clr_country_flag = temp_idea_decision_flag
+	}
+}
+
+#Selects Diplomatic Ideas
+country_event = {
+	id = idea_selection.2
+	title = idea_selection.2.t
+	desc = idea_selection.2.d
+	picture = WESTERNISATION_eventPicture
+	
+    is_triggered_only = yes
+
+    #Espionage Ideas
+	option = {
+		name = idea_selection.2.esp
+		trigger = {
+			NOT = {
+				has_idea_group = spy_ideas
+			}
+		}
+		espionage_ideas_effect = yes
+		clr_country_flag = temp_idea_decision_flag
+	}
+    #Trade Ideas
+	option = {
+		name = idea_selection.2.trade
+		trigger = {
+			NOT = {
+				has_idea_group = trade_ideas
+			}
+		}
+		trade_ideas_effect = yes
+		clr_country_flag = temp_idea_decision_flag
+	}
+    #Statehood Ideas
+	option = {
+		name = idea_selection.2.sta
+		trigger = {
+			NOT = {
+				has_idea_group = statehood_ideas
+			}
+		}
+		statehood_ideas_effect = yes
+		clr_country_flag = temp_idea_decision_flag
+	}
+    #Maritime Ideas
+	option = {
+		name = idea_selection.2.mari
+		trigger = {
+			NOT = {
+				has_idea_group = maritime_ideas
+			}
+		}
+		maritime_ideas_effect = yes
+		clr_country_flag = temp_idea_decision_flag
+	}
+    #Humanist Ideas
+	option = {
+		name = idea_selection.2.hum
+		trigger = {
+			NOT = {
+				has_idea_group = humanist_ideas
+			}
+		}
+		humanist_ideas_effect = yes
+		clr_country_flag = temp_idea_decision_flag
+	}
+    #Influence Ideas
+	option = {
+		name = idea_selection.2.infl
+		trigger = {
+			NOT = {
+				has_idea_group = influence_ideas
+			}
+		}
+		influence_ideas_effect = yes
+		clr_country_flag = temp_idea_decision_flag
+	}
+	#Cancel
+	option = {
+		name = idea_selection.2.g
+		clr_country_flag = temp_idea_decision_flag
+	}
+}
+
+#Selects Admin Ideas
+country_event = {
+	id = idea_selection.3
+	title = idea_selection.3.t
+	desc = idea_selection.3.d
+	picture = WESTERNISATION_eventPicture
+	
+    is_triggered_only = yes
+
+    #Innovative Ideas
+	option = {
+		name = idea_selection.3.inno
+		trigger = {
+			NOT = {
+				has_idea_group = innovativeness_ideas
+			}
+		}
+		innovative_ideas_effect = yes
+		clr_country_flag = temp_idea_decision_flag
+	}
+    #Religious Ideas
+	option = {
+		name = idea_selection.3.rel
+		trigger = {
+			NOT = {
+				has_idea_group = religious_ideas
+			}
+		}
+		religious_ideas_effect = yes
+		clr_country_flag = temp_idea_decision_flag
+	}
+    #Infrastructure Ideas
+	option = {
+		name = idea_selection.3.infra
+		trigger = {
+			NOT = {
+				has_idea_group = infrastructure_ideas
+			}
+		}
+		infrastructure_ideas_effect = yes
+		clr_country_flag = temp_idea_decision_flag
+	}
+    #Economic Ideas
+	option = {
+		name = idea_selection.3.eco
+		trigger = {
+			NOT = {
+				has_idea_group = economic_ideas
+			}
+		}
+		economic_ideas_effect = yes
+		clr_country_flag = temp_idea_decision_flag
+	}
+    #Expansion Ideas
+	option = {
+		name = idea_selection.3.exp
+		trigger = {
+			NOT = {
+				has_idea_group = expansion_ideas
+			}
+		}
+		expansion_ideas_effect = yes
+		clr_country_flag = temp_idea_decision_flag
+	}
+    #Administrative Ideas
+	option = {
+		name = idea_selection.3.adm
+		trigger = {
+			NOT = {
+				has_idea_group = administrative_ideas
+			}
+		}
+		administrative_ideas_effect = yes
+		clr_country_flag = temp_idea_decision_flag
+	}
+	#Cancel
+	option = {
+		name = idea_selection.3.g
+		clr_country_flag = temp_idea_decision_flag
+	}
+}

@@ -1,0 +1,120 @@
+has_adm_group_scripted_trigger = {
+	has_idea_group = expansion_ideas
+	has_idea_group = economic_ideas
+	has_idea_group = administrative_ideas
+	has_idea_group = religious_ideas
+	has_idea_group = infrastructure_ideas
+	has_idea_group = innovativeness_ideas
+}
+
+has_mil_group_scripted_trigger = {
+	has_idea_group = quality_ideas
+	has_idea_group = quantity_ideas
+	has_idea_group = aristocracy_ideas
+	has_idea_group = plutocracy_ideas
+	has_idea_group = offensive_ideas
+	has_idea_group = defensive_ideas
+}
+
+has_dip_group_scripted_trigger = {
+	has_idea_group = influence_ideas
+	has_idea_group = maritime_ideas
+	has_idea_group = spy_ideas
+	has_idea_group = statehood_ideas
+	has_idea_group = trade_ideas
+	has_idea_group = humanist_ideas
+}
+
+has_idea_groups_trigger = {
+	has_idea_group = aristocracy_ideas
+	has_idea_group = plutocracy_ideas
+	has_idea_group = innovativeness_ideas
+	has_idea_group = religious_ideas
+	has_idea_group = spy_ideas
+	has_idea_group = offensive_ideas
+	has_idea_group = defensive_ideas
+	has_idea_group = trade_ideas
+	has_idea_group = economic_ideas
+	has_idea_group = maritime_ideas
+	has_idea_group = quality_ideas
+	has_idea_group = quantity_ideas
+	has_idea_group = expansion_ideas
+	has_idea_group = administrative_ideas
+	has_idea_group = humanist_ideas
+	has_idea_group = influence_ideas
+	has_idea_group = infrastructure_ideas
+	has_idea_group = statehood_ideas
+}
+
+idea_overstacking_limit_all = {
+
+}
+
+idea_group_limit = {
+	OR = {
+		NOT = {
+			NOT = { adm_tech = 5}
+			adm_tech = 7
+			calc_true_if = {
+				has_idea_groups_trigger = yes
+				amount = 1
+			} 
+		}
+		NOT = {
+			NOT = { adm_tech = 7}
+			adm_tech = 10
+			calc_true_if = {
+				has_idea_groups_trigger = yes
+				amount = 2
+			} 
+		}
+		NOT = {
+			NOT = { adm_tech = 10}
+			adm_tech = 14
+			calc_true_if = {
+				has_idea_groups_trigger = yes
+				amount = 3
+			} 
+		}
+		NOT = {
+			NOT = { adm_tech = 14}
+			adm_tech = 17
+			calc_true_if = {
+				has_idea_groups_trigger = yes
+				amount = 4
+			} 
+		}
+		NOT = {
+			NOT = { adm_tech = 17}
+			adm_tech = 20
+			calc_true_if = {
+				has_idea_groups_trigger = yes
+				amount = 5
+			} 
+		}
+		NOT = {
+			NOT = { adm_tech = 20}
+			adm_tech = 23
+			calc_true_if = {
+				has_idea_groups_trigger = yes
+				amount = 6
+			} 
+		}
+		NOT = {
+			NOT = { adm_tech = 23}
+			adm_tech = 26
+			calc_true_if = {
+				has_idea_groups_trigger = yes
+				amount = 7
+			} 
+		}
+		NOT = {
+			NOT = { adm_tech = 26}
+			calc_true_if = {
+				has_idea_groups_trigger = yes
+				amount = 8
+			} 
+		}
+		
+	}
+}

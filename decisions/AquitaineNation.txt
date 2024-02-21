@@ -1,0 +1,87 @@
+country_decisions = {
+
+	aquitaine_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_aquitaine_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = FRA }
+			NOT = { tag = SPA }
+			
+			OR = {
+				primary_culture = occitain
+				primary_culture = aquitaine
+				primary_culture = gascon
+			}
+			
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 174 #Aquitaine
+				province_id = 196 #Toulouse
+				province_id = 190 #Bourbonnais
+				province_id = 180 #Haut-Poitou
+				province_id = 203 #Lyonnais
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			NOT = { exists = AQT }
+			owns_core_province = 174
+			owns_core_province = 196
+			owns_core_province = 190
+			owns_core_province = 180
+			owns_core_province = 203
+		}
+		effect = {
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						government_rank = 2
+					}
+				}
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = formed_aquitaine_flag
+			change_tag = AQT
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}	
+			
+	}
+		
+}
+	
+
+
+

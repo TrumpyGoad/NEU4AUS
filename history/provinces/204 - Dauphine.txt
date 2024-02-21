@@ -1,0 +1,28 @@
+# 204 Dauphin� - Principal cities: Grenoble
+
+owner = DAU
+controller = DAU
+capital = "Grenoble"
+is_city = yes
+culture = occitain
+religion = catholic
+hre = no
+base_tax = 4
+base_production = 3
+trade_goods = wool
+base_manpower = 3
+add_core = DAU
+discovered_by = eastern
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+#fort_15th = yes
+
+1444.11.12 = {
+	owner = DAU
+	controller = DAU
+	add_core = DAU
+	remove_core = FRA
+	remove_core = ENG
+	remove_core = PRO
+}

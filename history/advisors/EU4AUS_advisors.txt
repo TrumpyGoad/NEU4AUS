@@ -1,0 +1,10 @@
+advisor = {
+	advisor_id = 11001
+	name = "Al-Deathsspear" 
+	location = 341 #Tunis
+	discount = yes
+	skill = 2
+	type = naval_reformer
+	date = 1428.8.18 #26 years old
+	death_date = 1492.11.19 #dies
+}
