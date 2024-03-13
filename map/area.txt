@@ -403,7 +403,10 @@ valencia_area = { #5
 }
 
 lower_andalucia_area = { #5
-	224 225 1748 1749 4548 5116 5118
+	224 1749 4548 5116 
+}
+cordoba_area = { 
+	1748 225 5118
 }
 
 upper_andalucia_area = { #4
@@ -1155,7 +1158,10 @@ daneti_area = { 5192 4532 5193 160}
 harsova_area = {5198 5200 2998 5199 5197 }
 
 moldavia_area = { #5
-	268 1756 2405 4529 4530 5234 5274
+	 1756  5234 5274
+} 
+upper_moldavia_area = { 
+	2405 4530 268 4529
 }
 
 transylvania_area = { #4 #Northern Transylvania

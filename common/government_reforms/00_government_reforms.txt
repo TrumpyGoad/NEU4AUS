@@ -74,7 +74,7 @@ defaults_reform = {
 	has_cultural_union = no 
 	can_remove_idea_group = yes
 	mercs_do_not_cost_army_professionalism = yes
-	is_eligible_for_hre_emperor = yes
+	is_eligible_for_hre_emperor = no
 }
 
 # legacy governments
@@ -376,9 +376,9 @@ merchant_republic = {
 venetian_merchant_republic = {
 	# government mechanics flags go here
 	icon = "politician"
-	allow_normal_conversion = yes
+	allow_normal_conversion = no
 	legacy_government = yes
-	valid_for_new_country = yes
+	valid_for_new_country = no
 	valid_for_nation_designer = yes
 	nation_designer_cost = 40
 	has_term_election = no

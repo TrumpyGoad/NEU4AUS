@@ -175,6 +175,7 @@ temple = {
 			value = 1
 		}
 	}
+	}
 	on_destroyed = {
 		on_province_tax_building_destroyed_estate_privileges_effect = yes
 		remove_development_from_building = {
@@ -213,6 +214,7 @@ temple = {
 					share = 0.25
 				}
 		}
+		}
 		remove_development_from_building = {
 			building = temple
 			type = tax
@@ -225,6 +227,8 @@ temple = {
 		factor = 1
 	}
 }
+
+
 
 barracks = {
 	cost = 100

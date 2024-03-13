@@ -1,7 +1,7 @@
 #332 - Marash
 
-owner = DUL
-controller = DUL
+owner = KOB
+controller = KOB
 culture = turkish
 religion = sunni
 capital = "Maras"
@@ -11,7 +11,7 @@ base_tax = 1
 base_production = 1
 base_manpower = 2
 is_city = yes
-add_core = DUL
+add_core = KOB
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim

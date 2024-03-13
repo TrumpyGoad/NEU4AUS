@@ -1,4 +1,4 @@
-#Sjaelland, incl. København, Roskilde, Helsingør, Ringsted
+#Sjaelland, incl. Kï¿½benhavn, Roskilde, Helsingï¿½r, Ringsted
 
 add_core = DAN
 owner = DAN
@@ -7,10 +7,10 @@ culture = danish
 religion = catholic
 hre = no
 base_tax = 8
-base_production = 8
+base_production = 9
 trade_goods = fish
 base_manpower = 4
-capital = "København"
+capital = "Kï¿½benhavn"
 is_city = yes
 discovered_by = eastern
 discovered_by = western

@@ -604,7 +604,7 @@ SCA_ideas = {
 	free = yes
 	
 	sca_united_craftsman = {
-		build_cost = -0.01
+		build_cost = -0.1
 	}
 	sca_unified_scandinavian = {
 		possible_policy = 1

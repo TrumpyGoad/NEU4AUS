@@ -200,6 +200,8 @@ iberia_region = {
 		extremadura_area
 		lisboa_area
 		porto_area
+		cordoba_area
+		macaronesia_area
 	}
 }
 
@@ -326,6 +328,7 @@ carpathia_region = {
 		daneti_area
 		harsova_area
 		zemplin_area
+		upper_moldavia_area
 	}
 }
 
@@ -371,7 +374,7 @@ maghreb_region = {
 		western_morocco_area
 		tripolitania_area
 		barbary_coast_area
-		macaronesia_area
+		
 	}
 }
 
