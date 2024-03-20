@@ -3077,8 +3077,6 @@ musketeers_reform = {
 		tag = FRA  
 	}
 	trigger = {
-	NOT = { current_age = age_of_discovery }
-		NOT = { current_age = age_of_reformation }
 		mission_completed = fra_musketeers
 		if = {
 			limit = { has_modifier_locking_military_tier = yes }

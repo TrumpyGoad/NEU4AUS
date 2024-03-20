@@ -101,7 +101,6 @@ monarchy = {
 				portuguese_monarchy_reform
 				holy_imperial_monarchy_reform
 				burgundian_state_reform
-				wallachian_state_reform
 				bohemian_elective_kingdom_reform
 				stadthalter_monarchy_reform
 				janissary_autocracy_reform
@@ -110,7 +109,7 @@ monarchy = {
 				courts_of_navarra
 				league_of_lezhe_reform
 				tibetan_dual_government_reform
-#1.36
+				#1.36
 				#Turkomen
 				turkoman_ottoman_institutions
 				pronoiar_monarchy_reform #custom nation
@@ -148,7 +147,7 @@ monarchy = {
 				house_of_lords_reform
 				ministerialis_promotion_reform
 				separation_of_boyars_from_court_reform
-#1.36
+				#1.36
 				nakharar_title
 				reform_the_pronoiars_reform
 				diwan_al_khass_reform
@@ -178,7 +177,7 @@ monarchy = {
 				ottoman_provincial_government_system_reform
 				namestnik_reform
 				consulate_of_the_sea
-#1.36
+				#1.36
 				restore_the_master_of_offices_reform
 				court_of_art_and_culture_reform
 				integrated_ottoman_officials
@@ -221,7 +220,7 @@ monarchy = {
 				head_of_the_patriarchy_reform
 				anglican_state_church_reform
 				english_conciliarism_reform
-#1.36
+				#1.36
 				legacy_of_the_safavid_reform
 				state_madrasas_reform
 			}
@@ -284,7 +283,7 @@ monarchy = {
 				merchant_arsenal_reform
 				tercios_reform
 				expanded_black_army_reform
-theme_system_reform
+				theme_system_reform
 				#1.36
 				sparapet_office
 				legacy_of_the_seljuk_reform
@@ -338,7 +337,7 @@ theme_system_reform
 				direct_royal_administration_reform
 				administration_of_the_parliament_reform
 				strengthened_parliament_reform
-#1.36
+				#1.36
 				legacy_of_eranshahr_reform
 				superiority_of_the_state_reform
 				divided_aristocracy_reform
@@ -639,7 +638,7 @@ republic = {
 				namestnik_reform
 				oprichnina_reform
 				consulate_of_the_sea
-#1.36
+				#1.36
 				diwan_al_khass_reform
 				integrated_ottoman_officials
 			}
@@ -700,7 +699,7 @@ republic = {
 				head_of_the_patriarchy_reform
 				anglican_state_church_reform
 				english_conciliarism_reform
-#1.36
+				#1.36
 				legacy_of_the_safavid_reform
 				state_madrasas_reform
 			}
@@ -763,7 +762,7 @@ republic = {
 				merchant_arsenal_reform
 				tercios_reform
 				expanded_black_army_reform
-#1.36
+				#1.36
 				sparapet_office
 				legacy_of_the_seljuk_reform
 				modernized_furusiyya_reform
@@ -798,7 +797,7 @@ republic = {
 				union_of_states_reform
 				cultural_administration_reform
 				penal_colonies_reform
-#1.36
+				#1.36
 				superiority_of_the_state_reform
 				divided_aristocracy_reform
 			}
@@ -825,7 +824,7 @@ republic = {
 				thalassocracy_reform
 				royal_charters_reform
 				commercial_trade_empire_reform
-#1.36
+				#1.36
 				karimi_stations_reform
 			}
 		}
@@ -982,7 +981,7 @@ tribal = {
 				matrilineal_system
 				feudal_tribe
 				great_man
-#1.36
+				#1.36
 				#Turkomen
 				turkoman_ottoman_institutions
 			}
@@ -1001,17 +1000,12 @@ tribal = {
 		}
 		tribal_military_doctrines = {
 			reforms = {
-				organized_military_staff_reform
-				military_engineering_reform
-				defensive_stance_reform
 				sygnakhs_system_reform
 				sustained_discipline_reform
 				cavalry_warfare_reform
 				mercenary_leadership_reform
 				#Visible but locked
-				amphibious_specialization_reform
 				royal_marines_reform
-				maritime_military_reform
 				professional_navy_reform
 				doppelsoldner_reform
 				#Invisible until unlocked
@@ -1057,7 +1051,7 @@ tribal = {
 				merchant_arsenal_reform
 				tercios_reform
 				expanded_black_army_reform
-#1.36
+				#1.36
 				sparapet_office
 				legacy_of_the_seljuk_reform
 				modernized_furusiyya_reform
@@ -1179,7 +1173,7 @@ theocracy = {
 				absolute_shogunate_reform
 				japanese_divine_empire
 				sisterhood_of_jeanne_darc_reform
-				land_christian_sun_reform
+				#Egypt
 				egyptian_government_reform
 			}
 		}
@@ -1202,7 +1196,7 @@ theocracy = {
 				education_of_the_advisors_reform
 				education_of_the_missionaries_reform
 				education_of_the_people_reform
-#1.36
+				#1.36
 				diwan_al_khass_reform
 				state_madrasas_reform
 				integrated_ottoman_officials
@@ -1239,7 +1233,7 @@ theocracy = {
 				strengthened_the_patriarchy_reform
 				head_of_the_patriarchy_reform
 				anglican_state_church_reform
-#1.36
+				#1.36
 				legacy_of_the_safavid_reform
 			}
 		}
@@ -1301,7 +1295,7 @@ theocracy = {
 				merchant_arsenal_reform
 				tercios_reform
 				expanded_black_army_reform
-#1.36
+				#1.36
 				sparapet_office
 				legacy_of_the_seljuk_reform
 				modernized_furusiyya_reform
@@ -1332,7 +1326,7 @@ theocracy = {
 				pious_merchants_reform
 				monastic_breweries_reform
 				warrior_monks_reform
-#1.36
+				#1.36
 				superiority_of_the_state_reform
 				divided_aristocracy_reform
 			}
@@ -1355,7 +1349,7 @@ theocracy = {
 				thalassocracy_reform
 				royal_charters_reform
 				commercial_trade_empire_reform
-#1.36
+				#1.36
 				karimi_stations_reform
 			}
 		}
